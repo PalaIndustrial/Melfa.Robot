@@ -18,6 +18,8 @@ public partial class MelfaRobot : IDisposable
 {
     public const int DEFAULT_PORT = 10001;
 
+    private readonly object _syncRoot = new();
+
     public string Host { get; }
     public int Port { get; }
     public int RobotNumber { get; }
@@ -43,7 +45,7 @@ public partial class MelfaRobot : IDisposable
     {
         if (IsConnected)
             return;
-        lock (this)
+        lock (_syncRoot)
         {
             if (IsConnected)
                 return;
@@ -59,7 +61,7 @@ public partial class MelfaRobot : IDisposable
     {
         if (!IsConnected)
             return;
-        lock (this)
+        lock (_syncRoot)
         {
             if (!IsConnected)
                 return;
@@ -1118,7 +1120,7 @@ public partial class MelfaRobot : IDisposable
         if (!IsConnected)
             throw new InvalidOperationException("Not connected.");
 
-        lock (this)
+        lock (_syncRoot)
         {
             if (!IsConnected)
                 throw new InvalidOperationException("Not connected.");
@@ -1145,7 +1147,7 @@ public partial class MelfaRobot : IDisposable
 
     public void Dispose()
     {
-        lock (this)
+        lock (_syncRoot)
         {
             try { Close(); } catch { }
             try { Disconnect(); } catch { }
