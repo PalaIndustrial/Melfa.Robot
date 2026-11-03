@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="Documents/BFP-A4288-V.pdf" />
+    <File Path="Documents/BFP-A4288-V.md" />
     <File Path="LICENSE.md" />
     <File Path="MIGRATION.md" />
     <File Path="CHANGELOG.md" />
