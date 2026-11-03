@@ -623,11 +623,16 @@ public partial class MelfaRobot : IDisposable
         set => DoCommandInternal($"LS{(value ? "ON" : "OFF")}");
     }
 
-    /// <summary>[ATENA] [AUE&lt;ON/OFF&gt;] Program start enable or disable</summary>
+    /// <summary>[ATENA] [AUE&lt;ON/OFF&gt;] Read start eligibility or enable/disable program start.</summary>
     public bool ProgramStart
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => int.Parse(DoCommandInternal("ATENA")) == 1;
+        get => DoCommandInternal("ATENA") switch
+        {
+            "0" => true,
+            "1" => false,
+            var status => throw new InvalidDataException($"Unexpected ATENA status: {status}")
+        };
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         set => DoCommandInternal(value ? "AUEON" : "AUEOFF");
     }
