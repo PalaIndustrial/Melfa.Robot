@@ -1,0 +1,10 @@
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <MELFA_TEST_HOST>127.0.0.1</MELFA_TEST_HOST>
+      <MELFA_TEST_PORT>10001</MELFA_TEST_PORT>
+      <MELFA_TEST_READ>1</MELFA_TEST_READ>
+      <MELFA_TEST_WRITE>0</MELFA_TEST_WRITE>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>
