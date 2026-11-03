@@ -11,6 +11,7 @@ using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace Melfa.Robot;
 
@@ -19,19 +20,33 @@ public partial class MelfaRobot : IDisposable
     public const int DEFAULT_PORT = 10001;
 
     private readonly object _syncRoot = new();
+    private readonly object _connectionSyncRoot = new();
+    private int _connectionVersion;
+    private int _commandTimeout = 5000;
 
     public string Host { get; }
     public int Port { get; }
     public int RobotNumber { get; }
 
+    /// <summary>Maximum time in milliseconds for a command exchange.</summary>
+    public int CommandTimeout
+    {
+        get => Volatile.Read(ref _commandTimeout);
+        set
+        {
+            if (value <= 0)
+                throw new ArgumentOutOfRangeException(nameof(value));
+            Volatile.Write(ref _commandTimeout, value);
+        }
+    }
+
     public bool IsConnected
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        get => _Client?.Connected ?? false;
+        get => Volatile.Read(ref _Client)?.Connected ?? false;
     }
 
     private TcpClient _Client = null;
-    private NetworkStream _Stream = null;
 
     public MelfaRobot(string host, int port = DEFAULT_PORT, int robot = 1)
     {
@@ -50,48 +65,36 @@ public partial class MelfaRobot : IDisposable
             if (IsConnected)
                 return;
 
-            _Client = new TcpClient();
-            _Client.Connect(Host, Port);
-            _Stream = _Client.GetStream();
+            var version = Volatile.Read(ref _connectionVersion);
+            var client = new TcpClient();
+            try
+            {
+                client.Connect(Host, Port);
+                lock (_connectionSyncRoot)
+                {
+                    if (version != _connectionVersion)
+                        throw new InvalidOperationException("Connection was cancelled.");
+                    Volatile.Write(ref _Client, client);
+                }
+            }
+            catch
+            {
+                client.Dispose();
+                throw;
+            }
         }
     }
 
     /// <summary>Disconnect from the robot</summary>
     public void Disconnect()
     {
-        if (!IsConnected)
-            return;
-
-        lock (_syncRoot)
+        TcpClient client;
+        lock (_connectionSyncRoot)
         {
-            if (!IsConnected)
-                return;
-
-            List<Exception> exceptions = null;
-
-            if (_Stream is not null)
-            {
-                try { _Stream.Close(); }
-                catch (Exception ex) { (exceptions ??= []).Add(ex); }
-
-                try { _Stream.Dispose(); }
-                catch (Exception ex) { (exceptions ??= []).Add(ex); }
-                finally { _Stream = null; }
-            }
-
-            if (_Client is not null)
-            {
-                try { _Client.Close(); }
-                catch (Exception ex) { (exceptions ??= []).Add(ex); }
-
-                try { _Client.Dispose(); }
-                catch (Exception ex) { (exceptions ??= []).Add(ex); }
-                finally { _Client = null; }
-            }
-
-            if (exceptions is { Count: > 0 })
-                throw new AggregateException("One or more errors occurred while disconnecting from robot.", exceptions);
+            Interlocked.Increment(ref _connectionVersion);
+            client = Interlocked.Exchange(ref _Client, null);
         }
+        client?.Dispose();
     }
 
     #region Communication
@@ -1141,28 +1144,57 @@ public partial class MelfaRobot : IDisposable
             .ToImmutableArray();
     #endregion
 
-    private readonly byte[] _ReadBuffer = new byte[512];
-
     private string DoCommandInternal(string command, int slot)
     {
-        if (!IsConnected)
-            throw new InvalidOperationException("Not connected.");
-
         lock (_syncRoot)
         {
-            if (!IsConnected)
+            var client = Volatile.Read(ref _Client);
+            if (client is null || !client.Connected)
                 throw new InvalidOperationException("Not connected.");
 
             var cmd = $"{RobotNumber};{slot};{command}";
-#if DEBUG
-            if (cmd.Length > 255)
-                throw new InvalidOperationException("Command too long (max 255 chars)");
-#endif
-            var wbuf = Encoding.ASCII.GetBytes(cmd);
-            _Stream.Write(wbuf, 0, wbuf.Length);
+            var encoding = Encoding.GetEncoding("us-ascii", EncoderFallback.ExceptionFallback, DecoderFallback.ExceptionFallback);
+            var wbuf = encoding.GetBytes(cmd + "\r");
+            if (wbuf.Length - 1 > 255)
+                throw new InvalidOperationException("Command too long (max 255 bytes).");
 
-            var n = _Stream.Read(_ReadBuffer, 0, _ReadBuffer.Length);
-            var ret = Encoding.ASCII.GetString(_ReadBuffer, 0, n);
+            var timeout = CommandTimeout;
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            string ret;
+            try
+            {
+                var stream = client.GetStream();
+                stream.WriteTimeout = timeout;
+                stream.Write(wbuf, 0, wbuf.Length);
+
+                using var response = new MemoryStream();
+                while (true)
+                {
+                    var remaining = timeout - stopwatch.ElapsedMilliseconds;
+                    if (remaining <= 0)
+                        throw new IOException("Timed out waiting for the robot response.");
+                    stream.ReadTimeout = (int)remaining;
+                    var value = stream.ReadByte();
+                    if (value < 0)
+                        throw new EndOfStreamException("The robot disconnected before completing its response.");
+                    if (value == '\r')
+                        break;
+                    if (response.Length >= 65536)
+                        throw new InvalidDataException("The robot response exceeds 65536 bytes.");
+                    response.WriteByte((byte)value);
+                }
+                ret = encoding.GetString(response.ToArray());
+                if (!ret.StartsWith("QoK", StringComparison.OrdinalIgnoreCase) &&
+                    !(ret.StartsWith("QeR", StringComparison.OrdinalIgnoreCase) &&
+                      ret.Length >= 7 && int.TryParse(ret.Substring(3, 4), out _)))
+                    throw new InvalidDataException("Invalid robot response: " + ret);
+            }
+            catch (Exception ex) when (ex is IOException || ex is SocketException || ex is ObjectDisposedException || ex is DecoderFallbackException)
+            {
+                Interlocked.CompareExchange(ref _Client, null, client);
+                client.Dispose();
+                throw;
+            }
             if (ret.StartsWith("QoK", StringComparison.InvariantCultureIgnoreCase))
                 return ret[3..];
 
@@ -1175,11 +1207,7 @@ public partial class MelfaRobot : IDisposable
 
     public void Dispose()
     {
-        lock (_syncRoot)
-        {
-            try { Close(); } catch { }
-            try { Disconnect(); } catch { }
-        }
+        Disconnect();
         GC.SuppressFinalize(this);
     }
 }

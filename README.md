@@ -14,8 +14,11 @@ Make sure one of OPT11 ~ OPT19 is configured as `Server`. For example:
 - Mode (NETMODE): 1 - Server
 - Port (NETPORT): 12345 # This is the port used to connect to the controller
 - Protocol (OPCE11): 0 - No-procedure # This is probably irrelevant
-- Exit Code (NETTERM): 0 - No-included
+- Exit Code (NETTERM): configure the controller to include the exit code in responses
 - Packet Type (CTERME): 0 - CR
+
+The client sends and expects a CR terminator. CR+LF and responses without an
+exit code are not supported; TCP does not preserve message boundaries.
 
 # Usage
 ## Create the robot object
@@ -44,6 +47,17 @@ robot.Close();
 robot.Disconnect();
 robot.Dispose();
 ```
+
+`Dispose` disconnects immediately; call `Close` first when a protocol-level
+close is required. `CommandTimeout` sets the maximum command exchange time in
+milliseconds (default 5000); increase it for operations such as
+`ExecuteBlocking`. A failed or incomplete exchange disconnects the client:
+the command may already have executed, so reconnect and check controller state
+before deciding whether to retry.
+
+`Disconnect` can interrupt a pending exchange, but commands on one connection
+are serialized. Do not rely on this library or network connection as an
+emergency stop; use the controller's independent safety systems.
 
 # TODO
 - Finish implement of all functionalities
