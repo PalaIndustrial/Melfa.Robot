@@ -8,12 +8,15 @@ The motion-command protocol tests use an in-process loopback controller only.
 They check request framing and response handling, not motion, instruction
 validity, or controller-specific slot selection.
 The `RobotReadOnly` category communicates with either a real controller or a
-simulator; it sends only `OPEN`, `PRGRD`, `PPOSF`, `JPOSF`, `HNDSTS` and
-`CLOSE`. The position tests report Cartesian and joint positions, checking
+simulator; it sends only `OPEN`, `PRGRD`, `PPOSF`, `JPOSF`, `HNDSTS`,
+`OPNUMRD`, `OPSTSRD` and `CLOSE`. The position tests report Cartesian and joint positions, checking
 that X, Y, Z and the configured joint axes are finite. The hand test reports
 output status without operating the hand. No motion, servo, I/O writes,
 execution, or reset commands are sent. `OPEN`/`CLOSE` do change communication
 session state. Run against an isolated, idle system under operator supervision.
+The option-status test compares the VT-separated all-slots response with each
+indexed response, and reports both in test output. Option availability and
+response formats may vary; a mismatch is reported rather than silently ignored.
 
 The `SimulatorWrite` category is **simulator only**. A string declaration is
 not proof that an endpoint is a simulator: the operator must independently verify
@@ -122,6 +125,17 @@ $env:MELFA_TEST_HOST = 'simulator-host'
 $env:MELFA_TEST_READ = '1'
 dotnet test .\Melfa.Robot.Tests\Melfa.Robot.Tests.csproj -f net10.0 --filter 'Category=RobotReadOnly'
 ```
+
+To run only the option-status test against a verified simulator:
+
+```powershell
+$env:MELFA_TEST_HOST = 'simulator-host'
+$env:MELFA_TEST_READ = '1'
+dotnet test .\Melfa.Robot.Tests\Melfa.Robot.Tests.csproj -f net10.0 --filter 'FullyQualifiedName~ReadOptionStatuses'
+```
+
+The test is read-only and can also run against a real controller when configured;
+the operator must verify the endpoint before enabling it.
 
 For the currently blocked write preflight, after read-only testing succeeds
 on the isolated simulator, an example configuration is:

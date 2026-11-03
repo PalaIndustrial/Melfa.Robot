@@ -9,6 +9,15 @@ public class PositionTests
     private const string JointResponse = "J1;+1.25;J2;-2.50;J3;3;J4;.5;J5;5.0;J6;6.0;;****,****;100;0.00;00000000";
     private const string CartesianResponse = "X;+1.25;Y;-2.50;Z;3;A;270;B;-270;C;540;L1;7.0;;6,4294967295;100;0.00;00000000";
 
+    [Fact]
+    public void ToStringUsesMelfaBasicPositionSyntax()
+    {
+        var joint = new PositionJ(1, 2, 3, 4, 5, 6, 7, 8);
+        var cartesian = new PositionP(1, 2, 3, 4, 5, 6, 7, 8, PositionConfig.RAF, 42);
+        Assert.Equal("(1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 7.00, 8.00)", joint.ToString());
+        Assert.Equal("(1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 7.00, 8.00) (6, 42)", cartesian.ToString());
+    }
+
     [Theory]
     [InlineData("en-US")]
     [InlineData("de-DE")]

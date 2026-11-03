@@ -69,6 +69,9 @@ internal sealed class RobotSession : IRobotCommands, IDisposable
     internal PositionP CurrentPosition() => Command(() => robot.CurrentPositionP);
     internal PositionJ CurrentJointPosition() => Command(() => robot.CurrentPositionJ);
     internal ImmutableArray<MelfaRobot.HandState> HandStates() => Command(() => robot.HandStates);
+    internal int OptionSlotCount() => Command(() => robot.OptionSlotCount);
+    internal ImmutableArray<string> OptionStatuses() => Command(() => robot.GetOptionStatus());
+    internal string OptionStatus(int slot) => Command(() => robot.GetOptionStatus(slot));
     public void OpenProgram(string name) => Command(() => robot.ProgramOpen(name));
     public void DiscardProgram() => Command(robot.ProgramNew);
     public void SaveProgram() => Command(robot.ProgramSave);
@@ -76,7 +79,7 @@ internal sealed class RobotSession : IRobotCommands, IDisposable
     public string GetLine(int line) => Command(() => robot.ProgramGetLine(line));
     public void EditLine(int line, string content) => Command(() => robot.ProgramEdit(line, content));
     public Type VariableType(string name) => Command(() => robot.ProgramGetVariableType(name));
-    public PositionJ GetJointVariable(string name) => Command(() => new PositionJ(robot.ReadVariable(name, 'J', TaskCount + 1)));
+    public PositionJ GetJointVariable(string name) => Command(() => new PositionJ(robot.ReadVariable(name, VariableClass.JointPosition, TaskCount + 1)));
     public void SetVariable(string name, string value) => Command(() => robot.ProgramSetVariable(name, value));
 
     public void Dispose()
