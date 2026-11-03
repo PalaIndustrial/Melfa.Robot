@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.4000.Message" xml:space="preserve">
+    <value>System error (time out)</value>
+  </data>
+  <data name="Error.4000.Cause" xml:space="preserve">
+    <value>There is a problem in the program's exclusive process.</value>
+  </data>
+  <data name="Error.4000.Measures" xml:space="preserve">
+    <value>If it comes back, contact your service provider.</value>
+  </data>
+  <data name="Error.4000.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4100.Message" xml:space="preserve">
+    <value>No. of registered file is full</value>
+  </data>
+  <data name="Error.4100.Cause" xml:space="preserve">
+    <value>The No. of program has been exceeded.</value>
+  </data>
+  <data name="Error.4100.Measures" xml:space="preserve">
+    <value>Delete any unnecessary programs.</value>
+  </data>
+  <data name="Error.4100.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4110.Message" xml:space="preserve">
+    <value>Memory area is full</value>
+  </data>
+  <data name="Error.4110.Cause" xml:space="preserve">
+    <value>The program and data have exceeded the capacity. Capacity of a program execution area is insufficient.</value>
+  </data>
+  <data name="Error.4110.Measures" xml:space="preserve">
+    <value>Delete any unnecessary programs or data.</value>
+  </data>
+  <data name="Error.4110.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4120.Message" xml:space="preserve">
+    <value>Too long program name</value>
+  </data>
+  <data name="Error.4120.Cause" xml:space="preserve">
+    <value>The program name is a maximum of 12 characters with 3 extension characters.</value>
+  </data>
+  <data name="Error.4120.Measures" xml:space="preserve">
+    <value>Set the program name to within 12 characters and 3 extension characters.</value>
+  </data>
+  <data name="Error.4120.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4130.Message" xml:space="preserve">
+    <value>Illegal program name</value>
+  </data>
+  <data name="Error.4130.Cause" xml:space="preserve">
+    <value>An illegal character was used in the program name.</value>
+  </data>
+  <data name="Error.4130.Measures" xml:space="preserve">
+    <value>Only numbers and alphabetic characters can be used.</value>
+  </data>
+  <data name="Error.4130.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4140.Message" xml:space="preserve">
+    <value>The program was not found</value>
+  </data>
+  <data name="Error.4140.Cause" xml:space="preserve">
+    <value>The designated program was not found</value>
+  </data>
+  <data name="Error.4140.Measures" xml:space="preserve">
+    <value>Designate a different program, or create the designated program.</value>
+  </data>
+  <data name="Error.4140.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4150.Message" xml:space="preserve">
+    <value>Program is faulty</value>
+  </data>
+  <data name="Error.4150.Cause" xml:space="preserve">
+    <value>Power shutdown may have occurred during the write operation.</value>
+  </data>
+  <data name="Error.4150.Measures" xml:space="preserve">
+    <value>The file may have been damaged. Delete the file.</value>
+  </data>
+  <data name="Error.4150.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4160.Message" xml:space="preserve">
+    <value>Not a robot program</value>
+  </data>
+  <data name="Error.4160.Cause" xml:space="preserve">
+    <value>The designated program is not a robot program.</value>
+  </data>
+  <data name="Error.4160.Measures" xml:space="preserve">
+    <value>Designate a different program.</value>
+  </data>
+  <data name="Error.4160.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4170.Message" xml:space="preserve">
+    <value>The program is being edited</value>
+  </data>
+  <data name="Error.4170.Cause" xml:space="preserve">
+    <value>The program is being edited.</value>
+  </data>
+  <data name="Error.4170.Measures" xml:space="preserve">
+    <value>Close the program being edited.</value>
+  </data>
+  <data name="Error.4170.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4180.Message" xml:space="preserve">
+    <value>Program is running</value>
+  </data>
+  <data name="Error.4180.Cause" xml:space="preserve">
+    <value>The program is running.</value>
+  </data>
+  <data name="Error.4180.Measures" xml:space="preserve">
+    <value>Stop the program.</value>
+  </data>
+  <data name="Error.4180.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4190.Message" xml:space="preserve">
+    <value>The program is selected</value>
+  </data>
+  <data name="Error.4190.Cause" xml:space="preserve">
+    <value>The program is preparing to execute.</value>
+  </data>
+  <data name="Error.4190.Measures" xml:space="preserve">
+    <value>Reset the program. The user base program is selected. Or the program to be executed is used with a different slot.</value>
+  </data>
+  <data name="Error.4190.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4200.Message" xml:space="preserve">
+    <value>Cannot write to file</value>
+  </data>
+  <data name="Error.4200.Cause" xml:space="preserve">
+    <value>Write operation is prohibited, or the file capacity is insufficient.</value>
+  </data>
+  <data name="Error.4200.Measures" xml:space="preserve">
+    <value>1. Enable file writing. 2. Delete unnecessary files.</value>
+  </data>
+  <data name="Error.4200.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4210.Message" xml:space="preserve">
+    <value>Too long statement</value>
+  </data>
+  <data name="Error.4210.Cause" xml:space="preserve">
+    <value>The command statement length is limited to 240 characters.</value>
+  </data>
+  <data name="Error.4210.Measures" xml:space="preserve">
+    <value>Delete the No. of characters in the command statement to within 240 characters.</value>
+  </data>
+  <data name="Error.4210.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4220.Message" xml:space="preserve">
+    <value>Syntax error</value>
+  </data>
+  <data name="Error.4220.Cause" xml:space="preserve">
+    <value>There is an error in the syntax of the input command statement.</value>
+  </data>
+  <data name="Error.4220.Measures" xml:space="preserve">
+    <value>Re-input in the correct syntax after checking the contents.</value>
+  </data>
+  <data name="Error.4220.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4230.Message" xml:space="preserve">
+    <value>The line No. does not exist</value>
+  </data>
+  <data name="Error.4230.Cause" xml:space="preserve">
+    <value>There is no specified line number.</value>
+  </data>
+  <data name="Error.4230.Measures" xml:space="preserve">
+    <value>Check the contents, and reinput the correct line No.</value>
+  </data>
+  <data name="Error.4230.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4240.Message" xml:space="preserve">
+    <value>The statement is write protected</value>
+  </data>
+  <data name="Error.4240.Cause" xml:space="preserve">
+    <value>The command statement is write protected.</value>
+  </data>
+  <data name="Error.4240.Measures" xml:space="preserve">
+    <value>Cancel the write protection.</value>
+  </data>
+  <data name="Error.4240.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4250.Message" xml:space="preserve">
+    <value>No more lines or variables</value>
+  </data>
+  <data name="Error.4250.Cause" xml:space="preserve">
+    <value>Reading of lines and variables exceeding the registered ones.</value>
+  </data>
+  <data name="Error.4250.Measures" xml:space="preserve">
+    <value>Check the programs.</value>
+  </data>
+  <data name="Error.4250.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4300.Message" xml:space="preserve">
+    <value>1. Too long variable name
+2. Too long variable/function name</value>
+  </data>
+  <data name="Error.4300.Cause" xml:space="preserve">
+    <value>1. Too long variable name: The variable name length is limited to 16 characters
+2. Too long variable/function name: The variable/function name length is limited to 32 characters.</value>
+  </data>
+  <data name="Error.4300.Measures" xml:space="preserve">
+    <value>1. Too long variable name: Shorten the variable name to within 16 characters
+2. Too long variable/function name: Shorten the variable/function name to within 32 characters.</value>
+  </data>
+  <data name="Error.4300.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4310.Message" xml:space="preserve">
+    <value>Illegal character is used</value>
+  </data>
+  <data name="Error.4310.Cause" xml:space="preserve">
+    <value>A character other than A to Z or 0 to 9 was used.</value>
+  </data>
+  <data name="Error.4310.Measures" xml:space="preserve">
+    <value>Use the character which can be used.</value>
+  </data>
+  <data name="Error.4310.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4320.Message" xml:space="preserve">
+    <value>The variable is write protected</value>
+  </data>
+  <data name="Error.4320.Cause" xml:space="preserve">
+    <value>The variable is write protected.</value>
+  </data>
+  <data name="Error.4320.Measures" xml:space="preserve">
+    <value>1. Use a writable variable. 2. Cancel the write protection.</value>
+  </data>
+  <data name="Error.4320.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4330.Message" xml:space="preserve">
+    <value>The variable is read protected</value>
+  </data>
+  <data name="Error.4330.Cause" xml:space="preserve">
+    <value>The variable is read protected.</value>
+  </data>
+  <data name="Error.4330.Measures" xml:space="preserve">
+    <value>1. Use a writable variable. 2. Cancel the write protection.</value>
+  </data>
+  <data name="Error.4330.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4340.Message" xml:space="preserve">
+    <value>The variable is not defined</value>
+  </data>
+  <data name="Error.4340.Cause" xml:space="preserve">
+    <value>The variable has not been defined.</value>
+  </data>
+  <data name="Error.4340.Measures" xml:space="preserve">
+    <value>Define the variable.</value>
+  </data>
+  <data name="Error.4340.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4341.Message" xml:space="preserve">
+    <value>The user external variable is not defined.</value>
+  </data>
+  <data name="Error.4341.Cause" xml:space="preserve">
+    <value>The user external variable has not been defined</value>
+  </data>
+  <data name="Error.4341.Measures" xml:space="preserve">
+    <value>Define the user external variable</value>
+  </data>
+  <data name="Error.4341.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4350.Message" xml:space="preserve">
+    <value>Duplicate definition (Val.)</value>
+  </data>
+  <data name="Error.4350.Cause" xml:space="preserve">
+    <value>Variables already defined cannot be redefined with the Dim or Def statements.</value>
+  </data>
+  <data name="Error.4350.Measures" xml:space="preserve">
+    <value>1. Change the variable name and define. 2. Delete the defined variable.</value>
+  </data>
+  <data name="Error.4350.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4360.Message" xml:space="preserve">
+    <value>Same variable used (65535 times)</value>
+  </data>
+  <data name="Error.4360.Cause" xml:space="preserve">
+    <value>Example: 1 P1=P1+P2 references P1 twice and P2 once.</value>
+  </data>
+  <data name="Error.4360.Measures" xml:space="preserve">
+    <value>Change the program to reduce the No. of times the same variable is used.</value>
+  </data>
+  <data name="Error.4360.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4370.Message" xml:space="preserve">
+    <value>Error in the array element</value>
+  </data>
+  <data name="Error.4370.Cause" xml:space="preserve">
+    <value>1. The array elements exceeds the define range. 2. The specified variable is not an array.</value>
+  </data>
+  <data name="Error.4370.Measures" xml:space="preserve">
+    <value>1. Correct the number of array elements within one to the maximum elements. 2. Do not specify array elements.</value>
+  </data>
+  <data name="Error.4370.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4380.Message" xml:space="preserve">
+    <value>Cannot delete variables (used)</value>
+  </data>
+  <data name="Error.4380.Cause" xml:space="preserve">
+    <value>Variables used in a command statement cannot be deleted.</value>
+  </data>
+  <data name="Error.4380.Measures" xml:space="preserve">
+    <value>Delete the command statement using the variable.</value>
+  </data>
+  <data name="Error.4380.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4390.Message" xml:space="preserve">
+    <value>Variable type combination error</value>
+  </data>
+  <data name="Error.4390.Cause" xml:space="preserve">
+    <value>The type of the user-defined external variable is different.</value>
+  </data>
+  <data name="Error.4390.Measures" xml:space="preserve">
+    <value>Match the variable types.</value>
+  </data>
+  <data name="Error.4390.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4400.Message" xml:space="preserve">
+    <value>Program is faulty.</value>
+  </data>
+  <data name="Error.4400.Cause" xml:space="preserve">
+    <value>The content of the program is abnormal.</value>
+  </data>
+  <data name="Error.4400.Measures" xml:space="preserve">
+    <value>Delete the program.</value>
+  </data>
+  <data name="Error.4400.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4420.Message" xml:space="preserve">
+    <value>Line No exceeds 32767</value>
+  </data>
+  <data name="Error.4420.Cause" xml:space="preserve">
+    <value>The new line No. or line gap is large.</value>
+  </data>
+  <data name="Error.4420.Measures" xml:space="preserve">
+    <value>Do not use line No. exceeding 32767.</value>
+  </data>
+  <data name="Error.4420.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4430.Message" xml:space="preserve">
+    <value>Not found the string searched</value>
+  </data>
+  <data name="Error.4430.Cause" xml:space="preserve">
+    <value>The character string searched for was not found.</value>
+  </data>
+  <data name="Error.4430.Measures" xml:space="preserve">
+    <value>Check the program.</value>
+  </data>
+  <data name="Error.4430.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4440.Message" xml:space="preserve">
+    <value>Duplicate definition (label)</value>
+  </data>
+  <data name="Error.4440.Cause" xml:space="preserve">
+    <value>A label already defined cannot be redefined.</value>
+  </data>
+  <data name="Error.4440.Measures" xml:space="preserve">
+    <value>1. Change the label name. 2. Delete the defined label line.</value>
+  </data>
+  <data name="Error.4440.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4460.Message" xml:space="preserve">
+    <value>Argument value range over</value>
+  </data>
+  <data name="Error.4460.Cause" xml:space="preserve">
+    <value>Argument value range over.</value>
+  </data>
+  <data name="Error.4460.Measures" xml:space="preserve">
+    <value>Confirm the argument range, and correct the value.</value>
+  </data>
+  <data name="Error.4460.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4470.Message" xml:space="preserve">
+    <value>Line No can't be used</value>
+  </data>
+  <data name="Error.4470.Cause" xml:space="preserve">
+    <value>Line No can't be used</value>
+  </data>
+  <data name="Error.4470.Measures" xml:space="preserve">
+    <value>Please use the label</value>
+  </data>
+  <data name="Error.4470.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4800.Message" xml:space="preserve">
+    <value>System error (System base prog)</value>
+  </data>
+  <data name="Error.4800.Cause" xml:space="preserve">
+    <value>The base program for the system could not be opened. Or, the system base program name was not speci- fied correctly in the parameter.</value>
+  </data>
+  <data name="Error.4800.Measures" xml:space="preserve">
+    <value>If it comes back, contact your service provider.</value>
+  </data>
+  <data name="Error.4800.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4810.Message" xml:space="preserve">
+    <value>The global variable defined by user is not available</value>
+  </data>
+  <data name="Error.4810.Cause" xml:space="preserve">
+    <value>The parameter "PRGUSR" is not correct.</value>
+  </data>
+  <data name="Error.4810.Measures" xml:space="preserve">
+    <value>To use user-defined external variables, it is necessary to set the name of the program describing only variable definitions in the PRGUSR parameter.</value>
+  </data>
+  <data name="Error.4810.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4811.Message" xml:space="preserve">
+    <value>The global variable redefined</value>
+  </data>
+  <data name="Error.4811.Cause" xml:space="preserve">
+    <value>A system global variable is defined in user global.</value>
+  </data>
+  <data name="Error.4811.Measures" xml:space="preserve">
+    <value>Correct the program.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.4811.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4820.Message" xml:space="preserve">
+    <value>No editing program</value>
+  </data>
+  <data name="Error.4820.Cause" xml:space="preserve">
+    <value>The program was closed while editing. For example, the program being edited is closed when a key switch enable/disable operation is performed via the T/B during online editing on a PC.</value>
+  </data>
+  <data name="Error.4820.Measures" xml:space="preserve">
+    <value>Try editing the program again.</value>
+  </data>
+  <data name="Error.4820.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4900.Message" xml:space="preserve">
+    <value>System error (Prog Hndl)</value>
+  </data>
+  <data name="Error.4900.Cause" xml:space="preserve">
+    <value>The program name used by internal processing is not normal.</value>
+  </data>
+  <data name="Error.4900.Measures" xml:space="preserve">
+    <value>If it comes back, contact your service provider.</value>
+  </data>
+  <data name="Error.4900.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4910.Message" xml:space="preserve">
+    <value>Robot Language is mismatched</value>
+  </data>
+  <data name="Error.4910.Cause" xml:space="preserve">
+    <value>The parameter RLNG is mismatched. (2:MELFA-BASIC V, 3:MELFA-BASIC VI)</value>
+  </data>
+  <data name="Error.4910.Measures" xml:space="preserve">
+    <value>Re-set RLNG or select an other program.</value>
+  </data>
+  <data name="Error.4910.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4922.Message" xml:space="preserve">
+    <value>Unsupported program version</value>
+  </data>
+  <data name="Error.4922.Cause" xml:space="preserve">
+    <value>This program was created with the new version.</value>
+  </data>
+  <data name="Error.4922.Measures" xml:space="preserve">
+    <value>This program cannot be opened with this robot.</value>
+  </data>
+  <data name="Error.4922.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4920.Message" xml:space="preserve">
+    <value>There is no backup data in ROM</value>
+  </data>
+  <data name="Error.4920.Cause" xml:space="preserve">
+    <value>There is no backup data in ROM.</value>
+  </data>
+  <data name="Error.4920.Measures" xml:space="preserve">
+    <value>Please operate after backup.</value>
+  </data>
+  <data name="Error.4920.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4930.Message" xml:space="preserve">
+    <value>1. CavChk cannot be executed (*)
+2. CavChk cannot be used</value>
+  </data>
+  <data name="Error.4930.Cause" xml:space="preserve">
+    <value>1. CavChk cannot be executed (*): Collision avoidance serves as prohibition of use
+2. CavChk cannot be used: This robot does not correspond to collision avoidance</value>
+  </data>
+  <data name="Error.4930.Measures" xml:space="preserve">
+    <value>1. CavChk cannot be executed (*): Change parameter CAV into use permission
+2. CavChk cannot be used: Delete CavChk command</value>
+  </data>
+  <data name="Error.4930.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4931.Message" xml:space="preserve">
+    <value>Cmp command cannot be executed</value>
+  </data>
+  <data name="Error.4931.Cause" xml:space="preserve">
+    <value>Collision avoidance is effective</value>
+  </data>
+  <data name="Error.4931.Measures" xml:space="preserve">
+    <value>Repeal collision avoidance (execute CavChk Off)</value>
+  </data>
+  <data name="Error.4931.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4932.Message" xml:space="preserve">
+    <value>Trk command cannot be executed</value>
+  </data>
+  <data name="Error.4932.Cause" xml:space="preserve">
+    <value>Collision avoidance is effective</value>
+  </data>
+  <data name="Error.4932.Measures" xml:space="preserve">
+    <value>Repeal collision avoidance (execute CavChk Off)</value>
+  </data>
+  <data name="Error.4932.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4933.Message" xml:space="preserve">
+    <value>CavChk cannot be executed</value>
+  </data>
+  <data name="Error.4933.Cause" xml:space="preserve">
+    <value>Cmp command is executed</value>
+  </data>
+  <data name="Error.4933.Measures" xml:space="preserve">
+    <value>Repeal compliance mode (execute Cnp Off)</value>
+  </data>
+  <data name="Error.4933.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4934.Message" xml:space="preserve">
+    <value>CavChk cannot be executed</value>
+  </data>
+  <data name="Error.4934.Cause" xml:space="preserve">
+    <value>Trk command is executed</value>
+  </data>
+  <data name="Error.4934.Measures" xml:space="preserve">
+    <value>Repeal tracking mode (execute Trk Off)</value>
+  </data>
+  <data name="Error.4934.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4935.Message" xml:space="preserve">
+    <value>NOERR cannot be executed</value>
+  </data>
+  <data name="Error.4935.Cause" xml:space="preserve">
+    <value>Interruption using M_CavSts is invalid</value>
+  </data>
+  <data name="Error.4935.Measures" xml:space="preserve">
+    <value>Define interruption using M_CavSts and confirm it</value>
+  </data>
+  <data name="Error.4935.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4936.Message" xml:space="preserve">
+    <value>This ACT No. cannot be repealed</value>
+  </data>
+  <data name="Error.4936.Cause" xml:space="preserve">
+    <value>NoErr of collision avoidance is performed</value>
+  </data>
+  <data name="Error.4936.Measures" xml:space="preserve">
+    <value>Repeal this interruption after canceling NoErr</value>
+  </data>
+  <data name="Error.4936.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4937.Message" xml:space="preserve">
+    <value>A user free area size is lack</value>
+  </data>
+  <data name="Error.4937.Cause" xml:space="preserve">
+    <value>The size of a user free area is smaller than that of 2K</value>
+  </data>
+  <data name="Error.4937.Measures" xml:space="preserve">
+    <value>Please set 2K or more to the size of a user free area
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.4937.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4938.Message" xml:space="preserve">
+    <value>This robot does not correspond to collision avoidance.</value>
+  </data>
+  <data name="Error.4938.Cause" xml:space="preserve">
+    <value>This robot does not correspond to collision avoidance.</value>
+  </data>
+  <data name="Error.4938.Measures" xml:space="preserve">
+    <value>Parameter CAV returns disapproval.</value>
+  </data>
+  <data name="Error.4938.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4939.Message" xml:space="preserve">
+    <value>CAV version of Robot No.n is old</value>
+  </data>
+  <data name="Error.4939.Cause" xml:space="preserve">
+    <value>Software version of Robot No.n is old</value>
+  </data>
+  <data name="Error.4939.Measures" xml:space="preserve">
+    <value>Interference avoidance function cannot be used because the software version of interference avoidance of the robot-n is old. Software version upgrade is required. Contact the maker.</value>
+  </data>
+  <data name="Error.4939.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4941.Message" xml:space="preserve">
+    <value>MvSpl command cannot be executed</value>
+  </data>
+  <data name="Error.4941.Cause" xml:space="preserve">
+    <value>Collision avoidance is effective</value>
+  </data>
+  <data name="Error.4941.Measures" xml:space="preserve">
+    <value>The spline interpolation function and collision avoidance function cannot be enabled simultaneously. If using the spline interpolation function, disable the collision avoidance function.</value>
+  </data>
+  <data name="Error.4941.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.4950.Message" xml:space="preserve">
+    <value>1. Error in a function syntax
+2. Error in a parameter
+3. Error in a parameter</value>
+  </data>
+  <data name="Error.4950.Cause" xml:space="preserve">
+    <value>1. Error in a function syntax: Error in the definition of a function procedure.
+2. Error in a parameter: Error in a parameter of the function.
+3. Error in a parameter: The elements exceeds the range.</value>
+  </data>
+  <data name="Error.4950.Measures" xml:space="preserve">
+    <value>1. Error in a function syntax: Correct the definition of the function procedure.
+2. Error in a parameter: Correct the parameter of the function.
+3. Error in a parameter: Correct the array element.</value>
+  </data>
+  <data name="Error.4950.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+</root>

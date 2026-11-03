@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.4140.Message" xml:space="preserve">
+    <value>程式不存在</value>
+  </data>
+  <data name="Error.4140.Measures" xml:space="preserve">
+    <value>要求另一個程式，或是建立被要求的程式。</value>
+  </data>
+  <data name="Error.4140.Cause" xml:space="preserve">
+    <value>要求的程式不存在</value>
+  </data>
+  <data name="Error.4000.Message" xml:space="preserve"><value>系統錯誤（逾時）</value></data>
+  <data name="Error.4000.Cause" xml:space="preserve"><value>程式的互斥處理發生問題。</value></data>
+  <data name="Error.4000.Measures" xml:space="preserve"><value>若再次發生，請聯絡服務提供商。</value></data>
+  <data name="Error.4100.Message" xml:space="preserve"><value>已達可登錄檔案數量上限</value></data>
+  <data name="Error.4100.Cause" xml:space="preserve"><value>程式數量已超過上限。</value></data>
+  <data name="Error.4100.Measures" xml:space="preserve"><value>刪除不需要的程式。</value></data>
+  <data name="Error.4110.Message" xml:space="preserve"><value>記憶體區域已滿</value></data>
+  <data name="Error.4110.Cause" xml:space="preserve"><value>程式與資料已超過容量。程式執行區域的容量不足。</value></data>
+  <data name="Error.4110.Measures" xml:space="preserve"><value>刪除不需要的程式或資料。</value></data>
+  <data name="Error.4120.Message" xml:space="preserve"><value>程式名稱過長</value></data>
+  <data name="Error.4120.Cause" xml:space="preserve"><value>程式名稱最多為 12 個字元，副檔名最多為 3 個字元。</value></data>
+  <data name="Error.4120.Measures" xml:space="preserve"><value>將程式名稱設為 12 個字元以內，副檔名設為 3 個字元以內。</value></data>
+  <data name="Error.4130.Message" xml:space="preserve"><value>程式名稱不合法</value></data>
+  <data name="Error.4130.Cause" xml:space="preserve"><value>程式名稱使用了不合法的字元。</value></data>
+  <data name="Error.4130.Measures" xml:space="preserve"><value>只能使用數字和英文字母。</value></data>
+  <data name="Error.4150.Message" xml:space="preserve"><value>程式有問題</value></data>
+  <data name="Error.4150.Cause" xml:space="preserve"><value>寫入期間可能發生電源關閉。</value></data>
+  <data name="Error.4150.Measures" xml:space="preserve"><value>檔案可能已損壞，請刪除該檔案。</value></data>
+  <data name="Error.4160.Message" xml:space="preserve"><value>不是機器人程式</value></data>
+  <data name="Error.4160.Cause" xml:space="preserve"><value>指定的程式不是機器人程式。</value></data>
+  <data name="Error.4160.Measures" xml:space="preserve"><value>指定其他程式。</value></data>
+  <data name="Error.4170.Message" xml:space="preserve"><value>程式正在編輯中</value></data>
+  <data name="Error.4170.Cause" xml:space="preserve"><value>程式正在編輯中。</value></data>
+  <data name="Error.4170.Measures" xml:space="preserve"><value>關閉正在編輯的程式。</value></data>
+  <data name="Error.4180.Message" xml:space="preserve"><value>程式正在執行</value></data>
+  <data name="Error.4180.Cause" xml:space="preserve"><value>程式正在執行。</value></data>
+  <data name="Error.4180.Measures" xml:space="preserve"><value>停止程式。</value></data>
+  <data name="Error.4190.Message" xml:space="preserve"><value>程式已被選取</value></data>
+  <data name="Error.4190.Cause" xml:space="preserve"><value>程式正準備執行。</value></data>
+  <data name="Error.4190.Measures" xml:space="preserve"><value>重設程式。已選取使用者基底程式，或要執行的程式正在其他插槽中使用。</value></data>
+  <data name="Error.4200.Message" xml:space="preserve"><value>無法寫入檔案</value></data>
+  <data name="Error.4200.Cause" xml:space="preserve"><value>禁止寫入，或檔案容量不足。</value></data>
+  <data name="Error.4200.Measures" xml:space="preserve"><value>1. 允許寫入檔案。2. 刪除不需要的檔案。</value></data>
+  <data name="Error.4210.Message" xml:space="preserve"><value>敘述過長</value></data>
+  <data name="Error.4210.Cause" xml:space="preserve"><value>指令敘述的長度限制為 240 個字元。</value></data>
+  <data name="Error.4210.Measures" xml:space="preserve"><value>刪減指令敘述的字元，使其不超過 240 個字元。</value></data>
+  <data name="Error.4220.Message" xml:space="preserve"><value>語法錯誤</value></data>
+  <data name="Error.4220.Cause" xml:space="preserve"><value>輸入的指令敘述有語法錯誤。</value></data>
+  <data name="Error.4220.Measures" xml:space="preserve"><value>確認內容後，以正確的語法重新輸入。</value></data>
+  <data name="Error.4230.Message" xml:space="preserve"><value>行號不存在</value></data>
+  <data name="Error.4230.Cause" xml:space="preserve"><value>指定的行號不存在。</value></data>
+  <data name="Error.4230.Measures" xml:space="preserve"><value>確認內容後，重新輸入正確的行號。</value></data>
+  <data name="Error.4240.Message" xml:space="preserve"><value>敘述受到寫入保護</value></data>
+  <data name="Error.4240.Cause" xml:space="preserve"><value>指令敘述受到寫入保護。</value></data>
+  <data name="Error.4240.Measures" xml:space="preserve"><value>取消寫入保護。</value></data>
+  <data name="Error.4250.Message" xml:space="preserve"><value>沒有更多行或變數</value></data>
+  <data name="Error.4250.Cause" xml:space="preserve"><value>讀取的行或變數超出了已登錄的範圍。</value></data>
+  <data name="Error.4250.Measures" xml:space="preserve"><value>檢查程式。</value></data>
+  <data name="Error.4300.Message" xml:space="preserve"><value>1. 變數名稱過長
+2. 變數／函式名稱過長</value></data>
+  <data name="Error.4300.Cause" xml:space="preserve"><value>1. 變數名稱過長：變數名稱長度限制為 16 個字元。
+2. 變數／函式名稱過長：變數／函式名稱長度限制為 32 個字元。</value></data>
+  <data name="Error.4300.Measures" xml:space="preserve"><value>1. 變數名稱過長：將變數名稱縮短至 16 個字元以內。
+2. 變數／函式名稱過長：將變數／函式名稱縮短至 32 個字元以內。</value></data>
+  <data name="Error.4310.Message" xml:space="preserve"><value>使用了不合法的字元</value></data>
+  <data name="Error.4310.Cause" xml:space="preserve"><value>使用了 A 至 Z 或 0 至 9 以外的字元。</value></data>
+  <data name="Error.4310.Measures" xml:space="preserve"><value>使用允許的字元。</value></data>
+  <data name="Error.4320.Message" xml:space="preserve"><value>變數受到寫入保護</value></data>
+  <data name="Error.4320.Cause" xml:space="preserve"><value>變數受到寫入保護。</value></data>
+  <data name="Error.4320.Measures" xml:space="preserve"><value>1. 使用可寫入的變數。2. 取消寫入保護。</value></data>
+  <data name="Error.4330.Message" xml:space="preserve"><value>變數受到讀取保護</value></data>
+  <data name="Error.4330.Cause" xml:space="preserve"><value>變數受到讀取保護。</value></data>
+  <data name="Error.4330.Measures" xml:space="preserve"><value>1. 使用可寫入的變數。2. 取消寫入保護。</value></data>
+  <data name="Error.4340.Message" xml:space="preserve"><value>變數未定義</value></data>
+  <data name="Error.4340.Cause" xml:space="preserve"><value>變數尚未定義。</value></data>
+  <data name="Error.4340.Measures" xml:space="preserve"><value>定義變數。</value></data>
+  <data name="Error.4341.Message" xml:space="preserve"><value>使用者外部變數未定義。</value></data>
+  <data name="Error.4341.Cause" xml:space="preserve"><value>使用者外部變數尚未定義。</value></data>
+  <data name="Error.4341.Measures" xml:space="preserve"><value>定義使用者外部變數。</value></data>
+  <data name="Error.4350.Message" xml:space="preserve"><value>重複定義（變數）</value></data>
+  <data name="Error.4350.Cause" xml:space="preserve"><value>已定義的變數無法使用 Dim 或 Def 敘述重新定義。</value></data>
+  <data name="Error.4350.Measures" xml:space="preserve"><value>1. 更改變數名稱並定義。2. 刪除已定義的變數。</value></data>
+  <data name="Error.4360.Message" xml:space="preserve"><value>相同變數的使用次數（65535 次）</value></data>
+  <data name="Error.4360.Cause" xml:space="preserve"><value>例如：1 P1=P1+P2 參照 P1 兩次、P2 一次。</value></data>
+  <data name="Error.4360.Measures" xml:space="preserve"><value>修改程式，減少相同變數的使用次數。</value></data>
+  <data name="Error.4370.Message" xml:space="preserve"><value>陣列元素錯誤</value></data>
+  <data name="Error.4370.Cause" xml:space="preserve"><value>1. 陣列元素超出定義範圍。2. 指定的變數不是陣列。</value></data>
+  <data name="Error.4370.Measures" xml:space="preserve"><value>1. 將陣列元素編號修正為 1 至最大元素數的範圍。2. 不要指定陣列元素。</value></data>
+  <data name="Error.4380.Message" xml:space="preserve"><value>無法刪除變數（使用中）</value></data>
+  <data name="Error.4380.Cause" xml:space="preserve"><value>無法刪除指令敘述中使用的變數。</value></data>
+  <data name="Error.4380.Measures" xml:space="preserve"><value>刪除使用該變數的指令敘述。</value></data>
+  <data name="Error.4390.Message" xml:space="preserve"><value>變數類型組合錯誤</value></data>
+  <data name="Error.4390.Cause" xml:space="preserve"><value>使用者定義的外部變數類型不同。</value></data>
+  <data name="Error.4390.Measures" xml:space="preserve"><value>使變數類型一致。</value></data>
+  <data name="Error.4400.Message" xml:space="preserve"><value>程式有問題。</value></data>
+  <data name="Error.4400.Cause" xml:space="preserve"><value>程式內容異常。</value></data>
+  <data name="Error.4400.Measures" xml:space="preserve"><value>刪除程式。</value></data>
+  <data name="Error.4420.Message" xml:space="preserve"><value>行號超過 32767</value></data>
+  <data name="Error.4420.Cause" xml:space="preserve"><value>新行號或行號間隔過大。</value></data>
+  <data name="Error.4420.Measures" xml:space="preserve"><value>不要使用超過 32767 的行號。</value></data>
+  <data name="Error.4430.Message" xml:space="preserve"><value>找不到搜尋的字串</value></data>
+  <data name="Error.4430.Cause" xml:space="preserve"><value>找不到搜尋的字串。</value></data>
+  <data name="Error.4430.Measures" xml:space="preserve"><value>檢查程式。</value></data>
+  <data name="Error.4440.Message" xml:space="preserve"><value>重複定義（標籤）</value></data>
+  <data name="Error.4440.Cause" xml:space="preserve"><value>已定義的標籤無法重新定義。</value></data>
+  <data name="Error.4440.Measures" xml:space="preserve"><value>1. 更改標籤名稱。2. 刪除已定義標籤的行。</value></data>
+  <data name="Error.4460.Message" xml:space="preserve"><value>引數值超出範圍</value></data>
+  <data name="Error.4460.Cause" xml:space="preserve"><value>引數值超出範圍。</value></data>
+  <data name="Error.4460.Measures" xml:space="preserve"><value>確認引數範圍並修正數值。</value></data>
+  <data name="Error.4470.Message" xml:space="preserve"><value>無法使用行號</value></data>
+  <data name="Error.4470.Cause" xml:space="preserve"><value>無法使用行號。</value></data>
+  <data name="Error.4470.Measures" xml:space="preserve"><value>請使用標籤。</value></data>
+  <data name="Error.4800.Message" xml:space="preserve"><value>系統錯誤（系統基底程式）</value></data>
+  <data name="Error.4800.Cause" xml:space="preserve"><value>無法開啟系統基底程式，或參數中指定的系統基底程式名稱不正確。</value></data>
+  <data name="Error.4800.Measures" xml:space="preserve"><value>若再次發生，請聯絡服務提供商。</value></data>
+  <data name="Error.4810.Message" xml:space="preserve"><value>無法使用使用者定義的全域變數</value></data>
+  <data name="Error.4810.Cause" xml:space="preserve"><value>參數「PRGUSR」不正確。</value></data>
+  <data name="Error.4810.Measures" xml:space="preserve"><value>若要使用使用者定義的外部變數，必須在 PRGUSR 參數中設定僅包含變數定義的程式名稱。</value></data>
+  <data name="Error.4811.Message" xml:space="preserve"><value>全域變數重複定義</value></data>
+  <data name="Error.4811.Cause" xml:space="preserve"><value>在使用者全域變數中定義了系統全域變數。</value></data>
+  <data name="Error.4811.Measures" xml:space="preserve"><value>修正程式。
+除非另有說明，請關閉電源後再重新開啟。</value></data>
+  <data name="Error.4820.Message" xml:space="preserve"><value>沒有正在編輯的程式</value></data>
+  <data name="Error.4820.Cause" xml:space="preserve"><value>程式在編輯期間被關閉。例如，在電腦上線上編輯時，透過示教盒（T/B）進行鑰匙開關啟用／停用操作，會關閉正在編輯的程式。</value></data>
+  <data name="Error.4820.Measures" xml:space="preserve"><value>嘗試重新編輯程式。</value></data>
+  <data name="Error.4900.Message" xml:space="preserve"><value>系統錯誤（程式處理）</value></data>
+  <data name="Error.4900.Cause" xml:space="preserve"><value>內部處理使用的程式名稱異常。</value></data>
+  <data name="Error.4900.Measures" xml:space="preserve"><value>若再次發生，請聯絡服務提供商。</value></data>
+  <data name="Error.4910.Message" xml:space="preserve"><value>機器人語言不相符</value></data>
+  <data name="Error.4910.Cause" xml:space="preserve"><value>參數 RLNG 不相符。（2：MELFA-BASIC V，3：MELFA-BASIC VI）</value></data>
+  <data name="Error.4910.Measures" xml:space="preserve"><value>重新設定 RLNG 或選擇其他程式。</value></data>
+  <data name="Error.4922.Message" xml:space="preserve"><value>不支援的程式版本</value></data>
+  <data name="Error.4922.Cause" xml:space="preserve"><value>此程式是以較新的版本建立的。</value></data>
+  <data name="Error.4922.Measures" xml:space="preserve"><value>此程式無法在此機器人上開啟。</value></data>
+  <data name="Error.4920.Message" xml:space="preserve"><value>ROM 中沒有備份資料</value></data>
+  <data name="Error.4920.Cause" xml:space="preserve"><value>ROM 中沒有備份資料。</value></data>
+  <data name="Error.4920.Measures" xml:space="preserve"><value>請先備份再操作。</value></data>
+  <data name="Error.4930.Message" xml:space="preserve"><value>1. 無法執行 CavChk（*）
+2. 無法使用 CavChk</value></data>
+  <data name="Error.4930.Cause" xml:space="preserve"><value>1. 無法執行 CavChk（*）：避碰功能設定為禁止使用。
+2. 無法使用 CavChk：此機器人不支援避碰功能。</value></data>
+  <data name="Error.4930.Measures" xml:space="preserve"><value>1. 無法執行 CavChk（*）：將參數 CAV 改為允許使用。
+2. 無法使用 CavChk：刪除 CavChk 指令。</value></data>
+  <data name="Error.4931.Message" xml:space="preserve"><value>無法執行 Cmp 指令</value></data>
+  <data name="Error.4931.Cause" xml:space="preserve"><value>避碰功能已啟用。</value></data>
+  <data name="Error.4931.Measures" xml:space="preserve"><value>解除避碰功能（執行 CavChk Off）。</value></data>
+  <data name="Error.4932.Message" xml:space="preserve"><value>無法執行 Trk 指令</value></data>
+  <data name="Error.4932.Cause" xml:space="preserve"><value>避碰功能已啟用。</value></data>
+  <data name="Error.4932.Measures" xml:space="preserve"><value>解除避碰功能（執行 CavChk Off）。</value></data>
+  <data name="Error.4933.Message" xml:space="preserve"><value>無法執行 CavChk</value></data>
+  <data name="Error.4933.Cause" xml:space="preserve"><value>正在執行 Cmp 指令。</value></data>
+  <data name="Error.4933.Measures" xml:space="preserve"><value>解除柔順模式（執行 Cnp Off）。</value></data>
+  <data name="Error.4934.Message" xml:space="preserve"><value>無法執行 CavChk</value></data>
+  <data name="Error.4934.Cause" xml:space="preserve"><value>正在執行 Trk 指令。</value></data>
+  <data name="Error.4934.Measures" xml:space="preserve"><value>解除追蹤模式（執行 Trk Off）。</value></data>
+  <data name="Error.4935.Message" xml:space="preserve"><value>無法執行 NOERR</value></data>
+  <data name="Error.4935.Cause" xml:space="preserve"><value>使用 M_CavSts 的中斷無效。</value></data>
+  <data name="Error.4935.Measures" xml:space="preserve"><value>定義使用 M_CavSts 的中斷並加以確認。</value></data>
+  <data name="Error.4936.Message" xml:space="preserve"><value>無法解除此 ACT 編號</value></data>
+  <data name="Error.4936.Cause" xml:space="preserve"><value>已執行避碰功能的 NoErr。</value></data>
+  <data name="Error.4936.Measures" xml:space="preserve"><value>取消 NoErr 後解除此中斷。</value></data>
+  <data name="Error.4937.Message" xml:space="preserve"><value>使用者自由區域大小不足</value></data>
+  <data name="Error.4937.Cause" xml:space="preserve"><value>使用者自由區域的大小小於 2K。</value></data>
+  <data name="Error.4937.Measures" xml:space="preserve"><value>請將使用者自由區域的大小設定為 2K 以上。
+除非另有說明，請關閉電源後再重新開啟。</value></data>
+  <data name="Error.4938.Message" xml:space="preserve"><value>此機器人不支援避碰功能。</value></data>
+  <data name="Error.4938.Cause" xml:space="preserve"><value>此機器人不支援避碰功能。</value></data>
+  <data name="Error.4938.Measures" xml:space="preserve"><value>參數 CAV 返回不允許。</value></data>
+  <data name="Error.4939.Message" xml:space="preserve"><value>機器人編號 n 的 CAV 版本過舊</value></data>
+  <data name="Error.4939.Cause" xml:space="preserve"><value>機器人編號 n 的軟體版本過舊。</value></data>
+  <data name="Error.4939.Measures" xml:space="preserve"><value>由於機器人 n 的干涉迴避軟體版本過舊，無法使用干涉迴避功能。需要升級軟體版本，請聯絡製造商。</value></data>
+  <data name="Error.4941.Message" xml:space="preserve"><value>無法執行 MvSpl 指令</value></data>
+  <data name="Error.4941.Cause" xml:space="preserve"><value>避碰功能已啟用。</value></data>
+  <data name="Error.4941.Measures" xml:space="preserve"><value>樣條插補功能與避碰功能無法同時啟用。使用樣條插補功能時，請停用避碰功能。</value></data>
+  <data name="Error.4950.Message" xml:space="preserve"><value>1. 函式語法錯誤
+2. 參數錯誤
+3. 參數錯誤</value></data>
+  <data name="Error.4950.Cause" xml:space="preserve"><value>1. 函式語法錯誤：函式程序的定義有錯誤。
+2. 參數錯誤：函式的參數有錯誤。
+3. 參數錯誤：元素超出範圍。</value></data>
+  <data name="Error.4950.Measures" xml:space="preserve"><value>1. 函式語法錯誤：修正函式程序的定義。
+2. 參數錯誤：修正函式的參數。
+3. 參數錯誤：修正陣列元素。</value></data>
+</root>

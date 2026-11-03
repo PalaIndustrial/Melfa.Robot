@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.5600.Cause" xml:space="preserve">
+    <value>無法在報警時執行</value>
+  </data>
+  <data name="Error.5600.Measures" xml:space="preserve">
+    <value>消除報警</value>
+  </data>
+  <data name="Error.5600.Message" xml:space="preserve">
+    <value>無法在報警時執行</value>
+  </data>
+  <data name="Error.5610.Cause" xml:space="preserve">
+    <value>無法在停止信號輸入時執行</value>
+  </data>
+  <data name="Error.5610.Measures" xml:space="preserve">
+    <value>將停止信號關閉（OFF）後再試一次</value>
+  </data>
+  <data name="Error.5610.Message" xml:space="preserve">
+    <value>無法在 STOP ON 時執行</value>
+  </data>
+  <data name="Error.5620.Cause" xml:space="preserve">
+    <value>無法在循環停止信號輸入時執行</value>
+  </data>
+  <data name="Error.5620.Measures" xml:space="preserve">
+    <value>將循魂停止信號關閉（OFF）再試一次</value>
+  </data>
+  <data name="Error.5620.Message" xml:space="preserve">
+    <value>無法在 CSTOP ON 時執行</value>
+  </data>
+  <data name="Error.5630.Cause" xml:space="preserve">
+    <value>無法在伺服停止信號輸入時執行</value>
+  </data>
+  <data name="Error.5630.Measures" xml:space="preserve">
+    <value>將伺服停止信號關閉（OFF）再試一次</value>
+  </data>
+  <data name="Error.5630.Message" xml:space="preserve">
+    <value>無法在 SRVOFF 信號 ON 時執行</value>
+  </data>
+  <data name="Error.5640.Cause" xml:space="preserve">
+    <value>無法在運行中執行</value>
+  </data>
+  <data name="Error.5640.Measures" xml:space="preserve">
+    <value>停止操作，然後再試一次。</value>
+  </data>
+  <data name="Error.5640.Message" xml:space="preserve">
+    <value>無法在 RUN 時執行</value>
+  </data>
+  <data name="Error.5120.Message" xml:space="preserve">
+    <value>無法選擇程式（插槽不在程式選擇模式）</value>
+  </data>
+  <data name="Error.5120.Cause" xml:space="preserve">
+    <value>要求的插槽不在程式選擇模式</value>
+  </data>
+  <data name="Error.5120.Measures" xml:space="preserve">
+    <value>重置程式</value>
+  </data>
+  <data name="Error.5000.Message" xml:space="preserve"><value>示教操作盒（TB）的啟用開關為 ON</value></data>
+  <data name="Error.5000.Cause" xml:space="preserve"><value>在自動模式下，示教操作盒（TB）的啟用開關為 ON。</value></data>
+  <data name="Error.5000.Measures" xml:space="preserve"><value>將示教操作盒（TB）的啟用開關設為 OFF，或切換至示教模式。</value></data>
+  <data name="Error.5010.Message" xml:space="preserve"><value>AUTOENA 信號為 OFF</value></data>
+  <data name="Error.5010.Cause" xml:space="preserve"><value>自動運行允許信號為 OFF。</value></data>
+  <data name="Error.5010.Measures" xml:space="preserve"><value>將自動運行允許信號設為 ON，或切換至示教模式。</value></data>
+  <data name="Error.5100.Message" xml:space="preserve"><value>尚未選擇程式</value></data>
+  <data name="Error.5100.Cause" xml:space="preserve"><value>指定的插槽尚未選擇程式。</value></data>
+  <data name="Error.5100.Measures" xml:space="preserve"><value>為指定的插槽選擇程式。</value></data>
+  <data name="Error.5110.Message" xml:space="preserve"><value>無法連續運行</value></data>
+  <data name="Error.5110.Cause" xml:space="preserve"><value>指定了不同的程式名稱。</value></data>
+  <data name="Error.5110.Measures" xml:space="preserve"><value>指定正確的程式名稱。</value></data>
+  <data name="Error.5130.Message" xml:space="preserve"><value>無法啟用伺服</value></data>
+  <data name="Error.5130.Cause" xml:space="preserve"><value>正在執行伺服關閉處理。</value></data>
+  <data name="Error.5130.Measures" xml:space="preserve"><value>等待伺服關閉後，再啟用伺服。</value></data>
+  <data name="Error.5140.Message" xml:space="preserve"><value>無法讀取檔案</value></data>
+  <data name="Error.5140.Cause" xml:space="preserve"><value>正在讀取或編輯。</value></data>
+  <data name="Error.5140.Measures" xml:space="preserve"><value>關閉正在編輯的檔案，或等待讀取完成後再讀取。</value></data>
+  <data name="Error.5150.Message" xml:space="preserve"><value>尚未設定原點</value></data>
+  <data name="Error.5150.Cause" xml:space="preserve"><value>尚未設定原點。</value></data>
+  <data name="Error.5150.Measures" xml:space="preserve"><value>請參閱另冊「ROBOT ARM SETUP &amp; MAINTENANCE」中「Setting the origin」及「Resetting the origin」章節，並設定原點。</value></data>
+  <data name="Error.5200.Message" xml:space="preserve"><value>參數錯誤（TASKMAX）</value></data>
+  <data name="Error.5200.Cause" xml:space="preserve"><value>已超過 TASKMAX 參數設定值（初始值：8，最大值：32）。</value></data>
+  <data name="Error.5200.Measures" xml:space="preserve"><value>減少多工任務數量，或變更 TASKMAX 參數。
+除非另有註明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.5210.Message" xml:space="preserve"><value>參數錯誤（MECHAMAX）</value></data>
+  <data name="Error.5210.Cause" xml:space="preserve"><value>多機構的數量已超過上限。</value></data>
+  <data name="Error.5210.Measures" xml:space="preserve"><value>減少多機構的數量。
+除非另有註明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.5400.Message" xml:space="preserve"><value>無法指定所有機器人</value></data>
+  <data name="Error.5400.Cause" xml:space="preserve"><value>無法指定所有機構。</value></data>
+  <data name="Error.5400.Measures" xml:space="preserve"><value>指定單一機構的編號。</value></data>
+  <data name="Error.5410.Message" xml:space="preserve"><value>不存在的模式</value></data>
+  <data name="Error.5410.Cause" xml:space="preserve"><value>已切換至自動／示教以外的模式。</value></data>
+  <data name="Error.5410.Measures" xml:space="preserve"><value>請聯絡製造商。</value></data>
+  <data name="Error.5420.Message" xml:space="preserve"><value>插槽編號無效</value></data>
+  <data name="Error.5420.Cause" xml:space="preserve"><value>指定的任務插槽編號不在 1 至 TASKMAX（參數）的範圍內。</value></data>
+  <data name="Error.5420.Measures" xml:space="preserve"><value>指定正確的任務插槽。</value></data>
+  <data name="Error.5430.Message" xml:space="preserve"><value>機器人編號無效</value></data>
+  <data name="Error.5430.Cause" xml:space="preserve"><value>指定的機構無效。</value></data>
+  <data name="Error.5430.Measures" xml:space="preserve"><value>指定正確的機構。</value></data>
+  <data name="Error.5650.Message" xml:space="preserve"><value>無法在停止期間執行</value></data>
+  <data name="Error.5650.Cause" xml:space="preserve"><value>無法在停止操作期間執行。</value></data>
+  <data name="Error.5650.Measures" xml:space="preserve"><value>等待停止完成後，再執行。</value></data>
+  <data name="Error.5660.Message" xml:space="preserve"><value>運行期間編輯（包括 ALWAYS）</value></data>
+  <data name="Error.5660.Cause" xml:space="preserve"><value>運行期間（包括連續執行）無法編輯。</value></data>
+  <data name="Error.5660.Measures" xml:space="preserve"><value>停止程式後再執行。</value></data>
+  <data name="Error.5670.Message" xml:space="preserve"><value>無法在等待期間執行</value></data>
+  <data name="Error.5670.Cause" xml:space="preserve"><value>無法在等待期間執行。</value></data>
+  <data name="Error.5670.Measures" xml:space="preserve"><value>執行程式重置。</value></data>
+  <data name="Error.5990.Message" xml:space="preserve"><value>系統錯誤（無效命令）</value></data>
+  <data name="Error.5990.Cause" xml:space="preserve"><value>執行了不存在的命令。</value></data>
+  <data name="Error.5990.Measures" xml:space="preserve"><value>執行正確的命令。</value></data>
+</root>

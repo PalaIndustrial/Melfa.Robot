@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.7000.Message" xml:space="preserve"><value>找不到複製來源檔案</value></data>
+  <data name="Error.7000.Cause" xml:space="preserve"><value>找不到複製來源檔案。</value></data>
+  <data name="Error.7000.Measures" xml:space="preserve"><value>輸入正確的檔案名稱。</value></data>
+  <data name="Error.7010.Message" xml:space="preserve"><value>找不到要刪除的檔案</value></data>
+  <data name="Error.7010.Cause" xml:space="preserve"><value>找不到要刪除的檔案。</value></data>
+  <data name="Error.7010.Measures" xml:space="preserve"><value>輸入正確的檔案名稱。</value></data>
+  <data name="Error.7020.Message" xml:space="preserve"><value>找不到要重新命名的檔案</value></data>
+  <data name="Error.7020.Cause" xml:space="preserve"><value>找不到要重新命名的檔案。</value></data>
+  <data name="Error.7020.Measures" xml:space="preserve"><value>輸入正確的檔案名稱。</value></data>
+  <data name="Error.7030.Message" xml:space="preserve"><value>系統錯誤（參數大小超出限制）</value></data>
+  <data name="Error.7030.Cause" xml:space="preserve"><value>變更容量過大。</value></data>
+  <data name="Error.7030.Measures" xml:space="preserve"><value>請聯絡製造商。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7040.Message" xml:space="preserve"><value>禁止變更參數</value></data>
+  <data name="Error.7040.Cause" xml:space="preserve"><value>此參數屬於危險參數，禁止變更。</value></data>
+  <data name="Error.7040.Measures" xml:space="preserve"><value>請聯絡製造商。</value></data>
+  <data name="Error.7050.Message" xml:space="preserve"><value>檔案不正確</value></data>
+  <data name="Error.7050.Cause" xml:space="preserve"><value>此檔案已損壞。</value></data>
+  <data name="Error.7050.Measures" xml:space="preserve"><value>請聯絡經銷商。</value></data>
+  <data name="Error.7060.Message" xml:space="preserve"><value>系統錯誤（RAM 區域已滿）</value></data>
+  <data name="Error.7060.Cause" xml:space="preserve"><value>已超出容量。</value></data>
+  <data name="Error.7060.Measures" xml:space="preserve"><value>請聯絡製造商。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7070.Message" xml:space="preserve"><value>記憶體區域已滿</value></data>
+  <data name="Error.7070.Cause" xml:space="preserve"><value>程式和資料已超出容量。</value></data>
+  <data name="Error.7070.Measures" xml:space="preserve"><value>刪除不需要的程式或資料。</value></data>
+  <data name="Error.7071.Message" xml:space="preserve"><value>CTN 的記憶體區域不足</value></data>
+  <data name="Error.7071.Cause" xml:space="preserve"><value>繼續功能需要超過 100 Kbytes 的記憶體區域。</value></data>
+  <data name="Error.7071.Measures" xml:space="preserve"><value>刪除不需要的程式。</value></data>
+  <data name="Error.7080.Message" xml:space="preserve"><value>無法讀取參數</value></data>
+  <data name="Error.7080.Cause" xml:space="preserve"><value>參數不存在或密碼不正確。</value></data>
+  <data name="Error.7080.Measures" xml:space="preserve"><value>1. 輸入正確的參數名稱。2. 輸入正確的密碼。</value></data>
+  <data name="Error.7081.Message" xml:space="preserve"><value>1. 無法寫入參數
+2. 寫入參數時 CRC 不正確</value></data>
+  <data name="Error.7081.Cause" xml:space="preserve"><value>1. 無法寫入參數：參數不存在或密碼不正確。
+2. 寫入參數時 CRC 不正確：參數的 CRC 值不正確。</value></data>
+  <data name="Error.7081.Measures" xml:space="preserve"><value>1. 無法寫入參數：1. 輸入正確的參數名稱。2. 輸入正確的密碼。
+2. 寫入參數時 CRC 不正確：寫入安全監控功能相關參數時，CRC 檢查偵測到錯誤。請檢查機器人控制器與個人電腦之間的通訊環境，然後重新執行寫入操作。</value></data>
+  <data name="Error.7090.Message" xml:space="preserve"><value>參數註解不正確</value></data>
+  <data name="Error.7090.Cause" xml:space="preserve"><value>參數註解的字元數超出限制。</value></data>
+  <data name="Error.7090.Measures" xml:space="preserve"><value>操作不受影響，請繼續操作。</value></data>
+  <data name="Error.7099.Message" xml:space="preserve"><value>無法讀取參數「xxx」。「xxx」：參數名稱。</value></data>
+  <data name="Error.7099.Cause" xml:space="preserve"><value>參數不存在。</value></data>
+  <data name="Error.7099.Measures" xml:space="preserve"><value>請確認參數名稱。</value></data>
+  <data name="Error.7300.Message" xml:space="preserve"><value>正在載入參數檔案。</value></data>
+  <data name="Error.7300.Cause" xml:space="preserve"><value>必須重新開啟電源，參數才會生效。</value></data>
+  <data name="Error.7300.Measures" xml:space="preserve"><value>請將電源關閉再開啟一次。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7310.Message" xml:space="preserve"><value>變更的變數未儲存</value></data>
+  <data name="Error.7310.Cause" xml:space="preserve"><value>程式執行期間電源已關閉。</value></data>
+  <data name="Error.7310.Measures" xml:space="preserve"><value>請勿在程式執行期間關閉電源。</value></data>
+  <data name="Error.7311.Message" xml:space="preserve"><value>儲存檔案期間電源已關閉</value></data>
+  <data name="Error.7311.Cause" xml:space="preserve"><value>儲存檔案期間電源已關閉。</value></data>
+  <data name="Error.7311.Measures" xml:space="preserve"><value>請勿在儲存檔案期間關閉電源。</value></data>
+  <data name="Error.7332.Message" xml:space="preserve"><value>在 CTN 模式下無法切換至 RAM 模式</value></data>
+  <data name="Error.7332.Cause" xml:space="preserve"><value>在繼續模式下無法切換至 RAM 模式。</value></data>
+  <data name="Error.7332.Measures" xml:space="preserve"><value>請切換至 RAM 模式後再執行一次。</value></data>
+  <data name="Error.7340.Message" xml:space="preserve"><value>在 DRAM 模式下無法使用繼續功能</value></data>
+  <data name="Error.7340.Cause" xml:space="preserve"><value>在 DRAM 模式下無法使用繼續功能。</value></data>
+  <data name="Error.7340.Measures" xml:space="preserve"><value>請切換至 RAM 模式後再執行一次。</value></data>
+  <data name="Error.7341.Message" xml:space="preserve"><value>在 CTN 模式下無法切換至 DRAM 模式</value></data>
+  <data name="Error.7341.Cause" xml:space="preserve"><value>在 CTN 模式下無法切換至 DRAM 模式。</value></data>
+  <data name="Error.7341.Measures" xml:space="preserve"><value>請切換至 RAM 模式後再執行一次。</value></data>
+  <data name="Error.7342.Message" xml:space="preserve"><value>在 DRAM 模式下無法使用全域擴充</value></data>
+  <data name="Error.7342.Cause" xml:space="preserve"><value>在 DRAM 模式下無法使用全域擴充。</value></data>
+  <data name="Error.7342.Measures" xml:space="preserve"><value>請切換至 RAM 模式後再執行一次。</value></data>
+  <data name="Error.7343.Message" xml:space="preserve"><value>在 PRGGBL 模式下無法切換至 DRAM 模式</value></data>
+  <data name="Error.7343.Cause" xml:space="preserve"><value>在 PRGGBL 模式下無法切換至 DRAM 模式。</value></data>
+  <data name="Error.7343.Measures" xml:space="preserve"><value>請切換至 RAM 模式後再執行一次。</value></data>
+  <data name="Error.7370.Message" xml:space="preserve"><value>密碼長度為 8 至 32 個字元。</value></data>
+  <data name="Error.7370.Cause" xml:space="preserve"><value>密碼長度為 8 至 32 個字元。</value></data>
+  <data name="Error.7370.Measures" xml:space="preserve"><value>請輸入 8 至 32 個字元的密碼。</value></data>
+  <data name="Error.7371.Message" xml:space="preserve"><value>僅限英文字母與數字</value></data>
+  <data name="Error.7371.Cause" xml:space="preserve"><value>輸入了英文字母與數字以外的字元。</value></data>
+  <data name="Error.7371.Measures" xml:space="preserve"><value>請使用英文字母與數字輸入密碼。</value></data>
+  <data name="Error.7372.Message" xml:space="preserve"><value>密碼不相符</value></data>
+  <data name="Error.7372.Cause" xml:space="preserve"><value>密碼不相符。</value></data>
+  <data name="Error.7372.Measures" xml:space="preserve"><value>請重新輸入密碼。</value></data>
+  <data name="Error.7373.Message" xml:space="preserve"><value>程式受到密碼鎖定</value></data>
+  <data name="Error.7373.Cause" xml:space="preserve"><value>程式受到密碼鎖定。</value></data>
+  <data name="Error.7373.Measures" xml:space="preserve"><value>請解除密碼鎖定。</value></data>
+  <data name="Error.7374.Message" xml:space="preserve"><value>參數受到密碼鎖定</value></data>
+  <data name="Error.7374.Cause" xml:space="preserve"><value>參數受到密碼鎖定。</value></data>
+  <data name="Error.7374.Measures" xml:space="preserve"><value>請解除密碼鎖定。</value></data>
+  <data name="Error.7375.Message" xml:space="preserve"><value>檔案受到密碼鎖定</value></data>
+  <data name="Error.7375.Cause" xml:space="preserve"><value>檔案受到密碼鎖定。</value></data>
+  <data name="Error.7375.Measures" xml:space="preserve"><value>請解除密碼鎖定。</value></data>
+  <data name="Error.7378.Message" xml:space="preserve"><value>變更密碼</value></data>
+  <data name="Error.7378.Cause" xml:space="preserve"><value>密碼尚未從初始值變更。</value></data>
+  <data name="Error.7378.Measures" xml:space="preserve"><value>用於變更功能安全相關參數的密碼尚未從初始值變更。請將密碼變更為新密碼，然後設定參數。出廠預設密碼為「MEL- FASafetyPSWD」。</value></data>
+  <data name="Error.7450.Message" xml:space="preserve"><value>無電池電壓（機器人 CPU）</value></data>
+  <data name="Error.7450.Cause" xml:space="preserve"><value>電池已耗盡。</value></data>
+  <data name="Error.7450.Measures" xml:space="preserve"><value>機器人 CPU 的電池電壓已降至 2.5 V 以下（含 2.5 V）。請更換電池，然後還原機器人程式與參數。有關更換程序的詳細資訊，請參閱另冊「控制器設定、基本操作與維護」。</value></data>
+  <data name="Error.7451.Message" xml:space="preserve"><value>電池電壓低（機器人 CPU）</value></data>
+  <data name="Error.7451.Cause" xml:space="preserve"><value>電池即將耗盡。</value></data>
+  <data name="Error.7451.Measures" xml:space="preserve"><value>機器人 CPU 的電池電壓已降至 2.7 V 以下（含 2.7 V）。請備份機器人程式與參數，並立即更換電池，否則它們可能因電壓過低而遺失。有關更換程序的詳細資訊，請參閱另冊「控制器設定、基本操作與維護」。</value></data>
+  <data name="Error.7500.Message" xml:space="preserve"><value>無電池電壓（機器人）</value></data>
+  <data name="Error.7500.Cause" xml:space="preserve"><value>電池已耗盡。</value></data>
+  <data name="Error.7500.Measures" xml:space="preserve"><value>請更換電池並設定原點。有關更換程序的詳細資訊，請參閱另冊「使用手冊／機器手臂設定至維護」。</value></data>
+  <data name="Error.7510.Message" xml:space="preserve"><value>電池電壓低（機器人）</value></data>
+  <data name="Error.7510.Cause" xml:space="preserve"><value>電池即將耗盡。</value></data>
+  <data name="Error.7510.Measures" xml:space="preserve"><value>請更換電池。有關更換程序的詳細資訊，請參閱另冊「使用手冊／機器手臂設定至維護」。</value></data>
+  <data name="Error.7531.Message" xml:space="preserve"><value>潤滑脂補充時期
+（軸號：1。）</value></data>
+  <data name="Error.7532.Message" xml:space="preserve"><value>潤滑脂補充時期
+（軸號：2。）</value></data>
+  <data name="Error.7533.Message" xml:space="preserve"><value>潤滑脂補充時期
+（軸號：3。）</value></data>
+  <data name="Error.7534.Message" xml:space="preserve"><value>潤滑脂補充時期
+（軸號：4。）</value></data>
+  <data name="Error.7535.Message" xml:space="preserve"><value>潤滑脂補充時期
+（軸號：5。）</value></data>
+  <data name="Error.7536.Message" xml:space="preserve"><value>潤滑脂補充時期
+（軸號：6。）</value></data>
+  
+  <data name="Error.7531.Cause" xml:space="preserve"><value>潤滑脂似乎已達使用壽命。</value></data>
+  <data name="Error.7532.Cause" xml:space="preserve"><value>潤滑脂似乎已達使用壽命。</value></data>
+  <data name="Error.7533.Cause" xml:space="preserve"><value>潤滑脂似乎已達使用壽命。</value></data>
+  <data name="Error.7534.Cause" xml:space="preserve"><value>潤滑脂似乎已達使用壽命。</value></data>
+  <data name="Error.7535.Cause" xml:space="preserve"><value>潤滑脂似乎已達使用壽命。</value></data>
+  <data name="Error.7536.Cause" xml:space="preserve"><value>潤滑脂似乎已達使用壽命。</value></data>
+  
+  <data name="Error.7531.Measures" xml:space="preserve"><value>補充潤滑脂。</value></data>
+  <data name="Error.7532.Measures" xml:space="preserve"><value>補充潤滑脂。</value></data>
+  <data name="Error.7533.Measures" xml:space="preserve"><value>補充潤滑脂。</value></data>
+  <data name="Error.7534.Measures" xml:space="preserve"><value>補充潤滑脂。</value></data>
+  <data name="Error.7535.Measures" xml:space="preserve"><value>補充潤滑脂。</value></data>
+  <data name="Error.7536.Measures" xml:space="preserve"><value>補充潤滑脂。</value></data>
+  
+  <data name="Error.7541.Message" xml:space="preserve"><value>皮帶更換時期
+（軸號：1。）</value></data>
+  <data name="Error.7542.Message" xml:space="preserve"><value>皮帶更換時期
+（軸號：2。）</value></data>
+  <data name="Error.7543.Message" xml:space="preserve"><value>皮帶更換時期
+（軸號：3。）</value></data>
+  <data name="Error.7544.Message" xml:space="preserve"><value>皮帶更換時期
+（軸號：4。）</value></data>
+  <data name="Error.7545.Message" xml:space="preserve"><value>皮帶更換時期
+（軸號：5。）</value></data>
+  <data name="Error.7546.Message" xml:space="preserve"><value>皮帶更換時期
+（軸號：6。）</value></data>
+  
+  <data name="Error.7541.Cause" xml:space="preserve"><value>皮帶似乎已達使用壽命。</value></data>
+  <data name="Error.7542.Cause" xml:space="preserve"><value>皮帶似乎已達使用壽命。</value></data>
+  <data name="Error.7543.Cause" xml:space="preserve"><value>皮帶似乎已達使用壽命。</value></data>
+  <data name="Error.7544.Cause" xml:space="preserve"><value>皮帶似乎已達使用壽命。</value></data>
+  <data name="Error.7545.Cause" xml:space="preserve"><value>皮帶似乎已達使用壽命。</value></data>
+  <data name="Error.7546.Cause" xml:space="preserve"><value>皮帶似乎已達使用壽命。</value></data>
+  
+  <data name="Error.7541.Measures" xml:space="preserve"><value>檢查並更換皮帶。</value></data>
+  <data name="Error.7542.Measures" xml:space="preserve"><value>檢查並更換皮帶。</value></data>
+  <data name="Error.7543.Measures" xml:space="preserve"><value>檢查並更換皮帶。</value></data>
+  <data name="Error.7544.Measures" xml:space="preserve"><value>檢查並更換皮帶。</value></data>
+  <data name="Error.7545.Measures" xml:space="preserve"><value>檢查並更換皮帶。</value></data>
+  <data name="Error.7546.Measures" xml:space="preserve"><value>檢查並更換皮帶。</value></data>
+  
+  <data name="Error.7600.Message" xml:space="preserve"><value>附加軸的機構編號不正確。</value></data>
+  <data name="Error.7600.Cause" xml:space="preserve"><value>AXMENO（使用的機構編號）參數值不正確。</value></data>
+  <data name="Error.7600.Measures" xml:space="preserve"><value>在機械附加軸上，將「0」變更為小於 AXUNUM（使用的機構數）設定值的數值。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7601.Message" xml:space="preserve"><value>附加軸的軸號不正確。</value></data>
+  <data name="Error.7601.Cause" xml:space="preserve"><value>AXJNO（設定軸號）的值不正確。</value></data>
+  <data name="Error.7601.Measures" xml:space="preserve"><value>將此參數的值變更為 1 至 3。將此參數的值設為從 1 開始的順序。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7602.Message" xml:space="preserve"><value>附加軸的軸號重複。</value></data>
+  <data name="Error.7602.Cause" xml:space="preserve"><value>AXJNO（設定軸號）參數中有兩個以上的元素設為相同的值。</value></data>
+  <data name="Error.7602.Measures" xml:space="preserve"><value>將此參數 AXMENO 中設為相同值的元素編號之值變更為彼此不同的值。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7603.Message" xml:space="preserve"><value>附加軸的單位不正確。</value></data>
+  <data name="Error.7603.Cause" xml:space="preserve"><value>AXUNT（軸單位）參數值不正確。</value></data>
+  <data name="Error.7603.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為「0」或「1」。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7604.Message" xml:space="preserve"><value>附加軸的加速時間不正確。</value></data>
+  <data name="Error.7604.Cause" xml:space="preserve"><value>AXACC（加速時間）參數值不正確。</value></data>
+  <data name="Error.7604.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正實數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7605.Message" xml:space="preserve"><value>附加軸的減速時間不正確。</value></data>
+  <data name="Error.7605.Cause" xml:space="preserve"><value>AXDEC（減速時間）參數值不正確。</value></data>
+  <data name="Error.7605.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正實數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7606.Message" xml:space="preserve"><value>附加軸的齒輪比分子不正確。</value></data>
+  <data name="Error.7606.Cause" xml:space="preserve"><value>AXGRTN（總速比分子）參數值不正確。</value></data>
+  <data name="Error.7606.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正整數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7607.Message" xml:space="preserve"><value>附加軸的齒輪比分母不正確。</value></data>
+  <data name="Error.7607.Cause" xml:space="preserve"><value>AXGRTD（總速比分母）參數值不正確。</value></data>
+  <data name="Error.7607.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正整數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7609.Message" xml:space="preserve"><value>附加軸的馬達額定轉速不正確。</value></data>
+  <data name="Error.7609.Cause" xml:space="preserve"><value>AXMREV（額定轉速）參數值不正確。</value></data>
+  <data name="Error.7609.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正整數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7610.Message" xml:space="preserve"><value>附加軸的馬達最高轉速不正確。</value></data>
+  <data name="Error.7610.Cause" xml:space="preserve"><value>AXJMX（最高轉速）參數值不正確。</value></data>
+  <data name="Error.7610.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正整數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7611.Message" xml:space="preserve"><value>附加軸的編碼器脈波不正確。</value></data>
+  <data name="Error.7611.Cause" xml:space="preserve"><value>AXENCR（編碼器解析度）參數值不正確。</value></data>
+  <data name="Error.7611.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為正整數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7612.Message" xml:space="preserve"><value>附加軸的 JOG 平滑化時間常數不正確。</value></data>
+  <data name="Error.7612.Cause" xml:space="preserve"><value>AXJOGTS（JOG 平滑化時間常數）參數值不正確。</value></data>
+  <data name="Error.7612.Measures" xml:space="preserve"><value>將此參數所有元素的值變更為 0 或正實數。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7613.Message" xml:space="preserve"><value>請將電源關閉再重新開啟一次。</value></data>
+  <data name="Error.7613.Cause" xml:space="preserve"><value>必須將電源關閉一次。</value></data>
+  <data name="Error.7613.Measures" xml:space="preserve"><value>請關閉控制器電源，然後重新開啟。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7650.Message" xml:space="preserve"><value>力感測器數量設定不正確。</value></data>
+  <data name="Error.7650.Cause" xml:space="preserve"><value>一台機器人只能使用一個力感測器。</value></data>
+  <data name="Error.7650.Measures" xml:space="preserve"><value>檢查參數（AXJNO、AXMENO）設定，確認是否設定了多個力感測器。</value></data>
+  <data name="Error.7651.Message" xml:space="preserve"><value>力感測 I/F 模組初始化錯誤</value></data>
+  <data name="Error.7651.Cause" xml:space="preserve"><value>未辨識到力感測 I/F 模組，因此無法順利完成初始化。</value></data>
+  <data name="Error.7651.Measures" xml:space="preserve"><value>檢查力感測 I/F 模組的配線及電源是否開啟。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7652.Message" xml:space="preserve"><value>力感測 I/F 模組版本不正確</value></data>
+  <data name="Error.7652.Cause" xml:space="preserve"><value>不支援此力感測 I/F 模組的版本。</value></data>
+  <data name="Error.7652.Measures" xml:space="preserve"><value>請聯絡製造商。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7661.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：1）</value></data>
+  <data name="Error.7662.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：2）</value></data>
+  <data name="Error.7663.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：3）</value></data>
+  <data name="Error.7664.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：4）</value></data>
+  <data name="Error.7665.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：5）</value></data>
+  <data name="Error.7666.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：6）</value></data>
+  <data name="Error.7667.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：7）</value></data>
+  <data name="Error.7668.Message" xml:space="preserve"><value>力感測器資料超出容許值。
+（感測器軸：8）</value></data>
+  
+  <data name="Error.7661.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7662.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7663.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7664.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7665.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7666.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7667.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  <data name="Error.7668.Cause" xml:space="preserve"><value>作用於力感測器的力超出設定的容許值。</value></data>
+  
+  <data name="Error.7661.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7662.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7663.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7664.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7665.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7666.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7667.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  <data name="Error.7668.Measures" xml:space="preserve"><value>檢查是否有過大的力作用於力感測器。檢查參數 FSLMTMX 是否已設定適當的值。有關錯誤復原方法的詳細資訊，請參閱另冊「使用手冊／力感測功能」中的「力感測器容許值」章節。</value></data>
+  
+  <data name="Error.7700.Message" xml:space="preserve"><value>CC-Link 卡不正確（錯誤代碼）。</value></data>
+  <data name="Error.7700.Cause" xml:space="preserve"><value>CC-Link 卡不正確。</value></data>
+  <data name="Error.7700.Measures" xml:space="preserve"><value>請更換 CC-Link 卡。如果再次發生，請聯絡經銷商。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7710.Message" xml:space="preserve"><value>無法設定 CC-Link 主站。</value></data>
+  <data name="Error.7710.Cause" xml:space="preserve"><value>旋轉開關已設定為主站。</value></data>
+  <data name="Error.7710.Measures" xml:space="preserve"><value>將旋轉開關設為 0 以外的值。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7720.Message" xml:space="preserve"><value>已安裝兩張 CC-Link 介面卡。</value></data>
+  <data name="Error.7720.Cause" xml:space="preserve"><value>在插槽 2 安裝一張卡。</value></data>
+  <data name="Error.7720.Measures" xml:space="preserve"><value>不允許安裝兩張卡。只能安裝一張卡。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7730.Message" xml:space="preserve"><value>CC-Link 資料連結錯誤（本地站連線錯誤）</value></data>
+  <data name="Error.7730.Cause" xml:space="preserve"><value>線路發生錯誤或主站的參數設定無效。</value></data>
+  <data name="Error.7730.Measures" xml:space="preserve"><value>檢查線路與參數。</value></data>
+  <data name="Error.7750.Message" xml:space="preserve"><value>（CC-Link）纜線未連接或參數不相符。</value></data>
+  <data name="Error.7750.Cause" xml:space="preserve"><value>纜線未連接或參數不相符。</value></data>
+  <data name="Error.7750.Measures" xml:space="preserve"><value>重設電源並重新啟動。</value></data>
+  <data name="Error.7760.Message" xml:space="preserve"><value>CC-Link 初始化錯誤</value></data>
+  <data name="Error.7760.Cause" xml:space="preserve"><value>主站的參數不相符。</value></data>
+  <data name="Error.7760.Measures" xml:space="preserve"><value>修正參數，然後重新啟動。
+除非另有說明，請關閉電源後再開啟。</value></data>
+  <data name="Error.7780.Message" xml:space="preserve"><value>CC-Link 暫存器編號超出範圍。</value></data>
+  <data name="Error.7780.Cause" xml:space="preserve"><value>輸入的暫存器編號超出允許範圍。</value></data>
+  <data name="Error.7780.Measures" xml:space="preserve"><value>輸入正確的值。</value></data>
+  <data name="Error.7781.Message" xml:space="preserve"><value>指定了 CC-Link 的訊號編號。</value></data>
+  <data name="Error.7781.Cause" xml:space="preserve"><value>指定了 CC-Link 的訊號編號。</value></data>
+  <data name="Error.7781.Measures" xml:space="preserve"><value>安裝 CC-Link 介面卡。</value></data>
+  <data name="Error.7810.Message" xml:space="preserve"><value>MONPORT/SLMPPORT 參數錯誤</value></data>
+  <data name="Error.7810.Cause" xml:space="preserve"><value>MONPORT(1/2) 的元素與 SLMPPORT 重複。</value></data>
+  <data name="Error.7810.Measures" xml:space="preserve"><value>請設定為不與其他連接埠號碼重複。</value></data>
+  <data name="Error.7820.Message" xml:space="preserve"><value>Mxt Scommand 逾時</value></data>
+  <data name="Error.7820.Cause" xml:space="preserve"><value>已超過 MXTTOUT 參數設定的時間。</value></data>
+  <data name="Error.7820.Measures" xml:space="preserve"><value>增大 MXTTOUT 參數值。</value></data>
+  <data name="Error.7830.Message" xml:space="preserve"><value>未安裝 Ethernet 卡，或命令已停用</value></data>
+  <data name="Error.7830.Cause" xml:space="preserve"><value>未安裝 Ethernet 卡，或命令已停用。</value></data>
+  <data name="Error.7830.Measures" xml:space="preserve"><value>安裝 Ethernet 介面卡。</value></data>
+  <data name="Error.7840.Message" xml:space="preserve"><value>Mxt 命令接收資料不正確</value></data>
+  <data name="Error.7840.Cause" xml:space="preserve"><value>命令引數與資料類型不相符。</value></data>
+  <data name="Error.7840.Measures" xml:space="preserve"><value>檢查正在傳送的命令與資料。</value></data>
+  <data name="Error.7860.Message" xml:space="preserve"><value>SLMP 錯誤</value></data>
+  <data name="Error.7860.Cause" xml:space="preserve"><value>發生與 SLMP 相關的錯誤。</value></data>
+  <data name="Error.7860.Measures" xml:space="preserve"><value>請依錯誤的詳細編號確認其內容。</value></data>
+  <data name="Error.7861.Message" xml:space="preserve"><value>1. SLMP 參數錯誤
+2. SLMP SLMPPORT 參數錯誤
+3. SLMP SLMPPORT 參數錯誤</value></data>
+  <data name="Error.7861.Cause" xml:space="preserve"><value>1. SLMP 參數錯誤：參數不正確。
+2. SLMP SLMPPORT 參數錯誤：與 NETPORT 的伺服器連接埠號碼重複。
+3. SLMP SLMPPORT 參數錯誤：與 NETPORT(1) 或 MONPORT(1/2) 的元素重複。</value></data>
+  <data name="Error.7861.Measures" xml:space="preserve"><value>1. SLMP 參數錯誤：修正參數。
+2. SLMP SLMPPORT 參數錯誤：請設定為不與其他連接埠號碼重複。
+3. SLMP SLMPPORT 參數錯誤：請設定為不與其他連接埠號碼重複。</value></data>
+</root>

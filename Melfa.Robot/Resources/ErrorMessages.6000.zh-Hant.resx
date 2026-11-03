@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.6020.Cause" xml:space="preserve">
+    <value>尚未取得操作權。</value>
+  </data>
+  <data name="Error.6020.Measures" xml:space="preserve">
+    <value>取得操作權。</value>
+  </data>
+  <data name="Error.6020.Message" xml:space="preserve">
+    <value>沒有操作權</value>
+  </data>
+  <data name="Error.6010.Message" xml:space="preserve"><value>無效的命令</value></data>
+  <data name="Error.6010.Cause" xml:space="preserve"><value>可能是在透過資料連結開啟通訊線路之前傳送了資料，或因控制器與支援軟體的版本不一致而傳送了未登錄的通訊命令。</value></data>
+  <data name="Error.6010.Measures" xml:space="preserve"><value>在通訊線路開啟後再傳送，或使版本一致。</value></data>
+  <data name="Error.6011.Message" xml:space="preserve"><value>無法連接至 CR800</value></data>
+  <data name="Error.6011.Cause" xml:space="preserve"><value>無法連接至 CR800。</value></data>
+  <data name="Error.6011.Measures" xml:space="preserve"><value>請連接至 CPU 單元。</value></data>
+  <data name="Error.6030.Message" xml:space="preserve"><value>無法執行編輯操作</value></data>
+  <data name="Error.6030.Cause" xml:space="preserve"><value>尚未取得編輯操作權。</value></data>
+  <data name="Error.6030.Measures" xml:space="preserve"><value>取得編輯操作權。</value></data>
+  <data name="Error.6040.Message" xml:space="preserve"><value>系統錯誤（裝置編號無效）</value></data>
+  <data name="Error.6040.Cause" xml:space="preserve"><value>設定了未登錄的裝置編號。</value></data>
+  <data name="Error.6040.Measures" xml:space="preserve"><value>設定有效的裝置。</value></data>
+  <data name="Error.6050.Message" xml:space="preserve"><value>無法開啟檔案</value></data>
+  <data name="Error.6050.Cause" xml:space="preserve"><value>無法開啟區塊檔案。</value></data>
+  <data name="Error.6050.Measures" xml:space="preserve"><value>檢查檔案並指定正確的檔案。</value></data>
+  <data name="Error.6060.Message" xml:space="preserve"><value>模式不是 TEACH</value></data>
+  <data name="Error.6060.Cause" xml:space="preserve"><value>請在示教模式下寫入參數。</value></data>
+  <data name="Error.6060.Measures" xml:space="preserve"><value>切換至示教模式後再執行。</value></data>
+  <data name="Error.6070.Message" xml:space="preserve"><value>無法設定時間</value></data>
+  <data name="Error.6070.Cause" xml:space="preserve"><value>只能在程式停止且伺服為 OFF 時設定時間。</value></data>
+  <data name="Error.6070.Measures" xml:space="preserve"><value>停止程式並將伺服設為 OFF，然後設定時間。</value></data>
+  <data name="Error.6080.Message" xml:space="preserve"><value>通訊訊息過長</value></data>
+  <data name="Error.6080.Cause" xml:space="preserve"><value>通訊文字的字元數超過允許的上限。</value></data>
+  <data name="Error.6080.Measures" xml:space="preserve"><value>檢查參數等各項設定中註解的字元數。</value></data>
+  <data name="Error.6090.Message" xml:space="preserve"><value>無法重啟機器人電源</value></data>
+  <data name="Error.6090.Cause" xml:space="preserve"><value>無法重啟機器人電源。</value></data>
+  <data name="Error.6090.Measures" xml:space="preserve"><value>無法重啟機器人電源。</value></data>
+  <data name="Error.6500.Message" xml:space="preserve"><value>COM 線路未開啟</value></data>
+  <data name="Error.6500.Cause" xml:space="preserve"><value>程式未執行 Open。</value></data>
+  <data name="Error.6500.Measures" xml:space="preserve"><value>執行 Open 後再傳送 PRN。</value></data>
+  <data name="Error.6530.Message" xml:space="preserve"><value>COMDEV 參數無效</value></data>
+  <data name="Error.6530.Cause" xml:space="preserve"><value>參數（COMDEV）無效。</value></data>
+  <data name="Error.6530.Measures" xml:space="preserve"><value>修正 COMDEV 參數。
+除非另有說明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.6600.Message" xml:space="preserve"><value>信號編號超出範圍。</value></data>
+  <data name="Error.6600.Cause" xml:space="preserve"><value>指定的信號編號尚未定義。</value></data>
+  <data name="Error.6600.Measures" xml:space="preserve"><value>將信號編號改為正確的編號。</value></data>
+  <data name="Error.6610.Message" xml:space="preserve"><value>無法輸出（手爪輸入）</value></data>
+  <data name="Error.6610.Cause" xml:space="preserve"><value>無法寫入手爪輸入信號。</value></data>
+  <data name="Error.6610.Measures" xml:space="preserve"><value>使用正確的輸出信號。</value></data>
+  <data name="Error.6620.Message" xml:space="preserve"><value>無法寫入（特殊輸入）</value></data>
+  <data name="Error.6620.Cause" xml:space="preserve"><value>無法將輸入信號寫入機器人專用區域。</value></data>
+  <data name="Error.6620.Measures" xml:space="preserve"><value>使用實際信號。</value></data>
+  <data name="Error.6630.Message" xml:space="preserve"><value>無法寫入輸入信號</value></data>
+  <data name="Error.6630.Cause" xml:space="preserve"><value>目前為實際信號輸入模式。</value></data>
+  <data name="Error.6630.Measures" xml:space="preserve"><value>設定模擬輸入信號。</value></data>
+  <data name="Error.6640.Message" xml:space="preserve"><value>1. 參數無效（特殊信號）
+2. 專用信號參數 SFMODE 設定無效</value></data>
+  <data name="Error.6640.Cause" xml:space="preserve"><value>1. 參數無效（特殊信號）：參數設定無效。
+2. 專用信號參數 SFMODE 設定無效：專用信號參數 SFMODE（安全模式輸出）的設定無效。</value></data>
+  <data name="Error.6640.Measures" xml:space="preserve"><value>1. 參數無效（特殊信號）：修正變更過的參數。
+除非另有說明，請關閉電源後重新開啟。
+2. 專用信號參數 SFMODE 設定無效：專用輸出 SFMODE 的設定有誤（輸出信號的輸出位元寬度少於 3 位元）。請修正參數設定。
+除非另有說明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.6641.Message" xml:space="preserve"><value>重複設定（特殊輸入）</value></data>
+  <data name="Error.6641.Cause" xml:space="preserve"><value>參數設定無效。</value></data>
+  <data name="Error.6641.Measures" xml:space="preserve"><value>修正您變更過的專用輸入信號參數。</value></data>
+  <data name="Error.6642.Message" xml:space="preserve"><value>STOP 固定為信號編號 0</value></data>
+  <data name="Error.6642.Cause" xml:space="preserve"><value>參數設定無效。</value></data>
+  <data name="Error.6642.Measures" xml:space="preserve"><value>將參數 STOP（輸入）設為 0。
+除非另有說明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.6643.Message" xml:space="preserve"><value>參數無效（特殊信號）</value></data>
+  <data name="Error.6643.Cause" xml:space="preserve"><value>參數設定無效。</value></data>
+  <data name="Error.6643.Measures" xml:space="preserve"><value>將結束編號設為大於起始編號。</value></data>
+  <data name="Error.6650.Message" xml:space="preserve"><value>重複設定（特殊輸出）</value></data>
+  <data name="Error.6650.Cause" xml:space="preserve"><value>參數設定無效。</value></data>
+  <data name="Error.6650.Measures" xml:space="preserve"><value>修正參數。
+除非另有說明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.6651.Message" xml:space="preserve"><value>重複設定（HANDTYPE）</value></data>
+  <data name="Error.6651.Cause" xml:space="preserve"><value>參數設定無效。</value></data>
+  <data name="Error.6651.Measures" xml:space="preserve"><value>修正參數。
+除非另有說明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.6660.Message" xml:space="preserve"><value>無法輸出（特殊輸出）</value></data>
+  <data name="Error.6660.Cause" xml:space="preserve"><value>程式設定無效。</value></data>
+  <data name="Error.6660.Measures" xml:space="preserve"><value>修正程式。</value></data>
+  <data name="Error.6670.Message" xml:space="preserve"><value>OUT 重設模式無效</value></data>
+  <data name="Error.6670.Cause" xml:space="preserve"><value>參數未以每 8 個字元為一組來定義。</value></data>
+  <data name="Error.6670.Measures" xml:space="preserve"><value>修正參數。</value></data>
+  <data name="Error.6800.Message" xml:space="preserve"><value>「取消模擬輸入模式，關閉電源」</value></data>
+  <data name="Error.6800.Cause" xml:space="preserve"><value>取消模擬輸入後，必須重新開啟電源，以防止外部輸入信號造成機器人誤動作。</value></data>
+  <data name="Error.6800.Measures" xml:space="preserve"><value>將電源關閉後重新開啟一次，即切換至外部輸入信號。
+除非另有說明，請關閉電源後重新開啟。</value></data>
+  <data name="Error.6900.Message" xml:space="preserve"><value>模擬輸入信號模式</value></data>
+  <data name="Error.6900.Cause" xml:space="preserve"><value>由參數設定。</value></data>
+  <data name="Error.6900.Measures" xml:space="preserve"><value>若要設定實際信號，請重設參數後重新開啟電源。</value></data>
+</root>

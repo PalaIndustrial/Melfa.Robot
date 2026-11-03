@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.6010.Message" xml:space="preserve">
+    <value>Illegal command</value>
+  </data>
+  <data name="Error.6010.Cause" xml:space="preserve">
+    <value>This may have occurred because data was sent before the communication line was opened via a data link, or an unregistered communication command was sent due to the mismatch between the versions of the controller and support software.</value>
+  </data>
+  <data name="Error.6010.Measures" xml:space="preserve">
+    <value>Send after the communication line is opened. Or, match the versions.</value>
+  </data>
+  <data name="Error.6010.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6011.Message" xml:space="preserve">
+    <value>Cannot connect to CR800</value>
+  </data>
+  <data name="Error.6011.Cause" xml:space="preserve">
+    <value>Cannot connect to CR800</value>
+  </data>
+  <data name="Error.6011.Measures" xml:space="preserve">
+    <value>Please connect to CPU unit</value>
+  </data>
+  <data name="Error.6011.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6020.Message" xml:space="preserve">
+    <value>The operation is disabled</value>
+  </data>
+  <data name="Error.6020.Cause" xml:space="preserve">
+    <value>The operation right have not been acquired.</value>
+  </data>
+  <data name="Error.6020.Measures" xml:space="preserve">
+    <value>Acquire the operation rights.</value>
+  </data>
+  <data name="Error.6020.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6030.Message" xml:space="preserve">
+    <value>The editing operation is disable</value>
+  </data>
+  <data name="Error.6030.Cause" xml:space="preserve">
+    <value>The editing operation rights have not been acquired.</value>
+  </data>
+  <data name="Error.6030.Measures" xml:space="preserve">
+    <value>Acquire the editing operation rights.</value>
+  </data>
+  <data name="Error.6030.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6040.Message" xml:space="preserve">
+    <value>System error (illegal device No)</value>
+  </data>
+  <data name="Error.6040.Cause" xml:space="preserve">
+    <value>A non-registered device No. was set.</value>
+  </data>
+  <data name="Error.6040.Measures" xml:space="preserve">
+    <value>Set a valid device.</value>
+  </data>
+  <data name="Error.6040.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6050.Message" xml:space="preserve">
+    <value>The file cannot be opened</value>
+  </data>
+  <data name="Error.6050.Cause" xml:space="preserve">
+    <value>The block file cannot be opened.</value>
+  </data>
+  <data name="Error.6050.Measures" xml:space="preserve">
+    <value>Check the file, and designate the correct file.</value>
+  </data>
+  <data name="Error.6050.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6060.Message" xml:space="preserve">
+    <value>The mode is not TEACH</value>
+  </data>
+  <data name="Error.6060.Cause" xml:space="preserve">
+    <value>Carry out parameter writing in the teach mode.</value>
+  </data>
+  <data name="Error.6060.Measures" xml:space="preserve">
+    <value>Change to the teaching mode, and then execute.</value>
+  </data>
+  <data name="Error.6060.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6070.Message" xml:space="preserve">
+    <value>The time cannot be set</value>
+  </data>
+  <data name="Error.6070.Cause" xml:space="preserve">
+    <value>The time setting can only be executed when the program is stopped and the servo is OFF.</value>
+  </data>
+  <data name="Error.6070.Measures" xml:space="preserve">
+    <value>Stop the program and turn the servo OFF, and then set the time.</value>
+  </data>
+  <data name="Error.6070.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6080.Message" xml:space="preserve">
+    <value>Com mesg is too long</value>
+  </data>
+  <data name="Error.6080.Cause" xml:space="preserve">
+    <value>The character string of a communication text exceeded the maximum number allowed.</value>
+  </data>
+  <data name="Error.6080.Measures" xml:space="preserve">
+    <value>Verify the number of characters in a comment in various settings such as parameters.</value>
+  </data>
+  <data name="Error.6080.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6090.Message" xml:space="preserve">
+    <value>Can not power reset of robot</value>
+  </data>
+  <data name="Error.6090.Cause" xml:space="preserve">
+    <value>Can not power reset of robot</value>
+  </data>
+  <data name="Error.6090.Measures" xml:space="preserve">
+    <value>Can not power reset of robot</value>
+  </data>
+  <data name="Error.6090.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6500.Message" xml:space="preserve">
+    <value>Not opened COM line</value>
+  </data>
+  <data name="Error.6500.Cause" xml:space="preserve">
+    <value>Open was not executed by the program.</value>
+  </data>
+  <data name="Error.6500.Measures" xml:space="preserve">
+    <value>Execute Open, and then send PRN.</value>
+  </data>
+  <data name="Error.6500.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6530.Message" xml:space="preserve">
+    <value>COMDEV parameter is illegal</value>
+  </data>
+  <data name="Error.6530.Cause" xml:space="preserve">
+    <value>Illegal parameter (COMDEV).</value>
+  </data>
+  <data name="Error.6530.Measures" xml:space="preserve">
+    <value>Correct COMDEV parameter.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.6530.Level" xml:space="preserve">
+    <value>High</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6600.Message" xml:space="preserve">
+    <value>Signal number is out of range.</value>
+  </data>
+  <data name="Error.6600.Cause" xml:space="preserve">
+    <value>The designated signal No. has not been defined.</value>
+  </data>
+  <data name="Error.6600.Measures" xml:space="preserve">
+    <value>Change the signal No. to the correct No.</value>
+  </data>
+  <data name="Error.6600.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6610.Message" xml:space="preserve">
+    <value>Cannot output (hand input)</value>
+  </data>
+  <data name="Error.6610.Cause" xml:space="preserve">
+    <value>The hand input signal cannot be written.</value>
+  </data>
+  <data name="Error.6610.Measures" xml:space="preserve">
+    <value>Use the correct output signal.</value>
+  </data>
+  <data name="Error.6610.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6620.Message" xml:space="preserve">
+    <value>Cannot write (special Input)</value>
+  </data>
+  <data name="Error.6620.Cause" xml:space="preserve">
+    <value>The input signal cannot be written into the robot dedicated area.</value>
+  </data>
+  <data name="Error.6620.Measures" xml:space="preserve">
+    <value>Use an actual signal.</value>
+  </data>
+  <data name="Error.6620.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6630.Message" xml:space="preserve">
+    <value>Input signal cannot be written</value>
+  </data>
+  <data name="Error.6630.Cause" xml:space="preserve">
+    <value>This is the actual signal input mode.</value>
+  </data>
+  <data name="Error.6630.Measures" xml:space="preserve">
+    <value>Set a pseudo-input signal.</value>
+  </data>
+  <data name="Error.6630.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6640.Message" xml:space="preserve">
+    <value>1. Illegal param (special signal)
+2. Illegal setting of the dedicated signal parameter SFMODE</value>
+  </data>
+  <data name="Error.6640.Cause" xml:space="preserve">
+    <value>1. Illegal param (special signal): The parameter setting is illegal.
+2. Illegal setting of the dedicated signal parameter SFMODE: The setting of the dedicated signal parameter SFMODE (safety mode output) is illegal.</value>
+  </data>
+  <data name="Error.6640.Measures" xml:space="preserve">
+    <value>1. Illegal param (special signal): Correct the changed parameter.
+Power off and on, unless otherwise noted.
+2. Illegal setting of the dedicated signal parameter SFMODE: An error (output bit width of the output signal is less than 3 bits) exists in the dedicated output SFMODE setting. Correct the parameter setting.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.6640.Level" xml:space="preserve">
+    <value>High</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6641.Message" xml:space="preserve">
+    <value>Duplicate setting (special IN)</value>
+  </data>
+  <data name="Error.6641.Cause" xml:space="preserve">
+    <value>The parameter setting is illegal.</value>
+  </data>
+  <data name="Error.6641.Measures" xml:space="preserve">
+    <value>Correct the parameter of the dedicated input signal you changed.</value>
+  </data>
+  <data name="Error.6641.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6642.Message" xml:space="preserve">
+    <value>STOP is fixed signal No. 0</value>
+  </data>
+  <data name="Error.6642.Cause" xml:space="preserve">
+    <value>The parameter setting is illegal.</value>
+  </data>
+  <data name="Error.6642.Measures" xml:space="preserve">
+    <value>Set the parameter STOP(input) to 0.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.6642.Level" xml:space="preserve">
+    <value>High</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6643.Message" xml:space="preserve">
+    <value>Illegal parameter (special Sig.)</value>
+  </data>
+  <data name="Error.6643.Cause" xml:space="preserve">
+    <value>The parameter setting is illegal.</value>
+  </data>
+  <data name="Error.6643.Measures" xml:space="preserve">
+    <value>Make the ending number larger than the starting number.</value>
+  </data>
+  <data name="Error.6643.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6650.Message" xml:space="preserve">
+    <value>Duplicate setting (special OUT)</value>
+  </data>
+  <data name="Error.6650.Cause" xml:space="preserve">
+    <value>The parameter setting is illegal.</value>
+  </data>
+  <data name="Error.6650.Measures" xml:space="preserve">
+    <value>Correct the parameters.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.6650.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6651.Message" xml:space="preserve">
+    <value>Duplicate setting (HANDTYPE)</value>
+  </data>
+  <data name="Error.6651.Cause" xml:space="preserve">
+    <value>The parameter setting is illegal.</value>
+  </data>
+  <data name="Error.6651.Measures" xml:space="preserve">
+    <value>Correct the parameter.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.6651.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6660.Message" xml:space="preserve">
+    <value>Cannot output (SPECIAL OUT)</value>
+  </data>
+  <data name="Error.6660.Cause" xml:space="preserve">
+    <value>The program setting is illegal.</value>
+  </data>
+  <data name="Error.6660.Measures" xml:space="preserve">
+    <value>Correct the program.</value>
+  </data>
+  <data name="Error.6660.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6670.Message" xml:space="preserve">
+    <value>Illegal OUT reset pattern</value>
+  </data>
+  <data name="Error.6670.Cause" xml:space="preserve">
+    <value>The parameters are not defined in sets of 8 characters.</value>
+  </data>
+  <data name="Error.6670.Measures" xml:space="preserve">
+    <value>Correct the parameters.</value>
+  </data>
+  <data name="Error.6670.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6800.Message" xml:space="preserve">
+    <value>"Cancel pseudo-input mode, PW OFF"</value>
+  </data>
+  <data name="Error.6800.Cause" xml:space="preserve">
+    <value>If pseudo input was canceled, it is necessary to turn the power ON again in order to prevent the erroneous operation of the robot by external input signals.</value>
+  </data>
+  <data name="Error.6800.Measures" xml:space="preserve">
+    <value>Turn the power OFF and then ON once. It switches to an external input signal.
+Power off and on, unless otherwise noted.</value>
+  </data>
+  <data name="Error.6800.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.6900.Message" xml:space="preserve">
+    <value>Pseudo-input signal mode</value>
+  </data>
+  <data name="Error.6900.Cause" xml:space="preserve">
+    <value>Set with the parameters.</value>
+  </data>
+  <data name="Error.6900.Measures" xml:space="preserve">
+    <value>To set a real signal, reset the parameter and then turn the power ON again.</value>
+  </data>
+  <data name="Error.6900.Level" xml:space="preserve">
+    <value>Caution</value><comment>@DoNotTranslate</comment>
+  </data>
+</root>

@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.3100.Message" xml:space="preserve">
+    <value>1. Processor Call Stack over
+2. System ERROR (Call Stack)</value>
+  </data>
+  <data name="Error.3100.Cause" xml:space="preserve">
+    <value>1. Processor Call Stack over: Too many function calls or local variables.
+2. System ERROR (Call Stack): Processor Call Stack defect</value>
+  </data>
+  <data name="Error.3100.Measures" xml:space="preserve">
+    <value>1. Processor Call Stack over: Correct the program and re-execute.
+2. System ERROR (Call Stack): Possible problem with execution sequence of Function command.</value>
+  </data>
+  <data name="Error.3100.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3110.Message" xml:space="preserve">
+    <value>1. Arg. value range over
+2. The force sense control command argument lies outside the range.
+3. The force sense control status variable argument lies outside the range.
+4. The force sense control related argument lies outside the range.
+5. The Mo trigger No. lies outside the range.
+6. Def MoTrg command argument error
+7. Arg. value range over (MVA2)</value>
+  </data>
+  <data name="Error.3110.Cause" xml:space="preserve">
+    <value>1. Arg. value range over: Arg. value is outside range. For the PtoJ function, a position which the robot cannot reach or a singular point was set as the arg. value.
+2. The force sense control command argument lies outside the range.: A value outside the range was set for the force sense control command argument.
+3. The force sense control status variable argument lies outside the range.: A value outside the range was set for the force sense control status variable argument.
+4. The force sense control related argument lies outside the range.: A value outside the range was set for the force sense control related argument.
+5. The Mo trigger No. lies outside the range.: A value outside the range was set for the Mo trigger No.
+6. Def MoTrg command argument error: An unusable variable or different mechanical No. was set.
+7. Arg. value range over (MVA2): Argument value range is over (MVA2)</value>
+  </data>
+  <data name="Error.3110.Measures" xml:space="preserve">
+    <value>1. Arg. value range over: Please confirm the range of the argument and set a correct value
+2. The force sense control command argument lies outside the range.: Check the argument range and set a correct value.
+3. The force sense control status variable argument lies outside the range.: Check the argument range and set a correct value.
+4. The force sense control related argument lies outside the range.: Check the argument range and set a correct value.
+5. The Mo trigger No. lies outside the range.: Check the setting range and set a correct value.
+6. Def MoTrg command argument error: Set a usable variable or same mechanical No.
+7. Arg. value range over (MVA2): Check the argument range and reinput</value>
+  </data>
+  <data name="Error.3110.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3120.Message" xml:space="preserve">
+    <value>No. of arg. is over</value>
+  </data>
+  <data name="Error.3120.Cause" xml:space="preserve">
+    <value>No. of argument is over</value>
+  </data>
+  <data name="Error.3120.Measures" xml:space="preserve">
+    <value>Please confirm the range of the argument and set a correct value</value>
+  </data>
+  <data name="Error.3120.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3130.Message" xml:space="preserve">
+    <value>COM file is already opened</value>
+  </data>
+  <data name="Error.3130.Cause" xml:space="preserve">
+    <value>Opening of a file already opened was attempted.</value>
+  </data>
+  <data name="Error.3130.Measures" xml:space="preserve">
+    <value>Check the file No. and re-execute.</value>
+  </data>
+  <data name="Error.3130.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3140.Message" xml:space="preserve">
+    <value>Can't open COM file</value>
+  </data>
+  <data name="Error.3140.Cause" xml:space="preserve">
+    <value>The file cannot be opened.</value>
+  </data>
+  <data name="Error.3140.Measures" xml:space="preserve">
+    <value>Check the file No. and re-execute.</value>
+  </data>
+  <data name="Error.3140.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3141.Message" xml:space="preserve">
+    <value>The NVOpen command is not executed.</value>
+  </data>
+  <data name="Error.3141.Cause" xml:space="preserve">
+    <value>No NVOpen command was executed before execution of a command communicating with the vision sensor.</value>
+  </data>
+  <data name="Error.3141.Measures" xml:space="preserve">
+    <value>Revise the robot program to execute the NVOpen command.</value>
+  </data>
+  <data name="Error.3141.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3142.Message" xml:space="preserve">
+    <value>The communication line can not be opened.</value>
+  </data>
+  <data name="Error.3142.Cause" xml:space="preserve">
+    <value>The line for communication with the vision sensor can not be opened.</value>
+  </data>
+  <data name="Error.3142.Measures" xml:space="preserve">
+    <value>Check the communication cable or the communications parameters.</value>
+  </data>
+  <data name="Error.3142.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3150.Message" xml:space="preserve">
+    <value>Cannot Print (INPUT mode)</value>
+  </data>
+  <data name="Error.3150.Cause" xml:space="preserve">
+    <value>The file open mode is INPUT, so writing is not possible.</value>
+  </data>
+  <data name="Error.3150.Measures" xml:space="preserve">
+    <value>Check the file No. and open mode, and re-execute.</value>
+  </data>
+  <data name="Error.3150.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3170.Message" xml:space="preserve">
+    <value>Cannot Input (OUTPUT mode)</value>
+  </data>
+  <data name="Error.3170.Cause" xml:space="preserve">
+    <value>The file open mode is OUTPUT, so writing is not possible.</value>
+  </data>
+  <data name="Error.3170.Measures" xml:space="preserve">
+    <value>Check the file No. and open mode, and re-execute.</value>
+  </data>
+  <data name="Error.3170.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3180.Message" xml:space="preserve">
+    <value>System error (array range over)</value>
+  </data>
+  <data name="Error.3180.Cause" xml:space="preserve">
+    <value>System error (array range over)</value>
+  </data>
+  <data name="Error.3180.Measures" xml:space="preserve">
+    <value>If it comes back, contact your service provider</value>
+  </data>
+  <data name="Error.3180.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3200.Message" xml:space="preserve">
+    <value>This file is read only</value>
+  </data>
+  <data name="Error.3200.Cause" xml:space="preserve">
+    <value>The file cannot be read.</value>
+  </data>
+  <data name="Error.3200.Measures" xml:space="preserve">
+    <value>Check the contents of the file.</value>
+  </data>
+  <data name="Error.3200.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3210.Message" xml:space="preserve">
+    <value>This variable is write protected</value>
+  </data>
+  <data name="Error.3210.Cause" xml:space="preserve">
+    <value>Writing of this variable is prohibited.</value>
+  </data>
+  <data name="Error.3210.Measures" xml:space="preserve">
+    <value>Check the variable protection setting.</value>
+  </data>
+  <data name="Error.3210.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3220.Message" xml:space="preserve">
+    <value>Nesting over</value>
+  </data>
+  <data name="Error.3220.Cause" xml:space="preserve">
+    <value>A nest-over error occurred in If of the If instruction or For of the For instruction.</value>
+  </data>
+  <data name="Error.3220.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3220.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3230.Message" xml:space="preserve">
+    <value>For Next statements unmatch</value>
+  </data>
+  <data name="Error.3230.Cause" xml:space="preserve">
+    <value>The No. of For and Next statements do not match.</value>
+  </data>
+  <data name="Error.3230.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3230.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3240.Message" xml:space="preserve">
+    <value>Nesting over (For, While)</value>
+  </data>
+  <data name="Error.3240.Cause" xml:space="preserve">
+    <value>Nesting over (For, While)</value>
+  </data>
+  <data name="Error.3240.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3240.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3250.Message" xml:space="preserve">
+    <value>While WEnd statements unmatch</value>
+  </data>
+  <data name="Error.3250.Cause" xml:space="preserve">
+    <value>The No. of While and WEnd statements do not match.</value>
+  </data>
+  <data name="Error.3250.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3250.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3251.Message" xml:space="preserve">
+    <value>Number of jump destination exceeds 32</value>
+  </data>
+  <data name="Error.3251.Cause" xml:space="preserve">
+    <value>The number of branches defined exceeded 32.</value>
+  </data>
+  <data name="Error.3251.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3251.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3252.Message" xml:space="preserve">
+    <value>If EndIf statements unmatch</value>
+  </data>
+  <data name="Error.3252.Cause" xml:space="preserve">
+    <value>If EndIf statements unmatch.</value>
+  </data>
+  <data name="Error.3252.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3252.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3253.Message" xml:space="preserve">
+    <value>Nesting over (If, EndIf)</value>
+  </data>
+  <data name="Error.3253.Cause" xml:space="preserve">
+    <value>Nesting over (If, EndIf)</value>
+  </data>
+  <data name="Error.3253.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3253.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3254.Message" xml:space="preserve">
+    <value>Select - End Select statements unmatch</value>
+  </data>
+  <data name="Error.3254.Cause" xml:space="preserve">
+    <value>Select - End Select statements unmatch.</value>
+  </data>
+  <data name="Error.3254.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3254.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3255.Message" xml:space="preserve">
+    <value>If Else statements unmatch</value>
+  </data>
+  <data name="Error.3255.Cause" xml:space="preserve">
+    <value>If Else statements unmatch.</value>
+  </data>
+  <data name="Error.3255.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3255.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3256.Message" xml:space="preserve">
+    <value>1. Function definition error
+2. Function definitions exceeds max.
+3. Function statement is incorrect
+4. Function FEnd statemets unmatch
+5. Undefined function
+6. Function Main called
+7. Function Main does not exist
+8. Local var. in function was used</value>
+  </data>
+  <data name="Error.3256.Cause" xml:space="preserve">
+    <value>1. Function definition error: The error concerning the function definition occurred.
+2. Function definitions exceeds max.: The number of function definitions exceeds 256.
+3. Function statement is incorrect: Function statement position is incorrect.
+4. Function FEnd statemets unmatch: Function FEnd statemets unmatch.
+5. Undefined function: The called function or the assigned function is undefined.
+6. Function Main called: Function Main called.
+7. Function Main does not exist: Programs that there is no Function Main cannot be executed.
+8. Local var. in function was used: A local variable in the function procedure was used.</value>
+  </data>
+  <data name="Error.3256.Measures" xml:space="preserve">
+    <value>1. Function definition error: Please confirm the content by a detailed number of the error.
+2. Function definitions exceeds max.: Correct the program and re-execute.
+3. Function statement is incorrect: Correct the program and re-execute.
+4. Function FEnd statemets unmatch: Correct the program and re-execute.
+5. Undefined function: Please confirm the function procedure name.
+6. Function Main called: Function Main cannot be called.
+7. Function Main does not exist: Please add Function Main (parameterless) to the program.
+8. Local var. in function was used: Local variables in a function procedure cannot be used.</value>
+  </data>
+  <data name="Error.3256.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3257.Message" xml:space="preserve">
+    <value>1. Include declaration error
+2. Include declaration exceeds max.
+3. Include statement is incorrect</value>
+  </data>
+  <data name="Error.3257.Cause" xml:space="preserve">
+    <value>1. Include declaration error: The error concerning the include declaration occurred.
+2. Include declaration exceeds max.: The number of include declarations exceeds 64.
+3. Include statement is incorrect: Include statement position is incorrect.</value>
+  </data>
+  <data name="Error.3257.Measures" xml:space="preserve">
+    <value>1. Include declaration error: Please confirm the content by a detailed number of the error.
+2. Include declaration exceeds max.: Correct the program and re-execute.
+3. Include statement is incorrect: Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3257.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3258.Message" xml:space="preserve">
+    <value>1. Preprocessor error
+2. Preprocessor run line exceeds max.
+3. Preprocessor run error</value>
+  </data>
+  <data name="Error.3258.Cause" xml:space="preserve">
+    <value>1. Preprocessor error: The error concerning the preprocessor occurred.
+2. Preprocessor run line exceeds max.: Preprocessor execution line exceeds 1000 lines.
+3. Preprocessor run error: Commands that can not execute by the preprocessor are included.</value>
+  </data>
+  <data name="Error.3258.Measures" xml:space="preserve">
+    <value>1. Preprocessor error: Please confirm the content by a detailed number of the error.
+2. Preprocessor run line exceeds max.: Correct the program and re-execute.
+3. Preprocessor run error: Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3258.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3260.Message" xml:space="preserve">
+    <value>Cannot exec for all slots</value>
+  </data>
+  <data name="Error.3260.Cause" xml:space="preserve">
+    <value>Execution with all slots designated is not possible.</value>
+  </data>
+  <data name="Error.3260.Measures" xml:space="preserve">
+    <value>Designate an individual slot and try again.</value>
+  </data>
+  <data name="Error.3260.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3270.Message" xml:space="preserve">
+    <value>The command size is exceeded</value>
+  </data>
+  <data name="Error.3270.Cause" xml:space="preserve">
+    <value>The command size is exceeded.</value>
+  </data>
+  <data name="Error.3270.Measures" xml:space="preserve">
+    <value>Specify within single-byte 256 characters.</value>
+  </data>
+  <data name="Error.3270.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3280.Message" xml:space="preserve">
+    <value>Cannot execute without GetM</value>
+  </data>
+  <data name="Error.3280.Cause" xml:space="preserve">
+    <value>The command you attempted to execute cannot be executed without GetM. Or, a non-existing mechanical number was specified.</value>
+  </data>
+  <data name="Error.3280.Measures" xml:space="preserve">
+    <value>Execute it after executing the RelM and GetM commands in another task slot.</value>
+  </data>
+  <data name="Error.3280.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3281.Message" xml:space="preserve">
+    <value>Cannot execute during RUN</value>
+  </data>
+  <data name="Error.3281.Cause" xml:space="preserve">
+    <value>Cannot execute during operation.</value>
+  </data>
+  <data name="Error.3281.Measures" xml:space="preserve">
+    <value>Cannot execute during operation.</value>
+  </data>
+  <data name="Error.3281.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3282.Message" xml:space="preserve">
+    <value>"Can't RUN (not select, attribute)"</value>
+  </data>
+  <data name="Error.3282.Cause" xml:space="preserve">
+    <value>The program is not selected or the attribute is illegal.</value>
+  </data>
+  <data name="Error.3282.Measures" xml:space="preserve">
+    <value>Load the program into the specified task slot. Or, change the program attributes.</value>
+  </data>
+  <data name="Error.3282.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3285.Message" xml:space="preserve">
+    <value>Cannot execute (RUN or WAI)</value>
+  </data>
+  <data name="Error.3285.Cause" xml:space="preserve">
+    <value>can't execute in the state of stopping or executing.</value>
+  </data>
+  <data name="Error.3285.Measures" xml:space="preserve">
+    <value>Reset the program (cancel the abort status).</value>
+  </data>
+  <data name="Error.3285.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3286.Message" xml:space="preserve">
+    <value>Program is empty</value>
+  </data>
+  <data name="Error.3286.Cause" xml:space="preserve">
+    <value>Execution of an empty program was attempted.</value>
+  </data>
+  <data name="Error.3286.Measures" xml:space="preserve">
+    <value>Make the program or select the correct program.</value>
+  </data>
+  <data name="Error.3286.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3287.Message" xml:space="preserve">
+    <value>Cannot execute (ERROR ALWAYS)</value>
+  </data>
+  <data name="Error.3287.Cause" xml:space="preserve">
+    <value>This command cannot be used when the start conditions are ERROR and ALWAYS.</value>
+  </data>
+  <data name="Error.3287.Measures" xml:space="preserve">
+    <value>Correct the program.</value>
+  </data>
+  <data name="Error.3287.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3288.Message" xml:space="preserve">
+    <value>Cannot execute while editing</value>
+  </data>
+  <data name="Error.3288.Cause" xml:space="preserve">
+    <value>That program cannot be executed because it is being edited.</value>
+  </data>
+  <data name="Error.3288.Measures" xml:space="preserve">
+    <value>Finish editing the program first, and then start it.</value>
+  </data>
+  <data name="Error.3288.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3289.Message" xml:space="preserve">
+    <value>Program does not exist (SLT*)</value>
+  </data>
+  <data name="Error.3289.Cause" xml:space="preserve">
+    <value>The program designated in the slot table does not exist.</value>
+  </data>
+  <data name="Error.3289.Measures" xml:space="preserve">
+    <value>Correct the slot parameter.</value>
+  </data>
+  <data name="Error.3289.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3290.Message" xml:space="preserve">
+    <value>System slot cannot be executed</value>
+  </data>
+  <data name="Error.3290.Cause" xml:space="preserve">
+    <value>The system slot cannot be executed.</value>
+  </data>
+  <data name="Error.3290.Measures" xml:space="preserve">
+    <value>Check whether another slot (user slot) is being operated.</value>
+  </data>
+  <data name="Error.3290.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3300.Message" xml:space="preserve">
+    <value>User slot cannot be executed</value>
+  </data>
+  <data name="Error.3300.Cause" xml:space="preserve">
+    <value>A user slot cannot be executed.</value>
+  </data>
+  <data name="Error.3300.Measures" xml:space="preserve">
+    <value>Check whether the system slot is being operated.</value>
+  </data>
+  <data name="Error.3300.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3310.Message" xml:space="preserve">
+    <value>Cannot execute XRun (Runing)</value>
+  </data>
+  <data name="Error.3310.Cause" xml:space="preserve">
+    <value>XRun is not possible as the designated slot is operating.</value>
+  </data>
+  <data name="Error.3310.Measures" xml:space="preserve">
+    <value>Stop the specification slot, and execute.</value>
+  </data>
+  <data name="Error.3310.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3320.Message" xml:space="preserve">
+    <value>Cannnot execute XRun (empty)</value>
+  </data>
+  <data name="Error.3320.Cause" xml:space="preserve">
+    <value>XRun is not possible as the program has not been selected.</value>
+  </data>
+  <data name="Error.3320.Measures" xml:space="preserve">
+    <value>Specify program name to the argument or execute XLoad.</value>
+  </data>
+  <data name="Error.3320.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3330.Message" xml:space="preserve">
+    <value>Cannnot execute XStp (empty)</value>
+  </data>
+  <data name="Error.3330.Cause" xml:space="preserve">
+    <value>XStp is not possible as the program has not been selected.</value>
+  </data>
+  <data name="Error.3330.Measures" xml:space="preserve">
+    <value>correct the program, and execute.</value>
+  </data>
+  <data name="Error.3330.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3340.Message" xml:space="preserve">
+    <value>Cannnot execute XRst (empty)</value>
+  </data>
+  <data name="Error.3340.Cause" xml:space="preserve">
+    <value>XRst is not possible as the program has not been selected.</value>
+  </data>
+  <data name="Error.3340.Measures" xml:space="preserve">
+    <value>Resetting is possible in the state of waiting only.</value>
+  </data>
+  <data name="Error.3340.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3350.Message" xml:space="preserve">
+    <value>Cannnot execute XRst (Running)</value>
+  </data>
+  <data name="Error.3350.Cause" xml:space="preserve">
+    <value>Xrst is not possible as the program is executing.</value>
+  </data>
+  <data name="Error.3350.Measures" xml:space="preserve">
+    <value>Stop execution, and do it.</value>
+  </data>
+  <data name="Error.3350.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3360.Message" xml:space="preserve">
+    <value>Cannnot execute XLoad (not PSA)</value>
+  </data>
+  <data name="Error.3360.Cause" xml:space="preserve">
+    <value>XLoad cannot be executed when the program cannot be selected.</value>
+  </data>
+  <data name="Error.3360.Measures" xml:space="preserve">
+    <value>Execute XRst, and do it.</value>
+  </data>
+  <data name="Error.3360.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3361.Message" xml:space="preserve">
+    <value>Can not load the program (SLT*)</value>
+  </data>
+  <data name="Error.3361.Cause" xml:space="preserve">
+    <value>A non-existing program was specified in the slot parameter (SLTn).</value>
+  </data>
+  <data name="Error.3361.Measures" xml:space="preserve">
+    <value>A non-existing program was specified in the slot parameter (SLTn).</value>
+  </data>
+  <data name="Error.3361.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3370.Message" xml:space="preserve">
+    <value>Cannnot execute XClr (empty)</value>
+  </data>
+  <data name="Error.3370.Cause" xml:space="preserve">
+    <value>XClr is not possible as the program has not been selected.</value>
+  </data>
+  <data name="Error.3370.Measures" xml:space="preserve">
+    <value>XClr can only be executed to enable program selection.</value>
+  </data>
+  <data name="Error.3370.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3380.Message" xml:space="preserve">
+    <value>Cannnot execute XClr (not PSA)</value>
+  </data>
+  <data name="Error.3380.Cause" xml:space="preserve">
+    <value>Program selection is not enabled.</value>
+  </data>
+  <data name="Error.3380.Measures" xml:space="preserve">
+    <value>Execute XClr after resetting the program (canceling the abort status).</value>
+  </data>
+  <data name="Error.3380.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3390.Message" xml:space="preserve">
+    <value>Cannot use arc pallet</value>
+  </data>
+  <data name="Error.3390.Cause" xml:space="preserve">
+    <value>Cannot use arc pallet.</value>
+  </data>
+  <data name="Error.3390.Measures" xml:space="preserve">
+    <value>Change to another method.</value>
+  </data>
+  <data name="Error.3390.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3391.Message" xml:space="preserve">
+    <value>Cannot use MVA2</value>
+  </data>
+  <data name="Error.3391.Cause" xml:space="preserve">
+    <value>Cannot use MVA2</value>
+  </data>
+  <data name="Error.3391.Measures" xml:space="preserve">
+    <value>Change to another method</value>
+  </data>
+  <data name="Error.3391.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3400.Message" xml:space="preserve">
+    <value>System error (PROC stack over)</value>
+  </data>
+  <data name="Error.3400.Cause" xml:space="preserve">
+    <value>System error. (Processor stack overflow)</value>
+  </data>
+  <data name="Error.3400.Measures" xml:space="preserve">
+    <value>If it comes back, contact your service provider</value>
+  </data>
+  <data name="Error.3400.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3500.Message" xml:space="preserve">
+    <value>Illegal format input (Input)</value>
+  </data>
+  <data name="Error.3500.Cause" xml:space="preserve">
+    <value>The type of the variable specified by Input and the type of the received data do not match.</value>
+  </data>
+  <data name="Error.3500.Measures" xml:space="preserve">
+    <value>Check the format.</value>
+  </data>
+  <data name="Error.3500.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3501.Message" xml:space="preserve">
+    <value>Illegal Receive data (EBREAD)</value>
+  </data>
+  <data name="Error.3501.Cause" xml:space="preserve">
+    <value>Type is different (receive data and specified variable)</value>
+  </data>
+  <data name="Error.3501.Measures" xml:space="preserve">
+    <value>Please confirm specified tag data of the vision.</value>
+  </data>
+  <data name="Error.3501.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3600.Message" xml:space="preserve">
+    <value>Jump destination does not exist</value>
+  </data>
+  <data name="Error.3600.Cause" xml:space="preserve">
+    <value>No jump destination was found for the Def Act, On Com and On GoTo commands.</value>
+  </data>
+  <data name="Error.3600.Measures" xml:space="preserve">
+    <value>Check the jump destination.</value>
+  </data>
+  <data name="Error.3600.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3601.Message" xml:space="preserve">
+    <value>Jump destination is incorrect</value>
+  </data>
+  <data name="Error.3601.Cause" xml:space="preserve">
+    <value>Jumping into program control block is prohibited.</value>
+  </data>
+  <data name="Error.3601.Measures" xml:space="preserve">
+    <value>Correct the program and re-execute.</value>
+  </data>
+  <data name="Error.3601.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3700.Message" xml:space="preserve">
+    <value>Undefined variable</value>
+  </data>
+  <data name="Error.3700.Cause" xml:space="preserve">
+    <value>It was attempted to reference a variable that has not been initialized.</value>
+  </data>
+  <data name="Error.3700.Measures" xml:space="preserve">
+    <value>Define a variable, enter an initial value, and then use it.</value>
+  </data>
+  <data name="Error.3700.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3710.Message" xml:space="preserve">
+    <value>Nesting over (CallP)</value>
+  </data>
+  <data name="Error.3710.Cause" xml:space="preserve">
+    <value>Program Call is used more than the limitation.</value>
+  </data>
+  <data name="Error.3710.Measures" xml:space="preserve">
+    <value>Reduce the call count of CallP (nesting).</value>
+  </data>
+  <data name="Error.3710.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3720.Message" xml:space="preserve">
+    <value>RC NX statements unmatch</value>
+  </data>
+  <data name="Error.3720.Cause" xml:space="preserve">
+    <value>RC NX statements unmatch</value>
+  </data>
+  <data name="Error.3720.Measures" xml:space="preserve">
+    <value>Match the numbers of RC and NX.</value>
+  </data>
+  <data name="Error.3720.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3750.Message" xml:space="preserve">
+    <value>Illegal positions (Def Plt)</value>
+  </data>
+  <data name="Error.3750.Cause" xml:space="preserve">
+    <value>Multi rotation flag (FL2 J1/J4 axis) is different</value>
+  </data>
+  <data name="Error.3750.Measures" xml:space="preserve">
+    <value>Specify position to become the same multi rotation flag.</value>
+  </data>
+  <data name="Error.3750.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3760.Message" xml:space="preserve">
+    <value>Illegal positions (Def Plt)</value>
+  </data>
+  <data name="Error.3760.Cause" xml:space="preserve">
+    <value>J1 or J4 axis is greatly changed (Def Plt)</value>
+  </data>
+  <data name="Error.3760.Measures" xml:space="preserve">
+    <value>Specify positions to be not different greatly</value>
+  </data>
+  <data name="Error.3760.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3770.Message" xml:space="preserve">
+    <value>This is an undefined Mo trigger.</value>
+  </data>
+  <data name="Error.3770.Cause" xml:space="preserve">
+    <value>An attempt was made to use an undefined Mo trigger.</value>
+  </data>
+  <data name="Error.3770.Measures" xml:space="preserve">
+    <value>Define the specified Mo trigger before use.</value>
+  </data>
+  <data name="Error.3770.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3780.Message" xml:space="preserve">
+    <value>Cannot use the MELFA Smart Plus.</value>
+  </data>
+  <data name="Error.3780.Cause" xml:space="preserve">
+    <value>The MELFA Smart Plus card or MELFA Smart Plus card pack is not installed in the controller. When the MELFA Smart Plus card is installed, the setting of the parameter SMART+1 may be set incor- rectly.</value>
+  </data>
+  <data name="Error.3780.Measures" xml:space="preserve">
+    <value>Install the MELFA Smart Plus card or MELFA Smart Plus card pack. Set the parameter SMART+1 correctly.</value>
+  </data>
+  <data name="Error.3780.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3781.Message" xml:space="preserve">
+    <value>Cannot use the MELFA Smart Plus.</value>
+  </data>
+  <data name="Error.3781.Cause" xml:space="preserve">
+    <value>The MELFA Smart Plus card or MELFA Smart Plus card pack is not installed in the controller. When the MELFA Smart Plus card is installed, the setting of the parameter SMART+1 may be set incor- rectly.</value>
+  </data>
+  <data name="Error.3781.Measures" xml:space="preserve">
+    <value>Install the MELFA Smart Plus card or MELFA Smart Plus card pack. Set the parameter SMART+1 correctly.</value>
+  </data>
+  <data name="Error.3781.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3810.Message" xml:space="preserve">
+    <value>Different argument type</value>
+  </data>
+  <data name="Error.3810.Cause" xml:space="preserve">
+    <value>The type of an argument in an arithmetic operation, monadic operation, comparison operation or each func- tion is different.</value>
+  </data>
+  <data name="Error.3810.Measures" xml:space="preserve">
+    <value>Designate the correct argument.</value>
+  </data>
+  <data name="Error.3810.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3820.Message" xml:space="preserve">
+    <value>Undefined intermediate code</value>
+  </data>
+  <data name="Error.3820.Cause" xml:space="preserve">
+    <value>A program or system status variable may have been damaged.</value>
+  </data>
+  <data name="Error.3820.Measures" xml:space="preserve">
+    <value>Restore using the backup data. If the backup data is not available, it is necessary to create a program again.</value>
+  </data>
+  <data name="Error.3820.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3821.Message" xml:space="preserve">
+    <value>A compilation error occurred</value>
+  </data>
+  <data name="Error.3821.Cause" xml:space="preserve">
+    <value>There is an error in the input syntax.</value>
+  </data>
+  <data name="Error.3821.Measures" xml:space="preserve">
+    <value>Check the error number in the error message.</value>
+  </data>
+  <data name="Error.3821.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3830.Message" xml:space="preserve">
+    <value>Cannot execute GetM</value>
+  </data>
+  <data name="Error.3830.Cause" xml:space="preserve">
+    <value>GET of the mechanisms is not possible.</value>
+  </data>
+  <data name="Error.3830.Measures" xml:space="preserve">
+    <value>Check whether the designated mechanisms are being used with a different slot.</value>
+  </data>
+  <data name="Error.3830.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3840.Message" xml:space="preserve">
+    <value>Return without GoSub</value>
+  </data>
+  <data name="Error.3840.Cause" xml:space="preserve">
+    <value>Return was executed without using GoSub.</value>
+  </data>
+  <data name="Error.3840.Measures" xml:space="preserve">
+    <value>Check the program.</value>
+  </data>
+  <data name="Error.3840.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3850.Message" xml:space="preserve">
+    <value>Undefined PLT</value>
+  </data>
+  <data name="Error.3850.Cause" xml:space="preserve">
+    <value>The Def Plt command was not executed.</value>
+  </data>
+  <data name="Error.3850.Measures" xml:space="preserve">
+    <value>Use it after defining a pallet with the Def Plt command.</value>
+  </data>
+  <data name="Error.3850.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3860.Message" xml:space="preserve">
+    <value>Illegal position data defined</value>
+  </data>
+  <data name="Error.3860.Cause" xml:space="preserve">
+    <value>There is an error in the position data.</value>
+  </data>
+  <data name="Error.3860.Measures" xml:space="preserve">
+    <value>Check the position data definition.</value>
+  </data>
+  <data name="Error.3860.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3870.Message" xml:space="preserve">
+    <value>1. Illegal mecha No. (****) Note) "****" is substituted with the "robot status variable".
+2. The force sense control status variable mechanical No. is an invalid value.
+3. The mechanical No. specified with the Def MoTrg command is an invalid value.</value>
+  </data>
+  <data name="Error.3870.Cause" xml:space="preserve">
+    <value>1. Illegal mecha No. (****) Note) "****" is substituted with the "robot status variable".: The designated mecha No. is an invalid value
+2. The force sense control status variable mechanical No. is an invalid value.: An invalid variable was set for the force sense control status variable mechanical No.
+3. The mechanical No. specified with the Def MoTrg command is an invalid value.: The mechanical No. specified with the Def MoTrg command is an invalid value.</value>
+  </data>
+  <data name="Error.3870.Measures" xml:space="preserve">
+    <value>1. Illegal mecha No. (****) Note) "****" is substituted with the "robot status variable".: Please set a correct mecha No.
+2. The force sense control status variable mechanical No. is an invalid value.: Set a correct mechanical No.
+3. The mechanical No. specified with the Def MoTrg command is an invalid value.: Set a correct mechanical No.</value>
+  </data>
+  <data name="Error.3870.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3880.Message" xml:space="preserve">
+    <value>Illegal slot No.</value>
+  </data>
+  <data name="Error.3880.Cause" xml:space="preserve">
+    <value>The task slot number specified in the argument of the system status variables was invalid.</value>
+  </data>
+  <data name="Error.3880.Measures" xml:space="preserve">
+    <value>Input the correct slot No.</value>
+  </data>
+  <data name="Error.3880.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3890.Message" xml:space="preserve">
+    <value>System error (make MCODE)</value>
+  </data>
+  <data name="Error.3890.Cause" xml:space="preserve">
+    <value>An error has occurred when creating an operation instruction. The program may have been damaged.</value>
+  </data>
+  <data name="Error.3890.Measures" xml:space="preserve">
+    <value>Restore using the backup data. If the backup data is not available, it is necessary to create a program again.</value>
+  </data>
+  <data name="Error.3890.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3900.Message" xml:space="preserve">
+    <value>JRC Command is disable</value>
+  </data>
+  <data name="Error.3900.Cause" xml:space="preserve">
+    <value>The JRCEXE parameter is disabled, so it cannot be used.</value>
+  </data>
+  <data name="Error.3900.Measures" xml:space="preserve">
+    <value>Change the JRCEXE parameter, and then execute.</value>
+  </data>
+  <data name="Error.3900.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3910.Message" xml:space="preserve">
+    <value>Cannnot execute (JRC 0)</value>
+  </data>
+  <data name="Error.3910.Cause" xml:space="preserve">
+    <value>JRC 0 can not execute for robot arm axis.</value>
+  </data>
+  <data name="Error.3910.Measures" xml:space="preserve">
+    <value>Correctly set.</value>
+  </data>
+  <data name="Error.3910.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3930.Message" xml:space="preserve">
+    <value>This command cannot be executed</value>
+  </data>
+  <data name="Error.3930.Cause" xml:space="preserve">
+    <value>Collision detection is effective</value>
+  </data>
+  <data name="Error.3930.Measures" xml:space="preserve">
+    <value>Repeal collision detection (execute ColChk Off)</value>
+  </data>
+  <data name="Error.3930.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3940.Message" xml:space="preserve">
+    <value>ColChk cannot be executed</value>
+  </data>
+  <data name="Error.3940.Cause" xml:space="preserve">
+    <value>An exclusive function is performing with ColChk</value>
+  </data>
+  <data name="Error.3940.Measures" xml:space="preserve">
+    <value>Repeal the corresponding function</value>
+  </data>
+  <data name="Error.3940.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3950.Message" xml:space="preserve">
+    <value>NOERR cannot be executed</value>
+  </data>
+  <data name="Error.3950.Cause" xml:space="preserve">
+    <value>Interruption using M_ColSts is invalid</value>
+  </data>
+  <data name="Error.3950.Measures" xml:space="preserve">
+    <value>Define interruption using M_ColSts and confirm it</value>
+  </data>
+  <data name="Error.3950.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3960.Message" xml:space="preserve">
+    <value>This Act No. cannot be repealed</value>
+  </data>
+  <data name="Error.3960.Cause" xml:space="preserve">
+    <value>NOERR of collision detection is performed</value>
+  </data>
+  <data name="Error.3960.Measures" xml:space="preserve">
+    <value>Repeal this interruption after canceling NOERR</value>
+  </data>
+  <data name="Error.3960.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3970.Message" xml:space="preserve">
+    <value>ColChk cannot be performed</value>
+  </data>
+  <data name="Error.3970.Cause" xml:space="preserve">
+    <value>Collision detection serves as prohibition of use</value>
+  </data>
+  <data name="Error.3970.Measures" xml:space="preserve">
+    <value>Change parameter COL into use permission</value>
+  </data>
+  <data name="Error.3970.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3980.Message" xml:space="preserve">
+    <value>Load mode cannot be specified.</value>
+  </data>
+  <data name="Error.3980.Cause" xml:space="preserve">
+    <value>Prec command is executed</value>
+  </data>
+  <data name="Error.3980.Measures" xml:space="preserve">
+    <value>Repeal high accuracy mode (execute Prec Off)</value>
+  </data>
+  <data name="Error.3980.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3982.Message" xml:space="preserve">
+    <value>Cannot be used (singular point)</value>
+  </data>
+  <data name="Error.3982.Cause" xml:space="preserve">
+    <value>1 This robot does not correspond to the singular point function 2 Cmp command is executed 3 A synchronous addition axis control is effective 4 Tracking mode is effective 5 Pre-fetch execution is effective 6 This robot is a setting of the multi mechanism 7 ColChk On command is executed</value>
+  </data>
+  <data name="Error.3982.Measures" xml:space="preserve">
+    <value>1 Check the argument of Type specification 2 Invalidate a compliance mode (execute Cmp Off) 3 Invalidate a synchronous addition axis control 4 Invalidate a tracking mode (execute Trk Off) 5 Invalidate a pre-fetch execution 6 Do not use the function of passage singular point 7 Invalidate a collision detection (execute ColChk Off)</value>
+  </data>
+  <data name="Error.3982.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3983.Message" xml:space="preserve">
+    <value>Cannot execute Cnt movement</value>
+  </data>
+  <data name="Error.3983.Cause" xml:space="preserve">
+    <value>A structural flag or the angle of the joint is not corresponding</value>
+  </data>
+  <data name="Error.3983.Measures" xml:space="preserve">
+    <value>It surely positions it by Dly command etc</value>
+  </data>
+  <data name="Error.3983.Level" xml:space="preserve">
+    <value>High</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3984.Message" xml:space="preserve">
+    <value>Cannot be passsed (singularity)</value>
+  </data>
+  <data name="Error.3984.Cause" xml:space="preserve">
+    <value>Robot passes position which is very near the singular point</value>
+  </data>
+  <data name="Error.3984.Measures" xml:space="preserve">
+    <value>Adjust the teaching position</value>
+  </data>
+  <data name="Error.3984.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3985.Message" xml:space="preserve">
+    <value>Cannot be passsed (singularity)</value>
+  </data>
+  <data name="Error.3985.Cause" xml:space="preserve">
+    <value>Robot passes position which is very near the singular point</value>
+  </data>
+  <data name="Error.3985.Measures" xml:space="preserve">
+    <value>Adjust the teaching position</value>
+  </data>
+  <data name="Error.3985.Level" xml:space="preserve">
+    <value>High</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3986.Message" xml:space="preserve">
+    <value>1. Unable to enable force sense control. (Sensor)
+2. Unable to enable force sense control. (Cmp command)
+3. Unable to execute the Cmp command. (Force sense control)
+4. Unable to enable the collision detection function. (Force sense control)
+5. Unable to enable force sense control. (Initialization)
+6. This is the singular point adjacent area. (Force sense control)
+7. The force sense control status is different.
+8. This function cannot be used.
+9. Unable to change tool conversion data. (Force sense control)
+10. Unable to change base conversion data. (Force sense control)
+11. Unable to execute the Jrc command. (Force sense control)
+12. Disable force sense control.
+13. Unable to perform offset cancel. (Force sense control)</value>
+  </data>
+  <data name="Error.3986.Cause" xml:space="preserve">
+    <value>1. Unable to enable force sense control. (Sensor): Unable to execute because the force sensor is not connected.
+2. Unable to enable force sense control. (Cmp command): It is not possible to enable force sense control function while the compliance control function is enabled.
+3. Unable to execute the Cmp command. (Force sense control): It is not possible to enable the compliance control function while the force sense control function is enabled.
+4. Unable to enable the collision detection function. (Force sense control): It is not possible to enable the collision detection function while force sense control function is enabled.
+5. Unable to enable force sense control. (Initialization): It is not possible to perform initialization when starting force sense control.
+6. This is the singular point adjacent area. (Force sense control): It is not possible to move the singular point adjacent area while the force sense control function is enabled.
+7. The force sense control status is different.: The force sense control enabled/disabled status when resuming program operation differs from that during program operation.
+8. This function cannot be used.: This model is not compatible with the executed force sense control function.
+9. Unable to change tool conversion data. (Force sense control): It is not possible to change tool conversion data while the force sense control function is enabled.
+10. Unable to change base conversion data. (Force sense control): It is not possible to change base conversion data while the force sense control function is enabled.
+11. Unable to execute the Jrc command. (Force sense control): It is not possible to execute the Jrc command while the force sense control function is enabled.
+12. Disable force sense control.: JOG operation cannot be performed on your model while the force sense control function is enabled.
+13. Unable to perform offset cancel. (Force sense control): It is not possible to perform offset cancel while the force sense control function is enabled.</value>
+  </data>
+  <data name="Error.3986.Measures" xml:space="preserve">
+    <value>1. Unable to enable force sense control. (Sensor): Connect the force sensor, or delete the command that cause the error.
+2. Unable to enable force sense control. (Cmp command): The force sense control function and compliance control function cannot be enabled simultaneously. If using the force sense control function, disable the compliance control function.
+3. Unable to execute the Cmp command. (Force sense control): The force sense control function and compliance control function cannot be enabled simultaneously. If using the compliance control function, disable the force sense control function.
+4. Unable to enable the collision detection function. (Force sense control): The force sense control function and collision detection function cannot be enabled simultaneously. If using the collision detection function, disable the force sense control function.
+5. Unable to enable force sense control. (Initialization): Check the parameter settings.
+6. This is the singular point adjacent area. (Force sense control): If moving the singular point adjacent area, disable the force sense control function.
+7. The force sense control status is different.: Set the force sense control enabled/disabled status to the correct status. (This occurs only once when resuming program operation.)
+8. This function cannot be used.: Do not use this force sense control function. Contact the maker for details on the latest compatibility status.
+9. Unable to change tool conversion data. (Force sense control): If changing tool conversion data, disable the force sense control function.
+10. Unable to change base conversion data. (Force sense control): If changing base conversion data, disable the force sense control function.
+11. Unable to execute the Jrc command. (Force sense control): To execute the Jrc command, disable the force sense control function.
+12. Disable force sense control.: Disable the force sense control function.
+13. Unable to perform offset cancel. (Force sense control): If performing offset cancel, disable the force sense control function.</value>
+  </data>
+  <data name="Error.3986.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3987.Message" xml:space="preserve">
+    <value>1. Force sense control is disabled.
+2. Force sense control is enabled.
+3. Unable to execute the FsGChg command.
+4. Unable to output log file.
+5. The specified log file does not exist.
+6. Unable to change the force sense status variable.
+7. Force sense log commands executed simultaneously.
+8. Unable to create log file.
+9. Unable to execute the Fsc ON command.
+10. Unable to perform log data related processing.
+11. Force sense control is enabled.
+12. Unable to enable the Mo trigger.
+13. Mo trigger timeout
+14. Unable to execute the FsCTrg command.
+15. Unable to specify the control characteristics change.</value>
+  </data>
+  <data name="Error.3987.Cause" xml:space="preserve">
+    <value>1. Force sense control is disabled.: Force sense control is disabled, and so unable to execute the command.
+2. Force sense control is enabled.: It is not possible to enable force sense control again while already enabled.
+3. Unable to execute the FsGChg command.: It is not possible to execute the FsGChg command when force control gain change is not complete.
+4. Unable to output log file.: FTP processing was not properly performed.
+5. The specified log file does not exist.: The log file for the No. specified with the FsOutLog command does not exist.
+6. Unable to change the force sense status variable.: The status variable setting is currently being used by the force sense control function and so cannot be changed.
+7. Force sense log commands executed simultaneously.: It is not possible to create/output another file while creating (FsLog Off command) or outputting (FsOutLog command) a force sense log file.
+8. Unable to create log file.: Unable to create a force sense log file.
+9. Unable to execute the Fsc ON command.: It is not possible to execute the Fsc On command while changing the force control gain.
+10. Unable to perform log data related processing.: It is not possible to execute FsLog On command file while recording force sense control log data.
+11. Force sense control is enabled.: The parameter setting is currently being used by the force sense control function and so cannot be changed.
+12. Unable to enable the Mo trigger.: The Mo trigger for the FsCtrg command executed first is enabled.
+13. Mo trigger timeout: The Mo trigger did not turn ON within the specified time.
+14. Unable to execute the FsCTrg command.: The control characteristics is currently being changed. The Mo trigger for the FsCTrg command executed first is enabled.
+15. Unable to specify the control characteristics change.: The control characteristics change has been set with another command.</value>
+  </data>
+  <data name="Error.3987.Measures" xml:space="preserve">
+    <value>1. Force sense control is disabled.: Enable the force sense control function.
+2. Force sense control is enabled.: First disable the force sense control function, and then enable again.
+3. Unable to execute the FsGChg command.: Review the program so that the FsGChg command is executed after force control gain change is complete.
+4. Unable to output log file.: Check the FTP related parameter setting. Check the Ethernet cable connection. Check the FTP server settings at the computer.
+5. The specified log file does not exist.: Check whether the log file No. is incorrect.
+6. Unable to change the force sense status variable.: If changing the setting, disable the force sense control function.
+7. Force sense log commands executed simultaneously.: Process after force sense log file creation/output is complete.
+8. Unable to create log file.: Check the amount of available record space in the robot controller.
+9. Unable to execute the Fsc ON command.: Execute the Fsc On command after force control gain change is complete.
+10. Unable to perform log data related processing.: Execute the FsLog On command after log data recording is complete.
+11. Force sense control is enabled.: If changing the parameter, disable the force sense control function once.
+12. Unable to enable the Mo trigger.: Execute after changing the control characteristics.
+13. Mo trigger timeout: Review the Mo trigger conditions and robot program.
+14. Unable to execute the FsCTrg command.: Execute after changing the control characteristics.
+15. Unable to specify the control characteristics change.: Change the program so that the command is not executed at the same time as another command.</value>
+  </data>
+  <data name="Error.3987.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3988.Message" xml:space="preserve">
+    <value>Unable to create a position command.</value>
+  </data>
+  <data name="Error.3988.Cause" xml:space="preserve">
+    <value>It is not possible to convert linear position data to joint angle after offsetting with force control. The position after offsetting lies outside the movement range or is a singular point.</value>
+  </data>
+  <data name="Error.3988.Measures" xml:space="preserve">
+    <value>Review the movement and, settings so that adjacents outside the movement range and singular point adjacents are avoided.</value>
+  </data>
+  <data name="Error.3988.Level" xml:space="preserve">
+    <value>High</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3990.Message" xml:space="preserve">
+    <value>ColChk cannot be used</value>
+  </data>
+  <data name="Error.3990.Cause" xml:space="preserve">
+    <value>This robot is a setting of the multi mechanism</value>
+  </data>
+  <data name="Error.3990.Measures" xml:space="preserve">
+    <value>Change parameter COL into use prohibition</value>
+  </data>
+  <data name="Error.3990.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3991.Message" xml:space="preserve">
+    <value>Mainte.Forecast cannot be used</value>
+  </data>
+  <data name="Error.3991.Cause" xml:space="preserve">
+    <value>This robot is a setting of the multi mechanism</value>
+  </data>
+  <data name="Error.3991.Measures" xml:space="preserve">
+    <value>Invalidate the maintenance forecast</value>
+  </data>
+  <data name="Error.3991.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+  <data name="Error.3995.Message" xml:space="preserve">
+    <value>Can't use SQ Direct and ALWENA</value>
+  </data>
+  <data name="Error.3995.Cause" xml:space="preserve">
+    <value>SQ Direct function (parameter: IQMEM valid setting) can't be used Xrun, Xload, Xstp, Xrst, Servo and Reset Error command with always running program (parameter: ALWENA=1).</value>
+  </data>
+  <data name="Error.3995.Measures" xml:space="preserve">
+    <value>Change ALWENA parameter to 0</value>
+  </data>
+  <data name="Error.3995.Level" xml:space="preserve">
+    <value>Low</value><comment>@DoNotTranslate</comment>
+  </data>
+</root>

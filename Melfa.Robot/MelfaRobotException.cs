@@ -1,41 +1,46 @@
-﻿using Melfa.Robot.Resources;
 using System;
+using System.Resources;
 
 namespace Melfa.Robot;
 
 public sealed partial class MelfaRobotException : Exception
 {
-    private static string GetErrorMessage(int errno)
+    private static readonly ResourceManager[] ErrorResources = CreateErrorResources();
+    private static readonly ResourceManager UnknownErrorResources =
+        new("Melfa.Robot.Resources.ErrorMessages", typeof(MelfaRobotException).Assembly);
+
+    private static ResourceManager[] CreateErrorResources()
     {
-        return ErrorMessages.ResourceManager.GetString($"Error.{errno:0000}.Message")
-            ?? ErrorMessages.ResourceManager.GetString("Error.Unknown.Message");
+        var resources = new ResourceManager[10];
+        for (var i = 0; i < resources.Length; i++)
+            resources[i] = new ResourceManager($"Melfa.Robot.Resources.ErrorMessages.{i}000", typeof(MelfaRobotException).Assembly);
+        return resources;
     }
 
-    private static string GetErrorCause(int errno)
+    private static string GetErrorResource(int errno, string field)
     {
-        return ErrorMessages.ResourceManager.GetString($"Error.{errno:0000}.Cause")
-            ?? ErrorMessages.ResourceManager.GetString("Error.Unknown.Cause");
-    }
-
-    private static string GetErrorMeasures(int errno)
-    {
-        return ErrorMessages.ResourceManager.GetString($"Error.{errno:0000}.Measures")
-            ?? ErrorMessages.ResourceManager.GetString("Error.Unknown.Measures");
-    }
-
-    private static ErrorSeverity GetErrorSeverity(int errno)
-    {
-        var level = ErrorMessages.ResourceManager.GetString($"Error.{errno:0000}.Level")
-            ?? ErrorMessages.ResourceManager.GetString("Error.Unknown.Level");
-        return level switch
+        if (0 < errno && errno <= 9999)
         {
-            nameof(ErrorSeverity.High) => ErrorSeverity.High,
-            nameof(ErrorSeverity.Low) => ErrorSeverity.Low,
-            nameof(ErrorSeverity.Warning) => ErrorSeverity.Warning,
-            nameof(ErrorSeverity.Caution) => ErrorSeverity.Caution,
-            _ => ErrorSeverity.Unknown,
-        };
+            var resources = ErrorResources[errno / 1000];
+            var value = resources.GetString($"Error.{errno:0000}.{field}");
+            if (value != null)
+                return value;
+        }
+
+        return UnknownErrorResources.GetString($"Error.Unknown.{field}");
     }
+
+    private static string GetErrorMessage(int errno) => GetErrorResource(errno, "Message");
+    private static string GetErrorCause(int errno) => GetErrorResource(errno, "Cause");
+    private static string GetErrorMeasures(int errno) => GetErrorResource(errno, "Measures");
+    private static ErrorSeverity GetErrorSeverity(int errno) => GetErrorResource(errno, "Level") switch
+    {
+        nameof(ErrorSeverity.High) => ErrorSeverity.High,
+        nameof(ErrorSeverity.Low) => ErrorSeverity.Low,
+        nameof(ErrorSeverity.Warning) => ErrorSeverity.Warning,
+        nameof(ErrorSeverity.Caution) => ErrorSeverity.Caution,
+        _ => ErrorSeverity.Unknown,
+    };
 
     public static MelfaRobotException FromCommandResult(string ret) =>
         new(int.Parse(RegexHelper.ErrorRegex().Match(ret).Groups[nameof(ErrorNumber)].Value), null);

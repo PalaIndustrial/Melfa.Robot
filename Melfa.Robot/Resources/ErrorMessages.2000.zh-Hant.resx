@@ -1,0 +1,2325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.2000.Message" xml:space="preserve">
+    <value>伺服電機關閉</value>
+  </data>
+  <data name="Error.2000.Cause" xml:space="preserve">
+    <value>由於伺服電機「關閉」，機器人無法移動。</value>
+  </data>
+  <data name="Error.2000.Measures" xml:space="preserve">
+    <value>將伺服電機「啟動」後再試一次。</value>
+  </data>
+  <data name="Error.2010.Message" xml:space="preserve">
+    <value>無法輸出脈衝</value>
+  </data>
+  <data name="Error.2010.Cause" xml:space="preserve">
+    <value>脈衝輸出的指定有誤。</value>
+  </data>
+  <data name="Error.2010.Measures" xml:space="preserve">
+    <value>修正程式。</value>
+  </data>
+  <data name="Error.2020.Message" xml:space="preserve">
+    <value>正在讀取外部位置資料</value>
+  </data>
+  <data name="Error.2020.Cause" xml:space="preserve">
+    <value>讀取外部命令時執行了無法在此期間執行的命令。</value>
+  </data>
+  <data name="Error.2020.Measures" xml:space="preserve">
+    <value>修正程式。</value>
+  </data>
+  <data name="Error.2030.Message" xml:space="preserve">
+    <value>無法接受 JOG 操作</value>
+  </data>
+  <data name="Error.2030.Cause" xml:space="preserve">
+    <value>在無法接受 JOG 操作請求時發出了該請求。</value>
+  </data>
+  <data name="Error.2030.Measures" xml:space="preserve">
+    <value>在 JOG 操作結束後變更 JOG 模式。</value>
+  </data>
+  <data name="Error.2031.Message" xml:space="preserve">
+    <value>參數無效 (JOGTSJ,JOGJSP)</value>
+  </data>
+  <data name="Error.2031.Cause" xml:space="preserve">
+    <value>參數 JOGTSJ、JOGJSP 的設定不正確。[JOGPSP] [JOGJSP] =（第 1 元素、第 2 元素）=（固定高速、固定低速）</value>
+  </data>
+  <data name="Error.2031.Measures" xml:space="preserve">
+    <value>將設定維度設為 5 以下。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2040.Message" xml:space="preserve">
+    <value>示教位置不正確</value>
+  </data>
+  <data name="Error.2040.Cause" xml:space="preserve">
+    <value>變更示教位置。</value>
+  </data>
+  <data name="Error.2040.Measures" xml:space="preserve">
+    <value>無法根據示教位置計算工件座標。原因如下：1. 兩點位置相同。2. 三點位於同一直線上。請確認並修正示教位置。</value>
+  </data>
+  <data name="Error.2041.Message" xml:space="preserve">
+    <value>無法計算座標系轉換座標</value>
+  </data>
+  <data name="Error.2041.Cause" xml:space="preserve">
+    <value>定義座標系轉換所用座標系的位置資料位於同一點或排列在同一直線上，因此無法計算座標系。</value>
+  </data>
+  <data name="Error.2041.Measures" xml:space="preserve">
+    <value>將位置資料變更為適當位置，以便計算座標系。</value>
+  </data>
+  <data name="Error.2042.Message" xml:space="preserve">
+    <value>未設定座標系轉換座標</value>
+  </data>
+  <data name="Error.2042.Cause" xml:space="preserve">
+    <value>尚未設定座標系轉換用的座標系即嘗試進行轉換。</value>
+  </data>
+  <data name="Error.2042.Measures" xml:space="preserve">
+    <value>設定座標系或取消座標系轉換。確認 MvSpl 命令的「座標系轉換」引數指定是否正確。</value>
+  </data>
+  <data name="Error.2050.Message" xml:space="preserve">
+    <value>CPU 處理時間超限</value>
+  </data>
+  <data name="Error.2050.Cause" xml:space="preserve">
+    <value>同時啟用的功能過多。</value>
+  </data>
+  <data name="Error.2050.Measures" xml:space="preserve">
+    <value>CPU 處理時間超出限制值。請採取以下任一措施：1. 若啟用了干涉迴避功能，將部分圓柱模型改為球體模型，或減少檢查模型的數量。2. 停用部分功能：干涉迴避、使用者定義區域、自由平面限制、碰撞檢測、柔順控制、追蹤、力覺。3. 減少程式目前使用的中斷定義功能。</value>
+  </data>
+  <data name="Error.2090.Message" xml:space="preserve">
+    <value>位於干涉區域 n。（n 表示區域編號，1 至 32。）</value>
+  </data>
+  <data name="Error.2090.Cause" xml:space="preserve">
+    <value>嘗試移動至使用者定義區域「n」範圍之外。</value>
+  </data>
+  <data name="Error.2090.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2111.Message" xml:space="preserve">
+    <value>超出自由平面 1（平面編號：1）</value>
+  </data>
+  <data name="Error.2112.Message" xml:space="preserve">
+    <value>超出自由平面 2（平面編號：2）</value>
+  </data>
+  <data name="Error.2113.Message" xml:space="preserve">
+    <value>超出自由平面 3（平面編號：3）</value>
+  </data>
+  <data name="Error.2114.Message" xml:space="preserve">
+    <value>超出自由平面 4（平面編號：4）</value>
+  </data>
+  <data name="Error.2115.Message" xml:space="preserve">
+    <value>超出自由平面 5（平面編號：5）</value>
+  </data>
+  <data name="Error.2116.Message" xml:space="preserve">
+    <value>超出自由平面 6（平面編號：6）</value>
+  </data>
+  <data name="Error.2117.Message" xml:space="preserve">
+    <value>超出自由平面 7（平面編號：7）</value>
+  </data>
+  <data name="Error.2118.Message" xml:space="preserve">
+    <value>超出自由平面 8（平面編號：8）</value>
+  </data>
+  <data name="Error.2111.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「1」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2112.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「2」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2113.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「3」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2114.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「4」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2115.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「5」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2116.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「6」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2117.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「7」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2118.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「8」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2111.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2112.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2113.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2114.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2115.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2116.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2117.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2118.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2121.Message" xml:space="preserve">
+    <value>超出自由平面 1（平面編號：1）</value>
+  </data>
+  <data name="Error.2122.Message" xml:space="preserve">
+    <value>超出自由平面 2（平面編號：2）</value>
+  </data>
+  <data name="Error.2123.Message" xml:space="preserve">
+    <value>超出自由平面 3（平面編號：3）</value>
+  </data>
+  <data name="Error.2124.Message" xml:space="preserve">
+    <value>超出自由平面 4（平面編號：4）</value>
+  </data>
+  <data name="Error.2125.Message" xml:space="preserve">
+    <value>超出自由平面 5（平面編號：5）</value>
+  </data>
+  <data name="Error.2126.Message" xml:space="preserve">
+    <value>超出自由平面 6（平面編號：6）</value>
+  </data>
+  <data name="Error.2127.Message" xml:space="preserve">
+    <value>超出自由平面 7（平面編號：7）</value>
+  </data>
+  <data name="Error.2128.Message" xml:space="preserve">
+    <value>超出自由平面 8（平面編號：8）</value>
+  </data>
+  <data name="Error.2121.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「1」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2122.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「2」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2123.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「3」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2124.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「4」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2125.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「5」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2126.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「6」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2127.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「7」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2128.Cause" xml:space="preserve">
+    <value>嘗試移動至自由平面「8」所定義的平面之外。</value>
+  </data>
+  <data name="Error.2121.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2122.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2123.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2124.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2125.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2126.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2127.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2128.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2129.Message" xml:space="preserve">
+    <value>自由平面限制資料無效</value>
+  </data>
+  <data name="Error.2129.Cause" xml:space="preserve">
+    <value>自由平面資料的設定值無效。</value>
+  </data>
+  <data name="Error.2129.Measures" xml:space="preserve">
+    <value>參數 SFCnp 的三個點中有兩點相同。參數 SFCnAT 的值不是「0、1、-1」之一。</value>
+  </data>
+  <data name="Error.2131.Message" xml:space="preserve">
+    <value>J1 速度過高（命令）（軸編號：1）</value>
+  </data>
+  <data name="Error.2132.Message" xml:space="preserve">
+    <value>J2 速度過高（命令）（軸編號：2）</value>
+  </data>
+  <data name="Error.2133.Message" xml:space="preserve">
+    <value>J3 速度過高（命令）（軸編號：3）</value>
+  </data>
+  <data name="Error.2134.Message" xml:space="preserve">
+    <value>J4 速度過高（命令）（軸編號：4）</value>
+  </data>
+  <data name="Error.2135.Message" xml:space="preserve">
+    <value>J5 速度過高（命令）（軸編號：5）</value>
+  </data>
+  <data name="Error.2136.Message" xml:space="preserve">
+    <value>J6 速度過高（命令）（軸編號：6）</value>
+  </data>
+  <data name="Error.2137.Message" xml:space="preserve">
+    <value>J7 速度過高（命令）（軸編號：7）</value>
+  </data>
+  <data name="Error.2138.Message" xml:space="preserve">
+    <value>J8 速度過高（命令）（軸編號：8）</value>
+  </data>
+  <data name="Error.2131.Cause" xml:space="preserve">
+    <value>1 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2132.Cause" xml:space="preserve">
+    <value>2 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2133.Cause" xml:space="preserve">
+    <value>3 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2134.Cause" xml:space="preserve">
+    <value>4 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2135.Cause" xml:space="preserve">
+    <value>5 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2136.Cause" xml:space="preserve">
+    <value>6 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2137.Cause" xml:space="preserve">
+    <value>7 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2138.Cause" xml:space="preserve">
+    <value>8 軸的速度指令值超過允許值。以直線插補（或圓弧插補）移動時，視姿態而定，馬達可能需要高速旋轉。指定速度過大時，馬達速度指令值可能超過允許值。</value>
+  </data>
+  <data name="Error.2131.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2132.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2133.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2134.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2135.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2136.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2137.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2138.Measures" xml:space="preserve">
+    <value>請使用 Ovrd 與 Spd 命令降低移動速度，或變更移動位置。</value>
+  </data>
+  <data name="Error.2141.Message" xml:space="preserve">
+    <value>J1 超出 +ABS 限制（軸編號：1）</value>
+  </data>
+  <data name="Error.2142.Message" xml:space="preserve">
+    <value>J2 超出 +ABS 限制（軸編號：2）</value>
+  </data>
+  <data name="Error.2143.Message" xml:space="preserve">
+    <value>J3 超出 +ABS 限制（軸編號：3）</value>
+  </data>
+  <data name="Error.2144.Message" xml:space="preserve">
+    <value>J4 超出 +ABS 限制（軸編號：4）</value>
+  </data>
+  <data name="Error.2145.Message" xml:space="preserve">
+    <value>J5 超出 +ABS 限制（軸編號：5）</value>
+  </data>
+  <data name="Error.2146.Message" xml:space="preserve">
+    <value>J6 超出 +ABS 限制（軸編號：6）</value>
+  </data>
+  <data name="Error.2147.Message" xml:space="preserve">
+    <value>J7 超出 +ABS 限制（軸編號：7）</value>
+  </data>
+  <data name="Error.2148.Message" xml:space="preserve">
+    <value>J8 超出 +ABS 限制（軸編號：8）</value>
+  </data>
+  <data name="Error.2141.Cause" xml:space="preserve">
+    <value>軸「1」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2142.Cause" xml:space="preserve">
+    <value>軸「2」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2143.Cause" xml:space="preserve">
+    <value>軸「3」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2144.Cause" xml:space="preserve">
+    <value>軸「4」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2145.Cause" xml:space="preserve">
+    <value>軸「5」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2146.Cause" xml:space="preserve">
+    <value>軸「6」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2147.Cause" xml:space="preserve">
+    <value>軸「7」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2148.Cause" xml:space="preserve">
+    <value>軸「8」超出 +ABS 限制。</value>
+  </data>
+  <data name="Error.2141.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「1」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2142.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「2」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2143.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「3」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2144.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「4」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2145.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「5」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2146.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「6」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2147.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「7」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2148.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「8」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2151.Message" xml:space="preserve">
+    <value>J1 超出 -ABS 限制（軸編號：1）</value>
+  </data>
+  <data name="Error.2152.Message" xml:space="preserve">
+    <value>J2 超出 -ABS 限制（軸編號：2）</value>
+  </data>
+  <data name="Error.2153.Message" xml:space="preserve">
+    <value>J3 超出 -ABS 限制（軸編號：3）</value>
+  </data>
+  <data name="Error.2154.Message" xml:space="preserve">
+    <value>J4 超出 -ABS 限制（軸編號：4）</value>
+  </data>
+  <data name="Error.2155.Message" xml:space="preserve">
+    <value>J5 超出 -ABS 限制（軸編號：5）</value>
+  </data>
+  <data name="Error.2156.Message" xml:space="preserve">
+    <value>J6 超出 -ABS 限制（軸編號：6）</value>
+  </data>
+  <data name="Error.2157.Message" xml:space="preserve">
+    <value>J7 超出 -ABS 限制（軸編號：7）</value>
+  </data>
+  <data name="Error.2158.Message" xml:space="preserve">
+    <value>J8 超出 -ABS 限制（軸編號：8）</value>
+  </data>
+  <data name="Error.2151.Cause" xml:space="preserve">
+    <value>軸「1」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2152.Cause" xml:space="preserve">
+    <value>軸「2」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2153.Cause" xml:space="preserve">
+    <value>軸「3」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2154.Cause" xml:space="preserve">
+    <value>軸「4」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2155.Cause" xml:space="preserve">
+    <value>軸「5」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2156.Cause" xml:space="preserve">
+    <value>軸「6」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2157.Cause" xml:space="preserve">
+    <value>軸「7」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2158.Cause" xml:space="preserve">
+    <value>軸「8」超出 -ABS 限制。</value>
+  </data>
+  <data name="Error.2151.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「1」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2152.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「2」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2153.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「3」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2154.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「4」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2155.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「5」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2156.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「6」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2157.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「7」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2158.Measures" xml:space="preserve">
+    <value>請參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「8」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2160.Message" xml:space="preserve">
+    <value>J0 (+) 角度超限（軸編號：0）</value>
+  </data>
+  <data name="Error.2161.Message" xml:space="preserve">
+    <value>J1 (+) 角度超限（軸編號：1）</value>
+  </data>
+  <data name="Error.2162.Message" xml:space="preserve">
+    <value>J2 (+) 角度超限（軸編號：2）</value>
+  </data>
+  <data name="Error.2163.Message" xml:space="preserve">
+    <value>J3 (+) 角度超限（軸編號：3）</value>
+  </data>
+  <data name="Error.2164.Message" xml:space="preserve">
+    <value>J4 (+) 角度超限（軸編號：4）</value>
+  </data>
+  <data name="Error.2165.Message" xml:space="preserve">
+    <value>J5 (+) 角度超限（軸編號：5）</value>
+  </data>
+  <data name="Error.2166.Message" xml:space="preserve">
+    <value>J6 (+) 角度超限（軸編號：6）</value>
+  </data>
+  <data name="Error.2167.Message" xml:space="preserve">
+    <value>J7 (+) 角度超限（軸編號：7）</value>
+  </data>
+  <data name="Error.2168.Message" xml:space="preserve">
+    <value>J8 (+) 角度超限（軸編號：8）</value>
+  </data>
+  <data name="Error.2160.Cause" xml:space="preserve">
+    <value>軸「0」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2161.Cause" xml:space="preserve">
+    <value>軸「1」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2162.Cause" xml:space="preserve">
+    <value>軸「2」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2163.Cause" xml:space="preserve">
+    <value>軸「3」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2164.Cause" xml:space="preserve">
+    <value>軸「4」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2165.Cause" xml:space="preserve">
+    <value>軸「5」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2166.Cause" xml:space="preserve">
+    <value>軸「6」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2167.Cause" xml:space="preserve">
+    <value>軸「7」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2168.Cause" xml:space="preserve">
+    <value>軸「8」超出 + 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2160.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2161.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2162.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2163.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2164.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2165.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2166.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2167.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2168.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2170.Message" xml:space="preserve">
+    <value>J0 (-) 角度超限（軸編號：0）</value>
+  </data>
+  <data name="Error.2171.Message" xml:space="preserve">
+    <value>J1 (-) 角度超限（軸編號：1）</value>
+  </data>
+  <data name="Error.2172.Message" xml:space="preserve">
+    <value>J2 (-) 角度超限（軸編號：2）</value>
+  </data>
+  <data name="Error.2173.Message" xml:space="preserve">
+    <value>J3 (-) 角度超限（軸編號：3）</value>
+  </data>
+  <data name="Error.2174.Message" xml:space="preserve">
+    <value>J4 (-) 角度超限（軸編號：4）</value>
+  </data>
+  <data name="Error.2175.Message" xml:space="preserve">
+    <value>J5 (-) 角度超限（軸編號：5）</value>
+  </data>
+  <data name="Error.2176.Message" xml:space="preserve">
+    <value>J6 (-) 角度超限（軸編號：6）</value>
+  </data>
+  <data name="Error.2177.Message" xml:space="preserve">
+    <value>J7 (-) 角度超限（軸編號：7）</value>
+  </data>
+  <data name="Error.2178.Message" xml:space="preserve">
+    <value>J8 (-) 角度超限（軸編號：8）</value>
+  </data>
+  <data name="Error.2170.Cause" xml:space="preserve">
+    <value>軸「0」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2171.Cause" xml:space="preserve">
+    <value>軸「1」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2172.Cause" xml:space="preserve">
+    <value>軸「2」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2173.Cause" xml:space="preserve">
+    <value>軸「3」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2174.Cause" xml:space="preserve">
+    <value>軸「4」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2175.Cause" xml:space="preserve">
+    <value>軸「5」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2176.Cause" xml:space="preserve">
+    <value>軸「6」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2177.Cause" xml:space="preserve">
+    <value>軸「7」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2178.Cause" xml:space="preserve">
+    <value>軸「8」超出 - 關節限制。示教模式時，軸編號設為數值「0」。</value>
+  </data>
+  <data name="Error.2170.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2171.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2172.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2173.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2174.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2175.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2176.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2177.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2178.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2181.Message" xml:space="preserve">
+    <value>X(+) 資料超限</value>
+  </data>
+  <data name="Error.2181.Cause" xml:space="preserve">
+    <value>超出 X 軸正方向的 XYZ 限制。</value>
+  </data>
+  <data name="Error.2181.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2182.Message" xml:space="preserve">
+    <value>Y(+) 資料超限</value>
+  </data>
+  <data name="Error.2182.Cause" xml:space="preserve">
+    <value>超出 Y 軸正方向的 XYZ 限制。</value>
+  </data>
+  <data name="Error.2182.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2183.Message" xml:space="preserve">
+    <value>Z(+) 資料超限</value>
+  </data>
+  <data name="Error.2183.Cause" xml:space="preserve">
+    <value>超出 Z 軸正方向的 XYZ 限制。</value>
+  </data>
+  <data name="Error.2183.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2191.Message" xml:space="preserve">
+    <value>X(-) 資料超限</value>
+  </data>
+  <data name="Error.2191.Cause" xml:space="preserve">
+    <value>X(-) 資料超限。</value>
+  </data>
+  <data name="Error.2191.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2192.Message" xml:space="preserve">
+    <value>Y(-) 資料超限</value>
+  </data>
+  <data name="Error.2192.Cause" xml:space="preserve">
+    <value>Y(-) 資料超限。</value>
+  </data>
+  <data name="Error.2192.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2193.Message" xml:space="preserve">
+    <value>Z(-) 資料超限</value>
+  </data>
+  <data name="Error.2193.Cause" xml:space="preserve">
+    <value>Z(-) 資料超限。</value>
+  </data>
+  <data name="Error.2193.Measures" xml:space="preserve">
+    <value>調整位置。</value>
+  </data>
+  <data name="Error.2201.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2202.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2203.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2204.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2205.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2206.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2207.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2208.Message" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）
+2. SLP（機器人位置錯誤：CMD 區域）
+3. SLP（機器人位置錯誤：FB 區域）</value>
+  </data>
+  <data name="Error.2201.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2202.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2203.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2204.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2205.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2206.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2207.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2208.Cause" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：SLP 偵測到機器人位置回授（FB）超出監視平面。
+2. SLP（機器人位置錯誤：CMD 區域）：SLP 偵測到機器人位置命令（CMD）超出監視區域。
+3. SLP（機器人位置錯誤：FB 區域）：SLP 偵測到機器人位置回授（FB）超出監視區域。</value>
+  </data>
+  <data name="Error.2201.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2202.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2203.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2204.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2205.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2206.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2207.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2208.Measures" xml:space="preserve">
+    <value>1. SLP（機器人位置錯誤：FB 平面）：請確認機器人動作或相關參數設定。
+2. SLP（機器人位置錯誤：CMD 區域）：請確認機器人動作或相關參數設定。
+3. SLP（機器人位置錯誤：FB 區域）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2211.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：1）</value>
+  </data>
+  <data name="Error.2212.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：2）</value>
+  </data>
+  <data name="Error.2213.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：3）</value>
+  </data>
+  <data name="Error.2214.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：4）</value>
+  </data>
+  <data name="Error.2215.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：5）</value>
+  </data>
+  <data name="Error.2216.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：6）</value>
+  </data>
+  <data name="Error.2217.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：7）</value>
+  </data>
+  <data name="Error.2218.Message" xml:space="preserve">
+    <value>STR（機器人轉矩錯誤）（軸編號：8）</value>
+  </data>
+  <data name="Error.2211.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2212.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2213.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2214.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2215.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2216.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2217.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2218.Cause" xml:space="preserve">
+    <value>安全轉矩範圍監視偵測到超出轉矩限制。</value>
+  </data>
+  <data name="Error.2211.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2212.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2213.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2214.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2215.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2216.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2217.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2218.Measures" xml:space="preserve">
+    <value>轉矩範圍監視功能偵測到超出預定允許轉矩範圍的回授轉矩。</value>
+  </data>
+  <data name="Error.2221.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：1）</value>
+  </data>
+  <data name="Error.2222.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：2）</value>
+  </data>
+  <data name="Error.2223.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：3）</value>
+  </data>
+  <data name="Error.2224.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：4）</value>
+  </data>
+  <data name="Error.2225.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：5）</value>
+  </data>
+  <data name="Error.2226.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：6）</value>
+  </data>
+  <data name="Error.2227.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：7）</value>
+  </data>
+  <data name="Error.2228.Message" xml:space="preserve">
+    <value>DSI 不一致（DSI 編號：8）</value>
+  </data>
+  <data name="Error.2221.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2222.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2223.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2224.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2225.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2226.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2227.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2228.Cause" xml:space="preserve">
+    <value>雙重 DSI 狀態不一致。</value>
+  </data>
+  <data name="Error.2221.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2222.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2223.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2224.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2225.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2226.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2227.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2228.Measures" xml:space="preserve">
+    <value>雙重 DSI 訊號的 ON/OFF 狀態不一致。請檢查 DSI 接線、雙重訊號的 ON/OFF 狀態及 ON/OFF 狀態切換時序。（雙重訊號的 ON/OFF 狀態持續不一致約 0.1 秒以上時會發生此錯誤。）除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2230.Message" xml:space="preserve">
+    <value>雙重安全輸出不一致</value>
+  </data>
+  <data name="Error.2230.Cause" xml:space="preserve">
+    <value>冗餘接線的狀態不一致（雙重安全輸出）。</value>
+  </data>
+  <data name="Error.2230.Measures" xml:space="preserve">
+    <value>關閉電源後再開啟一次。若再次發生相同錯誤，請聯絡製造商。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2231.Message" xml:space="preserve">
+    <value>雙重安全輸出回授不一致</value>
+  </data>
+  <data name="Error.2231.Cause" xml:space="preserve">
+    <value>雙重安全輸出與回授狀態不一致。</value>
+  </data>
+  <data name="Error.2231.Measures" xml:space="preserve">
+    <value>關閉電源後再開啟一次。若再次發生相同錯誤，請聯絡製造商。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2240.Message" xml:space="preserve">
+    <value>原點資料變更</value>
+  </data>
+  <data name="Error.2240.Cause" xml:space="preserve">
+    <value>位置監視功能執行期間原點資料發生變更。</value>
+  </data>
+  <data name="Error.2240.Measures" xml:space="preserve">
+    <value>位置監視功能執行期間因設定原點而變更原點資料時會發生此錯誤。關閉電源後重新開啟以重設錯誤。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2250.Message" xml:space="preserve">
+    <value>無法執行安全功能（未設定原點）</value>
+  </data>
+  <data name="Error.2250.Cause" xml:space="preserve">
+    <value>因未設定原點，無法執行安全功能。</value>
+  </data>
+  <data name="Error.2250.Measures" xml:space="preserve">
+    <value>未設定原點時安全監視功能不會啟動。請設定原點。</value>
+  </data>
+  <data name="Error.2260.Message" xml:space="preserve">
+    <value>無法執行安全功能（無擴充安全單元）</value>
+  </data>
+  <data name="Error.2260.Cause" xml:space="preserve">
+    <value>未連接機器人安全選配的擴充安全單元。</value>
+  </data>
+  <data name="Error.2260.Measures" xml:space="preserve">
+    <value>使用安全監視功能須將機器人安全選配的擴充安全單元連接至控制器。請連接擴充安全單元。若已連接仍發生錯誤，擴充安全單元可能故障，請聯絡服務提供商。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2261.Message" xml:space="preserve">
+    <value>擴充安全單元站號錯誤</value>
+  </data>
+  <data name="Error.2261.Cause" xml:space="preserve">
+    <value>擴充安全單元的站號無效。</value>
+  </data>
+  <data name="Error.2261.Measures" xml:space="preserve">
+    <value>將擴充安全單元的站號設為 2。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2270.Message" xml:space="preserve">
+    <value>無法開啟伺服（SS1/STO 啟用中）</value>
+  </data>
+  <data name="Error.2270.Cause" xml:space="preserve">
+    <value>SS1/STO 啟用時無法開啟伺服。</value>
+  </data>
+  <data name="Error.2270.Measures" xml:space="preserve">
+    <value>開啟伺服前先停用 SS1。</value>
+  </data>
+  <data name="Error.2280.Message" xml:space="preserve">
+    <value>超出 SS1 減速時間</value>
+  </data>
+  <data name="Error.2280.Cause" xml:space="preserve">
+    <value>啟用 SS1 後機器人未在減速時間內停止。</value>
+  </data>
+  <data name="Error.2280.Measures" xml:space="preserve">
+    <value>請確認機器人動作、負載及停止速度參數（SFSPZERO）設定。</value>
+  </data>
+  <data name="Error.2281.Message" xml:space="preserve">
+    <value>超出 SS2 減速時間</value>
+  </data>
+  <data name="Error.2281.Cause" xml:space="preserve">
+    <value>啟用 SS2 後機器人未在減速時間內停止。</value>
+  </data>
+  <data name="Error.2281.Measures" xml:space="preserve">
+    <value>請確認機器人動作、負載及停止速度參數（SFSPZERO）設定。</value>
+  </data>
+  <data name="Error.2282.Message" xml:space="preserve">
+    <value>1. SOS（位置錯誤）
+2. SOS（速度錯誤）
+3. SOS（位置命令錯誤）
+4. SOS（速度命令錯誤）</value>
+  </data>
+  <data name="Error.2282.Cause" xml:space="preserve">
+    <value>1. SOS（位置錯誤）：偵測到 SOS 時的位置回授（FB）變化。
+2. SOS（速度錯誤）：偵測到 SOS 時的回授（FB）速度超限。
+3. SOS（位置命令錯誤）：偵測到 SOS 時的位置命令（CMD）變化。
+4. SOS（速度命令錯誤）：偵測到 SOS 時的命令（CMD）速度超限。</value>
+  </data>
+  <data name="Error.2282.Measures" xml:space="preserve">
+    <value>1. SOS（位置錯誤）：偵測到 SOS 時位置回授（FB）因外力而變化。消除外力來源或進行風險評估，再修改參數「SOSTLRNC」的值，以擴大 SOS 的允許範圍。
+2. SOS（速度錯誤）：請檢查外力或相關參數設定。
+3. SOS（位置命令錯誤）：請確認機器人動作或相關參數設定。
+4. SOS（速度命令錯誤）：請確認機器人動作或相關參數設定。</value>
+  </data>
+  <data name="Error.2301.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：1）</value>
+  </data>
+  <data name="Error.2302.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：2）</value>
+  </data>
+  <data name="Error.2303.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：3）</value>
+  </data>
+  <data name="Error.2304.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：4）</value>
+  </data>
+  <data name="Error.2305.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：5）</value>
+  </data>
+  <data name="Error.2306.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：6）</value>
+  </data>
+  <data name="Error.2307.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：7）</value>
+  </data>
+  <data name="Error.2308.Message" xml:space="preserve">
+    <value>SLS（關節速度錯誤）（軸編號：8）</value>
+  </data>
+  <data name="Error.2301.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2302.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2303.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2304.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2305.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2306.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2307.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2308.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2301.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2302.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2303.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2304.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2305.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2306.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2307.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2308.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2311.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：合成速度）</value>
+  </data>
+  <data name="Error.2312.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：X+）</value>
+  </data>
+  <data name="Error.2313.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：X-）</value>
+  </data>
+  <data name="Error.2314.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：Y+）</value>
+  </data>
+  <data name="Error.2315.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：Y-）</value>
+  </data>
+  <data name="Error.2316.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：Z+）</value>
+  </data>
+  <data name="Error.2317.Message" xml:space="preserve">
+    <value>SLS（XYZ 速度錯誤）（偵測方向：Z-）</value>
+  </data>
+  <data name="Error.2311.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2312.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2313.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2314.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2315.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2316.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2317.Cause" xml:space="preserve">
+    <value>速度監視偵測到速度超限。</value>
+  </data>
+  <data name="Error.2311.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2312.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2313.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2314.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2315.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2316.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2317.Measures" xml:space="preserve">
+    <value>速度監視功能偵測到超過限制速度的速度回授。請檢查機器人動作或監視速度設定，或檢查延遲時間（參數 SLSDLY）設定。</value>
+  </data>
+  <data name="Error.2320.Message" xml:space="preserve">
+    <value>SF 機器人控制錯誤</value>
+  </data>
+  <data name="Error.2320.Cause" xml:space="preserve">
+    <value>機器人動作命令與回授不一致。</value>
+  </data>
+  <data name="Error.2320.Measures" xml:space="preserve">
+    <value>機器人位置命令與回授位置不一致。請檢查機器人動作內容、末端負載設定或與周邊設備的干涉。</value>
+  </data>
+  <data name="Error.2370.Message" xml:space="preserve">
+    <value>1. SF（處理錯誤）
+2. SF（處理計數器錯誤）</value>
+  </data>
+  <data name="Error.2370.Cause" xml:space="preserve">
+    <value>1. SF（處理錯誤）：安全功能未正常執行。
+2. SF（處理計數器錯誤）：伺服 CPU 的安全功能未正常執行。</value>
+  </data>
+  <data name="Error.2370.Measures" xml:space="preserve">
+    <value>1. SF（處理錯誤）：關閉電源後再開啟一次。若再次發生相同錯誤，請聯絡製造商。除非另有說明，請關閉電源後再開啟。
+2. SF（處理計數器錯誤）：關閉電源後再開啟一次。若再次發生相同錯誤，請聯絡製造商。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2401.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：1）</value>
+  </data>
+  <data name="Error.2402.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：2）</value>
+  </data>
+  <data name="Error.2403.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：3）</value>
+  </data>
+  <data name="Error.2404.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：4）</value>
+  </data>
+  <data name="Error.2405.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：5）</value>
+  </data>
+  <data name="Error.2406.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：6）</value>
+  </data>
+  <data name="Error.2407.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：7）</value>
+  </data>
+  <data name="Error.2408.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：8）</value>
+  </data>
+  <data name="Error.2401.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2402.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2403.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2404.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2405.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2406.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2407.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2408.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2401.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2402.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2403.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2404.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2405.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2406.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2407.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2408.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2411.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：1）</value>
+  </data>
+  <data name="Error.2412.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：2）</value>
+  </data>
+  <data name="Error.2413.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：3）</value>
+  </data>
+  <data name="Error.2414.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：4）</value>
+  </data>
+  <data name="Error.2415.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：5）</value>
+  </data>
+  <data name="Error.2416.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：6）</value>
+  </data>
+  <data name="Error.2417.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：7）</value>
+  </data>
+  <data name="Error.2418.Message" xml:space="preserve">
+    <value>偵測到碰撞迴避 (*)。註：「(*)」表示偵測到的模型（模型登錄參數的末位數字）。（機器人 CPU 編號：8）</value>
+  </data>
+  <data name="Error.2411.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2412.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2413.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2414.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2415.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2416.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2417.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2418.Cause" xml:space="preserve">
+    <value>偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2411.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2412.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2413.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2414.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2415.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2416.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2417.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2418.Measures" xml:space="preserve">
+    <value>解除碰撞迴避狀態。</value>
+  </data>
+  <data name="Error.2420.Message" xml:space="preserve">
+    <value>碰撞迴避通訊錯誤</value>
+  </data>
+  <data name="Error.2420.Cause" xml:space="preserve">
+    <value>碰撞迴避通訊錯誤。</value>
+  </data>
+  <data name="Error.2420.Measures" xml:space="preserve">
+    <value>檢查機器人控制器。</value>
+  </data>
+  <data name="Error.2421.Message" xml:space="preserve">
+    <value>碰撞迴避模型過多</value>
+  </data>
+  <data name="Error.2421.Cause" xml:space="preserve">
+    <value>碰撞迴避模型過多。</value>
+  </data>
+  <data name="Error.2421.Measures" xml:space="preserve">
+    <value>減少碰撞迴避模型。</value>
+  </data>
+  <data name="Error.2430.Message" xml:space="preserve">
+    <value>再次偵測到碰撞迴避</value>
+  </data>
+  <data name="Error.2430.Cause" xml:space="preserve">
+    <value>已偵測到碰撞迴避。</value>
+  </data>
+  <data name="Error.2430.Measures" xml:space="preserve">
+    <value>將機械手臂移出干涉區域並恢復操作。</value>
+  </data>
+  <data name="Error.2500.Message" xml:space="preserve">
+    <value>追蹤編碼器資料錯誤</value>
+  </data>
+  <data name="Error.2500.Cause" xml:space="preserve">
+    <value>偵測到追蹤編碼器資料錯誤。</value>
+  </data>
+  <data name="Error.2500.Measures" xml:space="preserve">
+    <value>1）確認輸送帶以固定速度運轉。2）確認編碼器連接。3）確認接地線接地。</value>
+  </data>
+  <data name="Error.2510.Message" xml:space="preserve">
+    <value>追蹤參數設定值反向</value>
+  </data>
+  <data name="Error.2510.Cause" xml:space="preserve">
+    <value>追蹤參數 [EXCRGM*] 的設定值反向。</value>
+  </data>
+  <data name="Error.2510.Measures" xml:space="preserve">
+    <value>檢查參數 [EXCRGM*] 的值。</value>
+  </data>
+  <data name="Error.2520.Message" xml:space="preserve">
+    <value>追蹤參數超出範圍</value>
+  </data>
+  <data name="Error.2520.Cause" xml:space="preserve">
+    <value>追蹤參數 [TRBUF] 的設定值超出範圍。設定範圍：元素 1＝1–8，元素 2＝1–64。</value>
+  </data>
+  <data name="Error.2520.Measures" xml:space="preserve">
+    <value>檢查參數 [TRUBF] 的值。</value>
+  </data>
+  <data name="Error.2530.Message" xml:space="preserve">
+    <value>沒有可寫入資料的區域</value>
+  </data>
+  <data name="Error.2530.Cause" xml:space="preserve">
+    <value>沒有可寫入資料的區域。</value>
+  </data>
+  <data name="Error.2530.Measures" xml:space="preserve">
+    <value>請使用 TrRd 讀取資料。</value>
+  </data>
+  <data name="Error.2540.Message" xml:space="preserve">
+    <value>沒有可讀取的資料</value>
+  </data>
+  <data name="Error.2540.Cause" xml:space="preserve">
+    <value>沒有可讀取的資料。</value>
+  </data>
+  <data name="Error.2540.Measures" xml:space="preserve">
+    <value>請在執行 TrWrt 後使用 TrRd。</value>
+  </data>
+  <data name="Error.2560.Message" xml:space="preserve">
+    <value>追蹤參數無效</value>
+  </data>
+  <data name="Error.2560.Cause" xml:space="preserve">
+    <value>參數 EXTENC 的值超出範圍。設定範圍：1–8。</value>
+  </data>
+  <data name="Error.2560.Measures" xml:space="preserve">
+    <value>請檢查參數值。</value>
+  </data>
+  <data name="Error.2580.Message" xml:space="preserve">
+    <value>追蹤區域中沒有工件</value>
+  </data>
+  <data name="Error.2580.Cause" xml:space="preserve">
+    <value>追蹤緩衝區中沒有工件，或在工件進入追蹤區域之前執行了「TrkMv On」命令。</value>
+  </data>
+  <data name="Error.2580.Measures" xml:space="preserve">
+    <value>工件位於追蹤區域內時執行「TrkMv On」命令。</value>
+  </data>
+  <data name="Error.2601.Message" xml:space="preserve">
+    <value>起始位置超出極限範圍</value>
+  </data>
+  <data name="Error.2601.Cause" xml:space="preserve">
+    <value>起始位置在操作範圍之外。</value>
+  </data>
+  <data name="Error.2601.Measures" xml:space="preserve">
+    <value>調整位置</value>
+  </data>
+  <data name="Error.2602.Message" xml:space="preserve">
+    <value>目標位置超出極限範圍</value>
+  </data>
+  <data name="Error.2602.Cause" xml:space="preserve">
+    <value>目標位置在操作範圍之外。</value>
+  </data>
+  <data name="Error.2602.Measures" xml:space="preserve">
+    <value>調整位置</value>
+  </data>
+  <data name="Error.2603.Message" xml:space="preserve">
+    <value>過程位置超出極限範圍</value>
+  </data>
+  <data name="Error.2603.Cause" xml:space="preserve">
+    <value>中間過渡位置在操作範圍之外。</value>
+  </data>
+  <data name="Error.2603.Measures" xml:space="preserve">
+    <value>調整位置</value>
+  </data>
+  <data name="Error.2610.Message" xml:space="preserve">
+    <value>1. 樣條插補錯誤（樣條檔案）
+2. 無法開啟樣條檔案
+3. 樣條檔案損壞
+4. 不支援樣條檔案
+5. 無法變更樣條檔案
+6. 無法取得資料
+7. Ex-T 設定無效
+8. 無法建立樣條檔案</value>
+  </data>
+  <data name="Error.2610.Cause" xml:space="preserve">
+    <value>1. 樣條插補錯誤（樣條檔案）：發生與樣條檔案有關的錯誤。
+2. 無法開啟樣條檔案：無法開啟與 MvSpl 命令指定的樣條編號對應的樣條檔案。
+3. 樣條檔案損壞：樣條檔案內容與總和檢查碼不符。
+4. 不支援樣條檔案：指定的樣條檔案無法在目前的控制器上使用。
+5. 無法變更樣條檔案：目標樣條檔案目前正用於樣條插補（檔案已開啟）。
+6. 無法取得資料：樣條檔案已關閉，因此無法擷取資料。
+7. Ex-T 設定無效：Ex-T 設定無效。
+8. 無法建立樣條檔案：指定的樣條檔案已開啟。</value>
+  </data>
+  <data name="Error.2610.Measures" xml:space="preserve">
+    <value>1. 樣條插補錯誤（樣條檔案）：參照錯誤詳細編號確認發生的錯誤內容，並針對該內容採取措施。
+2. 無法開啟樣條檔案：確認樣條編號指定正確，且目標樣條檔案已儲存在控制器中。
+3. 樣條檔案損壞：開啟目標樣條檔案並檢查內容，再重新儲存以重建樣條檔案，然後將新檔案重新寫入控制器。
+4. 不支援樣條檔案：檢查樣條檔案及控制器的版本，可能需要升級軟體版本。
+5. 無法變更樣條檔案：目前用於樣條插補的樣條檔案（檔案已開啟）無法匯出至控制器、刪除或重新命名。請在樣條插補結束後執行這些操作。
+6. 無法取得資料：重設程式，然後再次執行 MvSpl 命令。
+7. Ex-T 設定無效：請確認檔案的編號及內容。
+8. 無法建立樣條檔案：請確認指定編號。</value>
+  </data>
+  <data name="Error.2611.Message" xml:space="preserve">
+    <value>1. 樣條插補錯誤（路徑點）
+2. 路徑點太接近 (nnnn)
+3. 姿態變化過大 (nnnn)
+4. 路徑點的構形旗標不正確 (nnnn)
+5. 未登錄路徑點
+6. 無法開啟路徑點檔案
+7. 檔案格式不同
+8. 點數無效</value>
+  </data>
+  <data name="Error.2611.Cause" xml:space="preserve">
+    <value>1. 樣條插補錯誤（路徑點）：發生與樣條檔案中登錄的路徑點有關的錯誤。
+2. 路徑點太接近 (nnnn)：路徑點之間的距離太短，或相對於路徑點距離的速度命令太高。
+3. 姿態變化過大 (nnnn)：路徑點之間的姿態變化過大。（姿態變化角度超過 150 度。）
+4. 路徑點的構形旗標不正確 (nnnn)：登錄了構形旗標值不同的路徑點。
+5. 未登錄路徑點：指定的路徑點未登錄。
+6. 無法開啟路徑點檔案：指定的路徑點檔案不存在。
+7. 檔案格式不同：檔案格式不同。
+8. 點數無效：路徑點數量無效。</value>
+  </data>
+  <data name="Error.2611.Measures" xml:space="preserve">
+    <value>1. 樣條插補錯誤（路徑點）：參照錯誤詳細編號確認發生的錯誤內容，並針對該內容採取措施。
+2. 路徑點太接近 (nnnn)：錯誤訊息中的「nnnn」表示造成錯誤的路徑點編號。請檢討此路徑點的位置或樣條插補命令速度。軟體版本 A3a 新增了高速樣條插補命令；啟用此功能後，對於各路徑點間的距離，可以指定比以往更高的命令速度。詳情請參閱另冊「使用說明書／功能及操作詳細說明」。
+3. 姿態變化過大 (nnnn)：錯誤訊息中的「nnnn」表示造成錯誤的路徑點編號。請檢討姿態以減小此路徑點的姿態變化量，或增加路徑點以減小單一區塊中的姿態變化量。
+4. 路徑點的構形旗標不正確 (nnnn)：錯誤訊息中的「nnnn」表示造成錯誤的路徑點編號。請檢討此路徑點的位置，並變更為與其他路徑點相同的構形旗標。
+5. 未登錄路徑點：請確認檔案的編號及內容。
+6. 無法開啟路徑點檔案：請確認檔案名稱及檔案是否存在。
+7. 檔案格式不同：請確認檔案格式。
+8. 點數無效：請確認檔案及檔案內容。</value>
+  </data>
+  <data name="Error.2612.Message" xml:space="preserve">
+    <value>1. 樣條插補錯誤（執行錯誤）
+2. 機器人不支援樣條插補
+3. 無法以這些啟動條件執行
+4. 正在執行其他樣條插補
+5. 無法執行單步返回</value>
+  </data>
+  <data name="Error.2612.Cause" xml:space="preserve">
+    <value>1. 樣條插補錯誤（執行錯誤）：發生與樣條插補執行條件有關的錯誤。
+2. 機器人不支援樣條插補：嘗試在不支援樣條插補的機器人上執行樣條插補。
+3. 無法以這些啟動條件執行：嘗試在啟動條件為 ALWAYS ERROR 的插槽中，以機器人程式執行樣條插補。
+4. 正在執行其他樣條插補：不能同時執行多個樣條插補。
+5. 無法執行單步返回：嘗試對樣條插補執行單步返回。</value>
+  </data>
+  <data name="Error.2612.Measures" xml:space="preserve">
+    <value>1. 樣條插補錯誤（執行錯誤）：參照錯誤詳細編號確認發生的錯誤內容，並針對該內容採取措施。
+2. 機器人不支援樣條插補：使用樣條插補以外的命令。
+3. 無法以這些啟動條件執行：啟動條件為 ALWAYS ERROR 的插槽無法執行樣條插補。請刪除樣條插補或將啟動條件改為 START。
+4. 正在執行其他樣條插補：檢查是否在樣條插補期間以其他機器人嘗試執行樣條插補，或在樣條插補暫停時直接嘗試執行樣條插補。
+5. 無法執行單步返回：樣條插補不支援單步返回操作。請勿嘗試單步返回。</value>
+  </data>
+  <data name="Error.2613.Message" xml:space="preserve">
+    <value>1. 樣條插補錯誤（插補處理）
+2. 路徑點不足
+3. 圓弧指定點不足 (nnnn)
+4. 區塊資料計算錯誤 (ssssssss)
+5. 區塊資料不存在
+6. 樣條插補命令計算錯誤 (nnnn)</value>
+  </data>
+  <data name="Error.2613.Cause" xml:space="preserve">
+    <value>1. 樣條插補錯誤（插補處理）：樣條插補處理期間發生錯誤。
+2. 路徑點不足：樣條檔案中登錄的路徑點少於四個。
+3. 圓弧指定點不足 (nnnn)：未為樣條插補圓弧指定連續三個路徑點。
+4. 區塊資料計算錯誤 (ssssssss)：計算樣條插補區塊相關資料的處理發生錯誤。
+5. 區塊資料不存在：樣條插補期間控制器的處理負載過大，無法及時產生樣條插補區塊資料。
+6. 樣條插補命令計算錯誤 (nnnn)：計算樣條插補位置命令的處理發生錯誤。</value>
+  </data>
+  <data name="Error.2613.Measures" xml:space="preserve">
+    <value>1. 樣條插補錯誤（插補處理）：參照錯誤詳細編號確認發生的錯誤內容，並針對該內容採取措施。
+2. 路徑點不足：執行樣條插補至少需要四個路徑點。請使用已登錄四個以上路徑點的樣條檔案。
+3. 圓弧指定點不足 (nnnn)：包含錯誤訊息所示路徑點編號「nnnn」的圓弧，其點數不足。產生圓弧須將連續三個路徑點指定為圓弧。若只有連續兩點就會發生此錯誤。請在圓弧指定中增加一個路徑點，以沿圓弧路徑移動。
+4. 區塊資料計算錯誤 (ssssssss)：錯誤內容依訊息中的「ssssssss」而異。
+- Reg.Pt.：樣條檔案中儲存的路徑點數量資訊與實際登錄的數量不符。請在樣條檔案編輯畫面開啟該檔案，重新儲存並匯出至控制器。
+- Cir.Arc：無法產生圓弧。請確認圓弧指定的路徑點未排列在同一直線上。
+- Frm.Cnv.：座標系轉換計算失敗。請檢討路徑點位置。
+- Blk.Stp.：區塊資料的產生已停止，無法執行樣條插補。請重設程式。
+- PtoJ.：無法計算該位置的關節角度。請檢討路徑點位置。
+5. 區塊資料不存在：檢查能否以下列方式降低樣條插補執行處理的負載。
+- 停止同時執行碰撞檢測或視覺控制等與移動有關的功能。
+- 檢討多工作業，減少同時執行的插槽數量。
+- 減少專用輸出訊號配置。
+- 降低樣條插補命令速度。
+6. 樣條插補命令計算錯誤 (nnnn)：請檢討錯誤訊息所示路徑點編號「nnnn」的位置或 MvSpl 命令引數的設定值。確認取消角度設定正確。（樣條曲線是否突然彎曲？）</value>
+  </data>
+  <data name="Error.2614.Message" xml:space="preserve">
+    <value>1. 樣條插補錯誤（其他功能）
+2. 追蹤功能已啟用
+3. 無法變更工具／基座設定
+4. 無法執行 Jrc 命令</value>
+  </data>
+  <data name="Error.2614.Cause" xml:space="preserve">
+    <value>1. 樣條插補錯誤（其他功能）：執行了無法與樣條插補並用的功能。
+2. 追蹤功能已啟用：嘗試樣條插補時追蹤功能已啟用。
+3. 無法變更工具／基座設定：樣條插補執行期間變更了工具／基座設定。
+4. 無法執行 Jrc 命令：樣條插補期間執行了 Jrc 命令。</value>
+  </data>
+  <data name="Error.2614.Measures" xml:space="preserve">
+    <value>1. 樣條插補錯誤（其他功能）：參照錯誤詳細編號確認發生的錯誤內容，並針對該內容採取措施。
+2. 追蹤功能已啟用：樣條插補與追蹤功能不能同時執行。執行樣條插補前請先停用追蹤功能。
+3. 無法變更工具／基座設定：樣條插補期間（包括暫停時）無法變更工具／基座設定。請在樣條插補結束後變更設定。
+4. 無法執行 Jrc 命令：樣條插補期間（包括暫停時）無法執行 Jrc 命令。請在樣條插補結束後執行該命令。</value>
+  </data>
+  <data name="Error.2615.Message" xml:space="preserve">
+    <value>1. 樣條插補錯誤（超出設定範圍）
+2. M_SplVar 設定值超出設定範圍
+3. M_SplVar 設定範圍超出設定範圍 (nnnn)
+4. 輸出訊號超出範圍 (nnnn)
+5. 容差設定值超出範圍 (nnnn)
+6. 插補設定資訊超出範圍
+7. 標頭資訊超出範圍</value>
+  </data>
+  <data name="Error.2615.Cause" xml:space="preserve">
+    <value>1. 樣條插補錯誤（超出設定範圍）：與樣條插補有關的設定值超出設定範圍。
+2. M_SplVar 設定值超出設定範圍：代入 M_SplVar 的值超出範圍。
+3. M_SplVar 設定範圍超出設定範圍 (nnnn)：樣條檔案中的設定值超出設定範圍。
+4. 輸出訊號超出範圍 (nnnn)：樣條檔案中訊號輸出的起始編號超出範圍。
+5. 容差設定值超出範圍 (nnnn)：樣條檔案中的容差指定超出範圍。
+6. 插補設定資訊超出範圍：樣條檔案的插補設定資訊中發現超出範圍的資料值。
+7. 標頭資訊超出範圍：樣條檔案的標頭資訊中發現超出範圍的資料值。</value>
+  </data>
+  <data name="Error.2615.Measures" xml:space="preserve">
+    <value>1. 樣條插補錯誤（超出設定範圍）：參照錯誤詳細編號確認發生的錯誤內容，並針對該內容採取措施。
+2. M_SplVar 設定值超出設定範圍：代入設定範圍內的值（0 至 32767）。
+3. M_SplVar 設定範圍超出設定範圍 (nnnn)：將錯誤訊息所示路徑點編號「nnnn」的設定變更為範圍內的值（-1 至 32767）。
+4. 輸出訊號超出範圍 (nnnn)：將錯誤訊息所示路徑點編號「nnnn」的訊號輸出起始編號變更為範圍內的值（-1 至 32767）。
+5. 容差設定值超出範圍 (nnnn)：將錯誤訊息所示路徑點編號「nnnn」的容差指定變更為範圍內的值（0 至 100）。
+6. 插補設定資訊超出範圍：開啟目標樣條檔案並檢查內容，再重新儲存以重建樣條檔案，然後將新檔案重新寫入控制器。
+7. 標頭資訊超出範圍：開啟目標樣條檔案並檢查內容，再重新儲存以重建樣條檔案，然後將新檔案重新寫入控制器。</value>
+  </data>
+  <data name="Error.2621.Message" xml:space="preserve">
+    <value>追蹤功能已啟用</value>
+  </data>
+  <data name="Error.2621.Cause" xml:space="preserve">
+    <value>追蹤功能與 Ex-T 控制功能不能同時啟用。</value>
+  </data>
+  <data name="Error.2621.Measures" xml:space="preserve">
+    <value>使用 Ex-T 控制功能時，請停用追蹤功能。</value>
+  </data>
+  <data name="Error.2622.Message" xml:space="preserve">
+    <value>奇異點通過功能已啟用</value>
+  </data>
+  <data name="Error.2622.Cause" xml:space="preserve">
+    <value>奇異點通過功能與 Ex-T 控制功能不能同時啟用。</value>
+  </data>
+  <data name="Error.2622.Measures" xml:space="preserve">
+    <value>使用 Ex-T 控制功能時，請停用奇異點通過功能。</value>
+  </data>
+  <data name="Error.2641.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：1）</value>
+  </data>
+  <data name="Error.2642.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：2）</value>
+  </data>
+  <data name="Error.2643.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：3）</value>
+  </data>
+  <data name="Error.2644.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：4）</value>
+  </data>
+  <data name="Error.2645.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：5）</value>
+  </data>
+  <data name="Error.2646.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：6）</value>
+  </data>
+  <data name="Error.2647.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：7）</value>
+  </data>
+  <data name="Error.2648.Message" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號（軸編號：8）</value>
+  </data>
+  <data name="Error.2641.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2642.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2643.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2644.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2645.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2646.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2647.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2648.Cause" xml:space="preserve">
+    <value>輸入了附加軸 FLS 訊號。</value>
+  </data>
+  <data name="Error.2641.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「1」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2642.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「2」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2643.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「3」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2644.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「4」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2645.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「5」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2646.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「6」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2647.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「7」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2648.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「8」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2651.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：1）</value>
+  </data>
+  <data name="Error.2652.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：2）</value>
+  </data>
+  <data name="Error.2653.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：3）</value>
+  </data>
+  <data name="Error.2654.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：4）</value>
+  </data>
+  <data name="Error.2655.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：5）</value>
+  </data>
+  <data name="Error.2656.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：6）</value>
+  </data>
+  <data name="Error.2657.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：7）</value>
+  </data>
+  <data name="Error.2658.Message" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號（軸編號：8）</value>
+  </data>
+  <data name="Error.2651.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2652.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2653.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2654.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2655.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2656.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2657.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2658.Cause" xml:space="preserve">
+    <value>輸入了附加軸 RLS 訊號。</value>
+  </data>
+  <data name="Error.2651.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「1」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2652.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「2」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2653.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「3」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2654.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「4」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2655.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「5」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2656.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「6」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2657.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「7」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2658.Measures" xml:space="preserve">
+    <value>鬆開煞車並以手移動手臂。或者，參閱另冊「使用說明書／功能及操作詳細說明」中的「暫時重設無法解除的錯誤之操作」，重設錯誤，然後使用 JOG 操作將軸「8」移至操作範圍內。</value>
+  </data>
+  <data name="Error.2660.Message" xml:space="preserve">
+    <value>1. 軸協同相關錯誤
+2. 機器人編號無效（軸追蹤）
+3. 軸編號無效（軸追蹤）
+4. 單位系統無效（軸追蹤）
+5. 未設定原點（軸追蹤）
+6. 機器人編號無效（基座協同）
+7. 軸編號無效（基座協同）
+8. 單位系統無效（基座協同）
+9. 未設定原點（基座協同）</value>
+  </data>
+  <data name="Error.2660.Cause" xml:space="preserve">
+    <value>1. 軸協同相關錯誤：發生軸協同相關錯誤。
+2. 機器人編號無效（軸追蹤）：指定的機器人編號無效。
+3. 軸編號無效（軸追蹤）：指定的軸編號無效。
+4. 單位系統無效（軸追蹤）：指定了旋轉軸。
+5. 未設定原點（軸追蹤）：因未設定原點，無法執行軸追蹤。
+6. 機器人編號無效（基座協同）：指定的機器人編號無效。
+7. 軸編號無效（基座協同）：指定的軸編號無效。
+8. 單位系統無效（基座協同）：指定了旋轉軸。
+9. 未設定原點（基座協同）：因未設定原點，無法執行基座協同。</value>
+  </data>
+  <data name="Error.2660.Measures" xml:space="preserve">
+    <value>1. 軸協同相關錯誤：請依錯誤詳細編號確認內容。
+2. 機器人編號無效（軸追蹤）：設定正確的機器人編號。
+3. 軸編號無效（軸追蹤）：設定正確的軸編號。
+4. 單位系統無效（軸追蹤）：請指定直線驅動軸。
+5. 未設定原點（軸追蹤）：請設定原點，然後關閉電源再開啟。
+6. 機器人編號無效（基座協同）：設定正確的機器人編號。
+7. 軸編號無效（基座協同）：設定正確的軸編號。
+8. 單位系統無效（基座協同）：請指定直線驅動軸。
+9. 未設定原點（基座協同）：請設定原點，然後關閉電源再開啟。</value>
+  </data>
+  <data name="Error.2661.Message" xml:space="preserve">
+    <value>1. 軸協同相關錯誤（組合）
+2. 無法使用（軸追蹤）
+3. 無法使用（基座協同）
+4. 無法使用（基座協同）
+5. 無法執行 Jrc
+6. 無法執行插補
+7. 無法使用（基座協同）</value>
+  </data>
+  <data name="Error.2661.Cause" xml:space="preserve">
+    <value>1. 軸協同相關錯誤（組合）：此功能不能與軸協同同時使用。
+2. 無法使用（軸追蹤）：同步附加軸控制已啟用。
+3. 無法使用（基座協同）：追蹤功能已啟用。
+4. 無法使用（基座協同）：同步附加軸控制已啟用。
+5. 無法執行 Jrc：基座協同正在執行。
+6. 無法執行插補：附加軸即將移動。
+7. 無法使用（基座協同）：干涉迴避功能已啟用。</value>
+  </data>
+  <data name="Error.2661.Measures" xml:space="preserve">
+    <value>1. 軸協同相關錯誤（組合）：請依錯誤詳細編號確認內容。
+2. 無法使用（軸追蹤）：停用同步附加軸控制。
+3. 無法使用（基座協同）：停用追蹤功能。
+4. 無法使用（基座協同）：停用同步附加軸控制。
+5. 無法執行 Jrc：請勿使用 Jrc 命令。
+6. 無法執行插補：請勿移動附加軸。
+7. 無法使用（基座協同）：停用干涉迴避功能。</value>
+  </data>
+  <data name="Error.2662.Message" xml:space="preserve">
+    <value>1. 無法變更工件設定
+2. 無法使用此工件</value>
+  </data>
+  <data name="Error.2662.Cause" xml:space="preserve">
+    <value>1. 無法變更工件設定：附加軸追蹤正在執行。
+2. 無法使用此工件：尚未完成設定（軸追蹤）。</value>
+  </data>
+  <data name="Error.2662.Measures" xml:space="preserve">
+    <value>1. 無法變更工件設定：請在停用工件協同後變更。
+2. 無法使用此工件：請確認設定值後再執行。</value>
+  </data>
+  <data name="Error.2663.Message" xml:space="preserve">
+    <value>原點資料已變更</value>
+  </data>
+  <data name="Error.2663.Cause" xml:space="preserve">
+    <value>基座協同目標軸的原點資料已變更。</value>
+  </data>
+  <data name="Error.2663.Measures" xml:space="preserve">
+    <value>關閉電源後再開啟一次。</value>
+  </data>
+  <data name="Error.2700.Message" xml:space="preserve">
+    <value>Cmp 錯誤（模式不同）</value>
+  </data>
+  <data name="Error.2700.Cause" xml:space="preserve">
+    <value>指定模式與目前模式不同。</value>
+  </data>
+  <data name="Error.2700.Measures" xml:space="preserve">
+    <value>執行 Cmp Off 後再指定。</value>
+  </data>
+  <data name="Error.2710.Message" xml:space="preserve">
+    <value>Cmp 錯誤（位移）</value>
+  </data>
+  <data name="Error.2710.Cause" xml:space="preserve">
+    <value>柔順控制動作的位移量超過指定值。</value>
+  </data>
+  <data name="Error.2710.Measures" xml:space="preserve">
+    <value>修正程式、位置或其他項目以減小位移量。</value>
+  </data>
+  <data name="Error.2720.Message" xml:space="preserve">
+    <value>Cmp 錯誤（關節角度）</value>
+  </data>
+  <data name="Error.2720.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節角度限制。</value>
+  </data>
+  <data name="Error.2720.Measures" xml:space="preserve">
+    <value>調整位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2721.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J1 關節角度）（軸編號：1）</value>
+  </data>
+  <data name="Error.2722.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J2 關節角度）（軸編號：2）</value>
+  </data>
+  <data name="Error.2723.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J3 關節角度）（軸編號：3）</value>
+  </data>
+  <data name="Error.2724.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J4 關節角度）（軸編號：4）</value>
+  </data>
+  <data name="Error.2725.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J5 關節角度）（軸編號：5）</value>
+  </data>
+  <data name="Error.2726.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J6 關節角度）（軸編號：6）</value>
+  </data>
+  <data name="Error.2727.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J7 關節角度）（軸編號：7）</value>
+  </data>
+  <data name="Error.2728.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J8 關節角度）（軸編號：8）</value>
+  </data>
+  <data name="Error.2721.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「1」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2722.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「2」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2723.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「3」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2724.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「4」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2725.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「5」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2726.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「6」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2727.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「7」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2728.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「8」軸的關節角度限制。</value>
+  </data>
+  <data name="Error.2721.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2722.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2723.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2724.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2725.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2726.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2727.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2728.Measures" xml:space="preserve">
+    <value>變更位置資料或減小位移。</value>
+  </data>
+  <data name="Error.2731.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J1 軸速度）（軸編號：1）</value>
+  </data>
+  <data name="Error.2732.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J2 軸速度）（軸編號：2）</value>
+  </data>
+  <data name="Error.2733.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J3 軸速度）（軸編號：3）</value>
+  </data>
+  <data name="Error.2734.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J4 軸速度）（軸編號：4）</value>
+  </data>
+  <data name="Error.2735.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J5 軸速度）（軸編號：5）</value>
+  </data>
+  <data name="Error.2736.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J6 軸速度）（軸編號：6）</value>
+  </data>
+  <data name="Error.2737.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J7 軸速度）（軸編號：7）</value>
+  </data>
+  <data name="Error.2738.Message" xml:space="preserve">
+    <value>Cmp 錯誤（J8 軸速度）（軸編號：8）</value>
+  </data>
+  <data name="Error.2731.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「1」軸的速度限制。</value>
+  </data>
+  <data name="Error.2732.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「2」軸的速度限制。</value>
+  </data>
+  <data name="Error.2733.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「3」軸的速度限制。</value>
+  </data>
+  <data name="Error.2734.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「4」軸的速度限制。</value>
+  </data>
+  <data name="Error.2735.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「5」軸的速度限制。</value>
+  </data>
+  <data name="Error.2736.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「6」軸的速度限制。</value>
+  </data>
+  <data name="Error.2737.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「7」軸的速度限制。</value>
+  </data>
+  <data name="Error.2738.Cause" xml:space="preserve">
+    <value>Cmp 命令超出關節「8」軸的速度限制。</value>
+  </data>
+  <data name="Error.2731.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2732.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2733.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2734.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2735.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2736.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2737.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2738.Measures" xml:space="preserve">
+    <value>變更位置資料或降低速度。</value>
+  </data>
+  <data name="Error.2740.Message" xml:space="preserve">
+    <value>Cmp 錯誤（座標轉換）</value>
+  </data>
+  <data name="Error.2740.Cause" xml:space="preserve">
+    <value>偵測到 Cmp 命令的座標轉換錯誤。</value>
+  </data>
+  <data name="Error.2740.Measures" xml:space="preserve">
+    <value>調整位置資料。</value>
+  </data>
+  <data name="Error.2750.Message" xml:space="preserve">
+    <value>1. 追蹤期間無法執行
+2. 無法停用 F.Ctrl（追蹤）
+3. 無法停用力覺控制（正在追蹤）</value>
+  </data>
+  <data name="Error.2750.Cause" xml:space="preserve">
+    <value>1. 追蹤期間無法執行：追蹤期間無法執行。
+2. 無法停用 F.Ctrl（追蹤）：執行追蹤時無法停用力控制。
+3. 無法停用力覺控制（正在追蹤）：執行追蹤功能時無法停用力覺控制。</value>
+  </data>
+  <data name="Error.2750.Measures" xml:space="preserve">
+    <value>1. 追蹤期間無法執行：執行 Trk Off 後再執行。
+2. 無法停用 F.Ctrl（追蹤）：請停用追蹤功能。
+3. 無法停用力覺控制（正在追蹤）：停用追蹤功能後再試。</value>
+  </data>
+  <data name="Error.2760.Message" xml:space="preserve">
+    <value>已達力覺控制偏移限制</value>
+  </data>
+  <data name="Error.2760.Cause" xml:space="preserve">
+    <value>機器人嘗試移動至力覺控制偏移限制之外。</value>
+  </data>
+  <data name="Error.2760.Measures" xml:space="preserve">
+    <value>檢查啟用力覺控制時的機器人動作是否有問題。（偏移限制為參數 FSCORMX 中設定的值。）</value>
+  </data>
+  <data name="Error.2770.Message" xml:space="preserve">
+    <value>偏移後的位置超出移動範圍 (**) 註：「**」會替換為「±Jn」（n 為軸編號）。</value>
+  </data>
+  <data name="Error.2770.Cause" xml:space="preserve">
+    <value>力覺控制偏移後的位置超出範圍。機器人可能已移動至接近移動範圍限制處。</value>
+  </data>
+  <data name="Error.2770.Measures" xml:space="preserve">
+    <value>檢討移動位置或力覺控制設定，確保偏移後的位置不超出移動範圍。</value>
+  </data>
+  <data name="Error.2780.Message" xml:space="preserve">
+    <value>偏移後位置的速度超限 (**) 註：「**」會替換為「Jn」（n 為軸編號）。</value>
+  </data>
+  <data name="Error.2780.Cause" xml:space="preserve">
+    <value>移動至力覺控制偏移後位置的速度超出速度限制。移動速度可能過快，或機器人可能已移動至奇異點附近。</value>
+  </data>
+  <data name="Error.2780.Measures" xml:space="preserve">
+    <value>檢討移動速度、移動位置或力覺控制設定。</value>
+  </data>
+  <data name="Error.2800.Message" xml:space="preserve">
+    <value>無效的位置資料</value>
+  </data>
+  <data name="Error.2800.Cause" xml:space="preserve">
+    <value>這可能在機器人無法到達位置時發生。</value>
+  </data>
+  <data name="Error.2800.Measures" xml:space="preserve">
+    <value>調整位置</value>
+  </data>
+  <data name="Error.2801.Message" xml:space="preserve">
+    <value>無效的起始位置資料</value>
+  </data>
+  <data name="Error.2801.Cause" xml:space="preserve">
+    <value>這可能在機器人無法到達起始位置時發生。</value>
+  </data>
+  <data name="Error.2801.Measures" xml:space="preserve">
+    <value>調整位置</value>
+  </data>
+  <data name="Error.2802.Message" xml:space="preserve">
+    <value>無效的目標位置資料</value>
+  </data>
+  <data name="Error.2802.Cause" xml:space="preserve">
+    <value>這可能在機器人無法到達目標位置時發生。</value>
+  </data>
+  <data name="Error.2802.Measures" xml:space="preserve">
+    <value>調整位置</value>
+  </data>
+  <data name="Error.2803.Message" xml:space="preserve">
+    <value>輔助位置資料無效（中間點）</value>
+  </data>
+  <data name="Error.2803.Cause" xml:space="preserve">
+    <value>直線插補的中間路徑及圓弧插補的路徑位於機器人無法移動到的位置。</value>
+  </data>
+  <data name="Error.2803.Measures" xml:space="preserve">
+    <value>確認發生錯誤的程式行，並確認不存在機器人無法移動到的位置。請修正起始位置、中間位置或結束位置的資料。</value>
+  </data>
+  <data name="Error.2810.Message" xml:space="preserve">
+    <value>姿態旗標不符合</value>
+  </data>
+  <data name="Error.2810.Cause" xml:space="preserve">
+    <value>起始位置與目標位置的姿態旗標不同</value>
+  </data>
+  <data name="Error.2810.Measures" xml:space="preserve">
+    <value>調整起始或目標位置</value>
+  </data>
+  <data name="Error.2820.Message" xml:space="preserve">
+    <value>加速度倍率無效</value>
+  </data>
+  <data name="Error.2820.Cause" xml:space="preserve">
+    <value>加減速倍率過小時會發生此錯誤。</value>
+  </data>
+  <data name="Error.2820.Measures" xml:space="preserve">
+    <value>將加減速倍率調大。</value>
+  </data>
+  <data name="Error.2830.Message" xml:space="preserve">
+    <value>系統錯誤（插補姿態類型）</value>
+  </data>
+  <data name="Error.2830.Cause" xml:space="preserve">
+    <value>Mov 指令的 Type 引數設為 -1 或類似值。</value>
+  </data>
+  <data name="Error.2830.Measures" xml:space="preserve">
+    <value>將 Mov 指令的 Type 引數變更為正確值（0、1 等）。</value>
+  </data>
+  <data name="Error.2840.Message" xml:space="preserve">
+    <value>系統錯誤（插補參數）</value>
+  </data>
+  <data name="Error.2840.Cause" xml:space="preserve">
+    <value>參數可能已損壞。</value>
+  </data>
+  <data name="Error.2840.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。</value>
+  </data>
+  <data name="Error.2850.Message" xml:space="preserve">
+    <value>系統錯誤（插補範數）</value>
+  </data>
+  <data name="Error.2850.Cause" xml:space="preserve">
+    <value>範數無效。內部運算處理發生問題。</value>
+  </data>
+  <data name="Error.2850.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。</value>
+  </data>
+  <data name="Error.2860.Message" xml:space="preserve">
+    <value>系統錯誤（插補類型）</value>
+  </data>
+  <data name="Error.2860.Cause" xml:space="preserve">
+    <value>正在使用無效的插補處理方法。內部運算處理發生問題。</value>
+  </data>
+  <data name="Error.2860.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。</value>
+  </data>
+  <data name="Error.2870.Message" xml:space="preserve">
+    <value>系統錯誤（插補資料未定義）</value>
+  </data>
+  <data name="Error.2870.Cause" xml:space="preserve">
+    <value>尚未定義插補位置資料。內部運算處理發生問題。</value>
+  </data>
+  <data name="Error.2870.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。</value>
+  </data>
+  <data name="Error.2880.Message" xml:space="preserve">
+    <value>系統錯誤（插補資料區域）</value>
+  </data>
+  <data name="Error.2880.Cause" xml:space="preserve">
+    <value>內部運算的記憶體不足。</value>
+  </data>
+  <data name="Error.2880.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。除非另有說明，請關閉電源後再開啟。</value>
+  </data>
+  <data name="Error.2890.Message" xml:space="preserve">
+    <value>系統錯誤（未定義的錯誤）</value>
+  </data>
+  <data name="Error.2890.Cause" xml:space="preserve">
+    <value>內部運算處理產生了未定義的錯誤編號。</value>
+  </data>
+  <data name="Error.2890.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。</value>
+  </data>
+  <data name="Error.2900.Message" xml:space="preserve">
+    <value>系統錯誤 M00 至 M04</value>
+  </data>
+  <data name="Error.2900.Cause" xml:space="preserve">
+    <value>內部處理發生錯誤。</value>
+  </data>
+  <data name="Error.2900.Measures" xml:space="preserve">
+    <value>若再次發生，請聯絡服務提供商。</value>
+  </data>
+</root>

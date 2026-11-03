@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.8300.Message" xml:space="preserve"><value>GETPOS 定義過多</value></data>
+  <data name="Error.8300.Cause" xml:space="preserve"><value>GETPOS 功能最多只能有 8 個。</value></data>
+  <data name="Error.8300.Measures" xml:space="preserve"><value>請使用相同的 Act No.，或重置不需要的程式。</value></data>
+  <data name="Error.8310.Message" xml:space="preserve"><value>GETPOS 未定義</value></data>
+  <data name="Error.8310.Cause" xml:space="preserve"><value>GETPOS 未定義。</value></data>
+  <data name="Error.8310.Measures" xml:space="preserve"><value>請定義 GETPOS。</value></data>
+  <data name="Error.8320.Message" xml:space="preserve"><value>系統錯誤（GETPOS）</value></data>
+  <data name="Error.8320.Cause" xml:space="preserve"><value>GETPOS 的內部資料不合法。</value></data>
+  <data name="Error.8320.Measures" xml:space="preserve"><value>請將電源關閉後重新開啟一次。</value></data>
+  <data name="Error.8400.Message" xml:space="preserve"><value>CTN 資料不合法（Prec）</value></data>
+  <data name="Error.8400.Cause" xml:space="preserve"><value>CTN 資料不合法，已切換至 Prec Off。</value></data>
+  <data name="Error.8400.Measures" xml:space="preserve"><value>請嘗試重新設定為 Prec 模式。</value></data>
+  <data name="Error.8600.Message" xml:space="preserve"><value>視覺系統未連線</value></data>
+  <data name="Error.8600.Cause" xml:space="preserve"><value>視覺系統未連線。</value></data>
+  <data name="Error.8600.Measures" xml:space="preserve"><value>請檢查通訊埠編號及參數。</value></data>
+  <data name="Error.8601.Message" xml:space="preserve"><value>無法登入視覺系統</value></data>
+  <data name="Error.8601.Cause" xml:space="preserve"><value>使用者名稱或密碼的參數異常。</value></data>
+  <data name="Error.8601.Measures" xml:space="preserve"><value>請正確設定參數。</value></data>
+  <data name="Error.8602.Message" xml:space="preserve"><value>密碼異常</value></data>
+  <data name="Error.8602.Cause" xml:space="preserve"><value>密碼與使用者名稱不相符。</value></data>
+  <data name="Error.8602.Measures" xml:space="preserve"><value>請正確設定密碼。</value></data>
+  <data name="Error.8603.Message" xml:space="preserve"><value>參數異常</value></data>
+  <data name="Error.8603.Cause" xml:space="preserve"><value>使用者名稱或密碼的參數異常。</value></data>
+  <data name="Error.8603.Measures" xml:space="preserve"><value>請正確設定參數。</value></data>
+  <data name="Error.8610.Message" xml:space="preserve"><value>通訊異常</value></data>
+  <data name="Error.8610.Cause" xml:space="preserve"><value>通訊中斷。</value></data>
+  <data name="Error.8610.Measures" xml:space="preserve"><value>請檢查通訊電纜。</value></data>
+  <data name="Error.8620.Message" xml:space="preserve"><value>視覺系統編號異常</value></data>
+  <data name="Error.8620.Cause" xml:space="preserve"><value>該編號未由 NVOpen 指定。</value></data>
+  <data name="Error.8620.Measures" xml:space="preserve"><value>請檢查 NVOpen 指令。</value></data>
+  <data name="Error.8621.Message" xml:space="preserve"><value>視覺程式名稱異常</value></data>
+  <data name="Error.8621.Cause" xml:space="preserve"><value>視覺程式名稱超過 15 個字元。</value></data>
+  <data name="Error.8621.Measures" xml:space="preserve"><value>請將程式名稱限制在 15 個字元以內。</value></data>
+  <data name="Error.8622.Message" xml:space="preserve"><value>視覺程式不存在</value></data>
+  <data name="Error.8622.Cause" xml:space="preserve"><value>指定的視覺程式不存在。</value></data>
+  <data name="Error.8622.Measures" xml:space="preserve"><value>請檢查視覺程式名稱。</value></data>
+  <data name="Error.8623.Message" xml:space="preserve"><value>SKIP 編號已被使用</value></data>
+  <data name="Error.8623.Cause" xml:space="preserve"><value>SKIP 編號已被使用。</value></data>
+  <data name="Error.8623.Measures" xml:space="preserve"><value>請確認 SKIP 編號。</value></data>
+  <data name="Error.8630.Message" xml:space="preserve"><value>辨識儲存格不合法</value></data>
+  <data name="Error.8630.Cause" xml:space="preserve"><value>儲存格中沒有值。</value></data>
+  <data name="Error.8630.Measures" xml:space="preserve"><value>請檢查辨識儲存格。</value></data>
+  <data name="Error.8631.Message" xml:space="preserve"><value>儲存格超出範圍</value></data>
+  <data name="Error.8631.Cause" xml:space="preserve"><value>超出儲存格的範圍。</value></data>
+  <data name="Error.8631.Measures" xml:space="preserve"><value>請檢查儲存格的範圍。</value></data>
+  <data name="Error.8632.Message" xml:space="preserve"><value>視覺系統逾時</value></data>
+  <data name="Error.8632.Cause" xml:space="preserve"><value>視覺系統沒有回應。</value></data>
+  <data name="Error.8632.Measures" xml:space="preserve"><value>請檢查逾時時間設定。</value></data>
+  <data name="Error.8633.Message" xml:space="preserve"><value>視覺系統逾時（NVTRG）</value></data>
+  <data name="Error.8633.Cause" xml:space="preserve"><value>視覺系統沒有回應（NVTRG）。</value></data>
+  <data name="Error.8633.Measures" xml:space="preserve"><value>請降低網路負載。</value></data>
+  <data name="Error.8634.Message" xml:space="preserve"><value>儲存格範圍內有逗號</value></data>
+  <data name="Error.8634.Cause" xml:space="preserve"><value>儲存格範圍內有逗號。</value></data>
+  <data name="Error.8634.Measures" xml:space="preserve"><value>請檢查儲存格的範圍。</value></data>
+  <data name="Error.8635.Message" xml:space="preserve"><value>儲存格範圍內沒有逗號</value></data>
+  <data name="Error.8635.Cause" xml:space="preserve"><value>儲存格範圍內沒有逗號。</value></data>
+  <data name="Error.8635.Measures" xml:space="preserve"><value>請檢查儲存格的範圍。</value></data>
+  <data name="Error.8636.Message" xml:space="preserve"><value>視覺標籤名稱異常</value></data>
+  <data name="Error.8636.Cause" xml:space="preserve"><value>視覺程式中沒有指定的視覺標籤。</value></data>
+  <data name="Error.8636.Measures" xml:space="preserve"><value>請修正視覺標籤名稱。</value></data>
+  <data name="Error.8640.Message" xml:space="preserve"><value>影像觸發異常</value></data>
+  <data name="Error.8640.Cause" xml:space="preserve"><value>視覺感測器的觸發設定異常。</value></data>
+  <data name="Error.8640.Measures" xml:space="preserve"><value>請檢查觸發設定。</value></data>
+  <data name="Error.8650.Message" xml:space="preserve"><value>請將視覺系統設為線上</value></data>
+  <data name="Error.8650.Cause" xml:space="preserve"><value>視覺感測器處於離線狀態。</value></data>
+  <data name="Error.8650.Measures" xml:space="preserve"><value>請將視覺感測器設為線上。</value></data>
+  <data name="Error.8660.Message" xml:space="preserve"><value>沒有權限</value></data>
+  <data name="Error.8660.Cause" xml:space="preserve"><value>該使用者名稱沒有完整存取權限。</value></data>
+  <data name="Error.8660.Measures" xml:space="preserve"><value>請檢查使用者名稱。</value></data>
+  <data name="Error.8670.Message" xml:space="preserve"><value>無法重新啟動</value></data>
+  <data name="Error.8670.Cause" xml:space="preserve"><value>未重置即啟動。</value></data>
+  <data name="Error.8670.Measures" xml:space="preserve"><value>請重置程式。</value></data>
+  <data name="Error.8680.Message" xml:space="preserve"><value>收到未知代碼（代碼編號）</value></data>
+  <data name="Error.8680.Cause" xml:space="preserve"><value>收到視覺感測器傳來未登錄的狀態代碼。（收到機器人控制器未登錄的狀態代碼。）</value></data>
+  <data name="Error.8680.Measures" xml:space="preserve"><value>從視覺感測器收到的狀態代碼會顯示於代碼編號處。若代碼編號不是數值，可能收到異常資料。請檢查通訊狀態、通訊設定及指令引數。</value></data>
+  <data name="Error.8700.Message" xml:space="preserve"><value>多 CPU 系統自我檢查錯誤
+（僅限 CR800-R／CR800-Q）</value></data>
+  <data name="Error.8700.Cause" xml:space="preserve"><value>多 CPU 系統參數不合法或 CPU 異常等。</value></data>
+  <data name="Error.8700.Measures" xml:space="preserve"><value>請使用 GX Developer 等工具確認錯誤的詳細資訊及處置方法。</value></data>
+  <data name="Error.8710.Message" xml:space="preserve"><value>PC I/O 模組參數 (m) 錯誤。(m)：目標參數編號 1–4（對應 QXYUNIT 1–4）。</value></data>
+  <data name="Error.8710.Cause" xml:space="preserve"><value>偵測到 PC I/O 模組設定不合法。</value></data>
+  <data name="Error.8710.Measures" xml:space="preserve"><value>請檢查參數值。</value></data>
+  <data name="Error.8720.Message" xml:space="preserve"><value>保險絲熔斷。（PC I/O 模組 (m)）。(m)：目標參數編號 1–4（對應 QXYUNIT 1–4）。</value></data>
+  <data name="Error.8720.Cause" xml:space="preserve"><value>保險絲熔斷。（PC I/O 模組）</value></data>
+  <data name="Error.8720.Measures" xml:space="preserve"><value>請參閱 PC I/O 模組手冊。</value></data>
+  <data name="Error.8730.Message" xml:space="preserve"><value>I/O 模組 (m) 移除錯誤。(m)：目標參數編號 1–4（對應 QXYUNIT 1–4）。</value></data>
+  <data name="Error.8730.Cause" xml:space="preserve"><value>PC I/O 模組已被移除。</value></data>
+  <data name="Error.8730.Measures" xml:space="preserve"><value>請安裝 PC I/O 模組。</value></data>
+  <data name="Error.8740.Message" xml:space="preserve"><value>CR800 初始通訊錯誤</value></data>
+  <data name="Error.8740.Cause" xml:space="preserve"><value>無法與 CR800 進行初始通訊。</value></data>
+  <data name="Error.8740.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8741.Message" xml:space="preserve"><value>CPU 模組初始通訊錯誤</value></data>
+  <data name="Error.8741.Cause" xml:space="preserve"><value>無法與 CPU 模組進行初始通訊。</value></data>
+  <data name="Error.8741.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8751.Message" xml:space="preserve"><value>CR800 通訊錯誤</value></data>
+  <data name="Error.8751.Cause" xml:space="preserve"><value>來自 CR800 的通訊中斷。</value></data>
+  <data name="Error.8751.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8752.Message" xml:space="preserve"><value>CPU 模組通訊錯誤</value></data>
+  <data name="Error.8752.Cause" xml:space="preserve"><value>來自 CPU 模組的通訊中斷。</value></data>
+  <data name="Error.8752.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8760.Message" xml:space="preserve"><value>PLC CPU 參數未設定</value></data>
+  <data name="Error.8760.Cause" xml:space="preserve"><value>PLC CPU 中未設定固定掃描通訊區域（Fixed Scan Communication Area）。</value></data>
+  <data name="Error.8760.Measures" xml:space="preserve"><value>請在 PLC CPU 中設定固定掃描通訊區域（Fixed Scan Communication Area）。</value></data>
+  <data name="Error.8761.Message" xml:space="preserve"><value>CPU 編號設定不合法</value></data>
+  <data name="Error.8761.Cause" xml:space="preserve"><value>CPU 編號設定不一致。</value></data>
+  <data name="Error.8761.Measures" xml:space="preserve"><value>請檢查 PLC 的多 CPU 設定及 QMLTCPUN 參數。</value></data>
+  <data name="Error.8762.Message" xml:space="preserve"><value>多 CPU 參數設定不合法</value></data>
+  <data name="Error.8762.Cause" xml:space="preserve"><value>多 CPU 參數設定不正確。</value></data>
+  <data name="Error.8762.Measures" xml:space="preserve"><value>由於多 CPU 參數設定不正確，機器人 CPU 中的同步處理未正確執行。請檢查並修正多 CPU 參數設定值，然後將電源關閉後重新開啟一次。
+除非另有註明，請關閉後重新開啟電源。</value></data>
+  <data name="Error.8770.Message" xml:space="preserve"><value>CR800 通訊錯誤</value></data>
+  <data name="Error.8770.Cause" xml:space="preserve"><value>偵測到來自 CR800 的通訊錯誤。</value></data>
+  <data name="Error.8770.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8780.Message" xml:space="preserve"><value>CPU 模組通訊錯誤</value></data>
+  <data name="Error.8780.Cause" xml:space="preserve"><value>偵測到來自 CPU 模組的通訊錯誤。</value></data>
+  <data name="Error.8780.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8790.Message" xml:space="preserve"><value>CR800 錯誤重置失敗</value></data>
+  <data name="Error.8790.Cause" xml:space="preserve"><value>無法重置 CR800 錯誤。</value></data>
+  <data name="Error.8790.Measures" xml:space="preserve"><value>請檢查通訊電纜連接。</value></data>
+  <data name="Error.8800.Message" xml:space="preserve"><value>1. ASIC 通訊錯誤
+2. ASIC CRC 錯誤
+3. ASIC 短訊框錯誤
+4. ASIC 超載錯誤
+5. ASIC 連接器連接錯誤
+6. ASIC 0 byte 傳輸</value></data>
+  <data name="Error.8800.Cause" xml:space="preserve"><value>1. ASIC 通訊錯誤：偵測到控制器內部通訊故障。控制器內部溫度可能過高。對於 CR800-R／CR800-Q 控制器，下列情況也可能是原因：電源開啟時序可能不正確；控制器與機器人 CPU 之間的電纜可能故障。
+2. ASIC CRC 錯誤：偵測到控制器內部通訊故障。控制器內部溫度可能過高。對於 CR800-R／CR800-Q 控制器，下列情況也可能是原因：電源開啟時序可能不正確；控制器與機器人 CPU 之間的電纜可能故障。
+3. ASIC 短訊框錯誤：偵測到控制器內部通訊故障。控制器內部溫度可能過高。對於 CR800-R／CR800-Q 控制器，下列情況也可能是原因：電源開啟時序可能不正確；控制器與機器人 CPU 之間的電纜可能故障。
+4. ASIC 超載錯誤：偵測到控制器內部通訊故障。控制器內部溫度可能過高。對於 CR800-R／CR800-Q 控制器，下列情況也可能是原因：電源開啟時序可能不正確；控制器與機器人 CPU 之間的電纜可能故障。
+5. ASIC 連接器連接錯誤：偵測到控制器內部通訊故障。控制器內部溫度可能過高。對於 CR800-R／CR800-Q 控制器，下列情況也可能是原因：電源開啟時序可能不正確；控制器與機器人 CPU 之間的電纜可能故障。
+6. ASIC 0 byte 傳輸：偵測到控制器內部通訊故障。控制器內部溫度可能過高。對於 CR800-R／CR800-Q 控制器，下列情況也可能是原因：電源開啟時序可能不正確；控制器與機器人 CPU 之間的電纜可能故障。</value></data>
+  <data name="Error.8800.Measures" xml:space="preserve"><value>1. ASIC 通訊錯誤：確認控制器濾網未堵塞且環境溫度不超過 40 度。採取上述措施後若錯誤仍持續，請聯絡製造商。對於 CR800-R／CR800-Q 控制器，請先開啟控制器的開關，再開啟機器人 CPU 的開關。檢查機器人 CPU 與控制器之間的電纜連接。
+除非另有註明，請關閉後重新開啟電源。
+2. ASIC CRC 錯誤：確認控制器濾網未堵塞且環境溫度不超過 40 度。採取上述措施後若錯誤仍持續，請聯絡製造商。對於 CR800-R／CR800-Q 控制器，請先開啟控制器的開關，再開啟機器人 CPU 的開關。檢查機器人 CPU 與控制器之間的電纜連接。
+除非另有註明，請關閉後重新開啟電源。
+3. ASIC 短訊框錯誤：確認控制器濾網未堵塞且環境溫度不超過 40 度。採取上述措施後若錯誤仍持續，請聯絡製造商。對於 CR800-R／CR800-Q 控制器，請先開啟控制器的開關，再開啟機器人 CPU 的開關。檢查機器人 CPU 與控制器之間的電纜連接。
+除非另有註明，請關閉後重新開啟電源。
+4. ASIC 超載錯誤：確認控制器濾網未堵塞且環境溫度不超過 40 度。採取上述措施後若錯誤仍持續，請聯絡製造商。對於 CR800-R／CR800-Q 控制器，請先開啟控制器的開關，再開啟機器人 CPU 的開關。檢查機器人 CPU 與控制器之間的電纜連接。
+除非另有註明，請關閉後重新開啟電源。
+5. ASIC 連接器連接錯誤：確認控制器濾網未堵塞且環境溫度不超過 40 度。採取上述措施後若錯誤仍持續，請聯絡製造商。對於 CR800-R／CR800-Q 控制器，請先開啟控制器的開關，再開啟機器人 CPU 的開關。檢查機器人 CPU 與控制器之間的電纜連接。
+除非另有註明，請關閉後重新開啟電源。
+6. ASIC 0 byte 傳輸：確認控制器濾網未堵塞且環境溫度不超過 40 度。採取上述措施後若錯誤仍持續，請聯絡製造商。對於 CR800-R／CR800-Q 控制器，請先開啟控制器的開關，再開啟機器人 CPU 的開關。檢查機器人 CPU 與控制器之間的電纜連接。
+除非另有註明，請關閉後重新開啟電源。</value></data>
+  <data name="Error.8810.Message" xml:space="preserve"><value>1. 通訊錯誤
+2. ID 不合法</value></data>
+  <data name="Error.8810.Cause" xml:space="preserve"><value>1. 通訊錯誤：向伺服裝置傳送資料時發生錯誤。
+2. ID 不合法：與伺服裝置通訊的資料 ID 不相符。</value></data>
+  <data name="Error.8810.Measures" xml:space="preserve"><value>1. 通訊錯誤：檢查通訊電纜連接，並確認沒有雜訊源。
+2. ID 不合法：將電源關閉後重新開啟一次。</value></data>
+  <data name="Error.8820.Message" xml:space="preserve"><value>通訊逾時</value></data>
+  <data name="Error.8820.Cause" xml:space="preserve"><value>與伺服裝置的通訊逾時。</value></data>
+  <data name="Error.8820.Measures" xml:space="preserve"><value>將電源關閉後重新開啟一次。</value></data>
+  <data name="Error.8830.Message" xml:space="preserve"><value>1. 放大器未連接
+2. 伺服軸設定錯誤
+3. 放大器不相容
+4. 通訊協定不相容
+5. 馬達 ID 不合法
+6. 參數設定失敗
+7. 放大器數量不合法</value></data>
+  <data name="Error.8830.Cause" xml:space="preserve"><value>1. 放大器未連接：無法偵測到伺服放大器。
+2. 伺服軸設定錯誤：軸設定不正確。
+3. 放大器不相容：連接了不相容的放大器。
+4. 通訊協定不相容：通訊協定不相容。
+5. 馬達 ID 不合法：連接了不相容的馬達。
+6. 參數設定失敗：伺服參數設定值不合法。
+7. 放大器數量不合法：連接的放大器數量不適當。</value></data>
+  <data name="Error.8830.Measures" xml:space="preserve"><value>1. 放大器未連接：檢查電纜連接及放大器電源。
+2. 伺服軸設定錯誤：檢查伺服軸設定（參數、旋轉開關）。
+3. 放大器不相容：移除不相容的放大器。
+4. 通訊協定不相容：移除不相容的放大器。
+5. 馬達 ID 不合法：移除不相容的馬達。
+6. 參數設定失敗：變更為正確的值。
+7. 放大器數量不合法：檢查連接的放大器數量。</value></data>
+  <data name="Error.8871.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8872.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8873.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8874.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8875.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8876.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8877.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  <data name="Error.8878.Message" xml:space="preserve"><value>1. 瞬時處理錯誤
+2. 瞬時處理逾時</value></data>
+  
+  <data name="Error.8871.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8872.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8873.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8874.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8875.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8876.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8877.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  <data name="Error.8878.Cause" xml:space="preserve"><value>1. 瞬時處理錯誤：傳送了不合法的請求資料。
+2. 瞬時處理逾時：伺服裝置未回應請求。</value></data>
+  
+  <data name="Error.8871.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8872.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8873.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8874.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8875.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8876.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8877.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  <data name="Error.8878.Measures" xml:space="preserve"><value>1. 瞬時處理錯誤：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。
+2. 瞬時處理逾時：將電源關閉後重新開啟一次。若錯誤再次出現，請聯絡服務提供商。</value></data>
+  
+  <data name="Error.8920.Message" xml:space="preserve"><value>感測器 I/F 模組錯誤 (**) 註：「**」會替換為「感測器 I/F 模組錯誤編號」（2 位十六進位數）。</value></data>
+  <data name="Error.8920.Cause" xml:space="preserve"><value>力感測器介面模組發生錯誤。</value></data>
+  <data name="Error.8920.Measures" xml:space="preserve"><value>請依錯誤訊息中的錯誤編號，參閱第 73 頁「表 2-1：力感測介面模組錯誤」。</value></data>
+  <data name="Error.8921.Message" xml:space="preserve"><value>感測器 I/F 模組警告 (**) 註：「**」會替換為「感測器 I/F 模組警告編號」（2 位十六進位數）。</value></data>
+  <data name="Error.8921.Cause" xml:space="preserve"><value>力感測器介面模組發出警告。</value></data>
+  <data name="Error.8921.Measures" xml:space="preserve"><value>請依錯誤訊息中的錯誤編號，參閱第 73 頁「表 2-1：力感測介面模組錯誤」。</value></data>
+</root>

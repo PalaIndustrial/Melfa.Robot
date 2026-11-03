@@ -37,15 +37,6 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-		<Compile Update="Resources\ErrorMessages.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>ErrorMessages.resx</DependentUpon>
-		</Compile>
-		<EmbeddedResource Update="Resources\ErrorMessages.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
 	</ItemGroup>
 
 </Project>

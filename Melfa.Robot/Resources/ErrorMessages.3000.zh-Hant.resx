@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.3100.Message" xml:space="preserve"><value>1. 處理器呼叫堆疊溢位
+2. 系統錯誤（呼叫堆疊）</value></data>
+  <data name="Error.3100.Cause" xml:space="preserve"><value>1. 處理器呼叫堆疊溢位：函式呼叫或區域變數過多。
+2. 系統錯誤（呼叫堆疊）：處理器呼叫堆疊異常。</value></data>
+  <data name="Error.3100.Measures" xml:space="preserve"><value>1. 處理器呼叫堆疊溢位：修正程式並重新執行。
+2. 系統錯誤（呼叫堆疊）：Function 指令的執行順序可能有問題。</value></data>
+  <data name="Error.3110.Message" xml:space="preserve"><value>1. 引數值超出範圍
+2. 力覺控制指令的引數超出範圍。
+3. 力覺控制狀態變數的引數超出範圍。
+4. 力覺控制相關引數超出範圍。
+5. Mo 觸發器編號超出範圍。
+6. Def MoTrg 指令引數錯誤
+7. 引數值超出範圍（MVA2）</value></data>
+  <data name="Error.3110.Cause" xml:space="preserve"><value>1. 引數值超出範圍：引數值超出範圍。對於 PtoJ 函式，設定了機器人無法到達的位置或奇異點作為引數值。
+2. 力覺控制指令的引數超出範圍。：力覺控制指令的引數設定了超出範圍的值。
+3. 力覺控制狀態變數的引數超出範圍。：力覺控制狀態變數的引數設定了超出範圍的值。
+4. 力覺控制相關引數超出範圍。：力覺控制相關引數設定了超出範圍的值。
+5. Mo 觸發器編號超出範圍。：Mo 觸發器編號設定了超出範圍的值。
+6. Def MoTrg 指令引數錯誤：設定了不可使用的變數或不同的機械編號。
+7. 引數值超出範圍（MVA2）：引數值超出範圍（MVA2）。</value></data>
+  <data name="Error.3110.Measures" xml:space="preserve"><value>1. 引數值超出範圍：確認引數範圍並設定正確的值。
+2. 力覺控制指令的引數超出範圍。：確認引數範圍並設定正確的值。
+3. 力覺控制狀態變數的引數超出範圍。：確認引數範圍並設定正確的值。
+4. 力覺控制相關引數超出範圍。：確認引數範圍並設定正確的值。
+5. Mo 觸發器編號超出範圍。：確認設定範圍並設定正確的值。
+6. Def MoTrg 指令引數錯誤：設定可使用的變數或相同的機械編號。
+7. 引數值超出範圍（MVA2）：確認引數範圍並重新輸入。</value></data>
+  <data name="Error.3120.Message" xml:space="preserve"><value>引數數量超出上限</value></data>
+  <data name="Error.3120.Cause" xml:space="preserve"><value>引數數量超出上限。</value></data>
+  <data name="Error.3120.Measures" xml:space="preserve"><value>確認引數範圍並設定正確的值。</value></data>
+  <data name="Error.3130.Message" xml:space="preserve"><value>COM 檔案已開啟</value></data>
+  <data name="Error.3130.Cause" xml:space="preserve"><value>嘗試開啟已開啟的檔案。</value></data>
+  <data name="Error.3130.Measures" xml:space="preserve"><value>確認檔案編號並重新執行。</value></data>
+  <data name="Error.3140.Message" xml:space="preserve"><value>無法開啟 COM 檔案</value></data>
+  <data name="Error.3140.Cause" xml:space="preserve"><value>無法開啟檔案。</value></data>
+  <data name="Error.3140.Measures" xml:space="preserve"><value>確認檔案編號並重新執行。</value></data>
+  <data name="Error.3141.Message" xml:space="preserve"><value>未執行 NVOpen 指令。</value></data>
+  <data name="Error.3141.Cause" xml:space="preserve"><value>執行與視覺感測器通訊的指令前，未執行 NVOpen 指令。</value></data>
+  <data name="Error.3141.Measures" xml:space="preserve"><value>修改機器人程式以執行 NVOpen 指令。</value></data>
+  <data name="Error.3142.Message" xml:space="preserve"><value>無法開啟通訊線路。</value></data>
+  <data name="Error.3142.Cause" xml:space="preserve"><value>無法開啟與視覺感測器通訊的線路。</value></data>
+  <data name="Error.3142.Measures" xml:space="preserve"><value>檢查通訊電纜或通訊參數。</value></data>
+  <data name="Error.3150.Message" xml:space="preserve"><value>無法 Print（INPUT 模式）</value></data>
+  <data name="Error.3150.Cause" xml:space="preserve"><value>檔案以 INPUT 模式開啟，因此無法寫入。</value></data>
+  <data name="Error.3150.Measures" xml:space="preserve"><value>確認檔案編號及開啟模式，然後重新執行。</value></data>
+  <data name="Error.3170.Message" xml:space="preserve"><value>無法 Input（OUTPUT 模式）</value></data>
+  <data name="Error.3170.Cause" xml:space="preserve"><value>檔案以 OUTPUT 模式開啟，因此無法寫入。</value></data>
+  <data name="Error.3170.Measures" xml:space="preserve"><value>確認檔案編號及開啟模式，然後重新執行。</value></data>
+  <data name="Error.3180.Message" xml:space="preserve"><value>系統錯誤（超出陣列範圍）</value></data>
+  <data name="Error.3180.Cause" xml:space="preserve"><value>系統錯誤（超出陣列範圍）。</value></data>
+  <data name="Error.3180.Measures" xml:space="preserve"><value>若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.3200.Message" xml:space="preserve"><value>此檔案為唯讀</value></data>
+  <data name="Error.3200.Cause" xml:space="preserve"><value>無法讀取檔案。</value></data>
+  <data name="Error.3200.Measures" xml:space="preserve"><value>檢查檔案內容。</value></data>
+  <data name="Error.3210.Message" xml:space="preserve"><value>此變數受寫入保護</value></data>
+  <data name="Error.3210.Cause" xml:space="preserve"><value>禁止寫入此變數。</value></data>
+  <data name="Error.3210.Measures" xml:space="preserve"><value>檢查變數保護設定。</value></data>
+  <data name="Error.3220.Message" xml:space="preserve"><value>巢狀層數超出上限</value></data>
+  <data name="Error.3220.Cause" xml:space="preserve"><value>If 指令中的 If 或 For 指令中的 For 發生巢狀層數超限錯誤。</value></data>
+  <data name="Error.3220.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3230.Message" xml:space="preserve"><value>For 與 Next 陳述式不匹配</value></data>
+  <data name="Error.3230.Cause" xml:space="preserve"><value>For 與 Next 陳述式的數量不一致。</value></data>
+  <data name="Error.3230.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3240.Message" xml:space="preserve"><value>巢狀層數超出上限（For、While）</value></data>
+  <data name="Error.3240.Cause" xml:space="preserve"><value>巢狀層數超出上限（For、While）。</value></data>
+  <data name="Error.3240.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3250.Message" xml:space="preserve"><value>While 與 WEnd 陳述式不匹配</value></data>
+  <data name="Error.3250.Cause" xml:space="preserve"><value>While 與 WEnd 陳述式的數量不一致。</value></data>
+  <data name="Error.3250.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3251.Message" xml:space="preserve"><value>跳轉目的地數量超過 32</value></data>
+  <data name="Error.3251.Cause" xml:space="preserve"><value>定義的分支數量超過 32。</value></data>
+  <data name="Error.3251.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3252.Message" xml:space="preserve"><value>If 與 EndIf 陳述式不匹配</value></data>
+  <data name="Error.3252.Cause" xml:space="preserve"><value>If 與 EndIf 陳述式不匹配。</value></data>
+  <data name="Error.3252.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3253.Message" xml:space="preserve"><value>巢狀層數超出上限（If、EndIf）</value></data>
+  <data name="Error.3253.Cause" xml:space="preserve"><value>巢狀層數超出上限（If、EndIf）。</value></data>
+  <data name="Error.3253.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3254.Message" xml:space="preserve"><value>Select 與 End Select 陳述式不匹配</value></data>
+  <data name="Error.3254.Cause" xml:space="preserve"><value>Select 與 End Select 陳述式不匹配。</value></data>
+  <data name="Error.3254.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3255.Message" xml:space="preserve"><value>If 與 Else 陳述式不匹配</value></data>
+  <data name="Error.3255.Cause" xml:space="preserve"><value>If 與 Else 陳述式不匹配。</value></data>
+  <data name="Error.3255.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3256.Message" xml:space="preserve"><value>1. 函式定義錯誤
+2. 函式定義數量超出上限
+3. Function 陳述式不正確
+4. Function 與 FEnd 陳述式不匹配
+5. 未定義的函式
+6. 呼叫了 Function Main
+7. Function Main 不存在
+8. 使用了函式中的區域變數</value></data>
+  <data name="Error.3256.Cause" xml:space="preserve"><value>1. 函式定義錯誤：發生與函式定義有關的錯誤。
+2. 函式定義數量超出上限：函式定義數量超過 256。
+3. Function 陳述式不正確：Function 陳述式的位置不正確。
+4. Function 與 FEnd 陳述式不匹配：Function 與 FEnd 陳述式不匹配。
+5. 未定義的函式：呼叫或指定的函式未定義。
+6. 呼叫了 Function Main：呼叫了 Function Main。
+7. Function Main 不存在：沒有 Function Main 的程式無法執行。
+8. 使用了函式中的區域變數：使用了函式程序中的區域變數。</value></data>
+  <data name="Error.3256.Measures" xml:space="preserve"><value>1. 函式定義錯誤：請依錯誤的詳細編號確認內容。
+2. 函式定義數量超出上限：修正程式並重新執行。
+3. Function 陳述式不正確：修正程式並重新執行。
+4. Function 與 FEnd 陳述式不匹配：修正程式並重新執行。
+5. 未定義的函式：請確認函式程序名稱。
+6. 呼叫了 Function Main：不能呼叫 Function Main。
+7. Function Main 不存在：請在程式中新增 Function Main（無參數）。
+8. 使用了函式中的區域變數：不能使用函式程序中的區域變數。</value></data>
+  <data name="Error.3257.Message" xml:space="preserve"><value>1. Include 宣告錯誤
+2. Include 宣告數量超出上限
+3. Include 陳述式不正確</value></data>
+  <data name="Error.3257.Cause" xml:space="preserve"><value>1. Include 宣告錯誤：發生與 Include 宣告有關的錯誤。
+2. Include 宣告數量超出上限：Include 宣告數量超過 64。
+3. Include 陳述式不正確：Include 陳述式的位置不正確。</value></data>
+  <data name="Error.3257.Measures" xml:space="preserve"><value>1. Include 宣告錯誤：請依錯誤的詳細編號確認內容。
+2. Include 宣告數量超出上限：修正程式並重新執行。
+3. Include 陳述式不正確：修正程式並重新執行。</value></data>
+  <data name="Error.3258.Message" xml:space="preserve"><value>1. 前置處理器錯誤
+2. 前置處理器執行行數超出上限
+3. 前置處理器執行錯誤</value></data>
+  <data name="Error.3258.Cause" xml:space="preserve"><value>1. 前置處理器錯誤：發生與前置處理器有關的錯誤。
+2. 前置處理器執行行數超出上限：前置處理器執行行數超過 1000 行。
+3. 前置處理器執行錯誤：包含前置處理器無法執行的指令。</value></data>
+  <data name="Error.3258.Measures" xml:space="preserve"><value>1. 前置處理器錯誤：請依錯誤的詳細編號確認內容。
+2. 前置處理器執行行數超出上限：修正程式並重新執行。
+3. 前置處理器執行錯誤：修正程式並重新執行。</value></data>
+  <data name="Error.3260.Message" xml:space="preserve"><value>無法對所有槽位執行</value></data>
+  <data name="Error.3260.Cause" xml:space="preserve"><value>無法指定所有槽位執行。</value></data>
+  <data name="Error.3260.Measures" xml:space="preserve"><value>指定單一槽位後重試。</value></data>
+  <data name="Error.3270.Message" xml:space="preserve"><value>指令長度超出上限</value></data>
+  <data name="Error.3270.Cause" xml:space="preserve"><value>指令長度超出上限。</value></data>
+  <data name="Error.3270.Measures" xml:space="preserve"><value>指定不超過 256 個單位元組字元。</value></data>
+  <data name="Error.3280.Message" xml:space="preserve"><value>未執行 GetM，無法執行</value></data>
+  <data name="Error.3280.Cause" xml:space="preserve"><value>嘗試執行的指令必須先執行 GetM。或者指定了不存在的機械編號。</value></data>
+  <data name="Error.3280.Measures" xml:space="preserve"><value>在其他任務槽位執行 RelM 和 GetM 指令後再執行。</value></data>
+  <data name="Error.3281.Message" xml:space="preserve"><value>運行中無法執行</value></data>
+  <data name="Error.3281.Cause" xml:space="preserve"><value>運行中無法執行。</value></data>
+  <data name="Error.3281.Measures" xml:space="preserve"><value>運行中無法執行。</value></data>
+  <data name="Error.3282.Message" xml:space="preserve"><value>無法 RUN（未選擇、屬性）</value></data>
+  <data name="Error.3282.Cause" xml:space="preserve"><value>未選擇程式或屬性無效。</value></data>
+  <data name="Error.3282.Measures" xml:space="preserve"><value>將程式載入指定的任務槽位，或變更程式屬性。</value></data>
+  <data name="Error.3285.Message" xml:space="preserve"><value>無法執行（RUN 或 WAI）</value></data>
+  <data name="Error.3285.Cause" xml:space="preserve"><value>在停止或執行狀態下無法執行。</value></data>
+  <data name="Error.3285.Measures" xml:space="preserve"><value>重設程式（解除中止狀態）。</value></data>
+  <data name="Error.3286.Message" xml:space="preserve"><value>程式為空</value></data>
+  <data name="Error.3286.Cause" xml:space="preserve"><value>嘗試執行空程式。</value></data>
+  <data name="Error.3286.Measures" xml:space="preserve"><value>建立程式或選擇正確的程式。</value></data>
+  <data name="Error.3287.Message" xml:space="preserve"><value>無法執行（ERROR ALWAYS）</value></data>
+  <data name="Error.3287.Cause" xml:space="preserve"><value>啟動條件為 ERROR 和 ALWAYS 時，無法使用此指令。</value></data>
+  <data name="Error.3287.Measures" xml:space="preserve"><value>修正程式。</value></data>
+  <data name="Error.3288.Message" xml:space="preserve"><value>編輯時無法執行</value></data>
+  <data name="Error.3288.Cause" xml:space="preserve"><value>該程式正在編輯中，無法執行。</value></data>
+  <data name="Error.3288.Measures" xml:space="preserve"><value>先完成程式編輯，再啟動程式。</value></data>
+  <data name="Error.3289.Message" xml:space="preserve"><value>程式不存在（SLT*）</value></data>
+  <data name="Error.3289.Cause" xml:space="preserve"><value>槽位表中指定的程式不存在。</value></data>
+  <data name="Error.3289.Measures" xml:space="preserve"><value>修正槽位參數。</value></data>
+  <data name="Error.3290.Message" xml:space="preserve"><value>無法執行系統槽位</value></data>
+  <data name="Error.3290.Cause" xml:space="preserve"><value>無法執行系統槽位。</value></data>
+  <data name="Error.3290.Measures" xml:space="preserve"><value>檢查其他槽位（使用者槽位）是否正在運行。</value></data>
+  <data name="Error.3300.Message" xml:space="preserve"><value>無法執行使用者槽位</value></data>
+  <data name="Error.3300.Cause" xml:space="preserve"><value>無法執行使用者槽位。</value></data>
+  <data name="Error.3300.Measures" xml:space="preserve"><value>檢查系統槽位是否正在運行。</value></data>
+  <data name="Error.3310.Message" xml:space="preserve"><value>無法執行 XRun（運行中）</value></data>
+  <data name="Error.3310.Cause" xml:space="preserve"><value>指定的槽位正在運行，無法執行 XRun。</value></data>
+  <data name="Error.3310.Measures" xml:space="preserve"><value>停止指定的槽位後執行。</value></data>
+  <data name="Error.3320.Message" xml:space="preserve"><value>無法執行 XRun（空）</value></data>
+  <data name="Error.3320.Cause" xml:space="preserve"><value>尚未選擇程式，無法執行 XRun。</value></data>
+  <data name="Error.3320.Measures" xml:space="preserve"><value>在引數中指定程式名稱或執行 XLoad。</value></data>
+  <data name="Error.3330.Message" xml:space="preserve"><value>無法執行 XStp（空）</value></data>
+  <data name="Error.3330.Cause" xml:space="preserve"><value>尚未選擇程式，無法執行 XStp。</value></data>
+  <data name="Error.3330.Measures" xml:space="preserve"><value>修正程式後執行。</value></data>
+  <data name="Error.3340.Message" xml:space="preserve"><value>無法執行 XRst（空）</value></data>
+  <data name="Error.3340.Cause" xml:space="preserve"><value>尚未選擇程式，無法執行 XRst。</value></data>
+  <data name="Error.3340.Measures" xml:space="preserve"><value>僅能在等待狀態下重設。</value></data>
+  <data name="Error.3350.Message" xml:space="preserve"><value>無法執行 XRst（運行中）</value></data>
+  <data name="Error.3350.Cause" xml:space="preserve"><value>程式正在執行，無法執行 XRst。</value></data>
+  <data name="Error.3350.Measures" xml:space="preserve"><value>停止執行後再執行。</value></data>
+  <data name="Error.3360.Message" xml:space="preserve"><value>無法執行 XLoad（非 PSA）</value></data>
+  <data name="Error.3360.Cause" xml:space="preserve"><value>無法選擇程式時，不能執行 XLoad。</value></data>
+  <data name="Error.3360.Measures" xml:space="preserve"><value>執行 XRst 後再執行。</value></data>
+  <data name="Error.3361.Message" xml:space="preserve"><value>無法載入程式（SLT*）</value></data>
+  <data name="Error.3361.Cause" xml:space="preserve"><value>槽位參數（SLTn）指定了不存在的程式。</value></data>
+  <data name="Error.3361.Measures" xml:space="preserve"><value>槽位參數（SLTn）指定了不存在的程式。</value></data>
+  <data name="Error.3370.Message" xml:space="preserve"><value>無法執行 XClr（空）</value></data>
+  <data name="Error.3370.Cause" xml:space="preserve"><value>尚未選擇程式，無法執行 XClr。</value></data>
+  <data name="Error.3370.Measures" xml:space="preserve"><value>僅能在可選擇程式時執行 XClr。</value></data>
+  <data name="Error.3380.Message" xml:space="preserve"><value>無法執行 XClr（非 PSA）</value></data>
+  <data name="Error.3380.Cause" xml:space="preserve"><value>程式選擇功能未啟用。</value></data>
+  <data name="Error.3380.Measures" xml:space="preserve"><value>重設程式（解除中止狀態）後執行 XClr。</value></data>
+  <data name="Error.3390.Message" xml:space="preserve"><value>無法使用圓弧棧板</value></data>
+  <data name="Error.3390.Cause" xml:space="preserve"><value>無法使用圓弧棧板。</value></data>
+  <data name="Error.3390.Measures" xml:space="preserve"><value>改用其他方法。</value></data>
+  <data name="Error.3391.Message" xml:space="preserve"><value>無法使用 MVA2</value></data>
+  <data name="Error.3391.Cause" xml:space="preserve"><value>無法使用 MVA2。</value></data>
+  <data name="Error.3391.Measures" xml:space="preserve"><value>改用其他方法。</value></data>
+  <data name="Error.3400.Message" xml:space="preserve"><value>系統錯誤（處理器堆疊溢位）</value></data>
+  <data name="Error.3400.Cause" xml:space="preserve"><value>系統錯誤。（處理器堆疊溢位）</value></data>
+  <data name="Error.3400.Measures" xml:space="preserve"><value>若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.3500.Message" xml:space="preserve"><value>輸入格式無效（Input）</value></data>
+  <data name="Error.3500.Cause" xml:space="preserve"><value>Input 指定的變數類型與接收資料的類型不一致。</value></data>
+  <data name="Error.3500.Measures" xml:space="preserve"><value>檢查格式。</value></data>
+  <data name="Error.3501.Message" xml:space="preserve"><value>接收資料無效（EBREAD）</value></data>
+  <data name="Error.3501.Cause" xml:space="preserve"><value>接收資料與指定變數的類型不同。</value></data>
+  <data name="Error.3501.Measures" xml:space="preserve"><value>請確認視覺系統指定的標籤資料。</value></data>
+  <data name="Error.3600.Message" xml:space="preserve"><value>跳轉目的地不存在</value></data>
+  <data name="Error.3600.Cause" xml:space="preserve"><value>找不到 Def Act、On Com 和 On GoTo 指令的跳轉目的地。</value></data>
+  <data name="Error.3600.Measures" xml:space="preserve"><value>檢查跳轉目的地。</value></data>
+  <data name="Error.3601.Message" xml:space="preserve"><value>跳轉目的地不正確</value></data>
+  <data name="Error.3601.Cause" xml:space="preserve"><value>禁止跳入程式控制區塊。</value></data>
+  <data name="Error.3601.Measures" xml:space="preserve"><value>修正程式並重新執行。</value></data>
+  <data name="Error.3700.Message" xml:space="preserve"><value>未定義的變數</value></data>
+  <data name="Error.3700.Cause" xml:space="preserve"><value>嘗試參照尚未初始化的變數。</value></data>
+  <data name="Error.3700.Measures" xml:space="preserve"><value>定義變數並輸入初始值後再使用。</value></data>
+  <data name="Error.3710.Message" xml:space="preserve"><value>巢狀層數超出上限（CallP）</value></data>
+  <data name="Error.3710.Cause" xml:space="preserve"><value>程式呼叫次數超出限制。</value></data>
+  <data name="Error.3710.Measures" xml:space="preserve"><value>減少 CallP 的呼叫次數（巢狀層數）。</value></data>
+  <data name="Error.3720.Message" xml:space="preserve"><value>RC 與 NX 陳述式不匹配</value></data>
+  <data name="Error.3720.Cause" xml:space="preserve"><value>RC 與 NX 陳述式不匹配。</value></data>
+  <data name="Error.3720.Measures" xml:space="preserve"><value>使 RC 與 NX 的數量一致。</value></data>
+  <data name="Error.3750.Message" xml:space="preserve"><value>位置無效（Def Plt）</value></data>
+  <data name="Error.3750.Cause" xml:space="preserve"><value>多圈旋轉旗標（FL2 J1/J4 軸）不同。</value></data>
+  <data name="Error.3750.Measures" xml:space="preserve"><value>指定多圈旋轉旗標相同的位置。</value></data>
+  <data name="Error.3760.Message" xml:space="preserve"><value>位置無效（Def Plt）</value></data>
+  <data name="Error.3760.Cause" xml:space="preserve"><value>J1 或 J4 軸變化過大（Def Plt）。</value></data>
+  <data name="Error.3760.Measures" xml:space="preserve"><value>指定差異不大的位置。</value></data>
+  <data name="Error.3770.Message" xml:space="preserve"><value>這是未定義的 Mo 觸發器。</value></data>
+  <data name="Error.3770.Cause" xml:space="preserve"><value>嘗試使用未定義的 Mo 觸發器。</value></data>
+  <data name="Error.3770.Measures" xml:space="preserve"><value>使用前先定義指定的 Mo 觸發器。</value></data>
+  <data name="Error.3780.Message" xml:space="preserve"><value>無法使用 MELFA Smart Plus。</value></data>
+  <data name="Error.3780.Cause" xml:space="preserve"><value>控制器中未安裝 MELFA Smart Plus 卡或 MELFA Smart Plus 卡套件。已安裝 MELFA Smart Plus 卡時，參數 SMART+1 的設定可能不正確。</value></data>
+  <data name="Error.3780.Measures" xml:space="preserve"><value>安裝 MELFA Smart Plus 卡或 MELFA Smart Plus 卡套件。正確設定參數 SMART+1。</value></data>
+  <data name="Error.3781.Message" xml:space="preserve"><value>無法使用 MELFA Smart Plus。</value></data>
+  <data name="Error.3781.Cause" xml:space="preserve"><value>控制器中未安裝 MELFA Smart Plus 卡或 MELFA Smart Plus 卡套件。已安裝 MELFA Smart Plus 卡時，參數 SMART+1 的設定可能不正確。</value></data>
+  <data name="Error.3781.Measures" xml:space="preserve"><value>安裝 MELFA Smart Plus 卡或 MELFA Smart Plus 卡套件。正確設定參數 SMART+1。</value></data>
+  <data name="Error.3810.Message" xml:space="preserve"><value>引數類型不同</value></data>
+  <data name="Error.3810.Cause" xml:space="preserve"><value>算術運算、單元運算、比較運算或各函式中的引數類型不同。</value></data>
+  <data name="Error.3810.Measures" xml:space="preserve"><value>指定正確的引數。</value></data>
+  <data name="Error.3820.Message" xml:space="preserve"><value>未定義的中間碼</value></data>
+  <data name="Error.3820.Cause" xml:space="preserve"><value>程式或系統狀態變數可能已損壞。</value></data>
+  <data name="Error.3820.Measures" xml:space="preserve"><value>使用備份資料還原。若沒有備份資料，必須重新建立程式。</value></data>
+  <data name="Error.3821.Message" xml:space="preserve"><value>發生編譯錯誤</value></data>
+  <data name="Error.3821.Cause" xml:space="preserve"><value>輸入的語法有誤。</value></data>
+  <data name="Error.3821.Measures" xml:space="preserve"><value>檢查錯誤訊息中的錯誤編號。</value></data>
+  <data name="Error.3830.Message" xml:space="preserve"><value>無法執行 GetM</value></data>
+  <data name="Error.3830.Cause" xml:space="preserve"><value>無法取得機械。</value></data>
+  <data name="Error.3830.Measures" xml:space="preserve"><value>檢查指定的機械是否正由其他槽位使用。</value></data>
+  <data name="Error.3840.Message" xml:space="preserve"><value>未執行 GoSub 即執行 Return</value></data>
+  <data name="Error.3840.Cause" xml:space="preserve"><value>未使用 GoSub 即執行 Return。</value></data>
+  <data name="Error.3840.Measures" xml:space="preserve"><value>檢查程式。</value></data>
+  <data name="Error.3850.Message" xml:space="preserve"><value>未定義 PLT</value></data>
+  <data name="Error.3850.Cause" xml:space="preserve"><value>未執行 Def Plt 指令。</value></data>
+  <data name="Error.3850.Measures" xml:space="preserve"><value>使用 Def Plt 指令定義棧板後再使用。</value></data>
+  <data name="Error.3860.Message" xml:space="preserve"><value>定義了無效的位置資料</value></data>
+  <data name="Error.3860.Cause" xml:space="preserve"><value>位置資料有誤。</value></data>
+  <data name="Error.3860.Measures" xml:space="preserve"><value>檢查位置資料的定義。</value></data>
+  <data name="Error.3870.Message" xml:space="preserve"><value>1. 機械編號無效（****）註：「****」會以「機器人狀態變數」取代。
+2. 力覺控制狀態變數的機械編號值無效。
+3. Def MoTrg 指令指定的機械編號值無效。</value></data>
+  <data name="Error.3870.Cause" xml:space="preserve"><value>1. 機械編號無效（****）註：「****」會以「機器人狀態變數」取代。：指定的機械編號值無效。
+2. 力覺控制狀態變數的機械編號值無效。：力覺控制狀態變數的機械編號設定了無效變數。
+3. Def MoTrg 指令指定的機械編號值無效。：Def MoTrg 指令指定的機械編號值無效。</value></data>
+  <data name="Error.3870.Measures" xml:space="preserve"><value>1. 機械編號無效（****）註：「****」會以「機器人狀態變數」取代。：請設定正確的機械編號。
+2. 力覺控制狀態變數的機械編號值無效。：設定正確的機械編號。
+3. Def MoTrg 指令指定的機械編號值無效。：設定正確的機械編號。</value></data>
+  <data name="Error.3880.Message" xml:space="preserve"><value>槽位編號無效</value></data>
+  <data name="Error.3880.Cause" xml:space="preserve"><value>系統狀態變數引數中指定的任務槽位編號無效。</value></data>
+  <data name="Error.3880.Measures" xml:space="preserve"><value>輸入正確的槽位編號。</value></data>
+  <data name="Error.3890.Message" xml:space="preserve"><value>系統錯誤（產生 MCODE）</value></data>
+  <data name="Error.3890.Cause" xml:space="preserve"><value>建立動作指令時發生錯誤。程式可能已損壞。</value></data>
+  <data name="Error.3890.Measures" xml:space="preserve"><value>使用備份資料還原。若沒有備份資料，必須重新建立程式。</value></data>
+  <data name="Error.3900.Message" xml:space="preserve"><value>JRC 指令已停用</value></data>
+  <data name="Error.3900.Cause" xml:space="preserve"><value>JRCEXE 參數已停用，因此無法使用。</value></data>
+  <data name="Error.3900.Measures" xml:space="preserve"><value>變更 JRCEXE 參數後執行。</value></data>
+  <data name="Error.3910.Message" xml:space="preserve"><value>無法執行（JRC 0）</value></data>
+  <data name="Error.3910.Cause" xml:space="preserve"><value>無法對機器手臂軸執行 JRC 0。</value></data>
+  <data name="Error.3910.Measures" xml:space="preserve"><value>正確設定。</value></data>
+  <data name="Error.3930.Message" xml:space="preserve"><value>無法執行此指令</value></data>
+  <data name="Error.3930.Cause" xml:space="preserve"><value>碰撞偵測已啟用。</value></data>
+  <data name="Error.3930.Measures" xml:space="preserve"><value>停用碰撞偵測（執行 ColChk Off）。</value></data>
+  <data name="Error.3940.Message" xml:space="preserve"><value>無法執行 ColChk</value></data>
+  <data name="Error.3940.Cause" xml:space="preserve"><value>與 ColChk 互斥的功能正在執行。</value></data>
+  <data name="Error.3940.Measures" xml:space="preserve"><value>停用相應的功能。</value></data>
+  <data name="Error.3950.Message" xml:space="preserve"><value>無法執行 NOERR</value></data>
+  <data name="Error.3950.Cause" xml:space="preserve"><value>使用 M_ColSts 的中斷無效。</value></data>
+  <data name="Error.3950.Measures" xml:space="preserve"><value>定義使用 M_ColSts 的中斷並予以確認。</value></data>
+  <data name="Error.3960.Message" xml:space="preserve"><value>無法取消此 Act 編號</value></data>
+  <data name="Error.3960.Cause" xml:space="preserve"><value>正在執行碰撞偵測的 NOERR。</value></data>
+  <data name="Error.3960.Measures" xml:space="preserve"><value>取消 NOERR 後再取消此中斷。</value></data>
+  <data name="Error.3970.Message" xml:space="preserve"><value>無法執行 ColChk</value></data>
+  <data name="Error.3970.Cause" xml:space="preserve"><value>碰撞偵測設定為禁止使用。</value></data>
+  <data name="Error.3970.Measures" xml:space="preserve"><value>將 COL 參數變更為允許使用。</value></data>
+  <data name="Error.3980.Message" xml:space="preserve"><value>無法指定負載模式。</value></data>
+  <data name="Error.3980.Cause" xml:space="preserve"><value>已執行 Prec 指令。</value></data>
+  <data name="Error.3980.Measures" xml:space="preserve"><value>停用高精度模式（執行 Prec Off）。</value></data>
+  <data name="Error.3982.Message" xml:space="preserve"><value>無法使用（奇異點）</value></data>
+  <data name="Error.3982.Cause" xml:space="preserve"><value>1 此機器人不支援奇異點功能。2 已執行 Cmp 指令。3 同步附加軸控制已啟用。4 追蹤模式已啟用。5 預讀執行已啟用。6 此機器人設定為多機械。7 已執行 ColChk On 指令。</value></data>
+  <data name="Error.3982.Measures" xml:space="preserve"><value>1 檢查 Type 指定的引數。2 停用柔順模式（執行 Cmp Off）。3 停用同步附加軸控制。4 停用追蹤模式（執行 Trk Off）。5 停用預讀執行。6 不要使用通過奇異點的功能。7 停用碰撞偵測（執行 ColChk Off）。</value></data>
+  <data name="Error.3983.Message" xml:space="preserve"><value>無法執行 Cnt 移動</value></data>
+  <data name="Error.3983.Cause" xml:space="preserve"><value>結構旗標或關節角度不一致。</value></data>
+  <data name="Error.3983.Measures" xml:space="preserve"><value>使用 Dly 指令等確實定位。</value></data>
+  <data name="Error.3984.Message" xml:space="preserve"><value>無法通過（奇異點）</value></data>
+  <data name="Error.3984.Cause" xml:space="preserve"><value>機器人通過非常接近奇異點的位置。</value></data>
+  <data name="Error.3984.Measures" xml:space="preserve"><value>調整示教位置。</value></data>
+  <data name="Error.3985.Message" xml:space="preserve"><value>無法通過（奇異點）</value></data>
+  <data name="Error.3985.Cause" xml:space="preserve"><value>機器人通過非常接近奇異點的位置。</value></data>
+  <data name="Error.3985.Measures" xml:space="preserve"><value>調整示教位置。</value></data>
+  <data name="Error.3986.Message" xml:space="preserve"><value>1. 無法啟用力覺控制。（感測器）
+2. 無法啟用力覺控制。（Cmp 指令）
+3. 無法執行 Cmp 指令。（力覺控制）
+4. 無法啟用碰撞偵測功能。（力覺控制）
+5. 無法啟用力覺控制。（初始化）
+6. 位於奇異點附近區域。（力覺控制）
+7. 力覺控制狀態不同。
+8. 無法使用此功能。
+9. 無法變更工具轉換資料。（力覺控制）
+10. 無法變更基座轉換資料。（力覺控制）
+11. 無法執行 Jrc 指令。（力覺控制）
+12. 請停用力覺控制。
+13. 無法取消偏移。（力覺控制）</value></data>
+  <data name="Error.3986.Cause" xml:space="preserve"><value>1. 無法啟用力覺控制。（感測器）：未連接力感測器，無法執行。
+2. 無法啟用力覺控制。（Cmp 指令）：柔順控制功能啟用時，無法啟用力覺控制功能。
+3. 無法執行 Cmp 指令。（力覺控制）：力覺控制功能啟用時，無法啟用柔順控制功能。
+4. 無法啟用碰撞偵測功能。（力覺控制）：力覺控制功能啟用時，無法啟用碰撞偵測功能。
+5. 無法啟用力覺控制。（初始化）：啟動力覺控制時無法初始化。
+6. 位於奇異點附近區域。（力覺控制）：力覺控制功能啟用時，無法移動至奇異點附近區域。
+7. 力覺控制狀態不同。：恢復程式運行時力覺控制的啟用／停用狀態與程式運行時不同。
+8. 無法使用此功能。：此機型不支援所執行的力覺控制功能。
+9. 無法變更工具轉換資料。（力覺控制）：力覺控制功能啟用時，無法變更工具轉換資料。
+10. 無法變更基座轉換資料。（力覺控制）：力覺控制功能啟用時，無法變更基座轉換資料。
+11. 無法執行 Jrc 指令。（力覺控制）：力覺控制功能啟用時，無法執行 Jrc 指令。
+12. 請停用力覺控制。：此機型在力覺控制功能啟用時無法進行 JOG 操作。
+13. 無法取消偏移。（力覺控制）：力覺控制功能啟用時，無法取消偏移。</value></data>
+  <data name="Error.3986.Measures" xml:space="preserve"><value>1. 無法啟用力覺控制。（感測器）：連接力感測器，或刪除造成錯誤的指令。
+2. 無法啟用力覺控制。（Cmp 指令）：力覺控制功能與柔順控制功能無法同時啟用。使用力覺控制功能時，請停用柔順控制功能。
+3. 無法執行 Cmp 指令。（力覺控制）：力覺控制功能與柔順控制功能無法同時啟用。使用柔順控制功能時，請停用力覺控制功能。
+4. 無法啟用碰撞偵測功能。（力覺控制）：力覺控制功能與碰撞偵測功能無法同時啟用。使用碰撞偵測功能時，請停用力覺控制功能。
+5. 無法啟用力覺控制。（初始化）：檢查參數設定。
+6. 位於奇異點附近區域。（力覺控制）：若要移動至奇異點附近區域，請停用力覺控制功能。
+7. 力覺控制狀態不同。：將力覺控制的啟用／停用狀態設為正確狀態。（恢復程式運行時僅發生一次。）
+8. 無法使用此功能。：不要使用此力覺控制功能。有關最新支援狀況的詳情，請聯絡製造商。
+9. 無法變更工具轉換資料。（力覺控制）：若要變更工具轉換資料，請停用力覺控制功能。
+10. 無法變更基座轉換資料。（力覺控制）：若要變更基座轉換資料，請停用力覺控制功能。
+11. 無法執行 Jrc 指令。（力覺控制）：若要執行 Jrc 指令，請停用力覺控制功能。
+12. 請停用力覺控制。：停用力覺控制功能。
+13. 無法取消偏移。（力覺控制）：若要取消偏移，請停用力覺控制功能。</value></data>
+  <data name="Error.3987.Message" xml:space="preserve"><value>1. 力覺控制已停用。
+2. 力覺控制已啟用。
+3. 無法執行 FsGChg 指令。
+4. 無法輸出記錄檔。
+5. 指定的記錄檔不存在。
+6. 無法變更力覺狀態變數。
+7. 力覺記錄指令同時執行。
+8. 無法建立記錄檔。
+9. 無法執行 Fsc ON 指令。
+10. 無法執行記錄資料相關處理。
+11. 力覺控制已啟用。
+12. 無法啟用 Mo 觸發器。
+13. Mo 觸發器逾時
+14. 無法執行 FsCTrg 指令。
+15. 無法指定控制特性變更。</value></data>
+  <data name="Error.3987.Cause" xml:space="preserve"><value>1. 力覺控制已停用。：力覺控制已停用，因此無法執行指令。
+2. 力覺控制已啟用。：力覺控制已啟用時，無法再次啟用。
+3. 無法執行 FsGChg 指令。：力控制增益變更尚未完成時，無法執行 FsGChg 指令。
+4. 無法輸出記錄檔。：FTP 處理未正確執行。
+5. 指定的記錄檔不存在。：FsOutLog 指令指定的編號所對應的記錄檔不存在。
+6. 無法變更力覺狀態變數。：該狀態變數設定目前正由力覺控制功能使用，因此無法變更。
+7. 力覺記錄指令同時執行。：建立（FsLog Off 指令）或輸出（FsOutLog 指令）力覺記錄檔時，無法建立或輸出另一個檔案。
+8. 無法建立記錄檔。：無法建立力覺記錄檔。
+9. 無法執行 Fsc ON 指令。：變更力控制增益時，無法執行 Fsc On 指令。
+10. 無法執行記錄資料相關處理。：記錄力覺控制記錄資料時，無法執行 FsLog On 指令。
+11. 力覺控制已啟用。：該參數設定目前正由力覺控制功能使用，因此無法變更。
+12. 無法啟用 Mo 觸發器。：先執行的 FsCtrg 指令的 Mo 觸發器已啟用。
+13. Mo 觸發器逾時：Mo 觸發器未在指定時間內變為 ON。
+14. 無法執行 FsCTrg 指令。：控制特性目前正在變更。先執行的 FsCTrg 指令的 Mo 觸發器已啟用。
+15. 無法指定控制特性變更。：其他指令已設定控制特性變更。</value></data>
+  <data name="Error.3987.Measures" xml:space="preserve"><value>1. 力覺控制已停用。：啟用力覺控制功能。
+2. 力覺控制已啟用。：先停用力覺控制功能，再重新啟用。
+3. 無法執行 FsGChg 指令。：檢查程式，使 FsGChg 指令在力控制增益變更完成後執行。
+4. 無法輸出記錄檔。：檢查 FTP 相關參數設定。檢查乙太網路電纜連接。檢查電腦上的 FTP 伺服器設定。
+5. 指定的記錄檔不存在。：檢查記錄檔編號是否有誤。
+6. 無法變更力覺狀態變數。：若要變更設定，請停用力覺控制功能。
+7. 力覺記錄指令同時執行。：待力覺記錄檔建立或輸出完成後再處理。
+8. 無法建立記錄檔。：檢查機器人控制器中的可用記錄空間。
+9. 無法執行 Fsc ON 指令。：力控制增益變更完成後執行 Fsc On 指令。
+10. 無法執行記錄資料相關處理。：記錄資料完成後執行 FsLog On 指令。
+11. 力覺控制已啟用。：若要變更參數，請先停用力覺控制功能。
+12. 無法啟用 Mo 觸發器。：控制特性變更完成後執行。
+13. Mo 觸發器逾時：檢查 Mo 觸發器條件與機器人程式。
+14. 無法執行 FsCTrg 指令。：控制特性變更完成後執行。
+15. 無法指定控制特性變更。：修改程式，使該指令不與其他指令同時執行。</value></data>
+  <data name="Error.3988.Message" xml:space="preserve"><value>無法產生位置指令。</value></data>
+  <data name="Error.3988.Cause" xml:space="preserve"><value>力控制偏移後，無法將直線位置資料轉換為關節角度。偏移後的位置位於移動範圍外或為奇異點。</value></data>
+  <data name="Error.3988.Measures" xml:space="preserve"><value>檢查移動動作及設定，以避開移動範圍外附近及奇異點附近的區域。</value></data>
+  <data name="Error.3990.Message" xml:space="preserve"><value>無法使用 ColChk</value></data>
+  <data name="Error.3990.Cause" xml:space="preserve"><value>此機器人設定為多機械。</value></data>
+  <data name="Error.3990.Measures" xml:space="preserve"><value>將 COL 參數變更為禁止使用。</value></data>
+  <data name="Error.3991.Message" xml:space="preserve"><value>無法使用 Mainte.Forecast</value></data>
+  <data name="Error.3991.Cause" xml:space="preserve"><value>此機器人設定為多機械。</value></data>
+  <data name="Error.3991.Measures" xml:space="preserve"><value>停用維護預測。</value></data>
+  <data name="Error.3995.Message" xml:space="preserve"><value>無法同時使用 SQ Direct 和 ALWENA</value></data>
+  <data name="Error.3995.Cause" xml:space="preserve"><value>當程式設定為持續運行（參數 ALWENA=1）時，無法使用 SQ Direct 功能（參數 IQMEM 設為有效）的 Xrun、Xload、Xstp、Xrst、Servo 和 Reset Error 指令。</value></data>
+  <data name="Error.3995.Measures" xml:space="preserve"><value>將 ALWENA 參數變更為 0。</value></data>
+</root>

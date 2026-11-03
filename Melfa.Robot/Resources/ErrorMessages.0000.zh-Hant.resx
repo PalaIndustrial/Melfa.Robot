@@ -1,0 +1,1467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 部分翻譯：僅涵蓋下列代碼；其餘代碼尚待翻譯。
+       星號錯誤除特別註明外，須關閉電源再重新開啟以重置。請參閱原手冊的安全說明及圖示。 -->
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Error.0006.Message" xml:space="preserve"><value>CPU 處理錯誤</value></data>
+  <data name="Error.0006.Cause" xml:space="preserve"><value>CPU 無法正常處理。</value></data>
+  <data name="Error.0006.Measures" xml:space="preserve"><value>若情況未改善，需更換某些零件。訊息中的 CPU 名稱依偵測到錯誤的 CPU 而異：RCPU_main、CCPU_main、RCPU_sub、CCPU_sub、CPU_main、CPU_sub、FPGA。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0008.Message" xml:space="preserve"><value>CPU 同步錯誤</value></data>
+  <data name="Error.0008.Cause" xml:space="preserve"><value>CPU 同步失敗。</value></data>
+  <data name="Error.0008.Measures" xml:space="preserve"><value>關閉電源後再重新開啟。</value></data>
+  <data name="Error.0009.Message" xml:space="preserve"><value>1. 版本更新（全部）
+2. 版本更新（主系統）
+3. 版本更新（伺服）
+4. 伺服軟體已寫入
+5. 伺服軟體重寫失敗（Er.*）</value></data>
+  <data name="Error.0009.Cause" xml:space="preserve"><value>1. 版本更新（全部）：全部版本已更新。
+2. 版本更新（主系統）：主系統版本已更新。
+3. 版本更新（伺服）：伺服版本已更新。
+4. 伺服軟體已寫入：伺服軟體已寫入。
+5. 伺服軟體重寫失敗（Er.*）：無法讀取伺服軟體。</value></data>
+  <data name="Error.0009.Measures" xml:space="preserve"><value>1. 版本更新（全部）：關閉電源後再開啟。
+2. 版本更新（主系統）：關閉電源後再開啟。
+3. 版本更新（伺服）：關閉電源後再開啟。
+4. 伺服軟體已寫入：執行重置即可解除，不必重新開啟電源。
+5. 伺服軟體重寫失敗（Er.*）：請聯絡服務供應商；訊息中的 * 為表示錯誤原因的數字（1 至 7）。除另有註明外，關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0010.Message" xml:space="preserve"><value>檔案版本不正確</value></data>
+  <data name="Error.0010.Cause" xml:space="preserve"><value>版本不一致。</value></data>
+  <data name="Error.0010.Measures" xml:space="preserve"><value>檔案已自動初始化，程式正在刪除。</value></data>
+  <data name="Error.0011.Message" xml:space="preserve"><value>系統資料版本不正確</value></data>
+  <data name="Error.0011.Cause" xml:space="preserve"><value>版本不一致。</value></data>
+  <data name="Error.0011.Measures" xml:space="preserve"><value>檔案已自動初始化。關閉電源後再重新開啟。</value></data>
+  <data name="Error.0012.Message" xml:space="preserve"><value>錯誤記錄已初始化</value></data>
+  <data name="Error.0012.Cause" xml:space="preserve"><value>由於版本不一致或錯誤記錄檔異常，錯誤記錄已初始化。</value></data>
+  <data name="Error.0012.Measures" xml:space="preserve"><value>重置警報後繼續操作。</value></data>
+  <data name="Error.0013.Message" xml:space="preserve"><value>1. 檔案不正確
+2. 系統 SD 卡不正確</value></data>
+  <data name="Error.0013.Cause" xml:space="preserve"><value>1. 檔案不正確：包含程式在內的資料可能損壞。
+2. 系統 SD 卡不正確：檔案損毀。</value></data>
+  <data name="Error.0013.Measures" xml:space="preserve"><value>1. 檔案不正確：需要初始化；請聯絡服務供應商。關閉電源後再開啟以重置。
+2. 系統 SD 卡不正確：執行檔案初始化。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0014.Message" xml:space="preserve"><value>系統錯誤（MECHA 不正確）</value></data>
+  <data name="Error.0014.Cause" xml:space="preserve"><value>字串不得超過 14 個字元。</value></data>
+  <data name="Error.0014.Measures" xml:space="preserve"><value>重新輸入正確名稱。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0015.Message" xml:space="preserve"><value>檔案版本不正確</value></data>
+  <data name="Error.0015.Cause" xml:space="preserve"><value>檔案版本不正確。</value></data>
+  <data name="Error.0015.Measures" xml:space="preserve"><value>請聯絡製造商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0016.Message" xml:space="preserve"><value>請關閉電源後再重新開啟</value></data>
+  <data name="Error.0016.Cause" xml:space="preserve"><value>關閉電源至重新開啟之間的時間太短。</value></data>
+  <data name="Error.0016.Measures" xml:space="preserve"><value>關閉電源後，等待較長時間再重新開啟。</value></data>
+  <data name="Error.0018.Message" xml:space="preserve"><value>已選擇機器人型號</value></data>
+  <data name="Error.0018.Cause" xml:space="preserve"><value>已選擇機器人型號。</value></data>
+  <data name="Error.0018.Measures" xml:space="preserve"><value>重置錯誤。</value></data>
+  <data name="Error.0020.Message" xml:space="preserve"><value>系統錯誤（備份資料名稱重複）</value></data>
+  <data name="Error.0020.Cause" xml:space="preserve"><value>系統備份區域的資料異常。</value></data>
+  <data name="Error.0020.Measures" xml:space="preserve"><value>請洽詢服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0021.Message" xml:space="preserve"><value>系統錯誤（備份資料數量超限）</value></data>
+  <data name="Error.0021.Cause" xml:space="preserve"><value>控制區域溢出。</value></data>
+  <data name="Error.0021.Measures" xml:space="preserve"><value>請洽詢服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0022.Message" xml:space="preserve"><value>系統錯誤（無備份資料區域）</value></data>
+  <data name="Error.0022.Cause" xml:space="preserve"><value>區域太小。</value></data>
+  <data name="Error.0022.Measures" xml:space="preserve"><value>請洽詢服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0028.Message" xml:space="preserve"><value>記憶體錯誤（ECC）</value></data>
+  <data name="Error.0028.Cause" xml:space="preserve"><value>偵測到 ECC 兩位元錯誤（***）。</value></data>
+  <data name="Error.0028.Measures" xml:space="preserve"><value>關閉電源後再重新開啟。訊息中的 *** 表示偵測到錯誤的部位：nvSRAM、FROM、RCPU_DRAM、RCPU_L2C、CCPU_DRAM、CCPU_L2C、R_nvSRAM、R_DRAM 或 R_L2C。</value></data>
+  <data name="Error.0029.Message" xml:space="preserve"><value>記憶體錯誤（ECC）</value></data>
+  <data name="Error.0029.Cause" xml:space="preserve"><value>偵測到 ECC 一位元錯誤（***）。</value></data>
+  <data name="Error.0029.Measures" xml:space="preserve"><value>若頻繁發生，請聯絡服務供應商。訊息中的 *** 表示偵測到錯誤的部位：nvSRAM、FROM、RCPU_DRAM、RCPU_L2C、CCPU_DRAM、CCPU_L2C、R_nvSRAM、R_DRAM 或 R_L2C。</value></data>
+  <data name="Error.0030.Message" xml:space="preserve"><value>夾爪錯誤：限位開關解除</value></data>
+  <data name="Error.0030.Cause" xml:space="preserve"><value>這是使用者設定的錯誤。</value></data>
+  <data name="Error.0030.Measures" xml:space="preserve"><value>排除原因後重置錯誤。</value></data>
+  <data name="Error.0031.Message" xml:space="preserve"><value>氣壓錯誤</value></data>
+  <data name="Error.0031.Cause" xml:space="preserve"><value>這是使用者設定的錯誤。</value></data>
+  <data name="Error.0031.Measures" xml:space="preserve"><value>排除原因後重置錯誤。</value></data>
+  <data name="Error.0032.Message" xml:space="preserve"><value>尚未設定 HIOTYPE 參數</value></data>
+  <data name="Error.0032.Cause" xml:space="preserve"><value>需要變更 HIOTYPE 參數。</value></data>
+  <data name="Error.0032.Measures" xml:space="preserve"><value>設定 HIOTYPE 參數（-1：未設定；0：源型；1：汲型）。</value></data>
+  <data name="Error.0039.Message" xml:space="preserve"><value>門開關訊號線路故障</value></data>
+  <data name="Error.0039.Cause" xml:space="preserve"><value>門開關兩個接點中的一個已損壞，或未使用雙線配線。</value></data>
+  <data name="Error.0039.Measures" xml:space="preserve"><value>關閉電源，檢查開關配線是否有問題並確認為雙線配線。門開關配線請參閱另冊《標準規格手冊》的安全措施範例。檢查後重新開啟電源。</value></data>
+  <data name="Error.0040.Message" xml:space="preserve"><value>門開關訊號輸入中</value></data>
+  <data name="Error.0040.Cause" xml:space="preserve"><value>門開關已開啟。</value></data>
+  <data name="Error.0040.Measures" xml:space="preserve"><value>確認門開關輸入訊號連接正確，並關閉與門開關輸入訊號相連的門。</value></data>
+  <data name="Error.0041.Message" xml:space="preserve"><value>1. 遠端 I/O 第 1 通道通訊錯誤
+2. 遠端 I/O 第 1 通道 CRC 錯誤</value></data>
+  <data name="Error.0041.Cause" xml:space="preserve"><value>1. 遠端 I/O 第 1 通道通訊錯誤：通訊線路異常。
+2. 遠端 I/O 第 1 通道 CRC 錯誤：遠端 I/O 第 1 通道通訊線路發生錯誤。</value></data>
+  <data name="Error.0041.Measures" xml:space="preserve"><value>1. 遠端 I/O 第 1 通道通訊錯誤：使用 CR800-R／CR800-Q 控制器時，確認 CPU 與控制器間的遠端 I/O 電纜已接地且連接正確。關閉電源後再開啟以重置。
+2. 遠端 I/O 第 1 通道 CRC 錯誤：使用 CR800-R／CR800-Q 控制器時，確認 CPU 與控制器間的遠端 I/O 電纜已接地且連接正確。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0042.Message" xml:space="preserve"><value>遠端 I/O 第 2 通道通訊錯誤</value></data>
+  <data name="Error.0042.Cause" xml:space="preserve"><value>通訊線路異常。</value></data>
+  <data name="Error.0042.Measures" xml:space="preserve"><value>檢查 CR750-Q／CR751-Q 控制器的遠端 I/O 電纜連接。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0044.Message" xml:space="preserve"><value>遠端 I/O 第 4 通道通訊錯誤</value></data>
+  <data name="Error.0044.Cause" xml:space="preserve"><value>通訊線路異常。</value></data>
+  <data name="Error.0044.Measures" xml:space="preserve"><value>檢查電纜或電源。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0045.Message" xml:space="preserve"><value>遠端 I/O 第 5 通道通訊錯誤</value></data>
+  <data name="Error.0045.Cause" xml:space="preserve"><value>通訊線路異常。</value></data>
+  <data name="Error.0045.Measures" xml:space="preserve"><value>檢查電纜或電源。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0046.Message" xml:space="preserve"><value>模式選擇開關配線故障</value></data>
+  <data name="Error.0046.Cause" xml:space="preserve"><value>模式選擇開關雙線配線的狀態不一致。</value></data>
+  <data name="Error.0046.Measures" xml:space="preserve"><value>關閉電源並確認開關配線正確；配線必須為雙線。模式選擇開關配線請參閱另冊《標準規格手冊》。</value></data>
+  <data name="Error.0047.Message" xml:space="preserve"><value>偵測到 OCL</value></data>
+  <data name="Error.0047.Cause" xml:space="preserve"><value>偵測到 OCL。</value></data>
+  <data name="Error.0047.Measures" xml:space="preserve"><value>請檢查操作面板急停線路。</value></data>
+  <data name="Error.0048.Message" xml:space="preserve"><value>模式選擇開關線路故障</value></data>
+  <data name="Error.0048.Cause" xml:space="preserve"><value>模式選擇開關雙線線路的狀態不一致。</value></data>
+  <data name="Error.0048.Measures" xml:space="preserve"><value>請檢查模式選擇開關線路。</value></data>
+  <data name="Error.0049.Message" xml:space="preserve"><value>示教器使能開關線路故障</value></data>
+  <data name="Error.0049.Cause" xml:space="preserve"><value>示教器使能開關雙線線路的狀態不一致。</value></data>
+  <data name="Error.0049.Measures" xml:space="preserve"><value>請檢查示教器使能開關線路。</value></data>
+  <data name="Error.0053.Message" xml:space="preserve"><value>附加軸 2 急停訊號輸入中</value></data>
+  <data name="Error.0053.Cause" xml:space="preserve"><value>附加軸放大器的外部急停訊號輸入中。</value></data>
+  <data name="Error.0053.Measures" xml:space="preserve"><value>檢查附加軸伺服放大器的急停裝置。附加軸的 EM1（強制斷電）線路也可能開路，請確認連接。外部急停 1 和 2 分開：外部急停 1 用於介面卡，外部急停 2 用於放大器本體。</value></data>
+  <data name="Error.0054.Message" xml:space="preserve"><value>外部急停電源配線故障</value></data>
+  <data name="Error.0054.Cause" xml:space="preserve"><value>外部急停雙線配線的狀態不一致。</value></data>
+  <data name="Error.0054.Measures" xml:space="preserve"><value>請檢查外部急停配線。</value></data>
+  <data name="Error.0099.Message" xml:space="preserve"><value>1. 軟體版本不正確（**）
+2. R/C 版本不正確（**）</value></data>
+  <data name="Error.0099.Cause" xml:space="preserve"><value>1. 軟體版本不正確（**）：已安裝舊版伺服軟體。
+2. R/C 版本不正確（**）：已安裝舊版 R/C。</value></data>
+  <data name="Error.0099.Measures" xml:space="preserve"><value>1. 軟體版本不正確（**）：必須更換為正確版本，請聯絡服務供應商；（**）表示正確的伺服軟體版本。錯誤訊息及原因中的軟體名稱依發生錯誤的軟體而異：CCPU 主系統、OS、RCPU 子系統、CCPU 子系統、伺服軟體、FPGA OS、子系統、FPGA 系統或 boot。除另有註明外，關閉電源後再開啟以重置。
+2. R/C 版本不正確（**）：必須更換為正確版本，請聯絡服務供應商；（**）表示正確的軟體版本。</value></data>
+  <data name="Error.0161.Message" xml:space="preserve"><value>無法同時使用平行 I/O 介面和模組（編號：1）</value></data>
+  <data name="Error.0162.Message" xml:space="preserve"><value>無法同時使用平行 I/O 介面和模組（編號：2）</value></data>
+  <data name="Error.0163.Message" xml:space="preserve"><value>無法同時使用平行 I/O 介面和模組（編號：3）</value></data>
+  
+  <data name="Error.0161.Cause" xml:space="preserve"><value>平行 I/O 介面與平行 I/O 模組的 I/O 通道號碼重複。</value></data>
+  <data name="Error.0162.Cause" xml:space="preserve"><value>平行 I/O 介面與平行 I/O 模組的 I/O 通道號碼重複。</value></data>
+  <data name="Error.0163.Cause" xml:space="preserve"><value>平行 I/O 介面與平行 I/O 模組的 I/O 通道號碼重複。</value></data>
+  
+  <data name="Error.0161.Measures" xml:space="preserve"><value>選擇平行 I/O 介面或平行 I/O 模組其中之一。</value></data>
+  <data name="Error.0162.Measures" xml:space="preserve"><value>選擇平行 I/O 介面或平行 I/O 模組其中之一。</value></data>
+  <data name="Error.0163.Measures" xml:space="preserve"><value>選擇平行 I/O 介面或平行 I/O 模組其中之一。</value></data>
+  
+  <data name="Error.0171.Message" xml:space="preserve"><value>平行 I/O 介面硬體錯誤（編號：1）</value></data>
+  <data name="Error.0172.Message" xml:space="preserve"><value>平行 I/O 介面硬體錯誤（編號：2）</value></data>
+  
+  <data name="Error.0171.Cause" xml:space="preserve"><value>平行 I/O 卡損壞，或平行 I/O 的外部電源中斷。</value></data>
+  <data name="Error.0172.Cause" xml:space="preserve"><value>平行 I/O 卡損壞，或平行 I/O 的外部電源中斷。</value></data>
+  
+  <data name="Error.0171.Measures" xml:space="preserve"><value>若再次發生，請更換平行 I/O 介面卡。</value></data>
+  <data name="Error.0172.Measures" xml:space="preserve"><value>若再次發生，請更換平行 I/O 介面卡。</value></data>
+  
+  <data name="Error.0181.Message" xml:space="preserve"><value>平行 I/O 保險絲熔斷（插槽 1，Fn；編號：1，n＝1 至 4）</value></data>
+  <data name="Error.0182.Message" xml:space="preserve"><value>平行 I/O 保險絲熔斷（插槽 2，Fn；編號：2，n＝1 至 4）</value></data>
+  
+  <data name="Error.0181.Cause" xml:space="preserve"><value>安裝於選配插槽 1 的平行 I/O 介面保險絲 Fn 熔斷。</value></data>
+  <data name="Error.0182.Cause" xml:space="preserve"><value>安裝於選配插槽 2 的平行 I/O 介面保險絲 Fn 熔斷。</value></data>
+  
+  <data name="Error.0181.Measures" xml:space="preserve"><value>排除保險絲熔斷的原因後，更換平行 I/O 介面的保險絲。</value></data>
+  <data name="Error.0182.Measures" xml:space="preserve"><value>排除保險絲熔斷的原因後，更換平行 I/O 介面的保險絲。</value></data>
+  
+  <data name="Error.0431.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：1）</value></data>
+  <data name="Error.0432.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：2）</value></data>
+  <data name="Error.0433.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：3）</value></data>
+  <data name="Error.0434.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：4）</value></data>
+  <data name="Error.0435.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：5）</value></data>
+  <data name="Error.0436.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：6）</value></data>
+  <data name="Error.0437.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：7）</value></data>
+  <data name="Error.0438.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：8）</value></data>
+  
+  <data name="Error.0431.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0432.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0433.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0434.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0435.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0436.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0437.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  <data name="Error.0438.Cause" xml:space="preserve"><value>馬達或編碼器的熱保護器動作。</value></data>
+  
+  <data name="Error.0431.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0432.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0433.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0434.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0435.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0436.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0437.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  <data name="Error.0438.Measures" xml:space="preserve"><value>降低機器人的速度及加速度。</value></data>
+  
+  <data name="Error.0491.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：1）</value></data>
+  <data name="Error.0492.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：2）</value></data>
+  <data name="Error.0493.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：3）</value></data>
+  <data name="Error.0494.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：4）</value></data>
+  <data name="Error.0495.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：5）</value></data>
+  <data name="Error.0496.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：6）</value></data>
+  <data name="Error.0497.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：7）</value></data>
+  <data name="Error.0498.Message" xml:space="preserve"><value>機器人內部風扇警報（風扇號碼：8）</value></data>
+  
+  <data name="Error.0491.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0492.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0493.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0494.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0495.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0496.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0497.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  <data name="Error.0498.Cause" xml:space="preserve"><value>機器人內部風扇可能故障。</value></data>
+  
+  <data name="Error.0491.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0492.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0493.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0494.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0495.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0496.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0497.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0498.Measures" xml:space="preserve"><value>請更換機器人內部風扇。關閉電源後再開啟以重置。</value></data>
+  
+  <data name="Error.0501.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：1）</value></data>
+  <data name="Error.0502.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：2）</value></data>
+  <data name="Error.0503.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：3）</value></data>
+  <data name="Error.0504.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：4）</value></data>
+  <data name="Error.0505.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：5）</value></data>
+  <data name="Error.0506.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：6）</value></data>
+  <data name="Error.0507.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：7）</value></data>
+  <data name="Error.0508.Message" xml:space="preserve"><value>伺服軸設定錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0501.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0502.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0503.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0504.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0505.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0506.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0507.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  <data name="Error.0508.Cause" xml:space="preserve"><value>軸號選擇開關設定不正確。</value></data>
+  
+  <data name="Error.0501.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0502.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0503.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0504.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0505.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0506.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0507.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0508.Measures" xml:space="preserve"><value>確認軸選擇開關的設定。關閉電源後再開啟以重置。</value></data>
+  
+  <data name="Error.0001.Cause" xml:space="preserve">
+    <value>系統可能有異常</value>
+  </data>
+  <data name="Error.0001.Measures" xml:space="preserve">
+    <value>將電源切至 OFF 再重新 ON。若問題持續發生，請聯絡您的供應商。</value>
+  </data>
+  <data name="Error.0001.Message" xml:space="preserve">
+    <value>故障安全裝置錯誤（SRVOFF）</value>
+  </data>
+  <data name="Error.0002.Cause" xml:space="preserve">
+    <value>系統可能有異常</value>
+  </data>
+  <data name="Error.0002.Measures" xml:space="preserve">
+    <value>將電源切至 OFF 再重新 ON。若問題持續發生，請聯絡您的供應商。</value>
+  </data>
+  <data name="Error.0002.Message" xml:space="preserve">
+    <value>故障安全裝置錯誤（STOP）</value>
+  </data>
+  <data name="Error.0003.Cause" xml:space="preserve">
+    <value>系統本身有毛病</value>
+  </data>
+  <data name="Error.0003.Measures" xml:space="preserve">
+    <value>將電源切至 OFF 再重新 ON。若問題持續發生，請聯絡您的供應商。</value>
+  </data>
+  <data name="Error.0003.Message" xml:space="preserve">
+    <value>系統異常</value>
+  </data>
+  <data name="Error.0004.Cause" xml:space="preserve">
+    <value>不能正常操作 CPU</value>
+  </data>
+  <data name="Error.0004.Measures" xml:space="preserve">
+    <value>若情況未改善，可能需要置換某些零部件。若問題持續發生，請聯絡您的供應商。
+各個訊息中的「CPU」會根據偵測到錯誤的 CPU 而不同。
+RCPU_main、CCPU_main、RCPU_sub、CCPU_sub、CPU_main、CPU_sub、FPGA、RCPU_PLD、CCPU_PLD
+關閉電源後再開啟以重置。</value>
+  </data>
+  <data name="Error.0004.Message" xml:space="preserve">
+    <value>CPU 看門狗錯誤</value>
+  </data>
+  <data name="Error.0050.Cause" xml:space="preserve">
+    <value>外部急停信號已觸發</value>
+  </data>
+  <data name="Error.0050.Measures" xml:space="preserve">
+    <value>放開外部急停信號</value>
+  </data>
+  <data name="Error.0050.Message" xml:space="preserve">
+    <value>緊急停止（外部）</value>
+  </data>
+  <data name="Error.0051.Cause" xml:space="preserve">
+    <value>外部急停連線異常</value>
+  </data>
+  <data name="Error.0051.Measures" xml:space="preserve">
+    <value>關閉電源，並檢查外部急停開關的連線。
+並且，確認它是使用雙信號輸入。檢閱《安全規範說明書》或是《標準規格手冊》取得緊急停止開關的接線方式。
+在確認檢查後重新啟動電源。</value>
+  </data>
+  <data name="Error.0051.Message" xml:space="preserve">
+    <value>外部急停開關連線異常</value>
+  </data>
+  <data name="Error.0061.Cause" xml:space="preserve">
+    <value>控制面板上的急停開關信號線異常</value>
+  </data>
+  <data name="Error.0061.Measures" xml:space="preserve">
+    <value>確認控制面板上的急停開關線路正常。
+並且，確認它是使用雙信號輸入。檢閱《安全規範說明書》或是《標準規格手冊》取得緊急停止開關的接線方式。
+在確認檢查後重新啟動電源。</value>
+  </data>
+  <data name="Error.0061.Message" xml:space="preserve">
+    <value>緊急停止（控制面板）</value>
+  </data>
+  <data name="Error.0070.Cause" xml:space="preserve">
+    <value>示教器上的緊急停止開關被觸發。或是在使用 UL 規範時，解除煞車的開關被啟動。</value>
+  </data>
+  <data name="Error.0070.Measures" xml:space="preserve">
+    <value>解除示教器上的緊急停止開關。或在使用 UL 規範時，停用解除煞車開關。若警報一直無法解除，請檢查安全裝置（TZ3438）上的保險絲。若保險絲燒了，請更換它。</value>
+  </data>
+  <data name="Error.0070.Message" xml:space="preserve">
+    <value>緊急停止（示教器）</value>
+  </data>
+  <data name="Error.0071.Cause" xml:space="preserve">
+    <value>示教器上的急停開關信號異常</value>
+  </data>
+  <data name="Error.0071.Measures" xml:space="preserve">
+    <value>確認示教器上的急停開關線路正常。
+並且，確認它是使用雙信號輸入。檢閱《安全規範說明書》或是《標準規格手冊》取得緊急停止開關的接線方式。
+在確認檢查後重新啟動電源。</value>
+  </data>
+  <data name="Error.0071.Message" xml:space="preserve">
+    <value>緊急停止（示教器）</value>
+  </data>
+  <data name="Error.0074.Message" xml:space="preserve"><value>示教器啟用／停用線路故障</value></data>
+  <data name="Error.0074.Cause" xml:space="preserve"><value>示教器啟用／停用雙線線路狀態不一致。</value></data>
+  <data name="Error.0074.Measures" xml:space="preserve"><value>確認示教器連接正確。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0075.Message" xml:space="preserve"><value>示教器通訊錯誤</value></data>
+  <data name="Error.0075.Cause" xml:space="preserve"><value>控制器與示教器之間的通訊中斷。</value></data>
+  <data name="Error.0075.Measures" xml:space="preserve"><value>若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0077.Message" xml:space="preserve"><value>電雙層電容過電壓</value></data>
+  <data name="Error.0077.Cause" xml:space="preserve"><value>機器人內部電路板的電源損壞。</value></data>
+  <data name="Error.0077.Measures" xml:space="preserve"><value>關閉電源並聯絡服務供應商。除另有註明外，須關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0083.Message" xml:space="preserve"><value>夾爪保險絲熔斷</value></data>
+  <data name="Error.0083.Cause" xml:space="preserve"><value>氣動夾爪的電源保險絲熔斷；夾爪輸入／輸出訊號的電源線可能短路。</value></data>
+  <data name="Error.0083.Measures" xml:space="preserve"><value>確認夾爪輸入電纜 HC1 至 HC8、輸出電纜 GR1 至 GR8 及其連接電纜均正確連接，且未因夾傷而短路。更換保險絲；詳見手冊第 65 頁「2.1.2 需要更換夾爪保險絲的位置」。若更換後再次發生，請聯絡製造商。除另有註明外，須關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0086.Message" xml:space="preserve"><value>電動夾爪模組過電流</value></data>
+  <data name="Error.0086.Cause" xml:space="preserve"><value>電動夾爪的馬達或電路板損壞。</value></data>
+  <data name="Error.0086.Measures" xml:space="preserve"><value>更換電動夾爪的馬達或電路板。</value></data>
+  <data name="Error.0090.Message" xml:space="preserve"><value>1. 煞車保險絲熔斷
+2. 示教器保險絲熔斷</value></data>
+  <data name="Error.0090.Cause" xml:space="preserve"><value>1. 煞車保險絲熔斷：可能是煞車故障或煞車電纜接地故障所致。
+2. 示教器保險絲熔斷：電纜可能斷線或發生接地故障。</value></data>
+  <data name="Error.0090.Measures" xml:space="preserve"><value>1. 煞車保險絲熔斷：控制器內有兩個煞車保險絲，請參閱手冊第 64 頁「2.1.1 需要更換煞車保險絲的位置」，並更換兩個保險絲。若更換後再次發生，請聯絡經銷商。
+2. 示教器保險絲熔斷：檢查電纜是否有問題，檢查後重新開啟電源。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0091.Message" xml:space="preserve"><value>無法存取專用訊號</value></data>
+  <data name="Error.0091.Cause" xml:space="preserve"><value>指定訊號已分配給專用輸出訊號，無法重複使用。</value></data>
+  <data name="Error.0091.Measures" xml:space="preserve"><value>確認不同的專用輸出訊號是否分配了相同的專用輸出號碼。變更輸出號碼或專用輸出分配參數。</value></data>
+  <data name="Error.0095.Message" xml:space="preserve"><value>煞車釋放開關已開啟</value></data>
+  <data name="Error.0095.Cause" xml:space="preserve"><value>煞車釋放開關開啟時無法執行。</value></data>
+  <data name="Error.0095.Measures" xml:space="preserve"><value>檢查煞車釋放開關並將其關閉。</value></data>
+  <data name="Error.0097.Message" xml:space="preserve"><value>磁力接觸器（MC）狀態異常</value></data>
+  <data name="Error.0097.Cause" xml:space="preserve"><value>雙重化磁力接觸器的狀態訊號不一致。</value></data>
+  <data name="Error.0097.Measures" xml:space="preserve"><value>關閉電源後重新開啟以重置錯誤。若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0098.Message" xml:space="preserve"><value>安全繼電器（SR）狀態異常</value></data>
+  <data name="Error.0098.Cause" xml:space="preserve"><value>雙重化安全繼電器的狀態訊號不一致。</value></data>
+  <data name="Error.0098.Measures" xml:space="preserve"><value>關閉電源後重新開啟以重置錯誤。若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0100.Message" xml:space="preserve"><value>控制器內溫度過高</value></data>
+  <data name="Error.0100.Cause" xml:space="preserve"><value>進氣風扇未運轉或風扇濾網堵塞。</value></data>
+  <data name="Error.0100.Measures" xml:space="preserve"><value>檢查進氣風扇運轉情況，必要時清潔或更換濾網。確認環境溫度在規格範圍內。若再次發生，請聯絡經銷商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0101.Message" xml:space="preserve"><value>控制器內溫度過高</value></data>
+  <data name="Error.0101.Cause" xml:space="preserve"><value>進氣風扇未運轉或風扇濾網堵塞。</value></data>
+  <data name="Error.0101.Measures" xml:space="preserve"><value>檢查進氣風扇運轉情況，必要時清潔或更換濾網。確認環境溫度在規格範圍內。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0102.Message" xml:space="preserve"><value>控制器內溫度過高</value></data>
+  <data name="Error.0102.Cause" xml:space="preserve"><value>進氣風扇未運轉或風扇濾網堵塞。</value></data>
+  <data name="Error.0102.Measures" xml:space="preserve"><value>檢查進氣風扇運轉情況，必要時清潔或更換濾網。確認環境溫度在規格範圍內。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0103.Message" xml:space="preserve"><value>機器人 CPU 溫度過高</value></data>
+  <data name="Error.0103.Cause" xml:space="preserve"><value>機器人 CPU 的環境溫度過高。</value></data>
+  <data name="Error.0103.Measures" xml:space="preserve"><value>將環境溫度降至規格範圍內。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0104.Message" xml:space="preserve"><value>機器人 CPU 溫度過高</value></data>
+  <data name="Error.0104.Cause" xml:space="preserve"><value>機器人 CPU 的環境溫度過高。</value></data>
+  <data name="Error.0104.Measures" xml:space="preserve"><value>將環境溫度降至規格範圍內。</value></data>
+  <data name="Error.0105.Message" xml:space="preserve"><value>機器人 CPU 溫度過高</value></data>
+  <data name="Error.0105.Cause" xml:space="preserve"><value>機器人 CPU 的環境溫度過高。</value></data>
+  <data name="Error.0105.Measures" xml:space="preserve"><value>將環境溫度降至規格範圍內。</value></data>
+  <data name="Error.0117.Message" xml:space="preserve"><value>煞車 12V 電源錯誤</value></data>
+  <data name="Error.0117.Cause" xml:space="preserve"><value>電源輸出超出規定範圍。</value></data>
+  <data name="Error.0117.Measures" xml:space="preserve"><value>關閉電源並聯絡服務供應商。除另有註明外，須關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0120.Message" xml:space="preserve"><value>瞬間停電</value></data>
+  <data name="Error.0120.Cause" xml:space="preserve"><value>電源中斷達 20 毫秒以上。</value></data>
+  <data name="Error.0120.Measures" xml:space="preserve"><value>檢查電源連接及供電狀態。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0130.Message" xml:space="preserve"><value>系統遠端 I/O 初始化連接錯誤</value></data>
+  <data name="Error.0130.Cause" xml:space="preserve"><value>系統遠端 I/O 通訊線路異常。</value></data>
+  <data name="Error.0130.Measures" xml:space="preserve"><value>確認通訊電纜正確接地且連接正確。使用 CR800-R／CR800-Q 控制器時，開啟電源應先開啟控制器開關，再開啟機器人 CPU。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0150.Message" xml:space="preserve"><value>機器人序號未定義</value></data>
+  <data name="Error.0150.Cause" xml:space="preserve"><value>機器人序號未定義。</value></data>
+  <data name="Error.0150.Measures" xml:space="preserve"><value>輸入機器人序號。設定方法請參閱另冊《控制器設定、基本操作及維護》。</value></data>
+  <data name="Error.0151.Message" xml:space="preserve"><value>機器人序號未定義</value></data>
+  <data name="Error.0151.Cause" xml:space="preserve"><value>機器人序號未定義。</value></data>
+  <data name="Error.0151.Measures" xml:space="preserve"><value>輸入機器人序號。</value></data>
+  <data name="Error.0152.Message" xml:space="preserve"><value>機器人序號不符</value></data>
+  <data name="Error.0152.Cause" xml:space="preserve"><value>已更換所連接的機器人手臂。</value></data>
+  <data name="Error.0152.Measures" xml:space="preserve"><value>確認所連接的機器人本體是否遭更換；若已更換，請修正組合。購買手臂或變更手臂與控制器組合後出現此錯誤時，請輸入序號；設定方法參閱另冊《控制器設定、基本操作及維護》的「輸入序號」。修正組合後，開始運轉前請確認所使用的程式及參數已設定至控制器。</value></data>
+  <data name="Error.0210.Message" xml:space="preserve"><value>電源錯誤（***）</value></data>
+  <data name="Error.0210.Cause" xml:space="preserve"><value>電源輸出電壓超出規定範圍。</value></data>
+  <data name="Error.0210.Measures" xml:space="preserve"><value>控制器內電源輸出電壓高於或低於規定值。關閉電源後再開啟以重置；若相同錯誤再次發生，請聯絡製造商。訊息中的 *** 表示偵測部位：24V、5V、3.3V、2.5V、1.8V、RCPU 1.5V、CCPU 1.5V、1.2V、RCPU 1.15V、CCPU 1.15V、1.1V、Ether 1V、ServoM 1V 或 ServoS 1V。</value></data>
+  <data name="Error.0211.Message" xml:space="preserve"><value>電源錯誤（***）</value></data>
+  <data name="Error.0211.Cause" xml:space="preserve"><value>電源輸出電壓超出規定範圍。</value></data>
+  <data name="Error.0211.Measures" xml:space="preserve"><value>機器人 CPU 內電源輸出電壓高於或低於規定值。關閉電源後再開啟以重置；若相同錯誤再次發生，請聯絡製造商。訊息中的 *** 表示偵測部位：5V、3.3V、2.5V、1.8V、1.5V、1.3V、1.15V、1V 或 FPGA。</value></data>
+  <data name="Error.0212.Message" xml:space="preserve"><value>電源錯誤</value></data>
+  <data name="Error.0212.Cause" xml:space="preserve"><value>電源輸出超出規定範圍。</value></data>
+  <data name="Error.0212.Measures" xml:space="preserve"><value>關閉電源後再開啟以重置；若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0213.Message" xml:space="preserve"><value>電源錯誤</value></data>
+  <data name="Error.0213.Cause" xml:space="preserve"><value>電源輸出超出規定範圍。</value></data>
+  <data name="Error.0213.Measures" xml:space="preserve"><value>關閉電源後再開啟以重置；若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0220.Message" xml:space="preserve"><value>記憶體故障（主 CPU）</value></data>
+  <data name="Error.0220.Cause" xml:space="preserve"><value>偵測到記憶體故障。</value></data>
+  <data name="Error.0220.Measures" xml:space="preserve"><value>主 CPU 存取的 DRAM 偵測到寫入與讀取資料不一致或保持資料損壞等故障。關閉電源後再開啟以重置；若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0230.Message" xml:space="preserve"><value>安全參數錯誤（xxxxx）</value></data>
+  <data name="Error.0230.Cause" xml:space="preserve"><value>偵測到安全參數值錯誤。</value></data>
+  <data name="Error.0230.Measures" xml:space="preserve"><value>安全參數設定不正確。檢查錯誤訊息中（xxxxx）所示的參數並設定適當值。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0231.Message" xml:space="preserve"><value>參數 CRC 錯誤（xxxxx）</value></data>
+  <data name="Error.0231.Cause" xml:space="preserve"><value>偵測到安全參數值的 CRC 錯誤。</value></data>
+  <data name="Error.0231.Measures" xml:space="preserve"><value>檢查安全參數設定並寫入參數。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0240.Message" xml:space="preserve"><value>安全功能設定不一致</value></data>
+  <data name="Error.0240.Cause" xml:space="preserve"><value>安全功能已停用。</value></data>
+  <data name="Error.0240.Measures" xml:space="preserve"><value>已設定安全邏輯但安全功能停用。請刪除安全邏輯設定或啟用安全功能。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0241.Message" xml:space="preserve"><value>安全通訊故障</value></data>
+  <data name="Error.0241.Cause" xml:space="preserve"><value>偵測到安全通訊故障。</value></data>
+  <data name="Error.0241.Measures" xml:space="preserve"><value>關閉電源後再開啟；若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0242.Message" xml:space="preserve"><value>安全資料故障</value></data>
+  <data name="Error.0242.Cause" xml:space="preserve"><value>偵測到安全資料故障。</value></data>
+  <data name="Error.0242.Measures" xml:space="preserve"><value>關閉電源後再開啟；若相同錯誤再次發生，請聯絡製造商。</value></data>
+  <data name="Error.0243.Message" xml:space="preserve"><value>XXX 功能無法使用</value></data>
+  <data name="Error.0243.Cause" xml:space="preserve"><value>此機器人不支援該安全功能。</value></data>
+  <data name="Error.0243.Measures" xml:space="preserve"><value>停用該安全功能。</value></data>
+  <data name="Error.0260.Message" xml:space="preserve"><value>急停電路診斷錯誤</value></data>
+  <data name="Error.0260.Cause" xml:space="preserve"><value>電壓診斷錯誤。</value></data>
+  <data name="Error.0260.Measures" xml:space="preserve"><value>關閉電源後再開啟。</value></data>
+  <data name="Error.0270.Message" xml:space="preserve"><value>電壓診斷錯誤</value></data>
+  <data name="Error.0270.Cause" xml:space="preserve"><value>電壓診斷錯誤。</value></data>
+  <data name="Error.0270.Measures" xml:space="preserve"><value>關閉電源後再開啟。</value></data>
+  <data name="Error.0280.Message" xml:space="preserve"><value>STO 電路診斷錯誤</value></data>
+  <data name="Error.0280.Cause" xml:space="preserve"><value>STO 電路錯誤。</value></data>
+  <data name="Error.0280.Measures" xml:space="preserve"><value>關閉電源後再開啟。</value></data>
+  <data name="Error.0290.Message" xml:space="preserve"><value>PLD 控制錯誤</value></data>
+  <data name="Error.0290.Cause" xml:space="preserve"><value>PLD 控制錯誤。</value></data>
+  <data name="Error.0290.Measures" xml:space="preserve"><value>關閉電源後再開啟。</value></data>
+  <data name="Error.0310.Message" xml:space="preserve"><value>1. 機構板存取錯誤
+2. 機構板緩衝區存取錯誤</value></data>
+  <data name="Error.0310.Cause" xml:space="preserve"><value>1. 機構板存取錯誤：存取機構板失敗。
+2. 機構板緩衝區存取錯誤：傳送／接收緩衝區無法儲存超過 100 筆資料。</value></data>
+  <data name="Error.0310.Measures" xml:space="preserve"><value>1. 機構板存取錯誤：確認機構板的連接。
+2. 機構板緩衝區存取錯誤：確認與機構板的通訊。</value></data>
+  <data name="Error.0311.Message" xml:space="preserve"><value>遠端 I/O 模組配置錯誤</value></data>
+  <data name="Error.0311.Cause" xml:space="preserve"><value>連接了不支援的多個遠端 I/O 模組。</value></data>
+  <data name="Error.0311.Measures" xml:space="preserve"><value>確認遠端 I/O 模組的配置。若連接擴充安全模組，請重新啟動該模組。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0315.Message" xml:space="preserve"><value>無法存取 D 裝置區域</value></data>
+  <data name="Error.0315.Cause" xml:space="preserve"><value>此區域無法重複使用。</value></data>
+  <data name="Error.0315.Measures" xml:space="preserve"><value>變更參數 DDEVVLn 中的 D 裝置起始號碼。</value></data>
+  <data name="Error.0316.Message" xml:space="preserve"><value>D 裝置區域超出範圍</value></data>
+  <data name="Error.0316.Cause" xml:space="preserve"><value>無法配置對應變數類型的區域。</value></data>
+  <data name="Error.0316.Measures" xml:space="preserve"><value>變更參數 DDEVVLn 中的 D 裝置起始號碼。</value></data>
+  <data name="Error.0317.Message" xml:space="preserve"><value>D 裝置變數重複</value></data>
+  <data name="Error.0317.Cause" xml:space="preserve"><value>無法對同一變數重複分配。</value></data>
+  <data name="Error.0317.Measures" xml:space="preserve"><value>變更參數 DDEVVLn 中的變數名稱。</value></data>
+  <data name="Error.0510.Message" xml:space="preserve"><value>轉換器設定不正確</value></data>
+  <data name="Error.0510.Cause" xml:space="preserve"><value>在外部急停模式以外偵測到外部急停輸入電源。</value></data>
+  <data name="Error.0510.Measures" xml:space="preserve"><value>設定不正確；若再次發生，請聯絡經銷商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0520.Message" xml:space="preserve"><value>機器人軸設定不正確</value></data>
+  <data name="Error.0520.Cause" xml:space="preserve"><value>機構所使用的伺服軸設定與其他機構的軸重複。</value></data>
+  <data name="Error.0520.Measures" xml:space="preserve"><value>正確設定軸。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0531.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：1）</value></data>
+  <data name="Error.0532.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：2）</value></data>
+  <data name="Error.0533.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：3）</value></data>
+  <data name="Error.0534.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：4）</value></data>
+  <data name="Error.0535.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：5）</value></data>
+  <data name="Error.0536.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：6）</value></data>
+  <data name="Error.0537.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：7）</value></data>
+  <data name="Error.0538.Message" xml:space="preserve"><value>伺服系統錯誤（記憶體；軸號：8）</value></data>
+  
+  <data name="Error.0531.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0532.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0533.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0534.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0535.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0536.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0537.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  <data name="Error.0538.Cause" xml:space="preserve"><value>伺服放大器記憶體 IC 的校驗和不正確。</value></data>
+  
+  <data name="Error.0531.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0532.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0533.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0534.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0535.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0536.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0537.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0538.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0541.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：1）</value></data>
+  <data name="Error.0542.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：2）</value></data>
+  <data name="Error.0543.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：3）</value></data>
+  <data name="Error.0544.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：4）</value></data>
+  <data name="Error.0545.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：5）</value></data>
+  <data name="Error.0546.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：6）</value></data>
+  <data name="Error.0547.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：7）</value></data>
+  <data name="Error.0548.Message" xml:space="preserve"><value>伺服系統錯誤（處理逾時；軸號：8）</value></data>
+  
+  <data name="Error.0541.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0542.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0543.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0544.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0545.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0546.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0547.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  <data name="Error.0548.Cause" xml:space="preserve"><value>伺服放大器軟體的資料處理未在規定時間內完成。</value></data>
+  
+  <data name="Error.0541.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0542.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0543.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0544.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0545.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0546.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0547.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0548.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0551.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：1）</value></data>
+  <data name="Error.0552.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：2）</value></data>
+  <data name="Error.0553.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：3）</value></data>
+  <data name="Error.0554.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：4）</value></data>
+  <data name="Error.0555.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：5）</value></data>
+  <data name="Error.0556.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：6）</value></data>
+  <data name="Error.0557.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：7）</value></data>
+  <data name="Error.0558.Message" xml:space="preserve"><value>伺服系統錯誤（磁極位置；軸號：8）</value></data>
+  
+  <data name="Error.0551.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0552.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0553.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0554.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0555.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0556.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0557.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  <data name="Error.0558.Cause" xml:space="preserve"><value>偵測器的磁極位置偵測訊號發生錯誤。</value></data>
+  
+  <data name="Error.0551.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0552.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0553.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0554.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0555.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0556.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0557.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0558.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0561.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：1）</value></data>
+  <data name="Error.0562.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：2）</value></data>
+  <data name="Error.0563.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：3）</value></data>
+  <data name="Error.0564.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：4）</value></data>
+  <data name="Error.0565.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：5）</value></data>
+  <data name="Error.0566.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：6）</value></data>
+  <data name="Error.0567.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：7）</value></data>
+  <data name="Error.0568.Message" xml:space="preserve"><value>伺服系統錯誤（A/D；軸號：8）</value></data>
+  
+  <data name="Error.0561.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0562.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0563.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0564.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0565.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0566.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0567.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  <data name="Error.0568.Cause" xml:space="preserve"><value>1）初始化時偵測到伺服放大器 A/D 轉換器錯誤。2）輸入門開關或急停訊號時，同時輸入停止或伺服關閉訊號。</value></data>
+  
+  <data name="Error.0561.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0562.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0563.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0564.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0565.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0566.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0567.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  <data name="Error.0568.Measures" xml:space="preserve"><value>1）關閉電源後再開啟；若再次發生，請聯絡服務供應商。2）不要將門開關或急停訊號與其他訊號同時輸入。</value></data>
+  
+  <data name="Error.0571.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：1）</value></data>
+  <data name="Error.0572.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：2）</value></data>
+  <data name="Error.0573.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：3）</value></data>
+  <data name="Error.0574.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：4）</value></data>
+  <data name="Error.0575.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：5）</value></data>
+  <data name="Error.0576.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：6）</value></data>
+  <data name="Error.0577.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：7）</value></data>
+  <data name="Error.0578.Message" xml:space="preserve"><value>編碼器錯誤（EEPROM；軸號：8）</value></data>
+  
+  <data name="Error.0571.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0572.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0573.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0574.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0575.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0576.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0577.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  <data name="Error.0578.Cause" xml:space="preserve"><value>偵測到序列脈衝編碼器的 EEPROM 資料錯誤。</value></data>
+  
+  <data name="Error.0571.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0572.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0573.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0574.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0575.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0576.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0577.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0578.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0581.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：1）</value></data>
+  <data name="Error.0582.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：2）</value></data>
+  <data name="Error.0583.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：3）</value></data>
+  <data name="Error.0584.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：4）</value></data>
+  <data name="Error.0585.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：5）</value></data>
+  <data name="Error.0586.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：6）</value></data>
+  <data name="Error.0587.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：7）</value></data>
+  <data name="Error.0588.Message" xml:space="preserve"><value>編碼器錯誤（LED；軸號：8）</value></data>
+  
+  <data name="Error.0581.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0582.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0583.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0584.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0585.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0586.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0587.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  <data name="Error.0588.Cause" xml:space="preserve"><value>序列脈衝編碼器的 LED 已劣化。</value></data>
+  
+  <data name="Error.0581.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0582.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0583.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0584.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0585.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0586.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0587.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0588.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0591.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：1）</value></data>
+  <data name="Error.0592.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：2）</value></data>
+  <data name="Error.0593.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：3）</value></data>
+  <data name="Error.0594.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：4）</value></data>
+  <data name="Error.0595.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：5）</value></data>
+  <data name="Error.0596.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：6）</value></data>
+  <data name="Error.0597.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：7）</value></data>
+  <data name="Error.0598.Message" xml:space="preserve"><value>編碼器錯誤（位置資料；軸號：8）</value></data>
+  
+  <data name="Error.0591.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0592.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0593.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0594.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0595.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0596.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0597.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  <data name="Error.0598.Cause" xml:space="preserve"><value>偵測到編碼器單圈內的位置資料錯誤。</value></data>
+  
+  <data name="Error.0591.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0592.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0593.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0594.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0595.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0596.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0597.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0598.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0601.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：1）</value></data>
+  <data name="Error.0602.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：2）</value></data>
+  <data name="Error.0603.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：3）</value></data>
+  <data name="Error.0604.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：4）</value></data>
+  <data name="Error.0605.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：5）</value></data>
+  <data name="Error.0606.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：6）</value></data>
+  <data name="Error.0607.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：7）</value></data>
+  <data name="Error.0608.Message" xml:space="preserve"><value>編碼器無訊號偵測 1（軸號：8）</value></data>
+  
+  <data name="Error.0601.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0602.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0603.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0604.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0605.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0606.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0607.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0608.Cause" xml:space="preserve"><value>偵測到安裝於馬達端的偵測器操作輸入錯誤。</value></data>
+  
+  <data name="Error.0601.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0602.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0603.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0604.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0605.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0606.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0607.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0608.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0611.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：1）</value></data>
+  <data name="Error.0612.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：2）</value></data>
+  <data name="Error.0613.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：3）</value></data>
+  <data name="Error.0614.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：4）</value></data>
+  <data name="Error.0615.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：5）</value></data>
+  <data name="Error.0616.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：6）</value></data>
+  <data name="Error.0617.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：7）</value></data>
+  <data name="Error.0618.Message" xml:space="preserve"><value>編碼器無訊號偵測 2（軸號：8）</value></data>
+  
+  <data name="Error.0611.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0612.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0613.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0614.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0615.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0616.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0617.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  <data name="Error.0618.Cause" xml:space="preserve"><value>偵測到安裝於機械端的偵測器操作輸入錯誤。</value></data>
+  
+  <data name="Error.0611.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0612.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0613.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0614.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0615.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0616.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0617.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0618.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0621.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：1）</value></data>
+  <data name="Error.0622.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：2）</value></data>
+  <data name="Error.0623.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：3）</value></data>
+  <data name="Error.0624.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：4）</value></data>
+  <data name="Error.0625.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：5）</value></data>
+  <data name="Error.0626.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：6）</value></data>
+  <data name="Error.0627.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：7）</value></data>
+  <data name="Error.0628.Message" xml:space="preserve"><value>伺服放大器 LSI 錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0621.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0622.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0623.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0624.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0625.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0626.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0627.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  <data name="Error.0628.Cause" xml:space="preserve"><value>偵測到伺服放大器 LSI 的操作錯誤。</value></data>
+  
+  <data name="Error.0621.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0622.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0623.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0624.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0625.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0626.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0627.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0628.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0631.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：1）</value></data>
+  <data name="Error.0632.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：2）</value></data>
+  <data name="Error.0633.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：3）</value></data>
+  <data name="Error.0634.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：4）</value></data>
+  <data name="Error.0635.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：5）</value></data>
+  <data name="Error.0636.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：6）</value></data>
+  <data name="Error.0637.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：7）</value></data>
+  <data name="Error.0638.Message" xml:space="preserve"><value>未使用軸伺服錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0631.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0632.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0633.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0634.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0635.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0636.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0637.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  <data name="Error.0638.Cause" xml:space="preserve"><value>未用於運動控制的軸發生電源模組錯誤。</value></data>
+  
+  <data name="Error.0631.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0632.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0633.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0634.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0635.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0636.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0637.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0638.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0641.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：1）</value></data>
+  <data name="Error.0642.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：2）</value></data>
+  <data name="Error.0643.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：3）</value></data>
+  <data name="Error.0644.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：4）</value></data>
+  <data name="Error.0645.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：5）</value></data>
+  <data name="Error.0646.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：6）</value></data>
+  <data name="Error.0647.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：7）</value></data>
+  <data name="Error.0648.Message" xml:space="preserve"><value>系統錯誤（ABS CPU；軸號：8）</value></data>
+  
+  <data name="Error.0641.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0642.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0643.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0644.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0645.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0646.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0647.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  <data name="Error.0648.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺的 CPU 錯誤。</value></data>
+  
+  <data name="Error.0641.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0642.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0643.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0644.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0645.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0646.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0647.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0648.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0651.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：1）</value></data>
+  <data name="Error.0652.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：2）</value></data>
+  <data name="Error.0653.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：3）</value></data>
+  <data name="Error.0654.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：4）</value></data>
+  <data name="Error.0655.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：5）</value></data>
+  <data name="Error.0656.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：6）</value></data>
+  <data name="Error.0657.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：7）</value></data>
+  <data name="Error.0658.Message" xml:space="preserve"><value>絕對位置錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0651.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0652.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0653.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0654.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0655.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0656.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0657.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  <data name="Error.0658.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的絕對位置偵測電路錯誤。</value></data>
+  
+  <data name="Error.0651.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0652.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0653.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0654.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0655.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0656.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0657.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0658.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0661.Message" xml:space="preserve"><value>增量位置錯誤（軸號：1）</value></data>
+  <data name="Error.0662.Message" xml:space="preserve"><value>增量位置錯誤（軸號：2）</value></data>
+  <data name="Error.0663.Message" xml:space="preserve"><value>增量位置錯誤（軸號：3）</value></data>
+  <data name="Error.0664.Message" xml:space="preserve"><value>增量位置錯誤（軸號：4）</value></data>
+  <data name="Error.0665.Message" xml:space="preserve"><value>增量位置錯誤（軸號：5）</value></data>
+  <data name="Error.0666.Message" xml:space="preserve"><value>增量位置錯誤（軸號：6）</value></data>
+  <data name="Error.0667.Message" xml:space="preserve"><value>增量位置錯誤（軸號：7）</value></data>
+  <data name="Error.0668.Message" xml:space="preserve"><value>增量位置錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0661.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0662.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0663.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0664.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0665.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0666.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0667.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  <data name="Error.0668.Cause" xml:space="preserve"><value>偵測到絕對位置線性尺內的相對位置偵測電路錯誤。</value></data>
+  
+  <data name="Error.0661.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0662.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0663.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0664.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0665.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0666.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0667.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0668.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0671.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：1）</value></data>
+  <data name="Error.0672.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：2）</value></data>
+  <data name="Error.0673.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：3）</value></data>
+  <data name="Error.0674.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：4）</value></data>
+  <data name="Error.0675.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：5）</value></data>
+  <data name="Error.0676.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：6）</value></data>
+  <data name="Error.0677.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：7）</value></data>
+  <data name="Error.0678.Message" xml:space="preserve"><value>編碼器 CPU 錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0671.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0672.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0673.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0674.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0675.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0676.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0677.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  <data name="Error.0678.Cause" xml:space="preserve"><value>偵測到位置偵測器 CPU 錯誤。</value></data>
+  
+  <data name="Error.0671.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0672.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0673.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0674.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0675.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0676.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0677.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0678.Measures" xml:space="preserve"><value>關閉電源後再開啟，並仔細確認機器人操作位置是否偏移。若有偏移，請重新設定原點位置（OP）；操作方法參閱另冊《操作手冊／機器人手臂設定至維護》。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0681.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：1）</value></data>
+  <data name="Error.0682.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：2）</value></data>
+  <data name="Error.0683.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：3）</value></data>
+  <data name="Error.0684.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：4）</value></data>
+  <data name="Error.0685.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：5）</value></data>
+  <data name="Error.0686.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：6）</value></data>
+  <data name="Error.0687.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：7）</value></data>
+  <data name="Error.0688.Message" xml:space="preserve"><value>編碼器 LED 錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0681.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0682.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0683.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0684.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0685.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0686.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0687.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  <data name="Error.0688.Cause" xml:space="preserve"><value>偵測到位置偵測器 LED 劣化。</value></data>
+  
+  <data name="Error.0681.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0682.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0683.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0684.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0685.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0686.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0687.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0688.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0690.Message" xml:space="preserve"><value>再生電路錯誤</value></data>
+  <data name="Error.0690.Cause" xml:space="preserve"><value>偵測到再生電晶體或電阻錯誤；電源電壓偏高時也可能發生。</value></data>
+  <data name="Error.0690.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0700.Message" xml:space="preserve"><value>電源外部接觸器熔接</value></data>
+  <data name="Error.0700.Cause" xml:space="preserve"><value>READY 為 OFF 時接觸器仍為 ON。</value></data>
+  <data name="Error.0700.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0710.Message" xml:space="preserve"><value>伺服放大器繼電器錯誤</value></data>
+  <data name="Error.0710.Cause" xml:space="preserve"><value>伺服 CPU 卡上的繼電器未開啟。</value></data>
+  <data name="Error.0710.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0711.Message" xml:space="preserve"><value>放電電阻繼電器錯誤</value></data>
+  <data name="Error.0711.Cause" xml:space="preserve"><value>轉換器上的放電電阻電路處於放電狀態。</value></data>
+  <data name="Error.0711.Measures" xml:space="preserve"><value>關閉電源後再開啟。</value></data>
+  <data name="Error.0712.Message" xml:space="preserve"><value>轉換器保險絲熔斷</value></data>
+  <data name="Error.0712.Cause" xml:space="preserve"><value>轉換器保險絲因接地故障或短路熔斷。</value></data>
+  <data name="Error.0712.Measures" xml:space="preserve"><value>檢查並修正客戶配線中的接地故障或短路部位，再更換控制器內的 3.2 A 保險絲。詳見手冊第 67 頁「2.1.4 需要更換轉換器保險絲的位置」；3.2 A 保險絲的詳細資訊請洽製造商。若處理後仍未改善，請聯絡製造商。除另有註明外，須關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0713.Message" xml:space="preserve"><value>編碼器電源保險絲跳脫</value></data>
+  <data name="Error.0713.Cause" xml:space="preserve"><value>編碼器電源保險絲因接地故障或短路跳脫。</value></data>
+  <data name="Error.0713.Measures" xml:space="preserve"><value>關閉電源，等待一段時間後再開啟。</value></data>
+  <data name="Error.0720.Message" xml:space="preserve"><value>電源看門狗錯誤</value></data>
+  <data name="Error.0720.Cause" xml:space="preserve"><value>轉換器軟體處理未在規定時間內完成。</value></data>
+  <data name="Error.0720.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0730.Message" xml:space="preserve"><value>電源突波繼電器熔接</value></data>
+  <data name="Error.0730.Cause" xml:space="preserve"><value>突波電阻短路繼電器未關閉。</value></data>
+  <data name="Error.0730.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0740.Message" xml:space="preserve"><value>電源主電路錯誤</value></data>
+  <data name="Error.0740.Cause" xml:space="preserve"><value>主電路電容器的充電動作異常，或外部急停連接有誤。</value></data>
+  <data name="Error.0740.Measures" xml:space="preserve"><value>關閉電源後再開啟，確認電源電壓在規定值內且外部急停連接正確。若再次發生，確認錯誤發生於伺服 ON／OFF 還是電源 OFF／ON 時，並聯絡服務供應商。</value></data>
+  <data name="Error.0742.Message" xml:space="preserve"><value>電源主電路錯誤</value></data>
+  <data name="Error.0742.Cause" xml:space="preserve"><value>轉換器卡上的安全繼電器故障使主電路電壓下降。</value></data>
+  <data name="Error.0742.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查外部急停開關配線是否有問題。配線請參閱另冊《標準規格手冊》的安全措施範例。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0743.Message" xml:space="preserve"><value>電源主電路錯誤 3</value></data>
+  <data name="Error.0743.Cause" xml:space="preserve"><value>接觸器故障使主電路電壓下降。</value></data>
+  <data name="Error.0743.Measures" xml:space="preserve"><value>關閉電源後再開啟，確認電源電壓及外部急停連接。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0750.Message" xml:space="preserve"><value>電源記憶體錯誤</value></data>
+  <data name="Error.0750.Cause" xml:space="preserve"><value>偵測到轉換器或 A/D 轉換器的記憶體電路錯誤。</value></data>
+  <data name="Error.0750.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0760.Message" xml:space="preserve"><value>電源錯誤</value></data>
+  <data name="Error.0760.Cause" xml:space="preserve"><value>偵測到與電源的資料通訊錯誤。</value></data>
+  <data name="Error.0760.Measures" xml:space="preserve"><value>關閉電源後再開啟。</value></data>
+  <data name="Error.0770.Message" xml:space="preserve"><value>電源處理錯誤</value></data>
+  <data name="Error.0770.Cause" xml:space="preserve"><value>電源處理週期發生錯誤。</value></data>
+  <data name="Error.0770.Measures" xml:space="preserve"><value>關閉電源後再開啟，並檢查是否有雜訊源。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0781.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：1）</value></data>
+  <data name="Error.0782.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：2）</value></data>
+  <data name="Error.0783.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：3）</value></data>
+  <data name="Error.0784.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：4）</value></data>
+  <data name="Error.0785.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：5）</value></data>
+  <data name="Error.0786.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：6）</value></data>
+  <data name="Error.0787.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：7）</value></data>
+  <data name="Error.0788.Message" xml:space="preserve"><value>伺服放大器看門狗錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0781.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0782.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0783.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0784.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0785.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0786.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0787.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  <data name="Error.0788.Cause" xml:space="preserve"><value>伺服放大器軟體處理未正常運作。</value></data>
+  
+  <data name="Error.0781.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0782.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0783.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0784.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0785.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0786.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0787.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0788.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0791.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：1）</value></data>
+  <data name="Error.0792.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：2）</value></data>
+  <data name="Error.0793.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：3）</value></data>
+  <data name="Error.0794.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：4）</value></data>
+  <data name="Error.0795.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：5）</value></data>
+  <data name="Error.0796.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：6）</value></data>
+  <data name="Error.0797.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：7）</value></data>
+  <data name="Error.0798.Message" xml:space="preserve"><value>伺服放大器電路板錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0791.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0792.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0793.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0794.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0795.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0796.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0797.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  <data name="Error.0798.Cause" xml:space="preserve"><value>偵測到伺服放大器電路板錯誤。</value></data>
+  
+  <data name="Error.0791.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0792.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0793.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0794.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0795.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0796.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0797.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0798.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0801.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：1）</value></data>
+  <data name="Error.0802.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：2）</value></data>
+  <data name="Error.0803.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：3）</value></data>
+  <data name="Error.0804.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：4）</value></data>
+  <data name="Error.0805.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：5）</value></data>
+  <data name="Error.0806.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：6）</value></data>
+  <data name="Error.0807.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：7）</value></data>
+  <data name="Error.0808.Message" xml:space="preserve"><value>伺服放大器時脈錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0801.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0802.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0803.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0804.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0805.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0806.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0807.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  <data name="Error.0808.Cause" xml:space="preserve"><value>偵測到伺服放大器時脈錯誤。</value></data>
+  
+  <data name="Error.0801.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0802.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0803.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0804.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0805.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0806.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0807.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0808.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0811.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：1）
+2. 加減速時電壓錯誤（軸號：1）</value></data>
+  <data name="Error.0812.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：2）
+2. 加減速時電壓錯誤（軸號：2）</value></data>
+  <data name="Error.0813.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：3）
+2. 加減速時電壓錯誤（軸號：3）</value></data>
+  <data name="Error.0814.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：4）
+2. 加減速時電壓錯誤（軸號：4）</value></data>
+  <data name="Error.0815.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：5）
+2. 加減速時電壓錯誤（軸號：5）</value></data>
+  <data name="Error.0816.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：6）
+2. 加減速時電壓錯誤（軸號：6）</value></data>
+  <data name="Error.0817.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：7）
+2. 加減速時電壓錯誤（軸號：7）</value></data>
+  <data name="Error.0818.Message" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：8）
+2. 加減速時電壓錯誤（軸號：8）</value></data>
+  
+  <data name="Error.0811.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：1）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：1）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0812.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：2）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：2）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0813.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：3）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：3）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0814.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：4）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：4）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0815.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：5）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：5）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0816.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：6）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：6）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0817.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：7）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：7）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  <data name="Error.0818.Cause" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：8）：PN 母線電壓降至 200V 以下，可能曾發生瞬間停電。
+2. 加減速時電壓錯誤（軸號：8）：輸入電壓下降導致偵測到馬達控制錯誤。</value></data>
+  
+  <data name="Error.0811.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：1）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：1）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0812.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：2）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：2）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0813.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：3）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：3）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0814.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：4）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：4）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0815.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：5）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：5）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0816.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：6）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：6）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0817.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：7）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：7）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  <data name="Error.0818.Measures" xml:space="preserve"><value>1. 伺服放大器電壓不足（軸號：8）：檢查一次側電壓。關閉電源後再開啟以重置。
+2. 加減速時電壓錯誤（軸號：8）：關閉電源後再開啟，並檢查一次側電壓。</value></data>
+  
+  <data name="Error.0820.Message" xml:space="preserve"><value>馬達接地故障</value></data>
+  <data name="Error.0820.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0820.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0821.Message" xml:space="preserve"><value>馬達接地故障（軸號：1）</value></data>
+  <data name="Error.0822.Message" xml:space="preserve"><value>馬達接地故障（軸號：2）</value></data>
+  <data name="Error.0823.Message" xml:space="preserve"><value>馬達接地故障（軸號：3）</value></data>
+  <data name="Error.0824.Message" xml:space="preserve"><value>馬達接地故障（軸號：4）</value></data>
+  <data name="Error.0825.Message" xml:space="preserve"><value>馬達接地故障（軸號：5）</value></data>
+  <data name="Error.0826.Message" xml:space="preserve"><value>馬達接地故障（軸號：6）</value></data>
+  <data name="Error.0827.Message" xml:space="preserve"><value>馬達接地故障（軸號：7）</value></data>
+  <data name="Error.0828.Message" xml:space="preserve"><value>馬達接地故障（軸號：8）</value></data>
+  
+  <data name="Error.0821.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0822.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0823.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0824.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0825.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0826.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0827.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0828.Cause" xml:space="preserve"><value>偵測到馬達接地故障；馬達電纜可能發生連接或導通錯誤。</value></data>
+  
+  <data name="Error.0821.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0822.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0823.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0824.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0825.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0826.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0827.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  <data name="Error.0828.Measures" xml:space="preserve"><value>關閉電源後再開啟，檢查馬達電纜的連接與導通情況。</value></data>
+  
+  <data name="Error.0831.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：1）</value></data>
+  <data name="Error.0832.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：2）</value></data>
+  <data name="Error.0833.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：3）</value></data>
+  <data name="Error.0834.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：4）</value></data>
+  <data name="Error.0835.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：5）</value></data>
+  <data name="Error.0836.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：6）</value></data>
+  <data name="Error.0837.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：7）</value></data>
+  <data name="Error.0838.Message" xml:space="preserve"><value>伺服放大器過電壓（軸號：8）</value></data>
+  
+  <data name="Error.0831.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0832.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0833.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0834.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0835.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0836.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0837.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  <data name="Error.0838.Cause" xml:space="preserve"><value>PN 母線電壓升至 400V 以上。</value></data>
+  
+  <data name="Error.0831.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0832.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0833.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0834.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0835.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0836.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0837.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0838.Measures" xml:space="preserve"><value>檢查一次側電源電壓，關閉電源後再開啟。</value></data>
+  
+  <data name="Error.0840.Message" xml:space="preserve"><value>瞬間停電（伺服）</value></data>
+  <data name="Error.0840.Cause" xml:space="preserve"><value>電源中斷達 50 毫秒以上。</value></data>
+  <data name="Error.0840.Measures" xml:space="preserve"><value>檢查電源電壓，關閉電源後再開啟。</value></data>
+  <data name="Error.0850.Message" xml:space="preserve"><value>電源電壓不正確</value></data>
+  <data name="Error.0850.Cause" xml:space="preserve"><value>輸入電源（L1、L2、L3）缺相、電壓不符合規格，或 100V／200V 規格切換設定不正確。</value></data>
+  <data name="Error.0850.Measures" xml:space="preserve"><value>檢查電源連接、供電狀態或設定。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0860.Message" xml:space="preserve"><value>電源過電壓</value></data>
+  <data name="Error.0860.Cause" xml:space="preserve"><value>轉換器 L+ 與 L- 間的電壓超過 410V。</value></data>
+  <data name="Error.0860.Measures" xml:space="preserve"><value>檢查電源連接及供電狀態。</value></data>
+  <data name="Error.0870.Message" xml:space="preserve"><value>電源模組過熱（風扇停止）</value></data>
+  <data name="Error.0870.Cause" xml:space="preserve"><value>冷卻風扇停止而導致過熱。</value></data>
+  <data name="Error.0870.Measures" xml:space="preserve"><value>檢查風扇是否轉動及其連接器。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0880.Message" xml:space="preserve"><value>電源模組過熱</value></data>
+  <data name="Error.0880.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0880.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0881.Message" xml:space="preserve"><value>電源模組過熱（軸號：1）</value></data>
+  <data name="Error.0882.Message" xml:space="preserve"><value>電源模組過熱（軸號：2）</value></data>
+  <data name="Error.0883.Message" xml:space="preserve"><value>電源模組過熱（軸號：3）</value></data>
+  <data name="Error.0884.Message" xml:space="preserve"><value>電源模組過熱（軸號：4）</value></data>
+  <data name="Error.0885.Message" xml:space="preserve"><value>電源模組過熱（軸號：5）</value></data>
+  <data name="Error.0886.Message" xml:space="preserve"><value>電源模組過熱（軸號：6）</value></data>
+  <data name="Error.0887.Message" xml:space="preserve"><value>電源模組過熱（軸號：7）</value></data>
+  <data name="Error.0888.Message" xml:space="preserve"><value>電源模組過熱（軸號：8）</value></data>
+  
+  <data name="Error.0881.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0882.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0883.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0884.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0885.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0886.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0887.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  <data name="Error.0888.Cause" xml:space="preserve"><value>偵測到電源模組再生電阻過熱。</value></data>
+  
+  <data name="Error.0881.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0882.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0883.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0884.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0885.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0886.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0887.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0888.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0891.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：1）</value></data>
+  <data name="Error.0892.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：2）</value></data>
+  <data name="Error.0893.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：3）</value></data>
+  <data name="Error.0894.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：4）</value></data>
+  <data name="Error.0895.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：5）</value></data>
+  <data name="Error.0896.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：6）</value></data>
+  <data name="Error.0897.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：7）</value></data>
+  <data name="Error.0898.Message" xml:space="preserve"><value>伺服放大器馬達過熱（軸號：8）</value></data>
+  
+  <data name="Error.0891.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0892.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0893.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0894.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0895.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0896.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0897.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  <data name="Error.0898.Cause" xml:space="preserve"><value>位置偵測器的熱保護器動作。</value></data>
+  
+  <data name="Error.0891.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0892.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0893.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0894.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0895.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0896.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0897.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  <data name="Error.0898.Measures" xml:space="preserve"><value>關閉控制器電源，等待一段時間後再開啟。例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。</value></data>
+  
+  <data name="Error.0901.Message" xml:space="preserve"><value>絕對位置超速（軸號：1）</value></data>
+  <data name="Error.0902.Message" xml:space="preserve"><value>絕對位置超速（軸號：2）</value></data>
+  <data name="Error.0903.Message" xml:space="preserve"><value>絕對位置超速（軸號：3）</value></data>
+  <data name="Error.0904.Message" xml:space="preserve"><value>絕對位置超速（軸號：4）</value></data>
+  <data name="Error.0905.Message" xml:space="preserve"><value>絕對位置超速（軸號：5）</value></data>
+  <data name="Error.0906.Message" xml:space="preserve"><value>絕對位置超速（軸號：6）</value></data>
+  <data name="Error.0907.Message" xml:space="preserve"><value>絕對位置超速（軸號：7）</value></data>
+  <data name="Error.0908.Message" xml:space="preserve"><value>絕對位置超速（軸號：8）</value></data>
+  
+  <data name="Error.0901.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0902.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0903.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0904.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0905.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0906.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0907.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  <data name="Error.0908.Cause" xml:space="preserve"><value>初始化時，絕對位置線性尺以 45 mm/s 以上的速度移動。</value></data>
+  
+  <data name="Error.0901.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0902.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0903.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0904.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0905.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0906.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0907.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0908.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0911.Message" xml:space="preserve"><value>伺服放大器超速（軸號：1）</value></data>
+  <data name="Error.0912.Message" xml:space="preserve"><value>伺服放大器超速（軸號：2）</value></data>
+  <data name="Error.0913.Message" xml:space="preserve"><value>伺服放大器超速（軸號：3）</value></data>
+  <data name="Error.0914.Message" xml:space="preserve"><value>伺服放大器超速（軸號：4）</value></data>
+  <data name="Error.0915.Message" xml:space="preserve"><value>伺服放大器超速（軸號：5）</value></data>
+  <data name="Error.0916.Message" xml:space="preserve"><value>伺服放大器超速（軸號：6）</value></data>
+  <data name="Error.0917.Message" xml:space="preserve"><value>伺服放大器超速（軸號：7）</value></data>
+  <data name="Error.0918.Message" xml:space="preserve"><value>伺服放大器超速（軸號：8）</value></data>
+  
+  <data name="Error.0911.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0912.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0913.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0914.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0915.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0916.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0917.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  <data name="Error.0918.Cause" xml:space="preserve"><value>偵測到超過馬達容許速度的轉速。</value></data>
+  
+  <data name="Error.0911.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0912.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0913.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0914.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0915.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0916.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0917.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0918.Measures" xml:space="preserve"><value>關閉電源後再開啟。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0920.Message" xml:space="preserve"><value>電源模組過電流</value></data>
+  <data name="Error.0920.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0920.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0921.Message" xml:space="preserve"><value>電源模組過電流（軸號：1）</value></data>
+  <data name="Error.0922.Message" xml:space="preserve"><value>電源模組過電流（軸號：2）</value></data>
+  <data name="Error.0923.Message" xml:space="preserve"><value>電源模組過電流（軸號：3）</value></data>
+  <data name="Error.0924.Message" xml:space="preserve"><value>電源模組過電流（軸號：4）</value></data>
+  <data name="Error.0925.Message" xml:space="preserve"><value>電源模組過電流（軸號：5）</value></data>
+  <data name="Error.0926.Message" xml:space="preserve"><value>電源模組過電流（軸號：6）</value></data>
+  <data name="Error.0927.Message" xml:space="preserve"><value>電源模組過電流（軸號：7）</value></data>
+  <data name="Error.0928.Message" xml:space="preserve"><value>電源模組過電流（軸號：8）</value></data>
+  
+  <data name="Error.0921.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0922.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0923.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0924.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0925.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0926.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0927.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  <data name="Error.0928.Cause" xml:space="preserve"><value>偵測到伺服放大器或電源過電流，或伺服放大器閘極電路錯誤；馬達電纜可能發生連接或導通錯誤。</value></data>
+  
+  <data name="Error.0921.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0922.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0923.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0924.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0925.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0926.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0927.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  <data name="Error.0928.Measures" xml:space="preserve"><value>確認機械電纜與移動軸電纜的連接。若再次發生，請聯絡服務供應商。關閉電源後再開啟以重置。</value></data>
+  
+  <data name="Error.0931.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：1）
+2. 馬達過電流（接地；軸號：1）</value></data>
+  <data name="Error.0932.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：2）
+2. 馬達過電流（接地；軸號：2）</value></data>
+  <data name="Error.0933.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：3）
+2. 馬達過電流（接地；軸號：3）</value></data>
+  <data name="Error.0934.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：4）
+2. 馬達過電流（接地；軸號：4）</value></data>
+  <data name="Error.0935.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：5）
+2. 馬達過電流（接地；軸號：5）</value></data>
+  <data name="Error.0936.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：6）
+2. 馬達過電流（接地；軸號：6）</value></data>
+  <data name="Error.0937.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：7）
+2. 馬達過電流（接地；軸號：7）</value></data>
+  <data name="Error.0938.Message" xml:space="preserve"><value>1. 馬達過電流（軸號：8）
+2. 馬達過電流（接地；軸號：8）</value></data>
+  
+  <data name="Error.0931.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：1）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：1）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0932.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：2）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：2）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0933.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：3）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：3）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0934.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：4）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：4）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0935.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：5）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：5）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0936.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：6）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：6）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0937.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：7）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：7）：馬達電源電纜接觸地線。</value></data>
+  <data name="Error.0938.Cause" xml:space="preserve"><value>1. 馬達過電流（軸號：8）：馬達流過過大電流或 A/D 轉換器輸出異常；馬達電源線連接可能異常。
+2. 馬達過電流（接地；軸號：8）：馬達電源電纜接觸地線。</value></data>
+  
+  <data name="Error.0931.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：1）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：1）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0932.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：2）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：2）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0933.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：3）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：3）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0934.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：4）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：4）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0935.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：5）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：5）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0936.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：6）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：6）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0937.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：7）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：7）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  <data name="Error.0938.Measures" xml:space="preserve"><value>1. 馬達過電流（軸號：8）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。
+2. 馬達過電流（接地；軸號：8）：關閉電源後再開啟，確認機械電纜及移動軸電纜等的連接。若再次發生，請聯絡服務供應商。</value></data>
+  
+  <data name="Error.0941.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：1）</value></data>
+  <data name="Error.0942.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：2）</value></data>
+  <data name="Error.0943.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：3）</value></data>
+  <data name="Error.0944.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：4）</value></data>
+  <data name="Error.0945.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：5）</value></data>
+  <data name="Error.0946.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：6）</value></data>
+  <data name="Error.0947.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：7）</value></data>
+  <data name="Error.0948.Message" xml:space="preserve"><value>過載（重量過大 1；軸號：8）</value></data>
+  
+  <data name="Error.0941.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0942.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0943.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0944.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0945.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0946.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0947.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  <data name="Error.0948.Cause" xml:space="preserve"><value>對馬達負荷較大的操作（高負載率操作）持續超過規定時間。</value></data>
+  
+  <data name="Error.0941.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0942.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0943.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0944.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0945.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0946.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0947.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0948.Measures" xml:space="preserve"><value>例如縮短操作速度的加減速時間。請參閱另冊《操作手冊／功能與操作詳細說明》中的命令 Accel、Ovrd、Spd，機器人狀態變數 M_SetAdl、M_LdfAct，以及參數 JADL（最佳加減速調整率）。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  
+  <data name="Error.0951.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：1）</value></data>
+  <data name="Error.0952.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：2）</value></data>
+  <data name="Error.0953.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：3）</value></data>
+  <data name="Error.0954.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：4）</value></data>
+  <data name="Error.0955.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：5）</value></data>
+  <data name="Error.0956.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：6）</value></data>
+  <data name="Error.0957.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：7）</value></data>
+  <data name="Error.0958.Message" xml:space="preserve"><value>過載（重量過大 2；軸號：8）</value></data>
+  
+  <data name="Error.0951.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0952.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0953.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0954.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0955.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0956.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0957.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  <data name="Error.0958.Cause" xml:space="preserve"><value>最大輸出電流持續超過一秒。</value></data>
+  
+  <data name="Error.0951.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0952.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0953.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0954.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0955.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0956.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0957.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0958.Measures" xml:space="preserve"><value>檢查負載重量及機器人受壓情況等。確認搬運條件（夾爪及工件質量）低於規格值。若再次發生，請聯絡經銷商。</value></data>
+  
+  <data name="Error.0961.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：1）</value></data>
+  <data name="Error.0962.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：2）</value></data>
+  <data name="Error.0963.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：3）</value></data>
+  <data name="Error.0964.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：4）</value></data>
+  <data name="Error.0965.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：5）</value></data>
+  <data name="Error.0966.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：6）</value></data>
+  <data name="Error.0967.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：7）</value></data>
+  <data name="Error.0968.Message" xml:space="preserve"><value>偏差過大錯誤 1（軸號：8）</value></data>
+  
+  <data name="Error.0961.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0962.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0963.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0964.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0965.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0966.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0967.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  <data name="Error.0968.Cause" xml:space="preserve"><value>伺服 ON 時位置偏差超限；急停減速期間也可能發生。</value></data>
+  
+  <data name="Error.0961.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0962.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0963.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0964.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0965.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0966.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0967.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  <data name="Error.0968.Measures" xml:space="preserve"><value>檢查負載重量、受壓情況以及機械電纜、移動軸電纜等的連接。環境溫度低或長時間停機後啟動時，請低速磨合或使用暖機模式。RH-20FRH 系列在夾爪偏移量長，且加減速控制固定或追蹤功能啟用時，請降低加減速度（Accel 命令）及移動速度（Ovrd 命令）；命令詳見另冊《操作手冊／功能與操作詳細說明》。急停減速時也可能發生此錯誤。關節座標系順應模式操作時，若發生 H096n，可增加參數 CMPJCLL 的設定值以抑制錯誤；參閱另冊的 Cmp Jnt 命令及 CMPJCLL（Cmp Jnt 電流限制等級）參數說明。</value></data>
+  
+  <data name="Error.0971.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：1）</value></data>
+  <data name="Error.0972.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：2）</value></data>
+  <data name="Error.0973.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：3）</value></data>
+  <data name="Error.0974.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：4）</value></data>
+  <data name="Error.0975.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：5）</value></data>
+  <data name="Error.0976.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：6）</value></data>
+  <data name="Error.0977.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：7）</value></data>
+  <data name="Error.0978.Message" xml:space="preserve"><value>偏差過大錯誤 2（軸號：8）</value></data>
+  
+  <data name="Error.0971.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0972.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0973.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0974.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0975.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0976.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0977.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  <data name="Error.0978.Cause" xml:space="preserve"><value>伺服 OFF 時位置偏差超限。</value></data>
+  
+  <data name="Error.0971.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0972.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0973.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0974.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0975.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0976.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0977.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  <data name="Error.0978.Measures" xml:space="preserve"><value>檢查是否有外力使機器人手臂移動。若再次發生，請聯絡經銷商。</value></data>
+  
+  <data name="Error.0981.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：1）</value></data>
+  <data name="Error.0982.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：2）</value></data>
+  <data name="Error.0983.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：3）</value></data>
+  <data name="Error.0984.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：4）</value></data>
+  <data name="Error.0985.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：5）</value></data>
+  <data name="Error.0986.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：6）</value></data>
+  <data name="Error.0987.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：7）</value></data>
+  <data name="Error.0988.Message" xml:space="preserve"><value>偏差過大錯誤 3（軸號：8）</value></data>
+  
+  <data name="Error.0981.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0982.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0983.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0984.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0985.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0986.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0987.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  <data name="Error.0988.Cause" xml:space="preserve"><value>馬達電源線連接異常。</value></data>
+  
+  <data name="Error.0981.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0982.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0983.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0984.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0985.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0986.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0987.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  <data name="Error.0988.Measures" xml:space="preserve"><value>檢查馬達電源線連接。偵測到偏差過大錯誤 1 時，馬達電流會關閉。</value></data>
+  
+</root>

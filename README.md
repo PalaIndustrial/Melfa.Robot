@@ -180,6 +180,17 @@ time zone. History navigation and filters use a controller-side cursor shared
 with other history reads; do not interleave independent traversals. `ERRLOG2=`
 and `ERRSUM2=` are not available on all controller models.
 
+`MelfaRobotException` looks up messages, causes, and measures in the
+BFP-A3480-F error catalog for CR-800 series controllers using the current UI
+culture. Numbered placeholders
+and user-defined ranges have individual resource entries; severity values
+remain culture-independent (`High`, `Low`, or `Caution`). When several messages
+share a number, corresponding messages, causes, and measures are numbered in
+the same order. Some numbers
+do not uniquely determine severity; their severity is `Unknown`. Consult the
+controller's error history and troubleshooting manual for the exact message
+and safety-critical instructions.
+
 ### Clean-up
 ```C#
 robot.Close();
@@ -219,8 +230,6 @@ Known missing or partial R-protocol functionality:
 - `XPOS`, `RPOS`: Read current positions.
 - `VAL`: Read by position (`<`, `>`, `+1`, `-1`); named-variable reads are implemented.
 - `MFTIME=`: Read the maintenance forecast reset date.
-
-Also expand the error message, cause, and measures resources.
 
 # Disclaimer
 
