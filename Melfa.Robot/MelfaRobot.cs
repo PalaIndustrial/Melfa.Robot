@@ -34,7 +34,7 @@ public partial class MelfaRobot : IDisposable
     public MelfaRobot(string host, int port = DEFAULT_PORT, int robot = 1)
     {
         Host = host;
-        Port = port < 0 ? 10000 : port;
+        Port = port < 0 ? DEFAULT_PORT : port;
         RobotNumber = robot;
     }
 
@@ -50,7 +50,7 @@ public partial class MelfaRobot : IDisposable
 
             _Client = new TcpClient();
             _Client.Connect(Host, Port);
-            _Stream = _Client?.GetStream();
+            _Stream = _Client.GetStream();
         }
     }
 
@@ -351,18 +351,28 @@ public partial class MelfaRobot : IDisposable
         var stream = new MemoryStream();
         try
         {
-            var results = DoCommandInternal("FREAD").Split(';');
+            int remaining;
             do
             {
+                var results = DoCommandInternal("FREAD").Split(';');
                 var bytes = HexConverter.GetBytes(results[0].AsSpan());
                 stream.Write(bytes, 0, bytes.Length);
-            } while (int.Parse(results[1]) != 0);
+                remaining = int.Parse(results[1]);
+            } while (remaining != 0);
+
+            stream.Flush();
+            stream.Seek(0, SeekOrigin.Begin);
+            return stream;
         }
-        catch { stream.Dispose(); }
-        finally { DoCommandInternal("FCLOSE"); }
-        stream.Flush();
-        stream.Seek(0, SeekOrigin.Begin);
-        return stream;
+        catch
+        {
+            stream.Dispose();
+            throw;
+        }
+        finally
+        {
+            DoCommandInternal("FCLOSE");
+        }
     }
 
     /// <summary>[FWRITE] File write</summary>
@@ -381,9 +391,12 @@ public partial class MelfaRobot : IDisposable
         var bytes = new byte[110];
         try
         {
-            var n = stream.Read(bytes, 0, bytes.Length);
-            var hex = HexConverter.GetString(bytes.AsSpan().Slice(0, n));
-            DoCommandInternal($"FWRITE{n}:{hex}");
+            int n;
+            while ((n = stream.Read(bytes, 0, bytes.Length)) > 0)
+            {
+                var hex = HexConverter.GetString(bytes.AsSpan(0, n));
+                DoCommandInternal($"FWRITE{n}:{hex}");
+            }
         }
         finally { DoCommandInternal("FCLOSE"); }
     }
@@ -1121,7 +1134,7 @@ public partial class MelfaRobot : IDisposable
             var n = _Stream.Read(_ReadBuffer, 0, _ReadBuffer.Length);
             var ret = Encoding.ASCII.GetString(_ReadBuffer, 0, n);
             if (ret.StartsWith("QoK", StringComparison.InvariantCultureIgnoreCase))
-                return ret.Substring(3);
+                return ret[3..];
 
             throw MelfaRobotException.FromErrorResult(cmd, ret);
         }
