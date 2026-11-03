@@ -21,6 +21,7 @@ public partial class MelfaRobot : IDisposable
 
     private readonly object _syncRoot = new();
     private readonly object _connectionSyncRoot = new();
+    private readonly object _fileSyncRoot = new();
     private int _connectionVersion;
     private int _commandTimeout = 5000;
 
@@ -370,19 +371,20 @@ public partial class MelfaRobot : IDisposable
     /// </returns>
     public Stream FileRead(string filename)
     {
-        DoCommandInternal($"FOPEN{filename};r");
         var stream = new MemoryStream();
         try
         {
-            int remaining;
-            do
+            WithOpenFile(filename, "r", () =>
             {
-                var results = DoCommandInternal("FREAD").Split(';');
-                var bytes = HexConverter.GetBytes(results[0].AsSpan());
-                stream.Write(bytes, 0, bytes.Length);
-                remaining = int.Parse(results[1]);
-            } while (remaining != 0);
-
+                int remaining;
+                do
+                {
+                    var results = DoCommandInternal("FREAD").Split(';');
+                    var bytes = HexConverter.GetBytes(results[0].AsSpan());
+                    stream.Write(bytes, 0, bytes.Length);
+                    remaining = int.Parse(results[1]);
+                } while (remaining != 0);
+            });
             stream.Flush();
             stream.Seek(0, SeekOrigin.Begin);
             return stream;
@@ -391,10 +393,6 @@ public partial class MelfaRobot : IDisposable
         {
             stream.Dispose();
             throw;
-        }
-        finally
-        {
-            DoCommandInternal("FCLOSE");
         }
     }
 
@@ -410,20 +408,40 @@ public partial class MelfaRobot : IDisposable
     /// <param name="stream">Content to be written to the controller</param>
     public void FileWrite(string filename, Stream stream)
     {
-        DoCommandInternal($"FOPEN{filename};w");
-        var bytes = new byte[110];
-        try
+        WithOpenFile(filename, "w", () =>
         {
             int n;
             while ((n = stream.Read(bytes, 0, bytes.Length)) > 0)
             {
                 var hex = HexConverter.GetString(bytes.AsSpan(0, n));
+            var bytes = new byte[110];
                 DoCommandInternal($"FWRITE{n};{hex}");
             }
         }
-        finally { DoCommandInternal("FCLOSE"); }
     }
 
+        });
+    }
+
+    private void WithOpenFile(string filename, string mode, Action action)
+    {
+        lock (_fileSyncRoot)
+        {
+            DoCommandInternal($"FOPEN{filename};{mode}");
+            try
+            {
+                action();
+            }
+            catch (Exception operationError)
+            {
+                try { DoCommandInternal("FCLOSE"); }
+                catch (Exception closeError)
+                {
+                    throw new AggregateException("File operation and close both failed.", operationError, closeError);
+                }
+                throw;
+            }
+            DoCommandInternal("FCLOSE");
     /// <summary>[EFREE] Read file size</summary>
     /// <returns>(Total sizes of file system, Used size)</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
