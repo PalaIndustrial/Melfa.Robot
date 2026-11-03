@@ -61,18 +61,36 @@ public partial class MelfaRobot : IDisposable
     {
         if (!IsConnected)
             return;
+
         lock (_syncRoot)
         {
             if (!IsConnected)
                 return;
 
-            try { _Stream.Close(); } catch { }
-            try { _Stream.Dispose(); } catch { }
-            _Stream = null;
+            List<Exception> exceptions = null;
 
-            try { _Client.Close(); } catch { }
-            try { _Client.Dispose(); } catch { }
-            _Client = null;
+            if (_Stream is not null)
+            {
+                try { _Stream.Close(); }
+                catch (Exception ex) { (exceptions ??= []).Add(ex); }
+
+                try { _Stream.Dispose(); }
+                catch (Exception ex) { (exceptions ??= []).Add(ex); }
+                finally { _Stream = null; }
+            }
+
+            if (_Client is not null)
+            {
+                try { _Client.Close(); }
+                catch (Exception ex) { (exceptions ??= []).Add(ex); }
+
+                try { _Client.Dispose(); }
+                catch (Exception ex) { (exceptions ??= []).Add(ex); }
+                finally { _Client = null; }
+            }
+
+            if (exceptions is { Count: > 0 })
+                throw new AggregateException("One or more errors occurred while disconnecting from robot.", exceptions);
         }
     }
 
