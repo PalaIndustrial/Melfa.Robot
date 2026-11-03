@@ -2,7 +2,6 @@ using CommunityToolkit.Diagnostics;
 using Melfa.Robot.Helpers;
 using Numeral;
 using System;
-using System.Buffers;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Globalization;
@@ -10,7 +9,6 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 
@@ -19,13 +17,6 @@ namespace Melfa.Robot;
 public partial class MelfaRobot : IDisposable
 {
     public const int DEFAULT_PORT = 10001;
-
-    private readonly object _syncRoot = new();
-    private readonly object _connectionSyncRoot = new();
-    private readonly object _fileSyncRoot = new();
-    private int _connectionVersion;
-    private int _commandTimeout = 5000;
-    private bool _requireResponseTerminator;
 
     public string Host { get; }
     public int Port { get; }
@@ -58,8 +49,6 @@ public partial class MelfaRobot : IDisposable
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get => Volatile.Read(ref _Client)?.Connected ?? false;
     }
-
-    private TcpClient _Client = null;
 
     public MelfaRobot(string host, int port = DEFAULT_PORT, int robot = 1)
     {
@@ -193,7 +182,7 @@ public partial class MelfaRobot : IDisposable
     /// <param name="type">The line to read</param>
     /// <returns>Content of the line</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public string ProgramGetLine(LocationType type) => DoCommandInternal($"LISTI{type.ToCommandString()}");
+    public string ProgramGetLine(LocationType type) => DoCommandInternal($"LISTI{type.ToProgramLocationCommandString()}");
     /// <summary>[LISTI] Program list read</summary>
     /// <remarks>The line data is read from the program. It is effective in the edit slot.</remarks>
     /// <param name="line">specific line number</param>
@@ -210,7 +199,7 @@ public partial class MelfaRobot : IDisposable
     ///     unable to parse the position to <see cref="PositionP"/> nor <see cref="PositionJ"/>
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public IPosition ProgramGetPosition(LocationType type) => ProgramGetPosition(type.ToCommandString());
+    public IPosition ProgramGetPosition(LocationType type) => ProgramGetPosition(type.ToProgramLocationCommandString());
 
     /// <summary>[LISTP] Program position read</summary>
     /// <param name="positionName">Specific position name</param>
@@ -434,28 +423,6 @@ public partial class MelfaRobot : IDisposable
                 DoCommandInternal($"FWRITE{n};{hex}");
             }
         });
-    }
-
-    private void WithOpenFile(string filename, string mode, Action action)
-    {
-        lock (_fileSyncRoot)
-        {
-            DoCommandInternal($"FOPEN{filename};{mode}");
-            try
-            {
-                action();
-            }
-            catch (Exception operationError)
-            {
-                try { DoCommandInternal("FCLOSE"); }
-                catch (Exception closeError)
-                {
-                    throw new AggregateException("File operation and close both failed.", operationError, closeError);
-                }
-                throw;
-            }
-            DoCommandInternal("FCLOSE");
-        }
     }
 
     /// <summary>[EFREE] Read file size</summary>
@@ -842,6 +809,7 @@ public partial class MelfaRobot : IDisposable
     /// <summary>[CYCLECLR] Cycle time clear</summary>
     /// <remakrs>The operating time of the program is cleared</remakrs>
     /// <param name="program">program name</param>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void CycleTimeClear(string program) => DoCommandInternal($"CYCLECLR{program}");
 
     public MelfaRobotException Error
@@ -1177,87 +1145,6 @@ public partial class MelfaRobot : IDisposable
             .Select(int.Parse)
             .ToImmutableArray();
     #endregion
-
-    private string DoCommandInternal(string command, int slot)
-    {
-        lock (_syncRoot)
-        {
-            var client = Volatile.Read(ref _Client);
-            if (client is null || !client.Connected)
-                throw new InvalidOperationException("Not connected.");
-
-            if (command.IndexOf('\r') >= 0 || command.IndexOf('\n') >= 0)
-                throw new ArgumentException("Command cannot contain CR or LF.", nameof(command));
-            var cmd = $"{RobotNumber};{slot};{command}";
-            var encoding = Encoding.GetEncoding("us-ascii", EncoderFallback.ExceptionFallback, DecoderFallback.ExceptionFallback);
-            var wbuf = encoding.GetBytes(cmd + "\r");
-            if (wbuf.Length - 1 > 255)
-                throw new InvalidOperationException("Command too long (max 255 bytes).");
-
-            var timeout = CommandTimeout;
-            var requireTerminator = RequireResponseTerminator;
-            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-            string ret;
-            using var response = new MemoryStream();
-            const int bufferSize = 1536;
-            var buffer = ArrayPool<byte>.Shared.Rent(bufferSize);
-            try
-            {
-                var stream = client.GetStream();
-                stream.WriteTimeout = timeout;
-                stream.Write(wbuf, 0, wbuf.Length);
-
-                while (true)
-                {
-                    var remaining = timeout - stopwatch.ElapsedMilliseconds;
-                    if (remaining <= 0)
-                        throw new IOException("Timed out waiting for the robot response.");
-                    stream.ReadTimeout = (int)remaining;
-                    var count = stream.Read(buffer, 0, requireTerminator ? 1 : bufferSize);
-                    if (count == 0)
-                        throw new EndOfStreamException("The robot disconnected before completing its response.");
-                    if (requireTerminator && buffer[0] == '\r')
-                        break;
-                    if (response.Length + count > 65536)
-                        throw new InvalidDataException("The robot response exceeds 65536 bytes.");
-                    response.Write(buffer, 0, count);
-                    if (!requireTerminator && count < bufferSize && response.Length >= 3)
-                    {
-                        var bytes = response.GetBuffer();
-                        var isError = (bytes[0] == 'Q' || bytes[0] == 'q') &&
-                                      (bytes[1] == 'E' || bytes[1] == 'e') &&
-                                      (bytes[2] == 'R' || bytes[2] == 'r');
-                        if (!isError || response.Length >= 7)
-                            break;
-                    }
-                }
-                ret = encoding.GetString(response.ToArray());
-                if (!requireTerminator)
-                    ret = ret.TrimEnd('\r', '\n');
-                if (!ret.StartsWith("QoK", StringComparison.OrdinalIgnoreCase) &&
-                    !(ret.StartsWith("QeR", StringComparison.OrdinalIgnoreCase) &&
-                      ret.Length >= 7 && int.TryParse(ret.Substring(3, 4), out _)))
-                    throw new InvalidDataException("Invalid robot response: " + ret);
-            }
-            catch (Exception ex) when (ex is IOException || ex is SocketException || ex is ObjectDisposedException || ex is DecoderFallbackException)
-            {
-                Interlocked.CompareExchange(ref _Client, null, client);
-                client.Dispose();
-                throw;
-            }
-            finally
-            {
-                ArrayPool<byte>.Shared.Return(buffer, clearArray: true);
-            }
-            if (ret.StartsWith("QoK", StringComparison.InvariantCultureIgnoreCase))
-                return ret[3..];
-
-            throw MelfaRobotException.FromErrorResult(cmd, ret);
-        }
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    private string DoCommandInternal(string command) => DoCommandInternal(command, 1);
 
     public void Dispose()
     {

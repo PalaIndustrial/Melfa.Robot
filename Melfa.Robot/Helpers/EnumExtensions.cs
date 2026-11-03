@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 
 namespace Melfa.Robot.Helpers;
@@ -25,7 +26,7 @@ internal static class EnumExtensions
             _ => throw new InvalidEnumArgumentException(nameof(method), (int)method, typeof(StepMethod)),
         };
 
-    public static string ToCommandString(this LocationType type) =>
+    public static string ToProgramLocationCommandString(this LocationType type) =>
         type switch
         {
             LocationType.Top => "TOP",
@@ -33,6 +34,25 @@ internal static class EnumExtensions
             LocationType.Next => "+1",
             LocationType.Previous => "-1",
             _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(LocationType)),
+        };
+
+    public static string ToVariablePositionCommandString(this LocationType position) => position switch
+    {
+        LocationType.Top => "<",
+        LocationType.Bottom => ">",
+        LocationType.Next => "+1",
+        LocationType.Previous => "-1",
+        _ => throw new ArgumentOutOfRangeException(nameof(position)),
+    };
+
+    public static string ToCommandString(this VariableClass variableClass) =>
+        variableClass switch
+        {
+            VariableClass.Integer => "M",
+            VariableClass.Character => "C",
+            VariableClass.CartesianPosition => "P",
+            VariableClass.JointPosition => "J",
+            _ => throw new InvalidEnumArgumentException(nameof(variableClass), (int)variableClass, typeof(VariableClass)),
         };
 
     public static string ToCommandString(this TaskMode mode) =>
