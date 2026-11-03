@@ -49,6 +49,18 @@ robot.Execute("MOV P1");
 robot.RunProgram("blah");
 ```
 
+## Read servo monitor data
+```C#
+var encoder = robot.ServoEncoder;
+var j1PositionFeedback = encoder[0].PositionFeedback;
+var commandedCurrent = robot.ServoCurrentCommands;
+var feedbackCurrent = robot.ServoCurrentFeedback;
+var voltage = robot.ServoVoltage;
+```
+
+Servo monitor arrays contain J1 through J8 in order, including unused axes.
+Each property reads a new controller snapshot.
+
 ## Clean-up
 ```C#
 robot.Close();

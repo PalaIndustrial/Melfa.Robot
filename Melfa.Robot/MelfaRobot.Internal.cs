@@ -23,6 +23,38 @@ public partial class MelfaRobot
     private bool _requireResponseTerminator;
     private TcpClient _Client = null;
 
+    private string[] ReadServoFields(string command, int count)
+    {
+        var fields = DoCommandInternal(command).Split(';');
+        if (fields.Length != count)
+            throw new InvalidDataException($"Unexpected {command} field count: {fields.Length}; expected {count}.");
+        return fields;
+    }
+
+    private ImmutableArray<T> ReadServoAxes<T>(string command, int fieldsPerAxis, Func<string[], int, T> parse)
+    {
+        var fields = ReadServoFields(command, 8 * fieldsPerAxis);
+        var axes = ImmutableArray.CreateBuilder<T>(8);
+        for (var i = 0; i < fields.Length; i += fieldsPerAxis)
+            axes.Add(parse(fields, i));
+        return axes.ToImmutable();
+    }
+
+    private static long ParseServoInteger(string value)
+    {
+        if (!long.TryParse(value, NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var result))
+            throw new InvalidDataException($"Invalid servo integer: {value}");
+        return result;
+    }
+
+    private static double ParseServoNumber(string value)
+    {
+        if (!double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ||
+            double.IsNaN(result) || double.IsInfinity(result))
+            throw new InvalidDataException($"Invalid servo number: {value}");
+        return result;
+    }
+
     private void WithOpenFile(string filename, string mode, Action action)
     {
         lock (_fileSyncRoot)

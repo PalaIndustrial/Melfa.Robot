@@ -906,12 +906,64 @@ public partial class MelfaRobot : IDisposable
             .ToImmutableArray();
     }
 
-    // TODO: SRVENC - Servo encoder read
-    // TODO: SRVDRP - Servo droop read
-    // TODO: SRVSPD - Servo speed read
-    // TODO: SRVCUR - Servo current read
-    // TODO: SRVLCR - Servo load current read
-    // TODO: SRVVOL - Servo voltage read
+    /// <summary>[SRVENC] Encoder position feedback, position in one rotation, Fdt command, and position command for J1-J8.</summary>
+    public ImmutableArray<(long PositionFeedback, long PositionInOneRotation, long FdtCommand, long PositionCommand)> ServoEncoder
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadServoAxes("SRVENC", 4, (fields, i) =>
+            (ParseServoInteger(fields[i]), ParseServoInteger(fields[i + 1]), ParseServoInteger(fields[i + 2]), ParseServoInteger(fields[i + 3])));
+    }
+
+    /// <summary>[SRVDRP] Position droop and maximum position droop for J1-J8.</summary>
+    public ImmutableArray<(long PositionDroop, long MaximumPositionDroop)> ServoDroop
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadServoAxes("SRVDRP", 2, (fields, i) =>
+            (ParseServoInteger(fields[i]), ParseServoInteger(fields[i + 1])));
+    }
+
+    /// <summary>[SRVSPD] Speed feedback, maximum speed, and speed command for J1-J8.</summary>
+    public ImmutableArray<(long SpeedFeedback, long MaximumSpeed, long SpeedCommand)> ServoSpeed
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadServoAxes("SRVSPD", 3, (fields, i) =>
+            (ParseServoInteger(fields[i]), ParseServoInteger(fields[i + 1]), ParseServoInteger(fields[i + 2])));
+    }
+
+    /// <summary>[SRVCUR0] Current command, positive and negative tolerable commands, and RMS current for J1-J8.</summary>
+    public ImmutableArray<(double CurrentCommand, double TolerableCommandPositive, double TolerableCommandNegative, double RmsCurrent)> ServoCurrentCommands
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadServoAxes("SRVCUR0", 4, (fields, i) =>
+            (ParseServoNumber(fields[i]), ParseServoNumber(fields[i + 1]), ParseServoNumber(fields[i + 2]), ParseServoNumber(fields[i + 3])));
+    }
+
+    /// <summary>[SRVCUR1] Current feedback and two maximum current commands for J1-J8.</summary>
+    public ImmutableArray<(double CurrentFeedback, double MaximumCurrentCommand1, double MaximumCurrentCommand2)> ServoCurrentFeedback
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadServoAxes("SRVCUR1", 3, (fields, i) =>
+            (ParseServoNumber(fields[i]), ParseServoNumber(fields[i + 1]), ParseServoNumber(fields[i + 2])));
+    }
+
+    /// <summary>[SRVLCR] Load level and maximum load level for J1-J8.</summary>
+    public ImmutableArray<(double LoadLevel, double MaximumLoadLevel)> ServoLoadCurrent
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadServoAxes("SRVLCR", 2, (fields, i) =>
+            (ParseServoNumber(fields[i]), ParseServoNumber(fields[i + 1])));
+    }
+
+    /// <summary>[SRVVOL] Power voltage, maximum and minimum voltage, and regeneration levels for J1-J8.</summary>
+    public (double PowerVoltage, double MaximumPowerVoltage, double MinimumPowerVoltage, ImmutableArray<double> RegenerationLevels) ServoVoltage
+    {
+        get
+        {
+            var fields = ReadServoFields("SRVVOL", 11);
+            return (ParseServoNumber(fields[0]), ParseServoNumber(fields[1]), ParseServoNumber(fields[2]),
+                fields.Skip(3).Select(ParseServoNumber).ToImmutableArray());
+        }
+    }
 
     /// <summary>[SRVMONRST=] Reset servo monitor data</summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
