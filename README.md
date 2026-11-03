@@ -128,10 +128,10 @@ bits 0-7 of `CompletedAxisMask` correspond to J1-J8.
 
 ### Read option information
 
-`robot.GetOptionStatus(1)` reads information for an option slot (1-3) as
-returned by the controller. `robot.GetOptionStatus()` reads all slots and
-splits the response on VT (`\v`), preserving empty fields. The information
-format depends on the installed options.
+`robot.GetOptionStatus(1)` reads information for an option slot as returned by
+the controller. Slot numbers start at 1; use `robot.OptionSlotCount` to determine
+how many slots to read. The information format depends on the installed options.
+The unindexed `OPSTSRD` command is not exposed because its behavior is unknown.
 
 ### Breakpoints
 

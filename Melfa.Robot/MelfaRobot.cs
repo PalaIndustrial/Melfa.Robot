@@ -1033,17 +1033,13 @@ public partial class MelfaRobot : IDisposable
         get => int.Parse(DoCommandInternal("OPNUMRD"));
     }
 
-    /// <summary>[OPSTSRD] Read option information for all slots.</summary>
-    /// <returns>Information in controller order, split on VT; empty fields are preserved.</returns>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public ImmutableArray<string> GetOptionStatus() =>
-        DoCommandInternal("OPSTSRD").Split('\x0b').ToImmutableArray();
-
     /// <summary>[OPSTSRD] Read option information for a slot.</summary>
-    /// <param name="optionSlot">Option slot number, from 1 to 3.</param>
+    /// <param name="optionSlot">Option slot number, starting at 1.</param>
     /// <returns>The controller's option information, including any VT separators.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public string GetOptionStatus(int optionSlot) => DoCommandInternal($"OPSTSRD{optionSlot}");
+    public string GetOptionStatus(int optionSlot) => optionSlot > 0
+        ? DoCommandInternal($"OPSTSRD{optionSlot}")
+        : throw new ArgumentOutOfRangeException(nameof(optionSlot), "Option slot number starting at 1");
 
     /// <summary>[THMRD] The internal temperature of the controller</summary>
     public double ControllerTemperature

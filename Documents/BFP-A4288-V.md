@@ -664,8 +664,8 @@ Axis masks use bits 0–7 for X/J1, Y/J2, Z/J3, A/J4, B/J5, C/J6, L1/J7 and L2/J
 
 ## 5.2.110 OPSTSRD — Read option information
 
-- Syntax: `OPSTSRD<Slot no.>`; slot number 1, 2 or 3. Response: `QoK<Option info.>`.
-- Syntax: `OPSTSRD` returns all slots separated by VT. Response: `QoKEthernet;IP Addr 192.168.0.1<VT>>PortNo(R time) 10000<VT>PortNo(OPT11-19) 10001/10002/10003/10004/10005/10006/10007/10008/1000919<VT>Connect Count(OPT11-19) 2/0/0/0/0/0/0/0/0<VT>bMAC Addr 00:00:00:00:00:00<VT>H/W Ver: 0H/W Ver: 0`
+- Syntax: `OPSTSRD<Slot no.>`; response: `QoK<Option info.>`. The manual lists slot numbers 1, 2 and 3, but slot 4 has also been observed.
+- The unindexed `OPSTSRD` command is supported by the protocol and simulator, but its slot and behavior are unknown; one simulator returned only `;`. The library exposes only the indexed form.
 - Source example request `1;1;OPSTSRD` omits the documented slot argument; response contains Ethernet address, real-time port, OPT11–19 ports and connection counts, MAC address and H/W version separated by VT. Extracted response: `QoKEthernet;IP Addr 192.168.0.1<VT>PortNo(R-time) 10000<VT>PortNo(OPT11-19) 10001/10002/10003/10004/10005/10006/10007/10008/10009<VT>Connect Count(OPT11-19) 2/0/0/0/0/0/0/0/0<VT>MAC Addr 00:00:00:00:00:00<VT>H/W Ver: 0`.
 - Source related command: `OPSTSRD`.
 
@@ -1458,7 +1458,7 @@ Axis masks use bits 0–7 for X/J1, Y/J2, Z/J3, A/J4, B/J5, C/J6, L1/J7 and L2/J
 
 ## 5.2.110 OPSTSRD — Read option information
 
-- Syntax: `OPSTSRD<Slot no.>`; slot number 1, 2 or 3. Response: `QoK<Option info.>`. Without a slot number, `OPSTSRD` returns all slots separated by VT.
+- Syntax: `OPSTSRD<Slot no.>`; response: `QoK<Option info.>`. The manual lists slot numbers 1, 2 and 3, but slot 4 has also been observed. The unindexed command is supported, but its slot and behavior are unknown; one simulator returned only `;`. The library exposes only the indexed form.
 - Source example request `1;1;OPSTSRD` omits the documented slot argument; response contains Ethernet address, real-time port, OPT11–19 ports and connection counts, MAC address and H/W version separated by VT. Extracted response: `QoKEthernet;IP Addr 192.168.0.1<VT>PortNo(R-time) 10000<VT>PortNo(OPT11-19) 10001/10002/10003/10004/10005/10006/10007/10008/10009<VT>Connect Count(OPT11-19) 2/0/0/0/0/0/0/0/0<VT>MAC Addr 00:00:00:00:00:00<VT>H/W Ver: 0`.
 - Source related command: `OPSTSRD`.
 
