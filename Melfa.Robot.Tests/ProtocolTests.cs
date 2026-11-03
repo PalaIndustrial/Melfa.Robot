@@ -82,36 +82,10 @@ public class ProtocolTests
     }
 
     [Fact]
-    public async Task ReadsAllOptionStatuses()
+    public void OptionStatusRequiresASlot()
     {
-        using var server = new Controller(async stream =>
-        {
-            Assert.Equal("1;1;OPSTSRD", await ReadCommand(stream));
-            await Send(stream, "QoKEthernet;IP Addr 192.168.0.1\vCC-Link;status=OK\vOther option\r");
-            Assert.Equal("1;1;OPSTSRD", await ReadCommand(stream));
-            await Send(stream, "QoKfirst\v\vthird\v\r");
-            Assert.Equal("1;1;OPSTSRD", await ReadCommand(stream));
-            await Send(stream, "QoK\r");
-        });
-        using var robot = server.Connect();
-        Assert.Equal(new[] { "Ethernet;IP Addr 192.168.0.1", "CC-Link;status=OK", "Other option" }, robot.GetOptionStatus());
-        Assert.Equal(new[] { "first", "", "third", "" }, robot.GetOptionStatus());
-        Assert.Equal(new[] { "" }, robot.GetOptionStatus());
-        await server.Complete();
-    }
-
-    [Fact]
-    public async Task AllOptionStatusesReadSurfacesControllerError()
-    {
-        using var server = new Controller(async stream =>
-        {
-            Assert.Equal("1;1;OPSTSRD", await ReadCommand(stream));
-            await Send(stream, "QeR1234\r");
-        });
-        using var robot = server.Connect();
-        var error = Assert.Throws<MelfaRobotException>(() => robot.GetOptionStatus());
-        Assert.Equal(1234, error.ErrorNumber);
-        await server.Complete();
+        Assert.Null(typeof(MelfaRobot).GetMethod(nameof(MelfaRobot.GetOptionStatus), Type.EmptyTypes));
+        Assert.NotNull(typeof(MelfaRobot).GetMethod(nameof(MelfaRobot.GetOptionStatus), new[] { typeof(int) }));
     }
 
     [Fact]
@@ -126,13 +100,23 @@ public class ProtocolTests
             await Send(stream, "QoKOther option;unknown format\v\r");
             Assert.Equal("1;1;OPSTSRD3", await ReadCommand(stream));
             await Send(stream, "QoK\r");
+            Assert.Equal("1;1;OPSTSRD4", await ReadCommand(stream));
+            await Send(stream, "QoK" + information + "\r");
         });
         using var robot = server.Connect();
-        Assert.Throws<ArgumentOutOfRangeException>(() => robot.GetOptionStatus(0));
-        Assert.Throws<ArgumentOutOfRangeException>(() => robot.GetOptionStatus(4));
         Assert.Equal(information, robot.GetOptionStatus(1));
         Assert.Equal("Other option;unknown format\v", robot.GetOptionStatus(2));
         Assert.Equal("", robot.GetOptionStatus(3));
+        Assert.Equal(information, robot.GetOptionStatus(4));
+        await server.Complete();
+    }
+
+    [Fact]
+    public async Task RejectsZeroOptionSlot()
+    {
+        using var server = new Controller(_ => Task.CompletedTask);
+        using var robot = server.Connect();
+        Assert.Throws<ArgumentOutOfRangeException>(() => robot.GetOptionStatus(0));
         await server.Complete();
     }
 
@@ -1131,6 +1115,28 @@ public class ProtocolTests
         Assert.True(robot.ProgramStart);
         Assert.False(robot.ProgramStart);
         Assert.Equal(400.13, Assert.IsType<PositionP>(robot.ProgramGetPosition("P1")).X);
+        await server.Complete();
+    }
+
+    [Fact]
+    public async Task ReadsPreparedProgramFileInBlocks()
+    {
+        using var server = new Controller(async stream =>
+        {
+            Assert.Equal("1;1;FOPENTEST.MB6;r", await ReadCommand(stream));
+            await Send(stream, "QoK\r");
+            Assert.Equal("1;1;FREAD", await ReadCommand(stream));
+            await Send(stream, "QoK524F42;1\r");
+            Assert.Equal("1;1;FREAD", await ReadCommand(stream));
+            await Send(stream, "QoK505247;0\r");
+            Assert.Equal("1;1;FCLOSE", await ReadCommand(stream));
+            await Send(stream, "QoK\r");
+        });
+        using var robot = server.Connect();
+        using var contents = robot.FileRead("TEST.MB6");
+        using var buffer = new MemoryStream();
+        contents.CopyTo(buffer);
+        Assert.Equal(Encoding.ASCII.GetBytes("ROBPRG"), buffer.ToArray());
         await server.Complete();
     }
 

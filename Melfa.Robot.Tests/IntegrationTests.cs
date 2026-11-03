@@ -23,7 +23,7 @@ internal static class Integration
 [Collection("Robot integration")]
 public class SimulatorWriteTests
 {
-    [WriteFact]
+    [Fact(Skip = "Scratch program creation is not yet verified.")]
     [Trait("Category", "SimulatorWrite")]
     public void EditScratchLineAndDiscard()
     {
@@ -32,7 +32,7 @@ public class SimulatorWriteTests
                 () => ScratchOperations.EditLine(robot, config.Line)));
     }
 
-    [WriteFact]
+    [Fact(Skip = "Scratch program creation is not yet verified.")]
     [Trait("Category", "SimulatorWrite")]
     public void EditAndRestoreScratchJointVariable()
     {

@@ -1,3 +1,5 @@
+using System.Text;
+using System.Text.RegularExpressions;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -18,6 +20,25 @@ public class ReadOnlyRobotTests
         {
             Assert.NotNull(robot.CurrentProgram(1));
             Assert.True(robot.TaskCount > 0);
+        });
+    }
+
+    [ReadProgramFact]
+    [Trait("Category", "RobotReadOnly")]
+    [Trait("Category", "SimulatorReadOnly")]
+    public void ReadPreparedProgramFile()
+    {
+        var name = SafetyConfig.ReadProgramName(Environment.GetEnvironmentVariable);
+        Integration.Run(false, (robot, _) =>
+        {
+            if (!Regex.IsMatch(robot.ProgramExtension, @"\A[A-Za-z0-9]{1,8}\z", RegexOptions.CultureInvariant))
+                throw new InvalidOperationException("Unrecognized program extension from OPEN.");
+            var filename = name + "." + robot.ProgramExtension;
+            using var contents = robot.ReadFile(filename);
+            output.WriteLine($"Read {contents.Length} bytes from {filename}.");
+            Assert.True(contents.Length > 0, $"Program file {filename} is empty.");
+            foreach (var line in ProgramFilePreview.ReadLines(contents))
+                output.WriteLine(line);
         });
     }
 
@@ -78,25 +99,40 @@ public class ReadOnlyRobotTests
         Integration.Run(false, (robot, _) =>
         {
             var count = robot.OptionSlotCount();
-            var all = robot.OptionStatuses();
-            output.WriteLine($"Option slots reported: {count}; OPSTSRD fields: {all.Length}");
-            for (var i = 0; i < all.Length; i++)
-                output.WriteLine($"All-slots field {i + 1}: {all[i]}");
-
-            if (count == 0)
+            output.WriteLine($"Option slots reported: {count}");
+            for (var slot = 1; slot <= count; slot++)
             {
-                Assert.Equal(new[] { "" }, all);
-                return;
+                var information = robot.OptionStatus(slot);
+                output.WriteLine($"Option slot {slot}: {information.Replace("\v", "<VT>")}");
             }
-
-            var indexed = new string[count];
-            for (var i = 0; i < count; i++)
-            {
-                indexed[i] = robot.OptionStatus(i + 1);
-                output.WriteLine($"Option slot {i + 1}: {indexed[i].Replace("\v", "<VT>")}");
-            }
-            Assert.Equal(count, all.Length);
-            Assert.Equal(indexed, all);
         });
+    }
+}
+
+internal static class ProgramFilePreview
+{
+    internal static IReadOnlyList<string> ReadLines(Stream contents)
+    {
+        using var reader = new StreamReader(contents, Encoding.Latin1, false, 1024, leaveOpen: true);
+        var lines = new List<string>();
+        var remaining = 0;
+        while (reader.ReadLine() is { } line)
+        {
+            if (lines.Count < 10)
+            {
+                var formatted = new StringBuilder(line.Length);
+                foreach (var character in line)
+                    if (character < 0x80)
+                        formatted.Append(character);
+                    else
+                        formatted.Append($"\\x{(int)character:X2}");
+                lines.Add(formatted.ToString());
+            }
+            else
+                remaining++;
+        }
+        if (remaining > 0)
+            lines.Add($"... {remaining} more lines");
+        return lines;
     }
 }

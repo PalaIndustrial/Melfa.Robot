@@ -29,7 +29,7 @@ internal static class ScratchOperations
             throw new InvalidOperationException("Unrecognized program extension from OPEN; cannot establish scratch filename.");
         var filename = name + "." + extension;
         if (robot.FileExists(filename) != false)
-            throw new InvalidOperationException("Scratch file must definitely be absent; existing or unknown FCHECK response.");
+            throw new InvalidOperationException("Scratch file must definitely be absent on the robot controller; existing or unknown FCHECK response.");
         for (var slot = 1; slot <= taskCount; slot++)
         {
             var current = robot.CurrentProgram(slot);

@@ -70,8 +70,8 @@ internal sealed class RobotSession : IRobotCommands, IDisposable
     internal PositionJ CurrentJointPosition() => Command(() => robot.CurrentPositionJ);
     internal ImmutableArray<MelfaRobot.HandState> HandStates() => Command(() => robot.HandStates);
     internal int OptionSlotCount() => Command(() => robot.OptionSlotCount);
-    internal ImmutableArray<string> OptionStatuses() => Command(() => robot.GetOptionStatus());
     internal string OptionStatus(int slot) => Command(() => robot.GetOptionStatus(slot));
+    internal Stream ReadFile(string filename) => Command(() => robot.FileRead(filename));
     public void OpenProgram(string name) => Command(() => robot.ProgramOpen(name));
     public void DiscardProgram() => Command(robot.ProgramNew);
     public void SaveProgram() => Command(robot.ProgramSave);

@@ -1,3 +1,4 @@
+using System.Text;
 using Xunit;
 
 namespace Melfa.Robot.Tests;
@@ -42,6 +43,59 @@ public class SafetyTests
     }
 
     [Theory]
+    [InlineData("TEST")]
+    [InlineData("1")]
+    public void ReadProgramNameAcceptsAProgramName(string name) =>
+        Assert.Equal(name, SafetyConfig.ReadProgramName(key => key == "MELFA_TEST_READ_PROGRAM" ? name : null));
+
+    [Theory]
+    [InlineData(null)]
+    [InlineData("")]
+    [InlineData("TEST.MB6")]
+    [InlineData("TEST;FDEL")]
+    [InlineData("TOOLONGNAME")]
+    public void ReadProgramNameRejectsMissingOrUnsafeNames(string? name) =>
+        Assert.Throws<InvalidOperationException>(() => SafetyConfig.ReadProgramName(key => key == "MELFA_TEST_READ_PROGRAM" ? name : null));
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    [InlineData(10)]
+    [InlineData(11)]
+    [InlineData(15)]
+    public void ProgramFilePreviewLimitsLinesAndReportsRemainder(int count)
+    {
+        var lines = Enumerable.Range(1, count).Select(i => $"{i} Hlt").ToArray();
+        using var contents = new MemoryStream(Encoding.ASCII.GetBytes(string.Join("\r\n", lines) + (count > 0 ? "\r\n" : "")));
+        var expected = lines.Take(10).ToList();
+        if (count > 10)
+            expected.Add($"... {count - 10} more lines");
+        Assert.Equal(expected, ProgramFilePreview.ReadLines(contents));
+    }
+
+    [Fact]
+    public void ProgramFilePreviewEscapesNonAsciiBytes()
+    {
+        using var contents = new MemoryStream(new byte[] { 0x48, 0x69, 0x80, 0xff, 0x35, 0x28 });
+        Assert.Equal(new[] { @"Hi\x80\xFF5(" }, ProgramFilePreview.ReadLines(contents));
+    }
+
+    [Fact]
+    public void ProgramFilePreviewEscapesEveryNonAsciiByte()
+    {
+        var bytes = Enumerable.Range(128, 128).Select(value => (byte)value).ToArray();
+        using var contents = new MemoryStream(bytes);
+        Assert.Equal(new[] { string.Concat(bytes.Select(value => $"\\x{value:X2}")) }, ProgramFilePreview.ReadLines(contents));
+    }
+
+    [Fact]
+    public void ProgramFilePreviewDoesNotAutoDetectUtf8()
+    {
+        using var contents = new MemoryStream(new byte[] { 0xef, 0xbb, 0xbf, 0x41 });
+        Assert.Equal(new[] { @"\xEF\xBB\xBFA" }, ProgramFilePreview.ReadLines(contents));
+    }
+
+    [Theory]
     [InlineData("MELFA_TEST_WRITE", "true")]
     [InlineData("MELFA_TEST_READ", "yes")]
     [InlineData("MELFA_TEST_HOST", "localhost;1")]
@@ -54,12 +108,32 @@ public class SafetyTests
     [InlineData("MELFA_TEST_EXCLUSIVE_SCRATCH_CONFIRMED", "0")]
     [InlineData("MELFA_TEST_SCRATCH_PROGRAM", "A;SAVE")]
     [InlineData("MELFA_TEST_SCRATCH_LINE", "0")]
-    [InlineData("MELFA_TEST_SCRATCH_JOINT", "J_01")]
+    [InlineData("MELFA_TEST_SCRATCH_JOINT", "J1;SAVE")]
+    [InlineData("MELFA_TEST_SCRATCH_JOINT", "1JOINT")]
+    [InlineData("MELFA_TEST_SCRATCH_JOINT", "J1\r")]
     public void InvalidConfigurationFailsClosed(string key, string value)
     {
         var env = WriteEnvironment();
         env[key] = value;
         Assert.Throws<InvalidOperationException>(() => Load(env, true));
+    }
+
+    [Theory]
+    [InlineData("J1")]
+    [InlineData("JPOS1")]
+    [InlineData("P1")]
+    [InlineData("ScratchJoint")]
+    [InlineData("J_01")]
+    public void ScratchJointAcceptsVariableNamesWithoutAPrefixConvention(string name)
+    {
+        var env = WriteEnvironment();
+        env["MELFA_TEST_SCRATCH_JOINT"] = name;
+        var config = Load(env, true)!;
+        Assert.Equal(name, config.Joint);
+        var fake = new FakeRobot();
+        ScratchOperations.EditJoint(fake, config.Joint!);
+        Assert.All(fake.VariableNames, actual => Assert.Equal(name, actual));
+        Assert.Equal(6, fake.VariableNames.Count);
     }
 
     [Theory]
@@ -240,6 +314,7 @@ public class SafetyTests
         public string? Fail;
         public bool FailFirstSet;
         public bool IgnoreFirstSet;
+        public readonly List<string> VariableNames = new();
         public PositionJ Position = new(1, 2, 3, 4, 5, 6, 7, 8);
         private void Call(string name)
         {
@@ -254,10 +329,11 @@ public class SafetyTests
         public void DeleteFile(string name) { Call("delete"); Exists = false; }
         public string GetLine(int line) { Call("line"); return $"{line} End"; }
         public void EditLine(int line, string content) => Call("edit");
-        public Type VariableType(string name) { Call("type"); return typeof(PositionJ); }
-        public PositionJ GetJointVariable(string name) { Call("position"); return Position; }
+        public Type VariableType(string name) { VariableNames.Add(name); Call("type"); return typeof(PositionJ); }
+        public PositionJ GetJointVariable(string name) { VariableNames.Add(name); Call("position"); return Position; }
         public void SetVariable(string name, string value)
         {
+            VariableNames.Add(name);
             Call("set");
             if (IgnoreFirstSet) { IgnoreFirstSet = false; return; }
             Position = new PositionJ(value);

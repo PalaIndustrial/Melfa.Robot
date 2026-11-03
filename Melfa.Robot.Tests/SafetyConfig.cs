@@ -32,8 +32,8 @@ internal sealed record SafetyConfig(string Host, int Port, int Robot, int Delay,
             throw new InvalidOperationException("Scratch program must be 1-8 ASCII alphanumeric characters, without an extension.");
         var line = Number(get, "MELFA_TEST_SCRATCH_LINE", null, 1, 999999);
         var joint = Required(get, "MELFA_TEST_SCRATCH_JOINT");
-        if (!Regex.IsMatch(joint, @"\AJ[1-9][0-9]{0,5}\z", RegexOptions.CultureInvariant))
-            throw new InvalidOperationException("Scratch joint must be a local J variable such as J1.");
+        if (!Regex.IsMatch(joint, @"\A[A-Za-z][A-Za-z0-9_]*\z", RegexOptions.CultureInvariant))
+            throw new InvalidOperationException("Scratch joint must be a valid variable name.");
         return new(host, port, robot, delay, program, line, joint);
     }
 
@@ -46,6 +46,14 @@ internal sealed record SafetyConfig(string Host, int Port, int Robot, int Delay,
 
     private static string Required(Func<string, string?> get, string name) =>
         string.IsNullOrEmpty(get(name)) ? throw new InvalidOperationException($"{name} is required.") : get(name)!;
+
+    internal static string ReadProgramName(Func<string, string?> get)
+    {
+        var name = Required(get, "MELFA_TEST_READ_PROGRAM");
+        if (!Regex.IsMatch(name, @"\A[A-Za-z0-9]{1,8}\z", RegexOptions.CultureInvariant))
+            throw new InvalidOperationException("Read program must be 1-8 ASCII alphanumeric characters, without an extension.");
+        return name;
+    }
 
     private static int Number(Func<string, string?> get, string name, int? defaultValue, int min, int max)
     {
@@ -64,6 +72,16 @@ internal sealed class ReadFactAttribute : FactAttribute
     {
         if (Environment.GetEnvironmentVariable("MELFA_TEST_READ") is null or "" or "0")
             Skip = "Set MELFA_TEST_READ=1 and configure a robot or simulator to enable.";
+    }
+}
+
+internal sealed class ReadProgramFactAttribute : FactAttribute
+{
+    public ReadProgramFactAttribute()
+    {
+        if (Environment.GetEnvironmentVariable("MELFA_TEST_READ") is null or "" or "0" ||
+            Environment.GetEnvironmentVariable("MELFA_TEST_READ_PROGRAM") is null or "")
+            Skip = "Set MELFA_TEST_READ=1 and MELFA_TEST_READ_PROGRAM to a manually prepared program.";
     }
 }
 
