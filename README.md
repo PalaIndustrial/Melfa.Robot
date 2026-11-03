@@ -81,6 +81,21 @@ var voltage = robot.ServoVoltage;
 Servo monitor arrays contain J1 through J8 in order, including unused axes.
 Each property reads a new controller snapshot.
 
+## Read error history and summaries
+```C#
+var latest = robot.GetErrorHistory(LocationType.Top);
+var filtered = robot.GetFilteredErrorHistory(LocationType.Top, "414000000", ErrorSeverity.Low);
+var summary = robot.GetErrorSummaryWithLastOccurrence(1);
+var start = robot.ErrorLogStartDate;
+```
+
+History reads return `null` when no entry is available. Summary responses retain
+the total count even when `Entry` is `null`. Dates and times are returned as
+controller strings (`yy-MM-dd` and `HH:mm:ss`) without assuming a century or
+time zone. History navigation and filters use a controller-side cursor shared
+with other history reads; do not interleave independent traversals. `ERRLOG2=`
+and `ERRSUM2=` are not available on all controller models.
+
 ## Clean-up
 ```C#
 robot.Close();

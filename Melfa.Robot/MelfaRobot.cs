@@ -829,22 +829,65 @@ public partial class MelfaRobot : IDisposable
             throw MelfaRobotException.FromCommandResult(ret);
     }
 
-    // TODO: ERRORLOG - Error history read
-    // TODO: ERRLOG2= - Error history reading / Error details number narrowing seeing
+    /// <summary>[ERRORMES] Read error contents from the controller.</summary>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public string GetErrorMessage(int errorNumber)
+    {
+        if (errorNumber < 0)
+            throw new ArgumentOutOfRangeException(nameof(errorNumber));
+        return DoCommandInternal($"ERRORMES{errorNumber}");
+    }
+
+    /// <summary>[ERRORLOG] Read an error history entry, or null if no history is available.</summary>
+    /// <remarks>Top is newest, Bottom oldest; Next and Previous navigate the controller's shared history cursor.</remarks>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ErrorHistoryEntry GetErrorHistory(LocationType position) =>
+        ParseErrorHistory(DoCommandInternal($"ERRORLOG{position.ToProgramLocationCommandString()}"));
+
+    /// <summary>[ERRLOG2=] Read filtered error history, or null if no history matches.</summary>
+    /// <param name="position">History position.</param>
+    /// <param name="severity">High, low, caution or all; null selects all levels.</param>
+    /// <param name="detailedErrorNumber">A 6-9 digit detail number.</param>
+    /// <remarks>Next and Previous use the controller's last filter and shared history cursor.</remarks>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ErrorHistoryEntry GetFilteredErrorHistory(LocationType position, string detailedErrorNumber, ErrorSeverity? severity = null)
+    {
+        var level = ErrorHistoryFilterLevel(severity);
+        if (detailedErrorNumber == null || !Regex.IsMatch(detailedErrorNumber, @"\A[0-9]{6,9}\z"))
+            throw new ArgumentException("The detailed error number must contain 6 to 9 digits.", nameof(detailedErrorNumber));
+        return ParseErrorHistory(DoCommandInternal($"ERRLOG2={position.ToProgramLocationCommandString()};{level};{detailedErrorNumber}"));
+    }
 
     /// <summary>[ERRLOGCLR] Error history clear</summary>
-    /// <param name="severity">Error severity</param>
+    /// <param name="severity">High, low, caution, or all error levels.</param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void ClearErrorLog(ErrorSeverity severity) => DoCommandInternal($"ERRLOGCLR{(int)severity}");
+    public void ClearErrorLog(ErrorSeverity severity) => DoCommandInternal($"ERRLOGCLR{ErrorHistoryFilterLevel(severity)}");
 
-    // TODO: ERRSUM - Error summary
-    // TODO: ERRSUM2= - error summary
+    /// <summary>[ERRSUM] Read an error summary entry by index (1-100).</summary>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ErrorSummary GetErrorSummary(int index) => ReadErrorSummary(index, false);
+
+    /// <summary>[ERRSUM2=] Read an error summary entry and its last occurrence by index (1-100).</summary>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ErrorSummary GetErrorSummaryWithLastOccurrence(int index) => ReadErrorSummary(index, true);
 
     /// <summary>[ERRSUMCLR] Clear error summary</summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void ClearErrorSummary() => DoCommandInternal("ERRSUMCLR");
 
-    // TODO: SUMDATE - Date when error logging function began
+    /// <summary>[SUMDATE0] Date and time when error history collection began.</summary>
+    public ErrorTimestamp ErrorLogStartDate
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ParseErrorTimestampResponse(DoCommandInternal("SUMDATE0"));
+    }
+
+    /// <summary>[SUMDATE1] Date and time when error summary collection began.</summary>
+    public ErrorTimestamp ErrorSummaryStartDate
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ParseErrorTimestampResponse(DoCommandInternal("SUMDATE1"));
+    }
 
     /// <summary>[VAL] Read the value of a named variable.</summary>
     /// <remarks>Use the edit slot (typically TASKMAX+1) to read edit-slot variables.</remarks>

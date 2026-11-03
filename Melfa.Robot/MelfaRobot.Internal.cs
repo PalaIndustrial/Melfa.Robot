@@ -23,6 +23,81 @@ public partial class MelfaRobot
     private bool _requireResponseTerminator;
     private TcpClient _Client = null;
 
+    private static int ErrorHistoryFilterLevel(ErrorSeverity? severity) => severity switch
+    {
+        null => 0,
+        ErrorSeverity.All => 0,
+        ErrorSeverity.High => 1,
+        ErrorSeverity.Low => 2,
+        ErrorSeverity.Caution => 3,
+        _ => throw new ArgumentOutOfRangeException(nameof(severity)),
+    };
+
+    private static ErrorSeverity ParseErrorSeverity(string value) => value switch
+    {
+        "1" or "H" => ErrorSeverity.High,
+        "2" or "L" => ErrorSeverity.Low,
+        "3" or "C" => ErrorSeverity.Caution,
+        _ => throw new InvalidDataException($"Invalid error severity: {value}"),
+    };
+
+    private static int ParseErrorCount(string value)
+    {
+        if (!int.TryParse(value, NumberStyles.None, CultureInfo.InvariantCulture, out var result))
+            throw new InvalidDataException($"Invalid error count or number: {value}");
+        return result;
+    }
+
+    private static ErrorTimestamp ParseErrorTimestamp(string date, string time)
+    {
+        if (!DateTime.TryParseExact($"{date} {time}", "yy-MM-dd HH:mm:ss",
+            CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            throw new InvalidDataException($"Invalid controller date and time: {date};{time}");
+        return new ErrorTimestamp(date, time);
+    }
+
+    private static ErrorTimestamp ParseErrorTimestampResponse(string result)
+    {
+        var fields = result.Split(';');
+        if (fields.Length != 2)
+            throw new InvalidDataException($"Unexpected error timestamp response: {result}");
+        return ParseErrorTimestamp(fields[0], fields[1]);
+    }
+
+    private static ErrorHistoryEntry ParseErrorHistory(string result)
+    {
+        if (result.Length == 0)
+            return null;
+        var fields = result.Split(';');
+        if (fields.Length != 8 || !Regex.IsMatch(fields[7], @"\A[0-9]{1,9}\z"))
+            throw new InvalidDataException($"Unexpected error history response: {result}");
+        return new ErrorHistoryEntry(ParseErrorTimestamp(fields[0], fields[1]), ParseErrorCount(fields[2]),
+            fields[3], ParseErrorSeverity(fields[4]), fields[5], ParseErrorCount(fields[6]), fields[7]);
+    }
+
+    private ErrorSummary ReadErrorSummary(int index, bool includeLastOccurrence)
+    {
+        if (index < 1 || index > 100)
+            throw new ArgumentOutOfRangeException(nameof(index));
+        var result = DoCommandInternal(includeLastOccurrence ? $"ERRSUM2={index}" : $"ERRSUM{index}");
+        var fields = result.Split(';');
+        if (fields.Length != (includeLastOccurrence ? 9 : 7) ||
+            !Regex.IsMatch(fields[1], @"\A[0-9]{9}\z"))
+            throw new InvalidDataException($"Unexpected error summary response: {result}");
+        var totalCount = ParseErrorCount(fields[0]);
+        var occurrences = ParseErrorCount(fields[6]);
+        if (fields[1] == "000000000")
+        {
+            if (fields[2] != "" || fields[3] != "" || fields[4] != "" || fields[5] != "" ||
+                occurrences != 0 || (includeLastOccurrence && (fields[7] != "" || fields[8] != "")))
+                throw new InvalidDataException($"Unexpected empty error summary response: {result}");
+            return new ErrorSummary(totalCount, null);
+        }
+        var timestamp = includeLastOccurrence ? ParseErrorTimestamp(fields[7], fields[8]) : null;
+        return new ErrorSummary(totalCount, new ErrorSummaryEntry(fields[1], ParseErrorSeverity(fields[2]),
+            fields[3], fields[4], fields[5], occurrences, timestamp));
+    }
+
     private string[] ReadServoFields(string command, int count)
     {
         var fields = DoCommandInternal(command).Split(';');
