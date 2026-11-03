@@ -105,6 +105,9 @@ public partial struct PositionJ : IPosition, IEquatable<PositionJ>
             PositionHelper.UInt32FromString(match.Groups["OVRD"].Value);
             PositionHelper.DoubleFromString(match.Groups["ENDSPEED"].Value);
             var axes = RegexHelper.PositionJointAxisRegex().Matches(match.Groups["POS"].Value);
+            var names = new HashSet<string>(axes.Cast<Match>().Select(axis => axis.Groups["AXIS"].Value), StringComparer.Ordinal);
+            if (!new[] { nameof(J1), nameof(J2), nameof(J3), nameof(J4), nameof(J5), nameof(J6) }.All(names.Contains))
+                throw new FormatException("Required joint axis is missing.");
             return new PositionJ(axes);
         }
         catch (Exception ex) when (ex is FormatException || ex is OverflowException || ex is PositionParseException)

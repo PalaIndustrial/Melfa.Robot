@@ -55,8 +55,8 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
             A = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(A)].Value));
             B = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(B)].Value));
             C = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(C)].Value));
-            L1 = PositionHelper.DoubleFromString(match.Groups[nameof(L1)].Value);
-            L2 = PositionHelper.DoubleFromString(match.Groups[nameof(L2)].Value);
+            L1 = match.Groups[nameof(L1)].Success ? PositionHelper.DoubleFromString(match.Groups[nameof(L1)].Value) : double.NaN;
+            L2 = match.Groups[nameof(L2)].Success ? PositionHelper.DoubleFromString(match.Groups[nameof(L2)].Value) : double.NaN;
             var flag = match.Groups[nameof(FLG1)].Value;
             FLG1 = char.IsLetter(flag[0])
                 ? (PositionConfig)Enum.Parse(typeof(PositionConfig), flag, true)
@@ -106,6 +106,8 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
                 default: throw new FormatException("Invalid position axis.");
             }
         }
+        if (!new[] { nameof(X), nameof(Y), nameof(Z), nameof(A), nameof(B), nameof(C) }.All(seen.Contains))
+            throw new FormatException("Required position axis is missing.");
         FLG1 = (PositionConfig)checked((byte)PositionHelper.UInt32FromString(pmatch.Groups["FLG1"].Value));
         FLG2 = PositionHelper.UInt32FromString(pmatch.Groups["FLG2"].Value);
     }

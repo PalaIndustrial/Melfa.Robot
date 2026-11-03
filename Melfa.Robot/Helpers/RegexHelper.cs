@@ -71,9 +71,9 @@ internal static partial class RegexHelper
             @"\s*(?'Z'" + PositionValuePattern + @")\s*," +
             @"\s*(?'A'" + PositionValuePattern + @")\s*," +
             @"\s*(?'B'" + PositionValuePattern + @")\s*," +
-            @"\s*(?'C'" + PositionValuePattern + @")\s*," +
-            @"\s*(?'L1'" + PositionValuePattern + @")\s*," +
-            @"\s*(?'L2'" + PositionValuePattern + @")\s*" +
+            @"\s*(?'C'" + PositionValuePattern + @")\s*" +
+            @"(?:,\s*(?'L1'" + PositionValuePattern + @")\s*" +
+            @"(?:,\s*(?'L2'" + PositionValuePattern + @")\s*)?)?" +
         @"\)\s*\(" +
             @"\s*(?'FLG1'(?:0[xX][0-9a-fA-F]+|[0-9]+|[lLrR][bBaA][fFnN]))\s*," +
             @"\s*(?'FLG2'(?:0[xX][0-9a-fA-F]+|[0-9]+))\s*" +
