@@ -8,6 +8,7 @@ public partial class MelfaRobot
 {
     public readonly partial struct RobotInformation
     {
+        private readonly string _protocolPayload;
         /// <summary>XYZ axes pattern</summary>
         /// <remarks>
         ///     Bit 0: X<br />
@@ -52,6 +53,8 @@ public partial class MelfaRobot
         // QokFF;FF;7,0;3,5,A,1E,32,46,64;MB5;PRM;RV-13FLM-D;CRnX-7xx;MELFA;17-10-06;Ver.S7e;ENG;COPYRIGHT(C)2008-2017 MITSUBISHI ELECTRIC CORPORATION ALL RIGHTS RESERVED;1;3;8;
         public RobotInformation(string raw)
         {
+            _protocolPayload = (raw.StartsWith("QoK", StringComparison.OrdinalIgnoreCase) ? raw.Substring(3) : raw)
+                .TrimEnd('\r', '\n');
             var match = RegexHelper.InfoRegex().Match(raw);
             AxisPatternXYZ = byte.Parse(match.Groups["P_AXIS_PATTERN"].Value, NumberStyles.HexNumber);
             AxisPatternJoint = byte.Parse(match.Groups["J_AXIS_PATTERN"].Value, NumberStyles.HexNumber);
@@ -83,5 +86,7 @@ public partial class MelfaRobot
             RobotInfo = match.Groups["ROBOT_INFO"].Value;
             MaximumTaskCount = int.Parse(match.Groups["TASKMAX"].Value);
         }
+
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 }

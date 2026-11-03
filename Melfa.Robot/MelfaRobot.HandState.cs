@@ -6,6 +6,7 @@ public partial class MelfaRobot
 {
     public readonly struct HandState
     {
+        private readonly string _protocolPayload;
         /// <summary>Signal number allocated in hand</summary>
         /// <remarks>-1: not used</remarks>
         public int SignalNumber { get; }
@@ -16,6 +17,7 @@ public partial class MelfaRobot
 
         internal HandState(Match match)
         {
+            _protocolPayload = match.Value;
             SignalNumber = int.Parse(match.Groups[nameof(SignalNumber)].Value);
             switch (int.Parse(match.Groups[nameof(State)].Value))
             {
@@ -25,5 +27,7 @@ public partial class MelfaRobot
             }
             HandType = (HandType)int.Parse(match.Groups[nameof(HandType)].Value);
         }
+
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 }

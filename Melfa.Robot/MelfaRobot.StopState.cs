@@ -5,8 +5,11 @@ public partial class MelfaRobot
     /// <summary>Run and stop status returned by DSTATE for one task slot.</summary>
     public readonly struct DetailedState
     {
-        internal DetailedState(int slot, RunStatus run, StopStatus stop, int error, int step, int mechanism)
+        private readonly string _protocolPayload;
+
+        internal DetailedState(int slot, RunStatus run, StopStatus stop, int error, int step, int mechanism, string protocolPayload)
         {
+            _protocolPayload = protocolPayload;
             TaskSlot = slot;
             RunStatus = run;
             StopStatus = stop;
@@ -22,18 +25,23 @@ public partial class MelfaRobot
         public int ErrorNumber { get; }
         public int StepNumber { get; }
         public int MechanismNumber { get; }
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 
     /// <summary>Stop and emergency-stop signal masks returned by STPSIG.</summary>
     public readonly struct StopSignalState
     {
-        internal StopSignalState(StopSignalSource stop, EmergencyStopSource emergencyStop)
+        private readonly string _protocolPayload;
+
+        internal StopSignalState(StopSignalSource stop, EmergencyStopSource emergencyStop, string protocolPayload)
         {
+            _protocolPayload = protocolPayload;
             Stop = stop;
             EmergencyStop = emergencyStop;
         }
 
         public StopSignalSource Stop { get; }
         public EmergencyStopSource EmergencyStop { get; }
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 }

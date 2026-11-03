@@ -8,8 +8,11 @@ public partial class MelfaRobot
     /// <summary>A page of variable data returned by VALS or GVALS.</summary>
     public sealed class VariablePage
     {
-        internal VariablePage(ImmutableArray<KeyValuePair<string, string>> variables, bool hasMore)
+        private readonly string _protocolPayload;
+
+        internal VariablePage(ImmutableArray<KeyValuePair<string, string>> variables, bool hasMore, string protocolPayload)
         {
+            _protocolPayload = protocolPayload;
             Variables = variables;
             HasMore = hasMore;
         }
@@ -19,5 +22,6 @@ public partial class MelfaRobot
 
         /// <summary>Whether the controller reports more variables.</summary>
         public bool HasMore { get; }
+        public override string ToString() => _protocolPayload;
     }
 }

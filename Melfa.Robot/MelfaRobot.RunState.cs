@@ -6,6 +6,7 @@ public partial class MelfaRobot
 {
     public readonly partial struct RunState
     {
+        private readonly string _protocolPayload;
         /// <summary>The task slot this state is associated with</summary>
         public int TaskSlot { get; }
 
@@ -36,6 +37,7 @@ public partial class MelfaRobot
 
         internal RunState(string ret, int slot)
         {
+            _protocolPayload = ret;
             TaskSlot = slot;
             var match = RegexHelper.RunStateRegex().Match(ret);
             ProgramName = match.Groups[nameof(ProgramName)].Value;
@@ -64,5 +66,7 @@ public partial class MelfaRobot
             TaskPriority = int.Parse(match.Groups[nameof(TaskPriority)].Value);
             MechNumber = int.Parse(match.Groups[nameof(MechNumber)].Value);
         }
+
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 }

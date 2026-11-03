@@ -5,8 +5,11 @@ public partial class MelfaRobot
     /// <summary>Installation status returned by CALIB.</summary>
     public readonly struct CalibrationInfo
     {
-        internal CalibrationInfo(bool isDefined, byte completedAxisMask, string reserved)
+        private readonly string _protocolPayload;
+
+        internal CalibrationInfo(bool isDefined, byte completedAxisMask, string reserved, string protocolPayload)
         {
+            _protocolPayload = protocolPayload;
             IsDefined = isDefined;
             CompletedAxisMask = completedAxisMask;
             Reserved = reserved;
@@ -18,5 +21,6 @@ public partial class MelfaRobot
         public byte CompletedAxisMask { get; }
         /// <summary>Any remaining reserved response data, retained as returned by the controller.</summary>
         public string Reserved { get; }
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 }

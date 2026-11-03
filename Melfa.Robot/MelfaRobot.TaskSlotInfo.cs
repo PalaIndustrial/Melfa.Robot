@@ -4,6 +4,7 @@ public partial class MelfaRobot
 {
     public readonly struct TaskSlotInfo
     {
+        private readonly string _protocolPayload;
         public int Slot { get; }
         /// <summary>Program name of slot table</summary>
         public string ProgramName { get; }
@@ -16,6 +17,7 @@ public partial class MelfaRobot
 
         internal TaskSlotInfo(string raw, int slot)
         {
+            _protocolPayload = raw;
             Slot = slot;
             var values = raw.Split(';');
             ProgramName = values[0];
@@ -34,5 +36,7 @@ public partial class MelfaRobot
             }
             Priority = int.Parse(values[3]);
         }
+
+        public override string ToString() => RequireProtocolPayload(_protocolPayload);
     }
 }

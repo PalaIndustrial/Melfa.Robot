@@ -7,10 +7,13 @@ public partial class MelfaRobot
     /// <summary>Hour-meter values reported by PTIME.</summary>
     public sealed class HourMeterData
     {
+        private readonly string _protocolPayload;
+
         internal HourMeterData(long powerOn, long allServoOn, ImmutableArray<long> mechanismServoOn,
             ImmutableArray<long> reserved, long programOperation, long reservedAfterProgram,
-            long batteryAccumulation, long batteryRemaining, long mechanismInformation)
+            long batteryAccumulation, long batteryRemaining, long mechanismInformation, string protocolPayload)
         {
+            _protocolPayload = protocolPayload;
             PowerOnHours = powerOn;
             AllMechanismsServoOnHours = allServoOn;
             MechanismServoOnHours = mechanismServoOn;
@@ -34,13 +37,17 @@ public partial class MelfaRobot
         public long BatteryRemainingHours { get; }
         /// <summary>Mechanism mask; bits 0-2 represent mechanisms 1-3.</summary>
         public long MechanismInformation { get; }
+        public override string ToString() => _protocolPayload;
     }
 
     /// <summary>Program operation and cycle measurements reported by CYCLETIME.</summary>
     public sealed class CycleTimeData
     {
-        internal CycleTimeData(long operation, long latest, long average, long count)
+        private readonly string _protocolPayload;
+
+        internal CycleTimeData(long operation, long latest, long average, long count, string protocolPayload)
         {
+            _protocolPayload = protocolPayload;
             OperationMilliseconds = operation;
             LatestCycleMilliseconds = latest;
             AverageCycleMilliseconds = average;
@@ -51,5 +58,6 @@ public partial class MelfaRobot
         public long LatestCycleMilliseconds { get; }
         public long AverageCycleMilliseconds { get; }
         public long CycleCount { get; }
+        public override string ToString() => _protocolPayload;
     }
 }

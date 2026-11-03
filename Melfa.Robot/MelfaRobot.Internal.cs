@@ -24,6 +24,9 @@ public partial class MelfaRobot
     private bool _requireResponseTerminator;
     private TcpClient _Client = null;
 
+    private static string RequireProtocolPayload(string payload) =>
+        payload ?? throw new InvalidOperationException("The default value has no protocol response.");
+
     private static Breakpoint ParseBreakpoint(string response)
     {
         var fields = response.Split(';');
@@ -33,7 +36,7 @@ public partial class MelfaRobot
             (fields[2] != "0" && fields[2] != "1"))
             throw new InvalidDataException($"Unexpected BRKPTGET response: {response}");
         return new Breakpoint(fields[0], line,
-            fields[2] == "0" ? BreakpointType.Continuous : BreakpointType.OneTime);
+            fields[2] == "0" ? BreakpointType.Continuous : BreakpointType.OneTime, response);
     }
 
     private static CalibrationInfo ParseCalibration(string response)
@@ -41,7 +44,7 @@ public partial class MelfaRobot
         if (response.Length < 3 || (response[0] != 'N' && response[0] != 'F') ||
             !byte.TryParse(response.Substring(1, 2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var axes))
             throw new InvalidDataException($"Unexpected CALIB response: {response}");
-        return new CalibrationInfo(response[0] == 'N', axes, response.Substring(3));
+        return new CalibrationInfo(response[0] == 'N', axes, response.Substring(3), response);
     }
 
     private static DetailedState ParseDetailedState(string response, int slot)
@@ -54,7 +57,7 @@ public partial class MelfaRobot
             !int.TryParse(fields[1], NumberStyles.None, CultureInfo.InvariantCulture, out var step) ||
             !int.TryParse(fields[2], NumberStyles.None, CultureInfo.InvariantCulture, out var mechanism))
             throw new InvalidDataException($"Unexpected DSTATE response: {response}");
-        return new DetailedState(slot, (RunStatus)run, (StopStatus)stop, error, step, mechanism);
+        return new DetailedState(slot, (RunStatus)run, (StopStatus)stop, error, step, mechanism, response);
     }
 
     private static StopSignalState ParseStopSignals(string response)
@@ -64,7 +67,7 @@ public partial class MelfaRobot
             !uint.TryParse(fields[0], NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var stop) ||
             !uint.TryParse(fields[1], NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var emergencyStop))
             throw new InvalidDataException($"Unexpected STPSIG response: {response}");
-        return new StopSignalState((StopSignalSource)stop, (EmergencyStopSource)emergencyStop);
+        return new StopSignalState((StopSignalSource)stop, (EmergencyStopSource)emergencyStop, response);
     }
 
     private static int ErrorHistoryFilterLevel(ErrorSeverity? severity) => severity switch
@@ -132,7 +135,7 @@ public partial class MelfaRobot
         for (var i = 0; i < fields.Length; i++)
             values[i] = ParseTimeCounter(fields[i]);
         return new HourMeterData(values[0], values[1], ImmutableArray.Create(values, 2, 3),
-            ImmutableArray.Create(values, 5, 12), values[17], values[18], values[19], values[20], values[21]);
+            ImmutableArray.Create(values, 5, 12), values[17], values[18], values[19], values[20], values[21], response);
     }
 
     private CycleTimeData ReadCycleTime(string program)
@@ -142,7 +145,7 @@ public partial class MelfaRobot
         if (fields.Length != 4)
             throw new InvalidDataException($"Unexpected CYCLETIME response: {response}");
         return new CycleTimeData(ParseTimeCounter(fields[0]), ParseTimeCounter(fields[1]),
-            ParseTimeCounter(fields[2]), ParseTimeCounter(fields[3]));
+            ParseTimeCounter(fields[2]), ParseTimeCounter(fields[3]), response);
     }
 
     private static ErrorTimestamp ParseErrorTimestampResponse(string result)
@@ -161,7 +164,7 @@ public partial class MelfaRobot
         if (fields.Length != 8 || !Regex.IsMatch(fields[7], @"\A[0-9]{1,9}\z"))
             throw new InvalidDataException($"Unexpected error history response: {result}");
         return new ErrorHistoryEntry(ParseErrorTimestamp(fields[0], fields[1]), ParseErrorCount(fields[2]),
-            fields[3], ParseErrorSeverity(fields[4]), fields[5], ParseErrorCount(fields[6]), fields[7]);
+            fields[3], ParseErrorSeverity(fields[4]), fields[5], ParseErrorCount(fields[6]), fields[7], result);
     }
 
     private ErrorSummary ReadErrorSummary(int index, bool includeLastOccurrence)
@@ -180,11 +183,11 @@ public partial class MelfaRobot
             if (fields[2] != "" || fields[3] != "" || fields[4] != "" || fields[5] != "" ||
                 occurrences != 0 || (includeLastOccurrence && (fields[7] != "" || fields[8] != "")))
                 throw new InvalidDataException($"Unexpected empty error summary response: {result}");
-            return new ErrorSummary(totalCount, null);
+            return new ErrorSummary(totalCount, null, result);
         }
         var timestamp = includeLastOccurrence ? ParseErrorTimestamp(fields[7], fields[8]) : null;
         return new ErrorSummary(totalCount, new ErrorSummaryEntry(fields[1], ParseErrorSeverity(fields[2]),
-            fields[3], fields[4], fields[5], occurrences, timestamp));
+            fields[3], fields[4], fields[5], occurrences, timestamp, result.Substring(result.IndexOf(';') + 1)), result);
     }
 
     private string[] ReadServoFields(string command, int count)
@@ -268,7 +271,7 @@ public partial class MelfaRobot
         }
         if (variables.Count != count)
             throw new InvalidDataException($"Unexpected variable count in response: {result}");
-        return new VariablePage(variables.ToImmutable(), result.Substring(flagSeparator + 1) == "1");
+        return new VariablePage(variables.ToImmutable(), result.Substring(flagSeparator + 1) == "1", result);
     }
 
     private static KeyValuePair<string, string> ParseVariableEntry(string entry)
