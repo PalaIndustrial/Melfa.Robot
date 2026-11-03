@@ -84,6 +84,27 @@ public class PositionTests
     }
 
     [Fact]
+    public void DocumentedListpPositionAllowsOmittedExternalAxes()
+    {
+        const string response = "P1=(+400.13,+0.00,+644.62,+180.00,+0.00,+180.00)(7,0)";
+        var position = new PositionP(response.Substring(response.IndexOf('=') + 1));
+        Assert.Equal(400.13, position.X);
+        Assert.Equal(644.62, position.Z);
+        Assert.Equal(-180, position.A);
+        Assert.Equal(-180, position.C);
+        Assert.Equal(PositionConfig.RAN, position.FLG1);
+        Assert.Equal(0u, position.FLG2);
+        Assert.True(double.IsNaN(position.L1));
+        Assert.True(double.IsNaN(position.L2));
+        Assert.Equal(position, new PositionP(position.ToString()));
+
+        var withL1 = new PositionP("(1,2,3,4,5,6,+7.25)(7,0)");
+        Assert.Equal(7.25, withL1.L1);
+        Assert.True(double.IsNaN(withL1.L2));
+        Assert.Throws<PositionParseException>(() => new PositionP("(1,2,3,4,5,6,)(7,0)"));
+    }
+
+    [Fact]
     public void CommandResponsesSupportSixThroughEightAxesAndOptionalPrefix()
     {
         Assert.True(double.IsNaN(PositionJ.FromCommand(JointResponse).J8));
@@ -103,6 +124,8 @@ public class PositionTests
             JointResponse.Replace("J1;+1.25;", "J1;1x25;"),
             JointResponse.Replace("J2;-2.50;", "J1;-2.50;"),
             JointResponse.Replace("J6;6.0;", ""),
+            JointResponse.Replace("J1;+1.25;", "J7;7.0;"),
+            JointResponse.Replace("J3;3;", "J7;7.0;J8;8.0;"),
             JointResponse.Replace("J1;+1.25;", "J1;1e9999;"),
             JointResponse.Replace("0.00;00000000", "0x00;00000000"),
             JointResponse.Replace("****,****", "****,***")
@@ -118,6 +141,8 @@ public class PositionTests
             CartesianResponse.Replace("X;+1.25;", "X;1x25;"),
             CartesianResponse.Replace("Y;-2.50;", "X;-2.50;"),
             CartesianResponse.Replace("C;540;", "").Replace("L1;7.0;", ""),
+            CartesianResponse.Replace("X;+1.25;", "L2;8.0;"),
+            CartesianResponse.Replace("Z;3;", "L2;8.0;"),
             CartesianResponse.Replace("6,4294967295", "256,0"),
             CartesianResponse.Replace("6,4294967295", "6,4294967296"),
             CartesianResponse.Replace("0.00;00000000", "1e9999;00000000")
