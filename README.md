@@ -1,12 +1,27 @@
 # Melfa.Robot
 
+## SAFETY NOTE
+
+!!! IMPORTANT !!!
+
+**THIS IS AN UNOFFICIAL ROBOT PROTOCOL LIBRARY INTENDED FOR EDUCATIONAL AND
+TESTING PURPOSES. USING IT TO CONTROL A REAL-WORLD ROBOT IS STRONGLY
+DISCOURAGED.**
+
+**THE AUTHOR ACCEPTS NO RESPONSIBILITY FOR ANY HARM OR DAMAGE
+RESULTING FROM OPERATING A REAL ROBOT WITH THIS LIBRARY.**
+
+!!! IMPORTANT !!!
+
+## Description
+
 This is a implementation of [Mitsubishi Electronics Factory Automation (MELFA)
 ](https://www.mitsubishielectric.com/fa/) robot R-protocol client in C#.
 
 The R-protocol is described in **BFP-A4288**, the version this project consult is 
 **BFP-A4288-V (2018/11/15)**.
 
-# Configure the robot controller
+## Configure the robot controller
 
 Go to "Parameter -> Communication Parameterr -> Ethernet", Check the "Device & Line" tab.
 
@@ -28,15 +43,15 @@ If the controller reliably terminates every response with CR, set
 handles fragmented responses but does not support CR+LF. Do not rely on the
 short-read convention where an incomplete response could lead to unsafe actions.
 
-# Usage
-## Create the robot object
+## Usage
+### Create the robot object
 ```C#
 var robot = new MelfaRobot("localhost", 10001, 1); // use the port configured above
 robot.Connect();
 var info = robot.Open("ClientName");
 ```
 
-## Do something with the robot
+### Do something with the robot
 ```C#
 robot.OperationEnabled = true; // CTRLON
 robot.ServoOn = true; // SRVON
@@ -46,12 +61,12 @@ robot.Execute("MOV P1"); // none-blocking,
 robot.ExecuteBlocking("MOV P2"); // blocking until motion is completed (or error)
 ```
 
-## Load a program and run
+### Load a program and run
 ```C#
 robot.RunProgram("blah");
 ```
 
-## Read variables
+### Read variables
 ```C#
 var value = robot.ReadGlobalVariable("M_01", VariableClass.Integer);
 var page = robot.ReadVariables(LocationType.Top, VariableClass.Integer, slot: 1);
@@ -71,12 +86,12 @@ not interleave other variable reads while paging. The protocol manual shows
 both VT and semicolon-plus-VT separators; a semicolon immediately before VT is
 treated as a separator, making an unquoted value ending in semicolon ambiguous.
 
-## File transfers
+### File transfers
 
 `FileRead` and `FileWrite` manage `FOPEN` and `FCLOSE` internally. These
 commands are intentionally not exposed as standalone operations.
 
-## Read positions
+### Read positions
 
 `CurrentPositionJ`, `CurrentPositionP`, `DestinationPositionJ`, and
 `DestinationPositionP` intentionally read all axes. Access an individual axis
@@ -86,7 +101,7 @@ The protocol's single-axis reads may be a legacy optimization for slower
 serial connections such as RS-232; the bandwidth savings are likely negligible
 on Ethernet... maybe... i guess... probably......
 
-## Read servo monitor data
+### Read servo monitor data
 ```C#
 var encoder = robot.ServoEncoder;
 var j1PositionFeedback = encoder[0].PositionFeedback;
@@ -98,7 +113,7 @@ var voltage = robot.ServoVoltage;
 Servo monitor arrays contain J1 through J8 in order, including unused axes.
 Each property reads a new controller snapshot.
 
-## Read stop status
+### Read stop status
 ```C#
 var state = robot.GetDetailedState(slot: 1);
 var signals = robot.StopSignals;
@@ -111,14 +126,14 @@ independent safety systems for emergency stops.
 `robot.Calibration` reads installation status and the completed-axis mask;
 bits 0-7 of `CompletedAxisMask` correspond to J1-J8.
 
-## Read option information
+### Read option information
 
 `robot.GetOptionStatus(1)` reads information for an option slot (1-3) as
 returned by the controller. `robot.GetOptionStatus()` reads all slots and
 splits the response on VT (`\v`), preserving empty fields. The information
 format depends on the installed options.
 
-## Breakpoints
+### Breakpoints
 
 ```C#
 var breakpoint = robot.GetBreakpoint("TEST", 1, 10, 200);
@@ -137,7 +152,7 @@ the line or pass `0` to clear all breakpoints for that program.
 Setting and clearing breakpoints changes controller state. Use these commands
 only when appropriate for the connected robot or simulator.
 
-## Read controller time and meters
+### Read controller time and meters
 ```C#
 var clock = robot.ControllerClock;
 var hours = robot.HourMeter;
@@ -150,7 +165,7 @@ hours; cycle times are in milliseconds. Each read requests a new snapshot.
 The `PTIME` parser follows the manual's 22-field example; its description of
 reserved field separators is ambiguous, so verify it against your controller.
 
-## Read error history and summaries
+### Read error history and summaries
 ```C#
 var latest = robot.GetErrorHistory(LocationType.Top);
 var filtered = robot.GetFilteredErrorHistory(LocationType.Top, "414000000", ErrorSeverity.Low);
@@ -165,7 +180,7 @@ time zone. History navigation and filters use a controller-side cursor shared
 with other history reads; do not interleave independent traversals. `ERRLOG2=`
 and `ERRSUM2=` are not available on all controller models.
 
-## Clean-up
+### Clean-up
 ```C#
 robot.Close();
 robot.Disconnect();
@@ -183,14 +198,14 @@ before deciding whether to retry.
 are serialized. Do not rely on this library or network connection as an
 emergency stop; use the controller's independent safety systems.
 
-# Tests
+## Tests
 
 Run `dotnet test .\Melfa.Robot.Tests\Melfa.Robot.Tests.csproj`.
 The default tests use a loopback controller and do not require robot hardware.
 Robot and simulator integration tests are opt-in; see
 [`Melfa.Robot.Tests\README.md`](Melfa.Robot.Tests/README.md).
 
-# TODO
+## TODO
 
 Known missing or partial R-protocol functionality:
 
