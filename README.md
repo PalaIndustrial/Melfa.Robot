@@ -116,6 +116,12 @@ returned by the controller. `robot.GetOptionStatus()` reads all slots and
 splits the response on VT (`\v`), preserving empty fields. The information
 format depends on the installed options.
 
+## Read breakpoints
+
+`robot.GetBreakpoint("TEST", 1, 10, 200)` reads breakpoint 1 within the
+specified line range. Pass `null` or an empty program name to search all
+programs. The controller returns one breakpoint per request.
+
 ## Read controller time and meters
 ```C#
 var clock = robot.ControllerClock;

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -22,6 +23,18 @@ public partial class MelfaRobot
     private int _commandTimeout = 5000;
     private bool _requireResponseTerminator;
     private TcpClient _Client = null;
+
+    private static Breakpoint ParseBreakpoint(string response)
+    {
+        var fields = response.Split(';');
+        if (fields.Length != 3 || string.IsNullOrWhiteSpace(fields[0]) ||
+            fields[0].Any(char.IsControl) ||
+            !int.TryParse(fields[1], NumberStyles.None, CultureInfo.InvariantCulture, out var line) ||
+            (fields[2] != "0" && fields[2] != "1"))
+            throw new InvalidDataException($"Unexpected BRKPTGET response: {response}");
+        return new Breakpoint(fields[0], line,
+            fields[2] == "0" ? BreakpointType.Continuous : BreakpointType.OneTime);
+    }
 
     private static CalibrationInfo ParseCalibration(string response)
     {

@@ -652,7 +652,27 @@ public partial class MelfaRobot : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void ClearBreakpoint(string program, int line = 0) => DoCommandInternal($"BRKPTCLR={program};{line}");
 
-    // TODO: BRKPTGET - List breakpoint
+    /// <summary>[BRKPTGET] Read a breakpoint by number and line range.</summary>
+    /// <param name="program">Program name, or null or empty to search all programs.</param>
+    /// <param name="breakpointNumber">Breakpoint number, from 1 to 128.</param>
+    /// <param name="startLine">Start line of the search range.</param>
+    /// <param name="endLine">End line of the search range.</param>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public Breakpoint GetBreakpoint(string program, int breakpointNumber, int startLine, int endLine)
+    {
+        if (program != null && (program.Length > 0 && string.IsNullOrWhiteSpace(program) ||
+            program.Any(c => c == ';' || char.IsControl(c))))
+            throw new ArgumentException("Invalid program name.", nameof(program));
+        if (breakpointNumber < 1 || breakpointNumber > 128)
+            throw new ArgumentOutOfRangeException(nameof(breakpointNumber));
+        if (startLine < 0)
+            throw new ArgumentOutOfRangeException(nameof(startLine));
+        if (endLine < 0)
+            throw new ArgumentOutOfRangeException(nameof(endLine));
+        var command = string.Format(CultureInfo.InvariantCulture, "BRKPTGET={0};{1};{2};{3}",
+            program, breakpointNumber, startLine, endLine);
+        return ParseBreakpoint(DoCommandInternal(command));
+    }
 
     /// <summary>Get or set the tool number (0 ~ 16)</summary>
     public int Tool
