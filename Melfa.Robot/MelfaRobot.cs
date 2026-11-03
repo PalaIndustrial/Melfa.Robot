@@ -794,9 +794,31 @@ public partial class MelfaRobot : IDisposable
         get => PositionP.FromCommand(DoCommandInternal("GPPOSF"));
     }
 
-    // TODO: TIME - Time read
-    // TODO: TIME= - Time change
-    // TODO: PTIME - Hour meter read
+    /// <summary>[TIME] Controller clock as date (yy-MM-dd) and time (HH:mm:ss).</summary>
+    /// <remarks>The controller does not specify a century or time zone.</remarks>
+    public (string Date, string Time) ControllerClock
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadControllerClock();
+    }
+
+    /// <summary>[TIME=] Set the controller clock.</summary>
+    /// <param name="date">Date in yy-MM-dd format.</param>
+    /// <param name="time">Time in HH:mm:ss format.</param>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void SetControllerClock(string date, string time)
+    {
+        if (!IsValidControllerTimestamp(date, time))
+            throw new ArgumentException("Expected a valid date (yy-MM-dd) and time (HH:mm:ss).");
+        DoCommandInternal($"TIME={date}{time}");
+    }
+
+    /// <summary>[PTIME] Read hour-meter data.</summary>
+    public HourMeterData HourMeter
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ReadHourMeter();
+    }
 
     /// <summary>[PTIMEDEL=] Hour meter clear</summary>
     /// <remarks>The operating time of the robot is cleared.</remarks>
@@ -804,7 +826,15 @@ public partial class MelfaRobot : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void ClearHourMeter(HourMeterKind kind) => DoCommandInternal($"PTIMEDEL={kind.ToCommandString()}");
 
-    // TODO: CYCLETIME - Cycle time read
+    /// <summary>[CYCLETIME] Read a program's cycle-time data.</summary>
+    /// <param name="program">Program name.</param>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public CycleTimeData GetCycleTime(string program)
+    {
+        if (string.IsNullOrWhiteSpace(program) || program.Any(c => c == ';' || char.IsControl(c)))
+            throw new ArgumentException("Invalid program name.", nameof(program));
+        return ReadCycleTime(program);
+    }
 
     /// <summary>[CYCLECLR] Cycle time clear</summary>
     /// <remakrs>The operating time of the program is cleared</remakrs>

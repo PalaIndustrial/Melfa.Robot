@@ -81,6 +81,19 @@ var voltage = robot.ServoVoltage;
 Servo monitor arrays contain J1 through J8 in order, including unused axes.
 Each property reads a new controller snapshot.
 
+## Read controller time and meters
+```C#
+var clock = robot.ControllerClock;
+var hours = robot.HourMeter;
+var cycle = robot.GetCycleTime("100");
+```
+
+The clock uses `yy-MM-dd` and `HH:mm:ss` strings without a century or time
+zone; `SetControllerClock` accepts the same formats. Hour-meter values are in
+hours; cycle times are in milliseconds. Each read requests a new snapshot.
+The `PTIME` parser follows the manual's 22-field example; its description of
+reserved field separators is ambiguous, so verify it against your controller.
+
 ## Read error history and summaries
 ```C#
 var latest = robot.GetErrorHistory(LocationType.Top);

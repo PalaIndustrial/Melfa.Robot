@@ -48,12 +48,57 @@ public partial class MelfaRobot
         return result;
     }
 
+    private static bool IsValidControllerTimestamp(string date, string time) =>
+        DateTime.TryParseExact($"{date} {time}", "yy-MM-dd HH:mm:ss",
+            CultureInfo.InvariantCulture, DateTimeStyles.None, out _);
+
     private static ErrorTimestamp ParseErrorTimestamp(string date, string time)
     {
-        if (!DateTime.TryParseExact($"{date} {time}", "yy-MM-dd HH:mm:ss",
-            CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+        if (!IsValidControllerTimestamp(date, time))
             throw new InvalidDataException($"Invalid controller date and time: {date};{time}");
         return new ErrorTimestamp(date, time);
+    }
+
+    private (string Date, string Time) ReadControllerClock()
+    {
+        var result = DoCommandInternal("TIME");
+        if (result.Length != 16)
+            throw new InvalidDataException($"Unexpected controller clock response: {result}");
+        var date = result.Substring(0, 8);
+        var time = result.Substring(8, 8);
+        if (!IsValidControllerTimestamp(date, time))
+            throw new InvalidDataException($"Unexpected controller clock response: {result}");
+        return (date, time);
+    }
+
+    private static long ParseTimeCounter(string value)
+    {
+        if (!long.TryParse(value, NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var result))
+            throw new InvalidDataException($"Invalid time counter: {value}");
+        return result;
+    }
+
+    private HourMeterData ReadHourMeter()
+    {
+        var response = DoCommandInternal("PTIME");
+        var fields = response.Split(';');
+        if (fields.Length != 22)
+            throw new InvalidDataException($"Unexpected PTIME field count: {fields.Length}; expected 22.");
+        var values = new long[fields.Length];
+        for (var i = 0; i < fields.Length; i++)
+            values[i] = ParseTimeCounter(fields[i]);
+        return new HourMeterData(values[0], values[1], ImmutableArray.Create(values, 2, 3),
+            ImmutableArray.Create(values, 5, 12), values[17], values[18], values[19], values[20], values[21]);
+    }
+
+    private CycleTimeData ReadCycleTime(string program)
+    {
+        var response = DoCommandInternal($"CYCLETIME{program}");
+        var fields = response.Split(';');
+        if (fields.Length != 4)
+            throw new InvalidDataException($"Unexpected CYCLETIME response: {response}");
+        return new CycleTimeData(ParseTimeCounter(fields[0]), ParseTimeCounter(fields[1]),
+            ParseTimeCounter(fields[2]), ParseTimeCounter(fields[3]));
     }
 
     private static ErrorTimestamp ParseErrorTimestampResponse(string result)
