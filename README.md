@@ -96,6 +96,26 @@ var voltage = robot.ServoVoltage;
 Servo monitor arrays contain J1 through J8 in order, including unused axes.
 Each property reads a new controller snapshot.
 
+## Read stop status
+```C#
+var state = robot.GetDetailedState(slot: 1);
+var signals = robot.StopSignals;
+bool ioEmergencyStop = (signals.EmergencyStop & EmergencyStopSource.InputOutput) != 0;
+```
+
+These are monitoring reads, not safety functions. Use the controller's
+independent safety systems for emergency stops.
+
+`robot.Calibration` reads installation status and the completed-axis mask;
+bits 0-7 of `CompletedAxisMask` correspond to J1-J8.
+
+## Read option information
+
+`robot.GetOptionStatus(1)` reads information for an option slot (1-3) as
+returned by the controller. `robot.GetOptionStatus()` reads all slots and
+splits the response on VT (`\v`), preserving empty fields. The information
+format depends on the installed options.
+
 ## Read controller time and meters
 ```C#
 var clock = robot.ControllerClock;

@@ -681,8 +681,17 @@ public partial class MelfaRobot : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public RunState GetState(int slot = 1) => new(DoCommandInternal("STATE", slot), slot);
 
-    // TODO: DSTATE - Read stop status
-    // TODO: CALIB - Install status
+    /// <summary>[DSTATE] Read run and stop status for a task slot.</summary>
+    /// <param name="slot">Task slot.</param>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public DetailedState GetDetailedState(int slot = 1) => ParseDetailedState(DoCommandInternal("DSTATE", slot), slot);
+
+    /// <summary>[CALIB] Read installation status and the completed-axis mask.</summary>
+    public CalibrationInfo Calibration
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ParseCalibration(DoCommandInternal("CALIB"));
+    }
 
     /// <summary>[IOSIGNAL] Input and output signal read</summary>
     /// <param name="input">Input signal number</param>
@@ -753,7 +762,12 @@ public partial class MelfaRobot : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void WriteCCLinkInput(int index, ushort value) => DoCommandInternal($"DIN={index};{value:x4}");
 
-    // TODO: STPSIG - Stop signal read
+    /// <summary>[STPSIG] Read stop and emergency-stop signal source masks.</summary>
+    public StopSignalState StopSignals
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get => ParseStopSignals(DoCommandInternal("STPSIG"));
+    }
 
     /// <summary>[HNDSTS] Hand output signal read</summary>
     public ImmutableArray<HandState> HandStates
@@ -999,7 +1013,22 @@ public partial class MelfaRobot : IDisposable
         get => int.Parse(DoCommandInternal("OPNUMRD"));
     }
 
-    // TODO: OPSTSRD
+    /// <summary>[OPSTSRD] Read option information for all slots.</summary>
+    /// <returns>Information in controller order, split on VT; empty fields are preserved.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ImmutableArray<string> GetOptionStatus() =>
+        DoCommandInternal("OPSTSRD").Split('\x0b').ToImmutableArray();
+
+    /// <summary>[OPSTSRD] Read option information for a slot.</summary>
+    /// <param name="optionSlot">Option slot number, from 1 to 3.</param>
+    /// <returns>The controller's option information, including any VT separators.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public string GetOptionStatus(int optionSlot)
+    {
+        if (optionSlot < 1 || optionSlot > 3)
+            throw new ArgumentOutOfRangeException(nameof(optionSlot));
+        return DoCommandInternal($"OPSTSRD{optionSlot}");
+    }
 
     /// <summary>[THMRD] The internal temperature of the controller</summary>
     public double ControllerTemperature

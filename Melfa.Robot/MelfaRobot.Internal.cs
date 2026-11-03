@@ -23,6 +23,37 @@ public partial class MelfaRobot
     private bool _requireResponseTerminator;
     private TcpClient _Client = null;
 
+    private static CalibrationInfo ParseCalibration(string response)
+    {
+        if (response.Length < 3 || (response[0] != 'N' && response[0] != 'F') ||
+            !byte.TryParse(response.Substring(1, 2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var axes))
+            throw new InvalidDataException($"Unexpected CALIB response: {response}");
+        return new CalibrationInfo(response[0] == 'N', axes, response.Substring(3));
+    }
+
+    private static DetailedState ParseDetailedState(string response, int slot)
+    {
+        var fields = response.Split(';');
+        if (fields.Length != 3 || fields[0].Length < 5 ||
+            !byte.TryParse(fields[0].Substring(0, 2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var run) ||
+            !byte.TryParse(fields[0].Substring(2, 2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var stop) ||
+            !int.TryParse(fields[0].Substring(4), NumberStyles.None, CultureInfo.InvariantCulture, out var error) ||
+            !int.TryParse(fields[1], NumberStyles.None, CultureInfo.InvariantCulture, out var step) ||
+            !int.TryParse(fields[2], NumberStyles.None, CultureInfo.InvariantCulture, out var mechanism))
+            throw new InvalidDataException($"Unexpected DSTATE response: {response}");
+        return new DetailedState(slot, (RunStatus)run, (StopStatus)stop, error, step, mechanism);
+    }
+
+    private static StopSignalState ParseStopSignals(string response)
+    {
+        var fields = response.Split(';');
+        if (fields.Length != 2 ||
+            !uint.TryParse(fields[0], NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var stop) ||
+            !uint.TryParse(fields[1], NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out var emergencyStop))
+            throw new InvalidDataException($"Unexpected STPSIG response: {response}");
+        return new StopSignalState((StopSignalSource)stop, (EmergencyStopSource)emergencyStop);
+    }
+
     private static int ErrorHistoryFilterLevel(ErrorSeverity? severity) => severity switch
     {
         null => 0,
