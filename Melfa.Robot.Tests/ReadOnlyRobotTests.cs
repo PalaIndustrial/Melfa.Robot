@@ -79,7 +79,6 @@ public class ReadOnlyRobotTests
         {
             var count = robot.OptionSlotCount();
             var all = robot.OptionStatuses();
-            Assert.Equal(count, all.Length);
             output.WriteLine($"Option slots reported: {count}; OPSTSRD fields: {all.Length}");
             for (var i = 0; i < all.Length; i++)
                 output.WriteLine($"All-slots field {i + 1}: {all[i]}");

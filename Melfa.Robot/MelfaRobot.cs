@@ -1043,12 +1043,7 @@ public partial class MelfaRobot : IDisposable
     /// <param name="optionSlot">Option slot number, from 1 to 3.</param>
     /// <returns>The controller's option information, including any VT separators.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public string GetOptionStatus(int optionSlot)
-    {
-        if (optionSlot < 1 || optionSlot > 3)
-            throw new ArgumentOutOfRangeException(nameof(optionSlot));
-        return DoCommandInternal($"OPSTSRD{optionSlot}");
-    }
+    public string GetOptionStatus(int optionSlot) => DoCommandInternal($"OPSTSRD{optionSlot}");
 
     /// <summary>[THMRD] The internal temperature of the controller</summary>
     public double ControllerTemperature
