@@ -153,8 +153,8 @@ public partial class MelfaRobot : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void ProgramEdit(int line, string content)
     {
-        content = content.Trim();
-        DoCommandInternal(content.Contains('\n') ? $"EMDAT{line} {content}" : $"EDATA{line} {content}");
+        content = content.Trim().Replace("\r\n", "\n").Replace('\r', '\n').Replace('\n', '\x0b');
+        DoCommandInternal(content.Contains('\x0b') ? $"EMDAT{line} {content}" : $"EDATA{line} {content}");
     }
 
     /// <summary>[EDINS] Insert program</summary>
@@ -415,7 +415,7 @@ public partial class MelfaRobot : IDisposable
             while ((n = stream.Read(bytes, 0, bytes.Length)) > 0)
             {
                 var hex = HexConverter.GetString(bytes.AsSpan(0, n));
-                DoCommandInternal($"FWRITE{n}:{hex}");
+                DoCommandInternal($"FWRITE{n};{hex}");
             }
         }
         finally { DoCommandInternal("FCLOSE"); }
@@ -604,7 +604,7 @@ public partial class MelfaRobot : IDisposable
     /// <param name="inching">Inching mode</param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Jog(JogMode mode, byte negative, byte positive, InchingMode inching = InchingMode.Off) =>
-        DoCommandInternal($"JOG{(byte)mode:x2};00;({negative:x2});({positive:x2});({(byte)inching:x2})");
+        DoCommandInternal($"JOG{(byte)mode:x2};00;{negative:x2};{positive:x2};{(byte)inching:x2}");
 
     /// <summary>[JOG] JOG operation for Multifunctional Electric Hand</summary>
     /// /// <remarks>If the command is not received between about 140msec, the jog operation is automatically stopped.</remarks>
@@ -637,7 +637,7 @@ public partial class MelfaRobot : IDisposable
     /// <param name="line">Target line number</param>
     /// <param name="type">Breakpoint type</param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void SetBreakpoint(string program, int line, BreakpointType type) => DoCommandInternal($"BRKPTSET{program};{line}{(int)type}");
+    public void SetBreakpoint(string program, int line, BreakpointType type) => DoCommandInternal($"BRKPTSET={program};{line};{(int)type}");
 
     /// <summary>[BRKPTCLR] Delete breakpoint</summary>
     /// <param name="program">Program name</param>
