@@ -44,6 +44,23 @@ public class ProtocolTests
     }
 
     [Fact]
+    public async Task RejectsInvalidCommandsWithoutSendingOrDisconnecting()
+    {
+        using var server = new Controller(async stream =>
+        {
+            Assert.Equal("1;1;PRGRD", await ReadCommand(stream));
+            await Send(stream, "QoKREADY\r");
+        });
+        using var robot = server.Connect();
+        Assert.Throws<ArgumentException>(() => robot.Execute("MOV P1\rSTOP"));
+        Assert.Throws<ArgumentException>(() => robot.Execute("MOV P1\nSTOP"));
+        Assert.Throws<EncoderFallbackException>(() => robot.Execute("\u00e9"));
+        Assert.Throws<InvalidOperationException>(() => robot.Execute(new string('A', 255)));
+        Assert.Equal("READY", robot.GetCurrentProgram());
+        await server.Complete();
+    }
+
+    [Fact]
     public async Task DisconnectInterruptsPendingRead()
     {
         var requestReceived = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);

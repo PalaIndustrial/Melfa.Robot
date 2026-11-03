@@ -1174,6 +1174,8 @@ public partial class MelfaRobot : IDisposable
             if (client is null || !client.Connected)
                 throw new InvalidOperationException("Not connected.");
 
+            if (command.IndexOf('\r') >= 0 || command.IndexOf('\n') >= 0)
+                throw new ArgumentException("Command cannot contain CR or LF.", nameof(command));
             var cmd = $"{RobotNumber};{slot};{command}";
             var encoding = Encoding.GetEncoding("us-ascii", EncoderFallback.ExceptionFallback, DecoderFallback.ExceptionFallback);
             var wbuf = encoding.GetBytes(cmd + "\r");
