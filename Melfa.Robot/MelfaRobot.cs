@@ -410,16 +410,13 @@ public partial class MelfaRobot : IDisposable
     {
         WithOpenFile(filename, "w", () =>
         {
+            var bytes = new byte[110];
             int n;
             while ((n = stream.Read(bytes, 0, bytes.Length)) > 0)
             {
                 var hex = HexConverter.GetString(bytes.AsSpan(0, n));
-            var bytes = new byte[110];
                 DoCommandInternal($"FWRITE{n};{hex}");
             }
-        }
-    }
-
         });
     }
 
@@ -442,6 +439,9 @@ public partial class MelfaRobot : IDisposable
                 throw;
             }
             DoCommandInternal("FCLOSE");
+        }
+    }
+
     /// <summary>[EFREE] Read file size</summary>
     /// <returns>(Total sizes of file system, Used size)</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
