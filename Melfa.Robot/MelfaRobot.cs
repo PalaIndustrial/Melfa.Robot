@@ -2,6 +2,7 @@ using CommunityToolkit.Diagnostics;
 using Melfa.Robot.Helpers;
 using Numeral;
 using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Globalization;
@@ -24,6 +25,7 @@ public partial class MelfaRobot : IDisposable
     private readonly object _fileSyncRoot = new();
     private int _connectionVersion;
     private int _commandTimeout = 5000;
+    private bool _requireResponseTerminator;
 
     public string Host { get; }
     public int Port { get; }
@@ -39,6 +41,16 @@ public partial class MelfaRobot : IDisposable
                 throw new ArgumentOutOfRangeException(nameof(value));
             Volatile.Write(ref _commandTimeout, value);
         }
+    }
+
+    /// <summary>
+    /// Require responses to end with CR instead of using the legacy short-read
+    /// convention. TCP short reads are not reliable message boundaries.
+    /// </summary>
+    public bool RequireResponseTerminator
+    {
+        get => Volatile.Read(ref _requireResponseTerminator);
+        set => Volatile.Write(ref _requireResponseTerminator, value);
     }
 
     public bool IsConnected
@@ -1183,31 +1195,45 @@ public partial class MelfaRobot : IDisposable
                 throw new InvalidOperationException("Command too long (max 255 bytes).");
 
             var timeout = CommandTimeout;
+            var requireTerminator = RequireResponseTerminator;
             var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             string ret;
+            using var response = new MemoryStream();
+            const int bufferSize = 1536;
+            var buffer = ArrayPool<byte>.Shared.Rent(bufferSize);
             try
             {
                 var stream = client.GetStream();
                 stream.WriteTimeout = timeout;
                 stream.Write(wbuf, 0, wbuf.Length);
 
-                using var response = new MemoryStream();
                 while (true)
                 {
                     var remaining = timeout - stopwatch.ElapsedMilliseconds;
                     if (remaining <= 0)
                         throw new IOException("Timed out waiting for the robot response.");
                     stream.ReadTimeout = (int)remaining;
-                    var value = stream.ReadByte();
-                    if (value < 0)
+                    var count = stream.Read(buffer, 0, requireTerminator ? 1 : bufferSize);
+                    if (count == 0)
                         throw new EndOfStreamException("The robot disconnected before completing its response.");
-                    if (value == '\r')
+                    if (requireTerminator && buffer[0] == '\r')
                         break;
-                    if (response.Length >= 65536)
+                    if (response.Length + count > 65536)
                         throw new InvalidDataException("The robot response exceeds 65536 bytes.");
-                    response.WriteByte((byte)value);
+                    response.Write(buffer, 0, count);
+                    if (!requireTerminator && count < bufferSize && response.Length >= 3)
+                    {
+                        var bytes = response.GetBuffer();
+                        var isError = (bytes[0] == 'Q' || bytes[0] == 'q') &&
+                                      (bytes[1] == 'E' || bytes[1] == 'e') &&
+                                      (bytes[2] == 'R' || bytes[2] == 'r');
+                        if (!isError || response.Length >= 7)
+                            break;
+                    }
                 }
                 ret = encoding.GetString(response.ToArray());
+                if (!requireTerminator)
+                    ret = ret.TrimEnd('\r', '\n');
                 if (!ret.StartsWith("QoK", StringComparison.OrdinalIgnoreCase) &&
                     !(ret.StartsWith("QeR", StringComparison.OrdinalIgnoreCase) &&
                       ret.Length >= 7 && int.TryParse(ret.Substring(3, 4), out _)))
@@ -1218,6 +1244,10 @@ public partial class MelfaRobot : IDisposable
                 Interlocked.CompareExchange(ref _Client, null, client);
                 client.Dispose();
                 throw;
+            }
+            finally
+            {
+                ArrayPool<byte>.Shared.Return(buffer, clearArray: true);
             }
             if (ret.StartsWith("QoK", StringComparison.InvariantCultureIgnoreCase))
                 return ret[3..];

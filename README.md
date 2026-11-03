@@ -14,11 +14,19 @@ Make sure one of OPT11 ~ OPT19 is configured as `Server`. For example:
 - Mode (NETMODE): 1 - Server
 - Port (NETPORT): 12345 # This is the port used to connect to the controller
 - Protocol (OPCE11): 0 - No-procedure # This is probably irrelevant
-- Exit Code (NETTERM): configure the controller to include the exit code in responses
 - Packet Type (CTERME): 0 - CR
 
-The client sends and expects a CR terminator. CR+LF and responses without an
-exit code are not supported; TCP does not preserve message boundaries.
+The client sends commands terminated with CR. By default it accepts responses
+without a terminator using a short-read convention, for compatibility with
+controllers and simulators that omit one. This is a heuristic: TCP reads do not
+preserve packet or message boundaries, so fragmented responses can be truncated
+or confused with the next response. A response whose read exactly fills the
+1536-byte buffer may wait for more data and time out.
+
+If the controller reliably terminates every response with CR, set
+`robot.RequireResponseTerminator = true` before sending commands. This mode
+handles fragmented responses but does not support CR+LF. Do not rely on the
+short-read convention where an incomplete response could lead to unsafe actions.
 
 # Usage
 ## Create the robot object
