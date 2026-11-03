@@ -209,10 +209,14 @@ public partial class MelfaRobot : IDisposable
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public IPosition ProgramGetPosition(string positionName)
     {
-        var ret = DoCommandInternal($"LISTP{positionName}").Split('=');
-        try { return new PositionP(ret[1]); } catch { }
-        try { return new PositionJ(ret[1]); } catch { }
-        throw new PositionParseException(ret[1], typeof(IPosition));
+        var ret = DoCommandInternal($"LISTP{positionName}");
+        var separator = ret.IndexOf('=');
+        if (separator < 0)
+            throw new PositionParseException(ret, typeof(IPosition));
+        var value = ret.Substring(separator + 1);
+        try { return new PositionP(value); } catch (PositionParseException) { }
+        try { return new PositionJ(value); } catch (PositionParseException) { }
+        throw new PositionParseException(value, typeof(IPosition));
     }
 
     /// <summary>[VTYPRD] Variable type read</summary>
