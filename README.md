@@ -69,6 +69,21 @@ not interleave other variable reads while paging. The protocol manual shows
 both VT and semicolon-plus-VT separators; a semicolon immediately before VT is
 treated as a separator, making an unquoted value ending in semicolon ambiguous.
 
+## File transfers
+
+`FileRead` and `FileWrite` manage `FOPEN` and `FCLOSE` internally. These
+commands are intentionally not exposed as standalone operations.
+
+## Read positions
+
+`CurrentPositionJ`, `CurrentPositionP`, `DestinationPositionJ`, and
+`DestinationPositionP` intentionally read all axes. Access an individual axis
+from the result, for example `robot.CurrentPositionJ.J1`.
+
+The protocol's single-axis reads may be a legacy optimization for slower
+serial connections such as RS-232; the bandwidth savings are likely negligible
+on Ethernet... maybe... i guess... probably......
+
 ## Read servo monitor data
 ```C#
 var encoder = robot.ServoEncoder;

@@ -357,8 +357,6 @@ public partial class MelfaRobot : IDisposable
     }
 
     // TODO: FINIT - File init
-    // TODO: FOPEN - File block open
-    // TODO: FCLOSE - File block close
 
     /// <summary>[FREAD] File read</summary>
     /// <remarks>
