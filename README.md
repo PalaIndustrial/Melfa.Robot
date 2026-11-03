@@ -41,7 +41,9 @@ var info = robot.Open("ClientName");
 robot.OperationEnabled = true; // CTRLON
 robot.ServoOn = true; // SRVON
 robot.Override = 10; // OVRD=10
-robot.Execute("MOV P1");
+robot.Execute("MOV P1"); // none-blocking, 
+                         // returns immediately after network transfer complete
+robot.ExecuteBlocking("MOV P2"); // blocking until motion is completed (or error)
 ```
 
 ## Load a program and run
@@ -116,11 +118,24 @@ returned by the controller. `robot.GetOptionStatus()` reads all slots and
 splits the response on VT (`\v`), preserving empty fields. The information
 format depends on the installed options.
 
-## Read breakpoints
+## Breakpoints
 
-`robot.GetBreakpoint("TEST", 1, 10, 200)` reads breakpoint 1 within the
-specified line range. Pass `null` or an empty program name to search all
-programs. The controller returns one breakpoint per request.
+```C#
+var breakpoint = robot.GetBreakpoint("TEST", 1, 10, 200);
+Console.WriteLine($"{breakpoint.ProgramName}: {breakpoint.LineNumber} ({breakpoint.Type})");
+
+robot.SetBreakpoint("TEST", 20, BreakpointType.Continuous);
+robot.ClearBreakpoint("TEST", 20);
+```
+
+`GetBreakpoint` reads one breakpoint by number (1-128) and line range. Pass
+`null` or an empty program name to search all programs. `SetBreakpoint` accepts
+`BreakpointType.Continuous` or `BreakpointType.OneTime`; the program must not
+be running. `ClearBreakpoint` removes the specified line's breakpoint; omit
+the line or pass `0` to clear all breakpoints for that program.
+
+Setting and clearing breakpoints changes controller state. Use these commands
+only when appropriate for the connected robot or simulator.
 
 ## Read controller time and meters
 ```C#
@@ -176,8 +191,21 @@ Robot and simulator integration tests are opt-in; see
 [`Melfa.Robot.Tests\README.md`](Melfa.Robot.Tests/README.md).
 
 # TODO
-- Finish implement of all functionalities
-- Add more error log items (which is tedious...)
+
+Known missing or partial R-protocol functionality:
+
+- `LISTL`: Read multiple program lines.
+- `PDIR`: Read the program directory.
+- `FDIR`: Read the file directory.
+- `FINIT`: Initialize the file system.
+- `ESEARCH`: Search for a string.
+- `LINESRD`: Read multiple execution lines.
+- `USERAREASTS`: Read user-specified areas.
+- `XPOS`, `RPOS`: Read current positions.
+- `VAL`: Read by position (`<`, `>`, `+1`, `-1`); named-variable reads are implemented.
+- `MFTIME=`: Read the maintenance forecast reset date.
+
+Also expand the error message, cause, and measures resources.
 
 # Disclaimer
 
