@@ -966,13 +966,18 @@ public partial class MelfaRobot : IDisposable
     public IEnumerable<string> ListChangedParameters()
     {
         var results = DoCommandInternal("PMR=0").Split(';');
-        do
+        while (true)
         {
-            var parameters = results[2].Split('\x0b');
-            foreach (var parameter in parameters)
-                yield return parameter;
+            if (int.Parse(results[1]) > 0)
+            {
+                var parameters = results[2].Split('\x0b');
+                foreach (var parameter in parameters)
+                    yield return parameter;
+            }
+            if (int.Parse(results[0]) == 0)
+                yield break;
             results = DoCommandInternal("PMR=1").Split(';');
-        } while (int.Parse(results[0]) != 0);
+        }
     }
 
     /// <summary>[KEYWD] Keyword</summary>
