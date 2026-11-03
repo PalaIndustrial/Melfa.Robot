@@ -49,6 +49,26 @@ robot.Execute("MOV P1");
 robot.RunProgram("blah");
 ```
 
+## Read variables
+```C#
+var value = robot.ReadGlobalVariable("M_01", VariableClass.Integer);
+var page = robot.ReadVariables(LocationType.Top, VariableClass.Integer, slot: 1);
+foreach (var variable in page.Variables)
+    Console.WriteLine($"{variable.Key} = {variable.Value}");
+while (page.HasMore)
+{
+    page = robot.ReadVariables(LocationType.Next, VariableClass.Integer, slot: 1);
+    // Process page.Variables.
+}
+```
+
+`ReadGlobalVariables` works the same way for global variables. Pages retain
+the controller's variable order and continuation flag; use the same class and
+slot for subsequent requests. Controller variable browsing is stateful, so do
+not interleave other variable reads while paging. The protocol manual shows
+both VT and semicolon-plus-VT separators; a semicolon immediately before VT is
+treated as a separator, making an unquoted value ending in semicolon ambiguous.
+
 ## Read servo monitor data
 ```C#
 var encoder = robot.ServoEncoder;

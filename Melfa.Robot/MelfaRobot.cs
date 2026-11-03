@@ -845,10 +845,73 @@ public partial class MelfaRobot : IDisposable
     public void ClearErrorSummary() => DoCommandInternal("ERRSUMCLR");
 
     // TODO: SUMDATE - Date when error logging function began
-    // TODO: VAL - Variable data read
-    // TODO: VALS - More variable data read
-    // TODO: GVAL - Global variable data read
-    // TODO: GVALS - More global variable data read
+
+    /// <summary>[VAL] Read the value of a named variable.</summary>
+    /// <remarks>Use the edit slot (typically TASKMAX+1) to read edit-slot variables.</remarks>
+    /// <param name="name">Variable name.</param>
+    /// <param name="variableClass">Variable class.</param>
+    /// <param name="slot">Task slot.</param>
+    /// <returns>The variable value as returned by the controller.</returns>
+    /// <exception cref="InvalidDataException">The response does not contain the requested variable.</exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public string ReadVariable(string name, VariableClass variableClass, int slot = 1)
+    {
+        ValidateVariable(name);
+        return ParseVariableResponse(name, DoCommandInternal($"VAL{name};{variableClass.ToCommandString()}", slot));
+    }
+
+    internal static void ValidateVariable(string name)
+    {
+        if (string.IsNullOrEmpty(name) || !Regex.IsMatch(name, @"\A[A-Za-z][A-Za-z0-9_]*\z"))
+            throw new ArgumentException("Invalid variable name.", nameof(name));
+    }
+
+    internal static string ParseVariableResponse(string name, string result)
+    {
+        var separator = result.IndexOf('=');
+        if (separator <= 0 || !string.Equals(result.Substring(0, separator), name, StringComparison.OrdinalIgnoreCase))
+            throw new InvalidDataException($"Unexpected variable response: {result}");
+        return result.Substring(separator + 1);
+    }
+
+    /// <summary>[VALS] Read a page of variables from a task or edit slot.</summary>
+    /// <param name="position">The starting position or direction.</param>
+    /// <param name="variableClass">Variable class.</param>
+    /// <param name="slot">Task slot; use TASKMAX+1 for the edit slot.</param>
+    /// <returns>The variables and continuation flag for this page.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public VariablePage ReadVariables(LocationType position, VariableClass variableClass, int slot = 1) =>
+        ReadVariablePage("VALS", position, variableClass, slot);
+
+    /// <summary>[GVAL] Read the value of a named global variable.</summary>
+    /// <param name="name">Variable name.</param>
+    /// <param name="variableClass">Variable class.</param>
+    /// <param name="slot">Task slot.</param>
+    /// <returns>The variable value as returned by the controller.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public string ReadGlobalVariable(string name, VariableClass variableClass, int slot = 1)
+    {
+        ValidateVariable(name);
+        return ParseVariableResponse(name, DoCommandInternal($"GVAL{name};{variableClass.ToCommandString()}", slot));
+    }
+
+    /// <summary>[GVAL] Read a global variable at a relative position.</summary>
+    /// <param name="position">The starting position or direction.</param>
+    /// <param name="variableClass">Variable class.</param>
+    /// <param name="slot">Task slot.</param>
+    /// <returns>The variable name and value as returned by the controller.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public KeyValuePair<string, string> ReadGlobalVariable(LocationType position, VariableClass variableClass, int slot = 1) =>
+        ParseVariableEntry(DoCommandInternal($"GVAL{position.ToVariablePositionCommandString()};{variableClass.ToCommandString()}", slot));
+
+    /// <summary>[GVALS] Read a page of global variables.</summary>
+    /// <param name="position">The starting position or direction.</param>
+    /// <param name="variableClass">Variable class.</param>
+    /// <param name="slot">Task slot.</param>
+    /// <returns>The variables and continuation flag for this page.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public VariablePage ReadGlobalVariables(LocationType position, VariableClass variableClass, int slot = 1) =>
+        ReadVariablePage("GVALS", position, variableClass, slot);
 
     /// <summary>[HOT] Variable data write</summary>
     /// <remarks>The value of the variable is changed. A integer variable is revocable while even starting.</remarks>
