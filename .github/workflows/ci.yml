@@ -19,4 +19,4 @@ jobs:
             8.0.x
             10.0.x
       - run: dotnet build .\Melfa.Robot\Melfa.Robot.csproj --configuration Release
-      - run: dotnet test .\Melfa.Robot.PositionTests\Melfa.Robot.PositionTests.csproj --configuration Release
+      - run: dotnet test .\Melfa.Robot.Tests\Melfa.Robot.Tests.csproj --configuration Release

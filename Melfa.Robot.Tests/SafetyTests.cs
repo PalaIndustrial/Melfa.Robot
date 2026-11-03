@@ -1,0 +1,267 @@
+using Xunit;
+
+namespace Melfa.Robot.Tests;
+
+public class SafetyTests
+{
+    private static SafetyConfig? Load(Dictionary<string, string> env, bool write) =>
+        SafetyConfig.Load(name => env.GetValueOrDefault(name), write);
+
+    private static Dictionary<string, string> WriteEnvironment() => new()
+    {
+        ["MELFA_TEST_WRITE"] = "1",
+        ["MELFA_TEST_HOST"] = "localhost",
+        ["MELFA_TEST_TARGET"] = "SIMULATOR",
+        ["MELFA_TEST_SIMULATOR_READ_CONFIRMED"] = "1",
+        ["MELFA_TEST_EXCLUSIVE_SCRATCH_CONFIRMED"] = "1",
+        ["MELFA_TEST_SCRATCH_PROGRAM"] = "SCRATCH",
+        ["MELFA_TEST_SCRATCH_LINE"] = "10",
+        ["MELFA_TEST_SCRATCH_JOINT"] = "J1"
+    };
+
+    [Fact]
+    public void ActualEnvironmentIsValidEvenWhenIntegrationTestsAreSkipped()
+    {
+        SafetyConfig.Load(Environment.GetEnvironmentVariable, false);
+        SafetyConfig.Load(Environment.GetEnvironmentVariable, true);
+    }
+
+    [Fact]
+    public void IntegrationIsOffByDefaultAndFlagsAreIndependent()
+    {
+        var env = new Dictionary<string, string>();
+        Assert.Null(Load(env, false));
+        Assert.Null(Load(env, true));
+        env = WriteEnvironment();
+        Assert.Null(Load(env, false));
+        Assert.NotNull(Load(env, true));
+        env["MELFA_TEST_WRITE"] = "0";
+        env["MELFA_TEST_READ"] = "1";
+        Assert.NotNull(Load(env, false));
+        Assert.Null(Load(env, true));
+    }
+
+    [Theory]
+    [InlineData("MELFA_TEST_WRITE", "true")]
+    [InlineData("MELFA_TEST_READ", "yes")]
+    [InlineData("MELFA_TEST_HOST", "localhost;1")]
+    [InlineData("MELFA_TEST_PORT", "0")]
+    [InlineData("MELFA_TEST_ROBOT", "0")]
+    [InlineData("MELFA_TEST_ROBOT", "4")]
+    [InlineData("MELFA_TEST_DELAY_MS", "99")]
+    [InlineData("MELFA_TEST_TARGET", "ROBOT")]
+    [InlineData("MELFA_TEST_SIMULATOR_READ_CONFIRMED", "0")]
+    [InlineData("MELFA_TEST_EXCLUSIVE_SCRATCH_CONFIRMED", "0")]
+    [InlineData("MELFA_TEST_SCRATCH_PROGRAM", "A;SAVE")]
+    [InlineData("MELFA_TEST_SCRATCH_LINE", "0")]
+    [InlineData("MELFA_TEST_SCRATCH_JOINT", "J_01")]
+    public void InvalidConfigurationFailsClosed(string key, string value)
+    {
+        var env = WriteEnvironment();
+        env[key] = value;
+        Assert.Throws<InvalidOperationException>(() => Load(env, true));
+    }
+
+    [Theory]
+    [InlineData("MELFA_TEST_HOST")]
+    [InlineData("MELFA_TEST_TARGET")]
+    [InlineData("MELFA_TEST_SIMULATOR_READ_CONFIRMED")]
+    [InlineData("MELFA_TEST_EXCLUSIVE_SCRATCH_CONFIRMED")]
+    [InlineData("MELFA_TEST_SCRATCH_PROGRAM")]
+    [InlineData("MELFA_TEST_SCRATCH_LINE")]
+    [InlineData("MELFA_TEST_SCRATCH_JOINT")]
+    public void MissingWriteConfigurationFailsClosed(string key)
+    {
+        var env = WriteEnvironment();
+        env.Remove(key);
+        Assert.Throws<InvalidOperationException>(() => Load(env, true));
+    }
+
+    [Fact]
+    public void ExistingUnknownOrSelectedScratchNeverOpens()
+    {
+        var config = Load(WriteEnvironment(), true)!;
+        foreach (var exists in new bool?[] { true, null })
+        {
+            var fake = new FakeRobot { Exists = exists };
+            Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, "MB6", () => { }));
+            Assert.Equal("SCRATCH.MB6", fake.CheckedFile);
+            Assert.DoesNotContain("open", fake.Calls);
+        }
+        var selected = new FakeRobot { Selected = "scratch.MB6" };
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(selected, config, 1, "MB6", () => { }));
+        Assert.DoesNotContain("open", selected.Calls);
+        var ambiguous = new FakeRobot { Selected = "OTHER;unexpected" };
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(ambiguous, config, 1, "MB6", () => { }));
+        Assert.DoesNotContain("open", ambiguous.Calls);
+        var otherInSlotOne = new FakeRobot { Selected = "OTHER" };
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(otherInSlotOne, config, 1, "MB6", () => { }));
+        Assert.DoesNotContain("open", otherInSlotOne.Calls);
+    }
+
+    [Fact]
+    public void AbsentScratchIsCreatedAndRemoved()
+    {
+        var env = WriteEnvironment();
+        env["MELFA_TEST_SCRATCH_PROGRAM"] = "1";
+        var config = Load(env, true)!;
+        var fake = new FakeRobot();
+        var ran = false;
+        ScratchOperations.WithScratch(fake, config, 1, "MB6", () => ran = true);
+        Assert.True(ran);
+        Assert.Equal("1.MB6", fake.CheckedFile);
+        Assert.Equal(new[] { "exists", "current", "discard", "open", "edit", "line", "save", "exists", "open", "discard", "exists", "delete", "exists" }, fake.Calls);
+        Assert.False(fake.Exists);
+    }
+
+    [Fact]
+    public void ScratchIsDiscardedAndRemovedWhenTestFails()
+    {
+        var fake = new FakeRobot();
+        var config = Load(WriteEnvironment(), true)!;
+        var error = Assert.Throws<InvalidOperationException>(() =>
+            ScratchOperations.WithScratch(fake, config, 1, "MB6", () => throw new InvalidOperationException("test failed")));
+        Assert.Equal("test failed", error.Message);
+        Assert.Contains("delete", fake.Calls);
+        Assert.False(fake.Exists);
+    }
+
+    [Fact]
+    public void FailedSaveNeverDeletesAnUnconfirmedFile()
+    {
+        var fake = new FakeRobot { Fail = "save" };
+        var config = Load(WriteEnvironment(), true)!;
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, "MB6", () => { }));
+        Assert.DoesNotContain("delete", fake.Calls);
+        Assert.Equal("discard", fake.Calls.Last());
+    }
+
+    [Theory]
+    [InlineData(true)]
+    [InlineData(null)]
+    public void ProgramOneMb6IsNeverTouchedWhenPresentOrUnknown(bool? exists)
+    {
+        var env = WriteEnvironment();
+        env["MELFA_TEST_SCRATCH_PROGRAM"] = "1";
+        var fake = new FakeRobot { Exists = exists };
+        var error = Assert.Throws<InvalidOperationException>(() =>
+            ScratchOperations.WithScratch(fake, Load(env, true)!, 1, "MB6", () => { }));
+        Assert.Contains("definitely be absent", error.Message);
+        Assert.Equal("1.MB6", fake.CheckedFile);
+        Assert.Equal(new[] { "exists" }, fake.Calls);
+    }
+
+    [Fact]
+    public void ScratchSelectedInAnotherSlotIsRejectedEvenWithDifferentExtension()
+    {
+        var config = Load(WriteEnvironment(), true)!;
+        var fake = new FakeRobot { SelectedBySlot = new Dictionary<int, string> { [2] = "scratch.MB5" } };
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 2, "MB6", () => { }));
+        Assert.Equal(new[] { "exists", "current", "current" }, fake.Calls);
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("MB6;FDEL")]
+    [InlineData(".MB6")]
+    public void AmbiguousExtensionNeverIssuesFileCheck(string extension)
+    {
+        var fake = new FakeRobot();
+        var config = Load(WriteEnvironment(), true)!;
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, extension, () => { }));
+        Assert.Empty(fake.Calls);
+    }
+
+    [Fact]
+    public void PrimaryAndCleanupFailuresAreBothReported()
+    {
+        var ex = Assert.Throws<AggregateException>(() => ScratchOperations.WithCleanup(
+            () => throw new InvalidOperationException("primary"),
+            () => throw new InvalidOperationException("cleanup")));
+        Assert.Equal(new[] { "primary", "cleanup" }, ex.InnerExceptions.Select(e => e.Message));
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithCleanup(() => { }, () => throw new Exception("cleanup")));
+    }
+
+    [Fact]
+    public void ScratchPreflightErrorIsSurfacedWithoutWrites()
+    {
+        var config = Load(WriteEnvironment(), true)!;
+        foreach (var command in new[] { "exists", "current" })
+        {
+            var fake = new FakeRobot { Fail = command };
+            var error = Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, "MB6", () => { }));
+            Assert.Equal(command, error.Message);
+            Assert.Equal(command == "exists" ? new[] { "exists" } : new[] { "exists", "current" }, fake.Calls);
+        }
+    }
+
+    [Fact]
+    public void JointIsVerifiedRestoredEvenWhenWriteIsUncertain()
+    {
+        var fake = new FakeRobot { FailFirstSet = true };
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.EditJoint(fake, "J1"));
+        Assert.Equal(new[] { "type", "position", "set", "set", "position" }, fake.Calls);
+        Assert.Equal(new PositionJ(1, 2, 3, 4, 5, 6, 7, 8), fake.Position);
+    }
+
+    [Fact]
+    public void JointSuccessVerifiesChangeAndRestoration()
+    {
+        var fake = new FakeRobot();
+        ScratchOperations.EditJoint(fake, "J1");
+        Assert.Equal(new[] { "type", "position", "set", "position", "set", "position" }, fake.Calls);
+        Assert.Equal(new PositionJ(1, 2, 3, 4, 5, 6, 7, 8), fake.Position);
+    }
+
+    [Fact]
+    public void SuccessfulWriteResponseWithoutChangedValueFailsAndStillRestores()
+    {
+        var fake = new FakeRobot { IgnoreFirstSet = true };
+        Assert.ThrowsAny<Exception>(() => ScratchOperations.EditJoint(fake, "J1"));
+        Assert.Equal(new[] { "type", "position", "set", "position", "set", "position" }, fake.Calls);
+        Assert.Equal(new PositionJ(1, 2, 3, 4, 5, 6, 7, 8), fake.Position);
+    }
+
+    [Fact]
+    public void UnsafeOriginalJointNeverGetsWritten()
+    {
+        var fake = new FakeRobot { Position = new PositionJ(1.234, 2, 3, 4, 5, 6, 7, 8) };
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.EditJoint(fake, "J1"));
+        Assert.DoesNotContain("set", fake.Calls);
+    }
+
+    private sealed class FakeRobot : IRobotCommands
+    {
+        public readonly List<string> Calls = new();
+        public bool? Exists = false;
+        public string? CheckedFile;
+        public string Selected = "";
+        public Dictionary<int, string>? SelectedBySlot;
+        public string? Fail;
+        public bool FailFirstSet;
+        public bool IgnoreFirstSet;
+        public PositionJ Position = new(1, 2, 3, 4, 5, 6, 7, 8);
+        private void Call(string name)
+        {
+            Calls.Add(name);
+            if (Fail == name) throw new InvalidOperationException(name);
+        }
+        public bool? FileExists(string name) { Call("exists"); CheckedFile = name; return Exists; }
+        public string CurrentProgram(int slot) { Call("current"); return SelectedBySlot?.GetValueOrDefault(slot) ?? Selected; }
+        public void OpenProgram(string name) => Call("open");
+        public void DiscardProgram() => Call("discard");
+        public void SaveProgram() { Call("save"); Exists = true; }
+        public void DeleteFile(string name) { Call("delete"); Exists = false; }
+        public string GetLine(int line) { Call("line"); return $"{line} End"; }
+        public void EditLine(int line, string content) => Call("edit");
+        public Type VariableType(string name) { Call("type"); return typeof(PositionJ); }
+        public PositionJ GetJointVariable(string name) { Call("position"); return Position; }
+        public void SetVariable(string name, string value)
+        {
+            Call("set");
+            if (IgnoreFirstSet) { IgnoreFirstSet = false; return; }
+            Position = new PositionJ(value);
+            if (FailFirstSet) { FailFirstSet = false; throw new InvalidOperationException("uncertain write"); }
+        }
+    }
+}

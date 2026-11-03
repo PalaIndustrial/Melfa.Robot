@@ -61,8 +61,10 @@ emergency stop; use the controller's independent safety systems.
 
 # Tests
 
-Run `dotnet test .\Melfa.Robot.PositionTests\Melfa.Robot.PositionTests.csproj`.
-The tests use a loopback controller and do not require robot hardware.
+Run `dotnet test .\Melfa.Robot.Tests\Melfa.Robot.Tests.csproj`.
+The default tests use a loopback controller and do not require robot hardware.
+Robot and simulator integration tests are opt-in; see
+[`Melfa.Robot.Tests\README.md`](Melfa.Robot.Tests/README.md).
 
 # TODO
 - Finish implement of all functionalities

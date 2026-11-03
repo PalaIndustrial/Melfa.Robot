@@ -1,0 +1,16 @@
+﻿{
+  "version": "1",
+  "environments": [
+    // 如需關於如何設定遠端環境的詳細資料，請參閱https://aka.ms/remotetesting
+    //{
+    //  "name": "WSL Ubuntu",
+    //  "type": "wsl",
+    //  "wslDistribution": "Ubuntu"
+    //},
+    //{
+    //  "name": "Docker dotnet/sdk",
+    //  "type": "docker",
+    //  "dockerImage": "mcr.microsoft.com/dotnet/sdk"
+    //}
+  ]
+}

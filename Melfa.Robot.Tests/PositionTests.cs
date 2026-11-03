@@ -2,7 +2,7 @@ using System.Globalization;
 using Melfa.Robot;
 using Xunit;
 
-namespace Melfa.Robot.PositionTests;
+namespace Melfa.Robot.Tests;
 
 public class PositionTests
 {

@@ -8,4 +8,5 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="Melfa.Robot/Melfa.Robot.csproj" />
+  <Project Path="Melfa.Robot.Tests/Melfa.Robot.Tests.csproj" />
 </Solution>
