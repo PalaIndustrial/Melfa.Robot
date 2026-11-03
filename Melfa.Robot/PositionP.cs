@@ -1,11 +1,12 @@
 ﻿using Melfa.Robot.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Melfa.Robot;
 
-public readonly partial struct PositionP : IPosition
+public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
 {
     public double X { get; }
     public double Y { get; }
@@ -43,22 +44,32 @@ public readonly partial struct PositionP : IPosition
 
     public PositionP(string raw)
     {
-        var match = RegexHelper.PositionXyzRegex().Match(raw);
+        var match = RegexHelper.PositionXyzRegex().Match(raw ?? "");
         if (!match.Success)
             throw new PositionParseException(raw, typeof(PositionP));
-        X = PositionHelper.DoubleFromString(match.Groups[nameof(X)].Value);
-        Y = PositionHelper.DoubleFromString(match.Groups[nameof(Y)].Value);
-        Z = PositionHelper.DoubleFromString(match.Groups[nameof(Z)].Value);
-        A = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(A)].Value));
-        B = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(B)].Value));
-        C = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(C)].Value));
-        L1 = PositionHelper.DoubleFromString(match.Groups[nameof(L1)].Value);
-        L2 = PositionHelper.DoubleFromString(match.Groups[nameof(L2)].Value);
-        FLG1 = (PositionConfig)Enum.Parse(typeof(PositionConfig), match.Groups[nameof(FLG1)].Value, true);
-        FLG2 = PositionHelper.UInt32FromString(match.Groups[nameof(FLG2)].Value);
+        try
+        {
+            X = PositionHelper.DoubleFromString(match.Groups[nameof(X)].Value);
+            Y = PositionHelper.DoubleFromString(match.Groups[nameof(Y)].Value);
+            Z = PositionHelper.DoubleFromString(match.Groups[nameof(Z)].Value);
+            A = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(A)].Value));
+            B = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(B)].Value));
+            C = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(C)].Value));
+            L1 = PositionHelper.DoubleFromString(match.Groups[nameof(L1)].Value);
+            L2 = PositionHelper.DoubleFromString(match.Groups[nameof(L2)].Value);
+            var flag = match.Groups[nameof(FLG1)].Value;
+            FLG1 = char.IsLetter(flag[0])
+                ? (PositionConfig)Enum.Parse(typeof(PositionConfig), flag, true)
+                : (PositionConfig)checked((byte)PositionHelper.UInt32FromString(flag));
+            FLG2 = PositionHelper.UInt32FromString(match.Groups[nameof(FLG2)].Value);
+        }
+        catch (Exception ex) when (ex is FormatException || ex is OverflowException || ex is ArgumentException)
+        {
+            throw new PositionParseException(raw, typeof(PositionP), ex);
+        }
     }
 
-    public override string ToString() => string.Format(
+    public override string ToString() => string.Format(System.Globalization.CultureInfo.InvariantCulture,
         "({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}) ({8}, {9})",
         PositionHelper.StringFromDouble("{0:0.00}", X),
         PositionHelper.StringFromDouble("{0:0.00}", Y),
@@ -75,35 +86,47 @@ public readonly partial struct PositionP : IPosition
     private PositionP(Match pmatch, MatchCollection amatches) :
         this(double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, double.NaN, PositionConfig.LBF, 0)
     {
+        var seen = new HashSet<string>(StringComparer.Ordinal);
         foreach (var match in amatches.Cast<Match>())
         {
-            try
+            var axis = match.Groups["AXIS"].Value;
+            if (!seen.Add(axis))
+                throw new FormatException("Duplicate position axis.");
+            var value = PositionHelper.DoubleFromString(match.Groups["VALUE"].Value);
+            switch (axis)
             {
-                switch (match.Groups["AXIS"].Value)
-                {
-                    case nameof(X): X = double.Parse(match.Groups["VALUE"].Value); break;
-                    case nameof(Y): Y = double.Parse(match.Groups["VALUE"].Value); break;
-                    case nameof(Z): Z = double.Parse(match.Groups["VALUE"].Value); break;
-                    case nameof(A): A = _NormalizeAngle(double.Parse(match.Groups["VALUE"].Value)); break;
-                    case nameof(B): B = _NormalizeAngle(double.Parse(match.Groups["VALUE"].Value)); break;
-                    case nameof(C): C = _NormalizeAngle(double.Parse(match.Groups["VALUE"].Value)); break;
-                    case nameof(L1): L1 = double.Parse(match.Groups["VALUE"].Value); break;
-                    case nameof(L2): L2 = double.Parse(match.Groups["VALUE"].Value); break;
-                }
+                case nameof(X): X = value; break;
+                case nameof(Y): Y = value; break;
+                case nameof(Z): Z = value; break;
+                case nameof(A): A = _NormalizeAngle(value); break;
+                case nameof(B): B = _NormalizeAngle(value); break;
+                case nameof(C): C = _NormalizeAngle(value); break;
+                case nameof(L1): L1 = value; break;
+                case nameof(L2): L2 = value; break;
+                default: throw new FormatException("Invalid position axis.");
             }
-            catch { }
         }
-        try { FLG1 = (PositionConfig)(int.Parse(pmatch.Groups["FLG1"].Value)); } catch { }
-        try { FLG2 = uint.Parse(pmatch.Groups["FLG2"].Value); } catch { }
-
+        FLG1 = (PositionConfig)checked((byte)PositionHelper.UInt32FromString(pmatch.Groups["FLG1"].Value));
+        FLG2 = PositionHelper.UInt32FromString(pmatch.Groups["FLG2"].Value);
     }
 
     //QokX;-400.94;Y;22.33;Z;985.71;A;-166.69;B;0.52;C;0.13;L1;0.00;L2;0.00;;6,0;100;0.00;00000000
     public static PositionP FromCommand(string raw)
     {
-        var pmatch = RegexHelper.PositionXyzPosRegex().Match(raw);
-        var amatches = RegexHelper.PositionXyzAxisRegex().Matches(pmatch.Groups["POS"].Value);
-        return new PositionP(pmatch, amatches);
+        var pmatch = RegexHelper.PositionXyzPosRegex().Match(raw ?? "");
+        if (!pmatch.Success)
+            throw new PositionParseException(raw, typeof(PositionP));
+        try
+        {
+            PositionHelper.UInt32FromString(pmatch.Groups["OVRD"].Value);
+            PositionHelper.DoubleFromString(pmatch.Groups["ENDSPEED"].Value);
+            var amatches = RegexHelper.PositionXyzAxisRegex().Matches(pmatch.Groups["POS"].Value);
+            return new PositionP(pmatch, amatches);
+        }
+        catch (Exception ex) when (ex is FormatException || ex is OverflowException)
+        {
+            throw new PositionParseException(raw, typeof(PositionP), ex);
+        }
     }
 
     private static short _GetTurn(uint flg, int axis)
@@ -118,47 +141,25 @@ public readonly partial struct PositionP : IPosition
     {
         if (double.IsNaN(angle) || double.IsInfinity(angle))
             return angle;
-        if (angle > 180)
-            return angle % 360;
-        if (angle < -180)
-            return angle % 360;
+        angle %= 360;
+        if (angle >= 180)
+            angle -= 360;
+        else if (angle < -180)
+            angle += 360;
         return angle;
-    }
-
-    private static bool _AngleEquals(double left, double right)
-    {
-        var l = _NormalizeAngle(left);
-        var r = _NormalizeAngle(right);
-
-        if (l == r)
-            return true;
-        if (l == -180.0 && r == 180.0)
-            return true;
-        if (l == 180.0 && r == -180.0)
-            return true;
-        return false;
     }
 
     public static bool operator ==(PositionP left, PositionP right) => left.Equals(right);
 
     public static bool operator !=(PositionP left, PositionP right) => !(left == right);
 
-    public override bool Equals(object obj)
-    {
-        if (ReferenceEquals(null, obj))
-            return false;
-        var pother = obj as PositionP?;
-        if (obj != null)
-            return false;
-        var other = pother.Value;
-        if (X != other.X || Y != other.Y || Z != other.Z ||
-            L1 != other.L1 || L2 != other.L2 ||
-            FLG1 != other.FLG1 || FLG2 != other.FLG2)
-            return false;
-        if (!_AngleEquals(A, other.A) || !_AngleEquals(B, other.B) || !_AngleEquals(C, other.C))
-            return false;
-        return true;
-    }
+    public override bool Equals(object obj) => obj is PositionP other && Equals(other);
+
+    public bool Equals(PositionP other) =>
+        X.Equals(other.X) && Y.Equals(other.Y) && Z.Equals(other.Z) &&
+        A.Equals(other.A) && B.Equals(other.B) && C.Equals(other.C) &&
+        L1.Equals(other.L1) && L2.Equals(other.L2) &&
+        FLG1 == other.FLG1 && FLG2 == other.FLG2;
 
     public override int GetHashCode() =>
         HashCode.Combine(

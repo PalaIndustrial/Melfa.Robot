@@ -48,36 +48,38 @@ internal static partial class RegexHelper
 
     private const string HandStateRegexPattern = @"(?'SignalNumber'-?\d+);(?'State'-?\d+);(?'HandType'-?\d+)";
 
+    private const string PositionNumberPattern = @"[-+]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][-+]?[0-9]+)?";
+    private const string PositionValuePattern = @"(?:" + PositionNumberPattern + @"|[nN][aA][nN]|[-+]?[iI][nN][fF])";
     private const string PositionJointRegexPattern =
-        @"^\s*\(" +
-            @"\s*(?'J1'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J2'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J3'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J4'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J5'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J6'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J7'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'J8'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*" +
-        @"\)\s*$";
-    private const string PositionJointPosRegexPattern = @"(?'POS'(J[1-8];-?\d+\.?\d+;){6,8});?\*{4},\*{4};(?'OVRD'\d+);(?'ENDSPEED'-?\d+.\d+);(?'LIMIT'[0-9a-fA-F]{8})";
-    private const string PositionJointAxisRegexPattern = @"(?'AXIS'J[1-8]);(?'VALUE'-?\d+.\d+);";
+        @"\A\s*\(" +
+            @"\s*(?'J1'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J2'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J3'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J4'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J5'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J6'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J7'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'J8'" + PositionValuePattern + @")\s*" +
+        @"\)\s*\z";
+    private const string PositionJointPosRegexPattern = @"\A(?i:Qok)?(?'POS'(?:J[1-8];" + PositionNumberPattern + @";){6,8});?\*{4},\*{4};(?'OVRD'[0-9]+);(?'ENDSPEED'" + PositionNumberPattern + @");(?'LIMIT'[0-9a-fA-F]{8})\z";
+    private const string PositionJointAxisRegexPattern = @"(?'AXIS'J[1-8]);(?'VALUE'" + PositionNumberPattern + @");";
 
     private const string PositionXyzRegexPattern =
-        @"^\s*\(" +
-            @"\s*(?'X'-?\d*\.?\d*|[nN][aA][nN]|[-+?][iI][nN][fF])\s*," +
-            @"\s*(?'Y'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'Z'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'A'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'B'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'C'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'L1'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*," +
-            @"\s*(?'L2'-?\d*\.?\d*|[nN][aA][nN]|[-+]?[iI][nN][fF])\s*" +
+        @"\A\s*\(" +
+            @"\s*(?'X'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'Y'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'Z'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'A'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'B'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'C'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'L1'" + PositionValuePattern + @")\s*," +
+            @"\s*(?'L2'" + PositionValuePattern + @")\s*" +
         @"\)\s*\(" +
-            @"\s*(?'FLG1'(?>0[xX][0-9a-fA-F]+|[0-9]+|[lLrR][bBaA][fFnN]))\s*," +
-            @"\s*(?'FLG2'(?>0[xX][0-9a-fA-F]+|[0-9]+))\s*" +
-        @"\)\s*$";
-    private const string PositionXyzPosRegexPattern = @"(?'POS'((X|Y|Z|A|B|C|L1|L2);-?\d+\.?\d+;){6,8});?(?'FLG1'\d+),(?'FLG2'\d+);(?'OVRD'\d+);(?'ENDSPEED'-?\d+.\d+);(?'LIMIT'[0-9a-fA-F]{8})";
-    private const string PositionXyzAxisRegexPattern = @"(?'AXIS'(X|Y|Z|A|B|C|L1|L2));(?'VALUE'-?\d+.\d+);";
+            @"\s*(?'FLG1'(?:0[xX][0-9a-fA-F]+|[0-9]+|[lLrR][bBaA][fFnN]))\s*," +
+            @"\s*(?'FLG2'(?:0[xX][0-9a-fA-F]+|[0-9]+))\s*" +
+        @"\)\s*\z";
+    private const string PositionXyzPosRegexPattern = @"\A(?i:Qok)?(?'POS'(?:(?:X|Y|Z|A|B|C|L1|L2);" + PositionNumberPattern + @";){6,8});?(?'FLG1'[0-9]+),(?'FLG2'[0-9]+);(?'OVRD'[0-9]+);(?'ENDSPEED'" + PositionNumberPattern + @");(?'LIMIT'[0-9a-fA-F]{8})\z";
+    private const string PositionXyzAxisRegexPattern = @"(?'AXIS'(?:X|Y|Z|A|B|C|L1|L2));(?'VALUE'" + PositionNumberPattern + @");";
 
 #if NET8_0_OR_GREATER
     [GeneratedRegex(ErrorRegexPattern, RegexOptions.ExplicitCapture | RegexOptions.Compiled)]

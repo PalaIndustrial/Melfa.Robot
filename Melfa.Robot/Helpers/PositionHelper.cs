@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Diagnostics;
 using System;
+using System.Globalization;
 
 namespace Melfa.Robot.Helpers;
 
@@ -14,22 +15,20 @@ internal static class PositionHelper
             case "inf": return double.PositiveInfinity;
             case "+inf": return double.PositiveInfinity;
             case "-inf": return double.NegativeInfinity;
-            default: return double.Parse(value);
+            default:
+                var result = double.Parse(value, NumberStyles.Float, CultureInfo.InvariantCulture);
+                if (double.IsInfinity(result))
+                    throw new OverflowException("Position value is outside the range of a double.");
+                return result;
         }
-    }
-
-    public static double DoubleFromStringOrDefault(string value, double defaultValue = double.NaN)
-    {
-        try { return DoubleFromString(value); }
-        catch { return defaultValue; }
     }
 
     public static uint UInt32FromString(string value)
     {
         Guard.IsNotNull(value);
-        return value.StartsWith("0x", StringComparison.InvariantCultureIgnoreCase) ?
-            uint.Parse(value.Substring(2), System.Globalization.NumberStyles.HexNumber) :
-            uint.Parse(value);
+        return value.StartsWith("0x", StringComparison.OrdinalIgnoreCase) ?
+            uint.Parse(value.Substring(2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture) :
+            uint.Parse(value, NumberStyles.None, CultureInfo.InvariantCulture);
     }
 
     public static string StringFromDouble(string format, double value)
@@ -40,6 +39,6 @@ internal static class PositionHelper
             return "Inf";
         if (double.IsNegativeInfinity(value))
             return "-Inf";
-        return string.Format(format, value);
+        return string.Format(CultureInfo.InvariantCulture, format, value);
     }
 }
