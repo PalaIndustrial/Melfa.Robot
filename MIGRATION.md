@@ -1,22 +1,24 @@
 # Migration Notes
 
-## Upcoming behavior change: `MelfaRobot.Disconnect()` now throws on cleanup failures
+## v0.1.22.8 behavior change: 
+
+### `MelfaRobot.Disconnect()` now throws on cleanup failures
 
 `MelfaRobot.Disconnect()` no longer swallows all exceptions from stream/socket teardown.
 
-### Previous behavior
+#### Previous behavior
 
 - `Disconnect()` used broad `catch { }` blocks.
 - Teardown failures were silently ignored.
 - Callers could not observe disconnect cleanup issues.
 
-### New behavior
+#### New behavior
 
 - `Disconnect()` still attempts all cleanup steps for both the network stream and TCP client.
 - The internal fields are reset deterministically (`_Stream = null`, `_Client = null`) even when teardown operations fail.
 - If one or more teardown operations fail, `Disconnect()` throws an `AggregateException` containing all captured errors.
 
-### Why this changed
+#### Why this changed
 
 This improves reliability and diagnosability by surfacing cleanup failures instead of hiding them.
 
