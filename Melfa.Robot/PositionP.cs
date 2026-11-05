@@ -19,23 +19,23 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
     public PositionConfig FLG1 { get; }
     public uint FLG2 { get; }
 
-    public short Turn1 => _GetTurn(FLG2, 0);
-    public short Turn2 => _GetTurn(FLG2, 1);
-    public short Turn3 => _GetTurn(FLG2, 2);
-    public short Turn4 => _GetTurn(FLG2, 3);
-    public short Turn5 => _GetTurn(FLG2, 4);
-    public short Turn6 => _GetTurn(FLG2, 5);
-    public short Turn7 => _GetTurn(FLG2, 6);
-    public short Turn8 => _GetTurn(FLG2, 7);
+    public short Turn1 => GetTurnInternal(FLG2, 0);
+    public short Turn2 => GetTurnInternal(FLG2, 1);
+    public short Turn3 => GetTurnInternal(FLG2, 2);
+    public short Turn4 => GetTurnInternal(FLG2, 3);
+    public short Turn5 => GetTurnInternal(FLG2, 4);
+    public short Turn6 => GetTurnInternal(FLG2, 5);
+    public short Turn7 => GetTurnInternal(FLG2, 6);
+    public short Turn8 => GetTurnInternal(FLG2, 7);
 
     public PositionP(double x = 0, double y = 0, double z = 0, double a = 0, double b = 0, double c = 0, double l1 = 0, double l2 = 0, PositionConfig flg1 = PositionConfig.LBF, uint flg2 = 0)
     {
         X = x;
         Y = y;
         Z = z;
-        A = _NormalizeAngle(a);
-        B = _NormalizeAngle(b);
-        C = _NormalizeAngle(c);
+        A = NormalizeAngleInternal(a);
+        B = NormalizeAngleInternal(b);
+        C = NormalizeAngleInternal(c);
         L1 = l1;
         L2 = l2;
         FLG1 = flg1;
@@ -52,9 +52,9 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
             X = PositionHelper.DoubleFromString(match.Groups[nameof(X)].Value);
             Y = PositionHelper.DoubleFromString(match.Groups[nameof(Y)].Value);
             Z = PositionHelper.DoubleFromString(match.Groups[nameof(Z)].Value);
-            A = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(A)].Value));
-            B = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(B)].Value));
-            C = _NormalizeAngle(PositionHelper.DoubleFromString(match.Groups[nameof(C)].Value));
+            A = NormalizeAngleInternal(PositionHelper.DoubleFromString(match.Groups[nameof(A)].Value));
+            B = NormalizeAngleInternal(PositionHelper.DoubleFromString(match.Groups[nameof(B)].Value));
+            C = NormalizeAngleInternal(PositionHelper.DoubleFromString(match.Groups[nameof(C)].Value));
             L1 = match.Groups[nameof(L1)].Success ? PositionHelper.DoubleFromString(match.Groups[nameof(L1)].Value) : double.NaN;
             L2 = match.Groups[nameof(L2)].Success ? PositionHelper.DoubleFromString(match.Groups[nameof(L2)].Value) : double.NaN;
             var flag = match.Groups[nameof(FLG1)].Value;
@@ -98,9 +98,9 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
                 case nameof(X): X = value; break;
                 case nameof(Y): Y = value; break;
                 case nameof(Z): Z = value; break;
-                case nameof(A): A = _NormalizeAngle(value); break;
-                case nameof(B): B = _NormalizeAngle(value); break;
-                case nameof(C): C = _NormalizeAngle(value); break;
+                case nameof(A): A = NormalizeAngleInternal(value); break;
+                case nameof(B): B = NormalizeAngleInternal(value); break;
+                case nameof(C): C = NormalizeAngleInternal(value); break;
                 case nameof(L1): L1 = value; break;
                 case nameof(L2): L2 = value; break;
                 default: throw new FormatException("Invalid position axis.");
@@ -131,14 +131,14 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
         }
     }
 
-    private static short _GetTurn(uint flg, int axis)
+    private static short GetTurnInternal(uint flg, int axis)
     {
         // Each FLG2 nibble is a signed 4-bit (two's complement) turn count.
         var n = (int)((flg >> (axis * 4)) & 0x0F);
         return (short)(n >= 8 ? n - 16 : n);
     }
 
-    private static double _NormalizeAngle(double angle)
+    private static double NormalizeAngleInternal(double angle)
     {
         if (double.IsNaN(angle) || double.IsInfinity(angle))
             return angle;
