@@ -2,7 +2,7 @@
 
 ## SAFETY NOTE
 
-!!! IMPORTANT !!!
+**!!! IMPORTANT !!!**
 
 **THIS IS AN UNOFFICIAL ROBOT PROTOCOL LIBRARY INTENDED FOR EDUCATIONAL AND
 TESTING PURPOSES. USING IT TO CONTROL A REAL-WORLD ROBOT IS STRONGLY
@@ -11,7 +11,9 @@ DISCOURAGED.**
 **THE AUTHOR ACCEPTS NO RESPONSIBILITY FOR ANY HARM OR DAMAGE
 RESULTING FROM OPERATING A REAL ROBOT WITH THIS LIBRARY.**
 
-!!! IMPORTANT !!!
+**USE AT YOUR OWN RISK**
+
+**!!! IMPORTANT !!!**
 
 ## Description
 
@@ -229,7 +231,6 @@ Known missing or partial R-protocol functionality:
 - `USERAREASTS`: Read user-specified areas.
 - `XPOS`, `RPOS`: Read current positions.
 - `VAL`: Read by position (`<`, `>`, `+1`, `-1`); named-variable reads are implemented.
-- `MFTIME=`: Read the maintenance forecast reset date.
 
 # Disclaimer
 
