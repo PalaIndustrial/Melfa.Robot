@@ -18,7 +18,7 @@ public class ReadOnlyRobotTests
     {
         Integration.Run(false, (robot, _) =>
         {
-            Assert.NotNull(robot.CurrentProgram(1));
+            Assert.NotNull(robot.GetCurrentProgram(1));
             Assert.True(robot.TaskCount > 0);
         });
     }
@@ -34,7 +34,7 @@ public class ReadOnlyRobotTests
             if (!Regex.IsMatch(robot.ProgramExtension, @"\A[A-Za-z0-9]{1,8}\z", RegexOptions.CultureInvariant))
                 throw new InvalidOperationException("Unrecognized program extension from OPEN.");
             var filename = name + "." + robot.ProgramExtension;
-            using var contents = robot.ReadFile(filename);
+            using var contents = robot.FileRead(filename);
             output.WriteLine($"Read {contents.Length} bytes from {filename}.");
             Assert.True(contents.Length > 0, $"Program file {filename} is empty.");
             foreach (var line in ProgramFilePreview.ReadLines(contents))
@@ -48,7 +48,7 @@ public class ReadOnlyRobotTests
     {
         Integration.Run(false, (robot, _) =>
         {
-            var position = robot.CurrentPosition();
+            var position = robot.CurrentPositionP;
             output.WriteLine($"Current Cartesian position: {position}");
             Assert.True(double.IsFinite(position.X), "X must be finite.");
             Assert.True(double.IsFinite(position.Y), "Y must be finite.");
@@ -62,7 +62,7 @@ public class ReadOnlyRobotTests
     {
         Integration.Run(false, (robot, _) =>
         {
-            var position = robot.CurrentJointPosition();
+            var position = robot.CurrentPositionJ;
             output.WriteLine($"Current joint position: {position}");
             var joints = new[] { position.J1, position.J2, position.J3, position.J4,
                                  position.J5, position.J6, position.J7, position.J8 };
@@ -79,7 +79,7 @@ public class ReadOnlyRobotTests
     {
         Integration.Run(false, (robot, _) =>
         {
-            var hands = robot.HandStates();
+            var hands = robot.HandStates;
             Assert.Equal(8, hands.Length);
             for (var i = 0; i < hands.Length; i++)
             {
@@ -98,13 +98,29 @@ public class ReadOnlyRobotTests
     {
         Integration.Run(false, (robot, _) =>
         {
-            var count = robot.OptionSlotCount();
+            var count = robot.OptionSlotCount;
             output.WriteLine($"Option slots reported: {count}");
             for (var slot = 1; slot <= count; slot++)
             {
-                var information = robot.OptionStatus(slot);
+                var information = robot.GetOptionStatus(slot);
                 output.WriteLine($"Option slot {slot}: {information.Replace("\v", "<VT>")}");
             }
+        });
+    }
+
+    [ReadFact(Skip = "Crash the simulator, temporarily disabled")]
+    [Trait("Category", "RobotReadOnly")]
+    [Trait("Category", "SimulatorCrashOnly")]
+    public void ReadMaintainaceForecast()
+    {
+        Integration.Run(false, (robot, _) =>
+        {
+            var battery = robot.MaintenanceForecastResetDate(MaintenanceType.Battery);
+            output.WriteLine($"MFTIME=1: {battery}");
+            var grease = robot.MaintenanceForecastResetDate(MaintenanceType.Grease);
+            output.WriteLine($"MFTIME=2: {grease}");
+            var belt = robot.MaintenanceForecastResetDate(MaintenanceType.Belt);
+            output.WriteLine($"MFTIME=3: {belt}");
         });
     }
 }

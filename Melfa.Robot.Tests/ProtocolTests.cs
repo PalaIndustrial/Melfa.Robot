@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Globalization;
 using System.Net;
@@ -8,7 +9,7 @@ using Xunit;
 
 namespace Melfa.Robot.Tests;
 
-public class ProtocolTests
+public partial class ProtocolTests
 {
     [Fact]
     public async Task ReadsBreakpointsByNumberAndLineRange()
@@ -36,7 +37,7 @@ public class ProtocolTests
             Assert.Equal("TEST", first.ProgramName);
             Assert.Equal(20, first.LineNumber);
             Assert.Equal(BreakpointType.Continuous, first.Type);
-            Assert.Equal("TEST;00020;0", first.ToString());
+            Assert.Equal("TEST;20;0", first.ToString());
             var last = robot.GetBreakpoint(null!, 128, 0, 0);
             Assert.Equal("OTHER.MB6", last.ProgramName);
             Assert.Equal(123, last.LineNumber);
@@ -156,7 +157,7 @@ public class ProtocolTests
         Assert.False(undefined.IsDefined);
         Assert.Equal(0x8a, undefined.CompletedAxisMask);
         Assert.Equal("00", undefined.Reserved);
-        Assert.Equal("F8a00", undefined.ToString());
+        Assert.Equal("F8A00", undefined.ToString());
         var noReservedData = robot.Calibration;
         Assert.True(noReservedData.IsDefined);
         Assert.Equal(0, noReservedData.CompletedAxisMask);
@@ -228,7 +229,7 @@ public class ProtocolTests
         Assert.Equal(4140, other.ErrorNumber);
         Assert.Equal(123, other.StepNumber);
         Assert.Equal(3, other.MechanismNumber);
-        Assert.Equal("a5fE4140;123;3", other.ToString());
+        Assert.Equal("A5FE4140;123;3", other.ToString());
         var clear = robot.StopSignals;
         Assert.Equal(StopSignalSource.None, clear.Stop);
         Assert.Equal(EmergencyStopSource.None, clear.EmergencyStop);
@@ -236,7 +237,7 @@ public class ProtocolTests
         var signals = robot.StopSignals;
         Assert.Equal(StopSignalSource.TeachingBox | StopSignalSource.PersonalComputer | StopSignalSource.OperationPanel, signals.Stop);
         Assert.Equal((EmergencyStopSource)0x85, signals.EmergencyStop);
-        Assert.Equal("0b;85", signals.ToString());
+        Assert.Equal("B;85", signals.ToString());
         Assert.True((signals.EmergencyStop & EmergencyStopSource.InputOutput) != 0);
         Assert.True((signals.EmergencyStop & EmergencyStopSource.TeachingBox) != 0);
         Assert.False((signals.EmergencyStop & EmergencyStopSource.OperationPanel) != 0);
@@ -529,7 +530,7 @@ public class ProtocolTests
     }
 
     [Fact]
-    public async Task RunStateAndTaskSlotToStringRetainResponseData()
+    public async Task RunStateAndTaskSlotToStringRebuildCanonicalResponseData()
     {
         const string state = "TEST.MB6;00020;100;5;aB0c0;001;1;;;;;;;;;REP;START;01;0";
         const string slot = "TEST.MB6;CYC;ALWAYS;01";
@@ -541,8 +542,8 @@ public class ProtocolTests
             await Send(stream, "QoK" + slot + "\r");
         });
         using var robot = server.Connect();
-        Assert.Equal(state, robot.GetState(4).ToString());
-        Assert.Equal(slot, robot.SlotGet(4).ToString());
+        Assert.Equal("TEST.MB6;20;100;5;AB0C0;1;1;;;;;;;;;REP;START;1;0", robot.GetState(4).ToString());
+        Assert.Equal("TEST.MB6;CYC;ALWAYS;1", robot.SlotGet(4).ToString());
         await server.Complete();
     }
 
@@ -555,16 +556,16 @@ public class ProtocolTests
     }
 
     [Fact]
-    public void DefaultProtocolStructsHaveNoResponseToFormat()
+    public void DefaultProtocolStructsFormatTheirZeroValues()
     {
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.Breakpoint).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.CalibrationInfo).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.DetailedState).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.HandState).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.RobotInformation).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.RunState).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.StopSignalState).ToString());
-        Assert.Throws<InvalidOperationException>(() => default(MelfaRobot.TaskSlotInfo).ToString());
+        Assert.Equal(";0;0", default(MelfaRobot.Breakpoint).ToString());
+        Assert.Equal("F00", default(MelfaRobot.CalibrationInfo).ToString());
+        Assert.Equal("00000;0;0", default(MelfaRobot.DetailedState).ToString());
+        Assert.Equal("0;-1;0", default(MelfaRobot.HandState).ToString());
+        Assert.Equal("00;00;0,0;;;;;;;01-01-01;;;;;;0;", default(MelfaRobot.RobotInformation).ToString());
+        Assert.Equal(";0;0;0;00000;0;0;;;;;;;;;REP;START;0;0", default(MelfaRobot.RunState).ToString());
+        Assert.Equal("0;0", default(MelfaRobot.StopSignalState).ToString());
+        Assert.Equal(";REP;START;0", default(MelfaRobot.TaskSlotInfo).ToString());
     }
 
     [Theory]
@@ -572,11 +573,13 @@ public class ProtocolTests
     [InlineData("ERRORLOG", "04-02-30;18:49:52;4140;message;2;S1;0;414000000")]
     [InlineData("ERRORLOG", "04-02-09;18:49:52;4140;message;2;S1;0")]
     [InlineData("ERRORLOG", "04-02-09;18:49:52;4140;message;2;S1;0;invalid")]
+    [InlineData("ERRORLOG", "04-02-09;18:49:52;abc;message;2;S1;0;414000000")]
     [InlineData("ERRSUM", "4;006000000;X;message;cause;measures;4")]
     [InlineData("ERRSUM", "4;000000000;H;message;cause;measures;1")]
     [InlineData("ERRSUM", "4;6000000;H;message;cause;measures;4")]
     [InlineData("ERRSUM2", "4;006000000;C;message;cause;measures;4;;")]
     [InlineData("SUMDATE", "10-08-09;25:00:00")]
+    [InlineData("SUMDATE", "10-08-09")]
     public async Task RejectsMalformedErrorLogData(string command, string response)
     {
         using var server = new Controller(async stream =>
@@ -633,33 +636,41 @@ public class ProtocolTests
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("fr-FR");
             var encoder = robot.ServoEncoder;
             Assert.Equal(8, encoder.Length);
-            Assert.Equal((-4475890L, 1L, 2L, -4487192L), encoder[0]);
-            Assert.Equal((28L, 29L, 30L, 31L), encoder[7]);
+            Assert.Equal(new MelfaRobot.ServoEncoderAxis(-4475890, 1, 2, -4487192), encoder[0]);
+            Assert.Equal(new MelfaRobot.ServoEncoderAxis(28, 29, 30, 31), encoder[7]);
+            Assert.Equal("-4475890;1;2;-4487192", encoder[0].ToString());
             var droop = robot.ServoDroop;
             Assert.Equal(8, droop.Length);
-            Assert.Equal((22463L, -1686967L), droop[1]);
-            Assert.Equal((14L, 15L), droop[7]);
+            Assert.Equal(new MelfaRobot.ServoDroopAxis(22463, -1686967), droop[1]);
+            Assert.Equal(new MelfaRobot.ServoDroopAxis(14, 15), droop[7]);
+            Assert.Equal("22463;-1686967", droop[1].ToString());
             var speed = robot.ServoSpeed;
             Assert.Equal(8, speed.Length);
-            Assert.Equal((29L, -4148L, 115L), speed[1]);
-            Assert.Equal((21L, 22L, 23L), speed[7]);
+            Assert.Equal(new MelfaRobot.ServoSpeedAxis(29, -4148, 115), speed[1]);
+            Assert.Equal(new MelfaRobot.ServoSpeedAxis(21, 22, 23), speed[7]);
+            Assert.Equal("29;-4148;115", speed[1].ToString());
             var commands = robot.ServoCurrentCommands;
             Assert.Equal(8, commands.Length);
-            Assert.Equal((-0.42, 1.25, -2.50, 3.75), commands[0]);
-            Assert.Equal((28d, 29d, 30d, 31d), commands[7]);
+            Assert.Equal(new MelfaRobot.ServoCurrentCommandAxis(-0.42, 1.25, -2.50, 3.75), commands[0]);
+            Assert.Equal(new MelfaRobot.ServoCurrentCommandAxis(28, 29, 30, 31), commands[7]);
+            Assert.Equal("-0.42;1.25;-2.5;3.75", commands[0].ToString());
             var feedback = robot.ServoCurrentFeedback;
             Assert.Equal(8, feedback.Length);
-            Assert.Equal((-0.42, 0.49, 3.30), feedback[0]);
-            Assert.Equal((0d, 0d, 0d), feedback[7]);
+            Assert.Equal(new MelfaRobot.ServoCurrentFeedbackAxis(-0.42, 0.49, 3.30), feedback[0]);
+            Assert.Equal(new MelfaRobot.ServoCurrentFeedbackAxis(0, 0, 0), feedback[7]);
+            Assert.Equal("-0.42;0.49;3.3", feedback[0].ToString());
             var load = robot.ServoLoadCurrent;
             Assert.Equal(8, load.Length);
-            Assert.Equal((3d, 3.5), load[0]);
-            Assert.Equal((1d, 1.5), load[7]);
+            Assert.Equal(new MelfaRobot.ServoLoadCurrentAxis(3, 3.5), load[0]);
+            Assert.Equal(new MelfaRobot.ServoLoadCurrentAxis(1, 1.5), load[7]);
+            Assert.Equal("3;3.5", load[0].ToString());
             var voltage = robot.ServoVoltage;
             Assert.Equal(200.5, voltage.PowerVoltage);
             Assert.Equal(210.75, voltage.MaximumPowerVoltage);
             Assert.Equal(190.25, voltage.MinimumPowerVoltage);
             Assert.Equal(new double[] { 1, 2, 3, 4, 5, 6, 7, 8 }, voltage.RegenerationLevels);
+            Assert.Equal(new MelfaRobot.ServoVoltageInfo(200.5, 210.75, 190.25, ImmutableArray.Create<double>(1, 2, 3, 4, 5, 6, 7, 8)), voltage);
+            Assert.Equal("200.5;210.75;190.25;1;2;3;4;5;6;7;8", voltage.ToString());
         }
         finally { CultureInfo.CurrentCulture = oldCulture; }
         await server.Complete();
@@ -927,7 +938,7 @@ public class ProtocolTests
         Assert.True(first.HasMore);
         Assert.Equal(new[] { "M1", "M2", "M3" }, first.Variables.Select(v => v.Key));
         Assert.Equal(new[] { "+1", "+2", "+3" }, first.Variables.Select(v => v.Value));
-        Assert.Equal("M1=+1;\vM2=+2;\vM3=+3;3;1", first.ToString());
+        Assert.Equal("M1=+1\vM2=+2\vM3=+3;3;1", first.ToString());
         var next = robot.ReadVariables(LocationType.Next, VariableClass.Integer, 9);
         Assert.False(next.HasMore);
         Assert.Equal(new[] { "M4", "M5" }, next.Variables.Select(v => v.Key));
@@ -1219,7 +1230,7 @@ public class ProtocolTests
     {
         private readonly TcpListener _listener = new(IPAddress.Loopback, 0);
         private readonly Task _server;
-        private TcpClient? _client;
+        private TcpClient _client;
 
         public Controller(Func<NetworkStream, Task> script)
         {

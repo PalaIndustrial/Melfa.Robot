@@ -5,7 +5,7 @@ namespace Melfa.Robot.Tests;
 
 public class SafetyTests
 {
-    private static SafetyConfig? Load(Dictionary<string, string> env, bool write) =>
+    private static SafetyConfig Load(Dictionary<string, string> env, bool write) =>
         SafetyConfig.Load(name => env.GetValueOrDefault(name), write);
 
     private static Dictionary<string, string> WriteEnvironment() => new()
@@ -54,7 +54,7 @@ public class SafetyTests
     [InlineData("TEST.MB6")]
     [InlineData("TEST;FDEL")]
     [InlineData("TOOLONGNAME")]
-    public void ReadProgramNameRejectsMissingOrUnsafeNames(string? name) =>
+    public void ReadProgramNameRejectsMissingOrUnsafeNames(string name) =>
         Assert.Throws<InvalidOperationException>(() => SafetyConfig.ReadProgramName(key => key == "MELFA_TEST_READ_PROGRAM" ? name : null));
 
     [Theory]
@@ -131,9 +131,10 @@ public class SafetyTests
         var config = Load(env, true)!;
         Assert.Equal(name, config.Joint);
         var fake = new FakeRobot();
-        ScratchOperations.EditJoint(fake, config.Joint!);
+        ScratchOperations.EditJoint(fake, config.Joint!, 2);
         Assert.All(fake.VariableNames, actual => Assert.Equal(name, actual));
         Assert.Equal(6, fake.VariableNames.Count);
+        Assert.All(fake.VariableSlots, slot => Assert.Equal(2, slot));
     }
 
     [Theory]
@@ -160,17 +161,17 @@ public class SafetyTests
             var fake = new FakeRobot { Exists = exists };
             Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, "MB6", () => { }));
             Assert.Equal("SCRATCH.MB6", fake.CheckedFile);
-            Assert.DoesNotContain("open", fake.Calls);
+            Assert.DoesNotContain(nameof(FakeRobot.ProgramOpen), fake.Calls);
         }
         var selected = new FakeRobot { Selected = "scratch.MB6" };
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(selected, config, 1, "MB6", () => { }));
-        Assert.DoesNotContain("open", selected.Calls);
+        Assert.DoesNotContain(nameof(FakeRobot.ProgramOpen), selected.Calls);
         var ambiguous = new FakeRobot { Selected = "OTHER;unexpected" };
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(ambiguous, config, 1, "MB6", () => { }));
-        Assert.DoesNotContain("open", ambiguous.Calls);
+        Assert.DoesNotContain(nameof(FakeRobot.ProgramOpen), ambiguous.Calls);
         var otherInSlotOne = new FakeRobot { Selected = "OTHER" };
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(otherInSlotOne, config, 1, "MB6", () => { }));
-        Assert.DoesNotContain("open", otherInSlotOne.Calls);
+        Assert.DoesNotContain(nameof(FakeRobot.ProgramOpen), otherInSlotOne.Calls);
     }
 
     [Fact]
@@ -184,7 +185,8 @@ public class SafetyTests
         ScratchOperations.WithScratch(fake, config, 1, "MB6", () => ran = true);
         Assert.True(ran);
         Assert.Equal("1.MB6", fake.CheckedFile);
-        Assert.Equal(new[] { "exists", "current", "discard", "open", "edit", "line", "save", "exists", "open", "discard", "exists", "delete", "exists" }, fake.Calls);
+        Assert.Equal(new[] { "FileExists", "GetCurrentProgram", "ProgramNew", "ProgramOpen", "ProgramEdit", "ProgramGetLine", "ProgramSave",
+            "FileExists", "ProgramOpen", "ProgramNew", "FileExists", "FileDelete", "FileExists" }, fake.Calls);
         Assert.False(fake.Exists);
     }
 
@@ -196,18 +198,18 @@ public class SafetyTests
         var error = Assert.Throws<InvalidOperationException>(() =>
             ScratchOperations.WithScratch(fake, config, 1, "MB6", () => throw new InvalidOperationException("test failed")));
         Assert.Equal("test failed", error.Message);
-        Assert.Contains("delete", fake.Calls);
+        Assert.Contains(nameof(FakeRobot.FileDelete), fake.Calls);
         Assert.False(fake.Exists);
     }
 
     [Fact]
     public void FailedSaveNeverDeletesAnUnconfirmedFile()
     {
-        var fake = new FakeRobot { Fail = "save" };
+        var fake = new FakeRobot { Fail = nameof(FakeRobot.ProgramSave) };
         var config = Load(WriteEnvironment(), true)!;
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, "MB6", () => { }));
-        Assert.DoesNotContain("delete", fake.Calls);
-        Assert.Equal("discard", fake.Calls.Last());
+        Assert.DoesNotContain(nameof(FakeRobot.FileDelete), fake.Calls);
+        Assert.Equal(nameof(FakeRobot.ProgramNew), fake.Calls.Last());
     }
 
     [Theory]
@@ -222,7 +224,7 @@ public class SafetyTests
             ScratchOperations.WithScratch(fake, Load(env, true)!, 1, "MB6", () => { }));
         Assert.Contains("definitely be absent", error.Message);
         Assert.Equal("1.MB6", fake.CheckedFile);
-        Assert.Equal(new[] { "exists" }, fake.Calls);
+        Assert.Equal(new[] { "FileExists" }, fake.Calls);
     }
 
     [Fact]
@@ -231,7 +233,7 @@ public class SafetyTests
         var config = Load(WriteEnvironment(), true)!;
         var fake = new FakeRobot { SelectedBySlot = new Dictionary<int, string> { [2] = "scratch.MB5" } };
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 2, "MB6", () => { }));
-        Assert.Equal(new[] { "exists", "current", "current" }, fake.Calls);
+        Assert.Equal(new[] { "FileExists", "GetCurrentProgram", "GetCurrentProgram" }, fake.Calls);
     }
 
     [Theory]
@@ -247,12 +249,12 @@ public class SafetyTests
     }
 
     [Fact]
-    public void PrimaryAndCleanupFailuresAreBothReported()
+    public async Task PrimaryAndCleanupFailuresAreBothReported()
     {
-        var ex = Assert.Throws<AggregateException>(() => ScratchOperations.WithCleanup(
+        var ex = Assert.ThrowsAsync<AggregateException>(() => ScratchOperations.WithCleanup(
             () => throw new InvalidOperationException("primary"),
             () => throw new InvalidOperationException("cleanup")));
-        Assert.Equal(new[] { "primary", "cleanup" }, ex.InnerExceptions.Select(e => e.Message));
+        Assert.Equal(new[] { "primary", "cleanup" }, ex.Exception.InnerExceptions.Select(e => e.Message));
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithCleanup(() => { }, () => throw new Exception("cleanup")));
     }
 
@@ -260,21 +262,26 @@ public class SafetyTests
     public void ScratchPreflightErrorIsSurfacedWithoutWrites()
     {
         var config = Load(WriteEnvironment(), true)!;
-        foreach (var command in new[] { "exists", "current" })
+        foreach (var command in new[] { "FileExists", "GetCurrentProgram" })
         {
             var fake = new FakeRobot { Fail = command };
             var error = Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithScratch(fake, config, 1, "MB6", () => { }));
             Assert.Equal(command, error.Message);
-            Assert.Equal(command == "exists" ? new[] { "exists" } : new[] { "exists", "current" }, fake.Calls);
+            Assert.Equal(command == "FileExists" ? new[] { "FileExists" } : new[] { "FileExists", "GetCurrentProgram" }, fake.Calls);
         }
     }
+
+    private const int EditSlot = 2;
+    private const string TypeRead = nameof(FakeRobot.ProgramGetVariableType);
+    private const string Read = nameof(FakeRobot.ReadVariable);
+    private const string Set = nameof(FakeRobot.ProgramSetVariable);
 
     [Fact]
     public void JointIsVerifiedRestoredEvenWhenWriteIsUncertain()
     {
         var fake = new FakeRobot { FailFirstSet = true };
-        Assert.Throws<InvalidOperationException>(() => ScratchOperations.EditJoint(fake, "J1"));
-        Assert.Equal(new[] { "type", "position", "set", "set", "position" }, fake.Calls);
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.EditJoint(fake, "J1", EditSlot));
+        Assert.Equal(new[] { TypeRead, Read, Set, Set, Read }, fake.Calls);
         Assert.Equal(new PositionJ(1, 2, 3, 4, 5, 6, 7, 8), fake.Position);
     }
 
@@ -282,8 +289,8 @@ public class SafetyTests
     public void JointSuccessVerifiesChangeAndRestoration()
     {
         var fake = new FakeRobot();
-        ScratchOperations.EditJoint(fake, "J1");
-        Assert.Equal(new[] { "type", "position", "set", "position", "set", "position" }, fake.Calls);
+        ScratchOperations.EditJoint(fake, "J1", EditSlot);
+        Assert.Equal(new[] { TypeRead, Read, Set, Read, Set, Read }, fake.Calls);
         Assert.Equal(new PositionJ(1, 2, 3, 4, 5, 6, 7, 8), fake.Position);
     }
 
@@ -291,8 +298,8 @@ public class SafetyTests
     public void SuccessfulWriteResponseWithoutChangedValueFailsAndStillRestores()
     {
         var fake = new FakeRobot { IgnoreFirstSet = true };
-        Assert.ThrowsAny<Exception>(() => ScratchOperations.EditJoint(fake, "J1"));
-        Assert.Equal(new[] { "type", "position", "set", "position", "set", "position" }, fake.Calls);
+        Assert.ThrowsAny<Exception>(() => ScratchOperations.EditJoint(fake, "J1", EditSlot));
+        Assert.Equal(new[] { TypeRead, Read, Set, Read, Set, Read }, fake.Calls);
         Assert.Equal(new PositionJ(1, 2, 3, 4, 5, 6, 7, 8), fake.Position);
     }
 
@@ -300,44 +307,17 @@ public class SafetyTests
     public void UnsafeOriginalJointNeverGetsWritten()
     {
         var fake = new FakeRobot { Position = new PositionJ(1.234, 2, 3, 4, 5, 6, 7, 8) };
-        Assert.Throws<InvalidOperationException>(() => ScratchOperations.EditJoint(fake, "J1"));
-        Assert.DoesNotContain("set", fake.Calls);
+        Assert.Throws<InvalidOperationException>(() => ScratchOperations.EditJoint(fake, "J1", EditSlot));
+        Assert.DoesNotContain(Set, fake.Calls);
     }
 
-    private sealed class FakeRobot : IRobotCommands
+    [Fact]
+    public void FakeRobotRejectsCommandsOutsideTheScratchWorkflow()
     {
-        public readonly List<string> Calls = new();
-        public bool? Exists = false;
-        public string? CheckedFile;
-        public string Selected = "";
-        public Dictionary<int, string>? SelectedBySlot;
-        public string? Fail;
-        public bool FailFirstSet;
-        public bool IgnoreFirstSet;
-        public readonly List<string> VariableNames = new();
-        public PositionJ Position = new(1, 2, 3, 4, 5, 6, 7, 8);
-        private void Call(string name)
-        {
-            Calls.Add(name);
-            if (Fail == name) throw new InvalidOperationException(name);
-        }
-        public bool? FileExists(string name) { Call("exists"); CheckedFile = name; return Exists; }
-        public string CurrentProgram(int slot) { Call("current"); return SelectedBySlot?.GetValueOrDefault(slot) ?? Selected; }
-        public void OpenProgram(string name) => Call("open");
-        public void DiscardProgram() => Call("discard");
-        public void SaveProgram() { Call("save"); Exists = true; }
-        public void DeleteFile(string name) { Call("delete"); Exists = false; }
-        public string GetLine(int line) { Call("line"); return $"{line} End"; }
-        public void EditLine(int line, string content) => Call("edit");
-        public Type VariableType(string name) { VariableNames.Add(name); Call("type"); return typeof(PositionJ); }
-        public PositionJ GetJointVariable(string name) { VariableNames.Add(name); Call("position"); return Position; }
-        public void SetVariable(string name, string value)
-        {
-            VariableNames.Add(name);
-            Call("set");
-            if (IgnoreFirstSet) { IgnoreFirstSet = false; return; }
-            Position = new PositionJ(value);
-            if (FailFirstSet) { FailFirstSet = false; throw new InvalidOperationException("uncertain write"); }
-        }
+        var fake = new FakeRobot();
+        Assert.Throws<NotSupportedException>(() => fake.RunProgram("SCRATCH"));
+        Assert.Throws<NotSupportedException>(() => fake.Override = 10);
+        Assert.Throws<NotSupportedException>(() => _ = fake.CurrentPositionJ);
+        Assert.Equal(new[] { nameof(FakeRobot.RunProgram), nameof(FakeRobot.Override), nameof(FakeRobot.CurrentPositionJ) }, fake.Calls);
     }
 }

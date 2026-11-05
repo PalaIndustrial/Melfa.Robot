@@ -4,9 +4,9 @@ using Xunit;
 
 namespace Melfa.Robot.Tests;
 
-internal sealed record SafetyConfig(string Host, int Port, int Robot, int Delay, string? Program, int Line, string? Joint)
+internal sealed record SafetyConfig(string Host, int Port, int Robot, int Delay, string Program, int Line, string Joint)
 {
-    internal static SafetyConfig? Load(Func<string, string?> get, bool write)
+    internal static SafetyConfig Load(Func<string, string> get, bool write)
     {
         var readEnabled = Flag(get, "MELFA_TEST_READ");
         var writeEnabled = Flag(get, "MELFA_TEST_WRITE");
@@ -37,17 +37,17 @@ internal sealed record SafetyConfig(string Host, int Port, int Robot, int Delay,
         return new(host, port, robot, delay, program, line, joint);
     }
 
-    private static bool Flag(Func<string, string?> get, string name) => get(name) switch
+    private static bool Flag(Func<string, string> get, string name) => get(name) switch
     {
         null or "" or "0" => false,
         "1" => true,
         _ => throw new InvalidOperationException($"{name} must be unset, 0, or 1.")
     };
 
-    private static string Required(Func<string, string?> get, string name) =>
+    private static string Required(Func<string, string> get, string name) =>
         string.IsNullOrEmpty(get(name)) ? throw new InvalidOperationException($"{name} is required.") : get(name)!;
 
-    internal static string ReadProgramName(Func<string, string?> get)
+    internal static string ReadProgramName(Func<string, string> get)
     {
         var name = Required(get, "MELFA_TEST_READ_PROGRAM");
         if (!Regex.IsMatch(name, @"\A[A-Za-z0-9]{1,8}\z", RegexOptions.CultureInvariant))
@@ -55,7 +55,7 @@ internal sealed record SafetyConfig(string Host, int Port, int Robot, int Delay,
         return name;
     }
 
-    private static int Number(Func<string, string?> get, string name, int? defaultValue, int min, int max)
+    private static int Number(Func<string, string> get, string name, int? defaultValue, int min, int max)
     {
         var text = get(name);
         if (text is null or "")

@@ -18,30 +18,16 @@ internal static class Integration
             action(session, config);
         }, session.Dispose);
     }
-}
 
-[Collection("Robot integration")]
-public class SimulatorWriteTests
-{
-    [Fact(Skip = "Scratch program creation is not yet verified.")]
-    [Trait("Category", "SimulatorWrite")]
-    public void EditScratchLineAndDiscard()
+    internal static async Task Run(bool write, Func<RobotSession, SafetyConfig, Task> func)
     {
-        Integration.Run(true, (robot, config) =>
-            ScratchOperations.WithScratch(robot, config, robot.TaskCount, robot.ProgramExtension,
-                () => ScratchOperations.EditLine(robot, config.Line)));
-    }
-
-    [Fact(Skip = "Scratch program creation is not yet verified.")]
-    [Trait("Category", "SimulatorWrite")]
-    public void EditAndRestoreScratchJointVariable()
-    {
-        Integration.Run(true, (robot, config) =>
-            ScratchOperations.WithScratch(robot, config, robot.TaskCount, robot.ProgramExtension,
-                () =>
-                {
-                    robot.SetVariable(config.Joint!, new PositionJ(0, 0, 0, 0, 0, 0, 0, 0).ToString());
-                    ScratchOperations.EditJoint(robot, config.Joint!);
-                }));
+        var config = SafetyConfig.Load(Environment.GetEnvironmentVariable, write)
+            ?? throw new InvalidOperationException("Integration test is not enabled.");
+        var session = new RobotSession(config);
+        await ScratchOperations.WithCleanup(async () =>
+        {
+            session.ConnectAndOpen();
+            await func(session, config);
+        }, session.Dispose);
     }
 }

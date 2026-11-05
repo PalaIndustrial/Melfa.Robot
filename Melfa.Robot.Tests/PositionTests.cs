@@ -203,4 +203,68 @@ public class PositionTests
         Assert.Equal(p.GetHashCode(), equalP.GetHashCode());
         Assert.Contains(equalP, new HashSet<PositionP> { p });
     }
+
+    [Fact]
+    public void DefaultPositionJIsAllZeroes()
+    {
+        var j = new PositionJ();
+        Assert.Equal(0.0, j.J1);
+        Assert.Equal(0.0, j.J2);
+        Assert.Equal(0.0, j.J3);
+        Assert.Equal(0.0, j.J4);
+        Assert.Equal(0.0, j.J5);
+        Assert.Equal(0.0, j.J6);
+        Assert.Equal(0.0, j.J7);
+        Assert.Equal(0.0, j.J8);
+    }
+
+    [Fact]
+    public void DefaultPositionPIsAllZeroesLBF()
+    {
+        var p = new PositionP();
+        Assert.Equal(0.0, p.X);
+        Assert.Equal(0.0, p.Y);
+        Assert.Equal(0.0, p.Z);
+        Assert.Equal(0.0, p.A);
+        Assert.Equal(0.0, p.B);
+        Assert.Equal(0.0, p.C);
+        Assert.Equal(0.0, p.L1);
+        Assert.Equal(0.0, p.L2);
+        Assert.Equal(PositionConfig.LBF, p.FLG1);
+        Assert.Equal(0u, p.FLG2);
+    }
+
+    [Theory]
+    [InlineData(0x76543210u, new short[] { 0, 1, 2, 3, 4, 5, 6, 7 })]
+    [InlineData(0x89ABCDEFu, new short[] { -1, -2, -3, -4, -5, -6, -7, -8 })]
+    [InlineData(0x00F00000u, new short[] { 0, 0, 0, 0, 0, -1, 0, 0 })]
+    [InlineData(0x80000007u, new short[] { 7, 0, 0, 0, 0, 0, 0, -8 })]
+    public void TurnsDecodeFlg2NibblesAsSignedValues(uint flg2, short[] expected)
+    {
+        var p = new PositionP(flg2: flg2);
+        Assert.Equal(expected, new[] { p.Turn1, p.Turn2, p.Turn3, p.Turn4, p.Turn5, p.Turn6, p.Turn7, p.Turn8 });
+    }
+
+    [Fact]
+    public void PositionJFromMatchesRejectsNullDuplicateAndUnknownAxes()
+    {
+        var regex = new System.Text.RegularExpressions.Regex(@"(?'AXIS'\w+);(?'VALUE'[^;]+);");
+        Assert.Throws<ArgumentNullException>(() => new PositionJ((System.Text.RegularExpressions.MatchCollection)null!));
+        Assert.Throws<PositionParseException>(() => new PositionJ(regex.Matches("J1;1;J1;2;")));
+        Assert.Throws<PositionParseException>(() => new PositionJ(regex.Matches("J9;1;")));
+        Assert.Throws<PositionParseException>(() => new PositionJ(regex.Matches("J1;abc;")));
+
+        var j = new PositionJ(regex.Matches("J1;1;J2;2;J3;3;J4;4;J5;5;J6;6;J7;7;J8;8;"));
+        Assert.Equal(new[] { 1.0, 2, 3, 4, 5, 6, 7, 8 }, new[] { j.J1, j.J2, j.J3, j.J4, j.J5, j.J6, j.J7, j.J8 });
+        var partial = new PositionJ(regex.Matches("J2;2.5;"));
+        Assert.True(double.IsNaN(partial.J1));
+        Assert.Equal(2.5, partial.J2);
+    }
+
+    [Fact]
+    public void PositionJFromCommandRejectsDuplicateAxes()
+    {
+        var raw = JointResponse.Replace("J6;6.0;", "J6;6.0;J6;7.0;");
+        Assert.Throws<PositionParseException>(() => PositionJ.FromCommand(raw));
+    }
 }
