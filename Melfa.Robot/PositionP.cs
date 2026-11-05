@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace Melfa.Robot;
 
-public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
+public readonly struct PositionP : IPosition, IEquatable<PositionP>
 {
     public double X { get; }
     public double Y { get; }
