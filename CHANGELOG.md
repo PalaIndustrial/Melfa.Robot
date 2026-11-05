@@ -6,6 +6,7 @@
 - Change `Disconnect()` to surface teardown failures via `AggregateException` and add migration guidance.
 - Replace `lock(this)` with a dedicated private lock object for safer synchronization.
 - Fix file transfer reliability: read all `FREAD` chunks and write full streams via repeated `FWRITE` chunks.
+- Fix `PositionP.Turn1`..`Turn8` decoding of negative turn counts (FLG2 nibbles are now treated as signed 4-bit two's complement).
 
 ## v0.1.22.6
 

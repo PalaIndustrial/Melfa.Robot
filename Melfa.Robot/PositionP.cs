@@ -133,10 +133,9 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
 
     private static short _GetTurn(uint flg, int axis)
     {
-        var n = (flg >> (axis * 4)) & 0x0F;
-        if ((n & 0x08) == 0x08)
-            n = ~n + 8;
-        return (short)n;
+        // Each FLG2 nibble is a signed 4-bit (two's complement) turn count.
+        var n = (int)((flg >> (axis * 4)) & 0x0F);
+        return (short)(n >= 8 ? n - 16 : n);
     }
 
     private static double _NormalizeAngle(double angle)
