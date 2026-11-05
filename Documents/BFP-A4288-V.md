@@ -1631,7 +1631,8 @@ Axis masks use bits 0–7 for X/J1, Y/J2, Z/J3, A/J4, B/J5, C/J6, L1/J7 and L2/J
 
 - Syntax: `MFTIME=<Type>`; `1` battery, `2` grease, `3` belt.
 - Response: `QoK<J1 reset date>;<J2 reset date>;…;<J8 reset date>;<J1 reset count>;…;<J8 reset count>`; reset dates and counts per axis. The example uses separate semicolon-delimited date and time components, unlike the single date field in the format.
-- Example request: `1;1;MFTIME=1`; response contains eight repetitions of `2014/04/09;17:06:16`, followed by eight zero counts. Exact bytes and field boundaries are uncertain in the duplicated extraction.
+- Example request: `1;1;MFTIME=1`; response contains eight repetitions of `2014/04/09;17:06:16`, followed by eight zero counts.
+	- `QoK2014/04/09;17:06:16;2014/04/09;17:06:16;2014/04/09;17:06:16;2014/04/09;17:06:16;2014/04/09;17:06:16;2014/04/09;17:06:16;2014/04/09;17:06:16;2014/04/09;17:06:16;0;0;0;0;0;0;0;0`
 
 ## 5.2.143 MFRST= — Reset maintenance forecast
 

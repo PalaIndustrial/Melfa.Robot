@@ -1343,7 +1343,12 @@ public partial class MelfaRobot : IDisposable
         get => int.Parse(DoCommandInternal("RPWRCHK=")) == 1;
     }
 
-    // TODO: MFTIME= - Read maintenance forecast reset date
+    /// <summary>[MFTIME=] Maintenance forecast reset date read</summary>
+    /// <remarks>BFP-A4288-V gives 1: Battery, 2: Grease, 3: Belt, unlike MFFCST= which numbers the types from 0.</remarks>
+    /// <param name="type">forecast type</param>
+    /// <returns>reset date and count of J1 through J8</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public MaintenanceResetData MaintenanceForecastResetDate(MaintenanceType type) => ReadMaintenanceResetData(type);
 
     /// <summary>[MFRST=] Maintenance forecast reset</summary>
     /// <param name="axis">
@@ -1363,13 +1368,17 @@ public partial class MelfaRobot : IDisposable
 
     /// <summary>[MFFCST=] Maintenance forecast read</summary>
     /// <param name="type">forecast type</param>
+    /// /// <remarks>BFP-A4288-V gives 0: Battery, 1: Grease, 2: Belt, unlike MFTIME= which numbers the types from 1.</remarks>
     /// <returns>list of forecast hour</returns>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public ImmutableArray<int> MaintenanceForecastHour(MaintenanceType type) =>
-        DoCommandInternal($"MFFCST={(int)type}")
+    public ImmutableArray<int> MaintenanceForecastHour(MaintenanceType type)
+    {
+        ValidateMaintenanceType(type);
+        // MFFCST= numbers the types from 0, unlike MFTIME=.
+        return DoCommandInternal($"MFFCST={(int)type - 1}")
             .Split(';')
             .Select(int.Parse)
             .ToImmutableArray();
+    }
     #endregion
 
     public void Dispose()
