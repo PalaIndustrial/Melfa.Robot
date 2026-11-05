@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Melfa.Robot;
 
 public partial class MelfaRobot
@@ -5,11 +7,8 @@ public partial class MelfaRobot
     /// <summary>Installation status returned by CALIB.</summary>
     public readonly struct CalibrationInfo
     {
-        private readonly string _protocolPayload;
-
-        internal CalibrationInfo(bool isDefined, byte completedAxisMask, string reserved, string protocolPayload)
+        public CalibrationInfo(bool isDefined, byte completedAxisMask, string reserved = "")
         {
-            _protocolPayload = protocolPayload;
             IsDefined = isDefined;
             CompletedAxisMask = completedAxisMask;
             Reserved = reserved;
@@ -21,6 +20,9 @@ public partial class MelfaRobot
         public byte CompletedAxisMask { get; }
         /// <summary>Any remaining reserved response data, retained as returned by the controller.</summary>
         public string Reserved { get; }
-        public override string ToString() => RequireProtocolPayload(_protocolPayload);
+
+        /// <summary>Formats the status as a CALIB response payload.</summary>
+        public override string ToString() =>
+            (IsDefined ? "N" : "F") + CompletedAxisMask.ToString("X2", CultureInfo.InvariantCulture) + Reserved;
     }
 }

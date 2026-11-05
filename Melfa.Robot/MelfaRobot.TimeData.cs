@@ -1,4 +1,7 @@
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Globalization;
+using System.Linq;
 
 namespace Melfa.Robot;
 
@@ -7,13 +10,10 @@ public partial class MelfaRobot
     /// <summary>Hour-meter values reported by PTIME.</summary>
     public sealed class HourMeterData
     {
-        private readonly string _protocolPayload;
-
-        internal HourMeterData(long powerOn, long allServoOn, ImmutableArray<long> mechanismServoOn,
+        public HourMeterData(long powerOn, long allServoOn, ImmutableArray<long> mechanismServoOn,
             ImmutableArray<long> reserved, long programOperation, long reservedAfterProgram,
-            long batteryAccumulation, long batteryRemaining, long mechanismInformation, string protocolPayload)
+            long batteryAccumulation, long batteryRemaining, long mechanismInformation)
         {
-            _protocolPayload = protocolPayload;
             PowerOnHours = powerOn;
             AllMechanismsServoOnHours = allServoOn;
             MechanismServoOnHours = mechanismServoOn;
@@ -37,17 +37,26 @@ public partial class MelfaRobot
         public long BatteryRemainingHours { get; }
         /// <summary>Mechanism mask; bits 0-2 represent mechanisms 1-3.</summary>
         public long MechanismInformation { get; }
-        public override string ToString() => _protocolPayload;
+
+        /// <summary>Formats the values as a PTIME response payload.</summary>
+        public override string ToString()
+        {
+            IEnumerable<long> fields = new[] { PowerOnHours, AllMechanismsServoOnHours };
+            if (!MechanismServoOnHours.IsDefault)
+                fields = fields.Concat(MechanismServoOnHours);
+            if (!ReservedFields.IsDefault)
+                fields = fields.Concat(ReservedFields);
+            fields = fields.Concat(new[] { ProgramOperationHours, ReservedAfterProgram, BatteryAccumulationHours,
+                BatteryRemainingHours, MechanismInformation });
+            return string.Join(";", fields.Select(value => value.ToString(CultureInfo.InvariantCulture)));
+        }
     }
 
     /// <summary>Program operation and cycle measurements reported by CYCLETIME.</summary>
     public sealed class CycleTimeData
     {
-        private readonly string _protocolPayload;
-
-        internal CycleTimeData(long operation, long latest, long average, long count, string protocolPayload)
+        public CycleTimeData(long operation, long latest, long average, long count)
         {
-            _protocolPayload = protocolPayload;
             OperationMilliseconds = operation;
             LatestCycleMilliseconds = latest;
             AverageCycleMilliseconds = average;
@@ -58,6 +67,9 @@ public partial class MelfaRobot
         public long LatestCycleMilliseconds { get; }
         public long AverageCycleMilliseconds { get; }
         public long CycleCount { get; }
-        public override string ToString() => _protocolPayload;
+
+        /// <summary>Formats the measurements as a CYCLETIME response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture, "{0};{1};{2};{3}",
+            OperationMilliseconds, LatestCycleMilliseconds, AverageCycleMilliseconds, CycleCount);
     }
 }

@@ -6,7 +6,6 @@ public partial class MelfaRobot
 {
     public readonly partial struct RunState
     {
-        private readonly string _protocolPayload;
         /// <summary>The task slot this state is associated with</summary>
         public int TaskSlot { get; }
 
@@ -35,9 +34,29 @@ public partial class MelfaRobot
         /// <summary>Mech number under use</summary>
         public int MechNumber { get; }
 
+        public RunState(int taskSlot, string programName, int lineNumber, int @override, EditStatus editStatus,
+            RunStatus runStatus, StopStatus stopStatus, int errorNumber, int stepNumber, MechInfo mechInfo,
+            string taskProgramName, TaskMode taskMode, TaskCondition taskCondition, int taskPriority, int mechNumber)
+        {
+            TaskSlot = taskSlot;
+            ProgramName = programName;
+            LineNumber = lineNumber;
+            Override = @override;
+            EditStatus = editStatus;
+            RunStatus = runStatus;
+            StopStatus = stopStatus;
+            ErrorNumber = errorNumber;
+            StepNumber = stepNumber;
+            MechInfo = mechInfo;
+            TaskProgramName = taskProgramName;
+            TaskMode = taskMode;
+            TaskCondition = taskCondition;
+            TaskPriority = taskPriority;
+            MechNumber = mechNumber;
+        }
+
         internal RunState(string ret, int slot)
         {
-            _protocolPayload = ret;
             TaskSlot = slot;
             var match = RegexHelper.RunStateRegex().Match(ret);
             ProgramName = match.Groups[nameof(ProgramName)].Value;
@@ -67,6 +86,11 @@ public partial class MelfaRobot
             MechNumber = int.Parse(match.Groups[nameof(MechNumber)].Value);
         }
 
-        public override string ToString() => RequireProtocolPayload(_protocolPayload);
+        /// <summary>Formats the state as a STATE response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture,
+            "{0};{1};{2};{3};{4:X2}{5:X2}{6};{7};{8};;;;;;;;{9};{10};{11};{12};{13}",
+            ProgramName, LineNumber, Override, (int)EditStatus, (byte)RunStatus, (byte)StopStatus, ErrorNumber,
+            StepNumber, (int)MechInfo, TaskProgramName, FormatTaskMode(TaskMode), FormatTaskCondition(TaskCondition),
+            TaskPriority, MechNumber);
     }
 }

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Melfa.Robot;
 
 public partial class MelfaRobot
@@ -5,11 +7,8 @@ public partial class MelfaRobot
     /// <summary>A breakpoint returned by BRKPTGET.</summary>
     public readonly struct Breakpoint
     {
-        private readonly string _protocolPayload;
-
-        internal Breakpoint(string programName, int lineNumber, BreakpointType type, string protocolPayload)
+        public Breakpoint(string programName, int lineNumber, BreakpointType type)
         {
-            _protocolPayload = protocolPayload;
             ProgramName = programName;
             LineNumber = lineNumber;
             Type = type;
@@ -18,6 +17,9 @@ public partial class MelfaRobot
         public string ProgramName { get; }
         public int LineNumber { get; }
         public BreakpointType Type { get; }
-        public override string ToString() => RequireProtocolPayload(_protocolPayload);
+
+        /// <summary>Formats the breakpoint as a BRKPTGET response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture, "{0};{1};{2}",
+            ProgramName, LineNumber, Type == BreakpointType.OneTime ? 1 : 0);
     }
 }

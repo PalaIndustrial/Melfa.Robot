@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Melfa.Robot;
 
 public partial class MelfaRobot
@@ -5,11 +7,8 @@ public partial class MelfaRobot
     /// <summary>Run and stop status returned by DSTATE for one task slot.</summary>
     public readonly struct DetailedState
     {
-        private readonly string _protocolPayload;
-
-        internal DetailedState(int slot, RunStatus run, StopStatus stop, int error, int step, int mechanism, string protocolPayload)
+        public DetailedState(int slot, RunStatus run, StopStatus stop, int error, int step, int mechanism)
         {
-            _protocolPayload = protocolPayload;
             TaskSlot = slot;
             RunStatus = run;
             StopStatus = stop;
@@ -25,23 +24,26 @@ public partial class MelfaRobot
         public int ErrorNumber { get; }
         public int StepNumber { get; }
         public int MechanismNumber { get; }
-        public override string ToString() => RequireProtocolPayload(_protocolPayload);
+
+        /// <summary>Formats the state as a DSTATE response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture, "{0:X2}{1:X2}{2};{3};{4}",
+            (byte)RunStatus, (byte)StopStatus, ErrorNumber, StepNumber, MechanismNumber);
     }
 
     /// <summary>Stop and emergency-stop signal masks returned by STPSIG.</summary>
     public readonly struct StopSignalState
     {
-        private readonly string _protocolPayload;
-
-        internal StopSignalState(StopSignalSource stop, EmergencyStopSource emergencyStop, string protocolPayload)
+        public StopSignalState(StopSignalSource stop, EmergencyStopSource emergencyStop)
         {
-            _protocolPayload = protocolPayload;
             Stop = stop;
             EmergencyStop = emergencyStop;
         }
 
         public StopSignalSource Stop { get; }
         public EmergencyStopSource EmergencyStop { get; }
-        public override string ToString() => RequireProtocolPayload(_protocolPayload);
+
+        /// <summary>Formats the masks as an STPSIG response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture, "{0:X};{1:X}",
+            (uint)Stop, (uint)EmergencyStop);
     }
 }

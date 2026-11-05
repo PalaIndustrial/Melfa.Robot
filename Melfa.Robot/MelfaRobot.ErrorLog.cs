@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Melfa.Robot;
 
 public partial class MelfaRobot
@@ -5,7 +7,7 @@ public partial class MelfaRobot
     /// <summary>A controller date and time, retained in the protocol's yy-MM-dd and HH:mm:ss formats.</summary>
     public sealed class ErrorTimestamp
     {
-        internal ErrorTimestamp(string date, string time) { Date = date; Time = time; }
+        public ErrorTimestamp(string date, string time) { Date = date; Time = time; }
         public string Date { get; }
         public string Time { get; }
         public override string ToString() => $"{Date};{Time}";
@@ -14,12 +16,9 @@ public partial class MelfaRobot
     /// <summary>An error history entry reported by the controller.</summary>
     public sealed class ErrorHistoryEntry
     {
-        private readonly string _protocolPayload;
-
-        internal ErrorHistoryEntry(ErrorTimestamp timestamp, int number, string contents, ErrorSeverity severity,
-            string program, int line, string detailNumber, string protocolPayload)
+        public ErrorHistoryEntry(ErrorTimestamp timestamp, int number, string contents, ErrorSeverity severity,
+            string program, int line, string detailNumber)
         {
-            _protocolPayload = protocolPayload;
             Timestamp = timestamp;
             ErrorNumber = number;
             Contents = contents;
@@ -36,18 +35,18 @@ public partial class MelfaRobot
         public string ProgramName { get; }
         public int LineNumber { get; }
         public string DetailedErrorNumber { get; }
-        public override string ToString() => _protocolPayload;
+
+        /// <summary>Formats the entry as an ERRORLOG response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture, "{0};{1};{2};{3};{4};{5};{6}",
+            Timestamp?.ToString() ?? ";", ErrorNumber, Contents, (int)Severity, ProgramName, LineNumber, DetailedErrorNumber);
     }
 
     /// <summary>An individual controller error summary entry.</summary>
     public sealed class ErrorSummaryEntry
     {
-        private readonly string _protocolPayload;
-
-        internal ErrorSummaryEntry(string detailNumber, ErrorSeverity severity, string contents,
-            string cause, string measures, int occurrences, ErrorTimestamp lastOccurrence, string protocolPayload)
+        public ErrorSummaryEntry(string detailNumber, ErrorSeverity severity, string contents,
+            string cause, string measures, int occurrences, ErrorTimestamp lastOccurrence = null)
         {
-            _protocolPayload = protocolPayload;
             DetailedErrorNumber = detailNumber;
             Severity = severity;
             Contents = contents;
@@ -65,23 +64,54 @@ public partial class MelfaRobot
         public int Occurrences { get; }
         /// <summary>Last occurrence, or null when read with ERRSUM.</summary>
         public ErrorTimestamp LastOccurrence { get; }
-        public override string ToString() => _protocolPayload;
+
+        /// <summary>Formats the entry as the ERRSUM (or ERRSUM2 when <see cref="LastOccurrence"/> is set) payload after the total count.</summary>
+        public override string ToString()
+        {
+            var text = string.Format(CultureInfo.InvariantCulture, "{0};{1};{2};{3};{4};{5}",
+                DetailedErrorNumber, FormatSummarySeverity(Severity), Contents, Cause, Measures, Occurrences);
+            return LastOccurrence is null ? text : text + ";" + LastOccurrence;
+        }
+
+        private static string FormatSummarySeverity(ErrorSeverity severity) => severity switch
+        {
+            ErrorSeverity.High => "H",
+            ErrorSeverity.Low => "L",
+            ErrorSeverity.Caution => "C",
+            _ => "",
+        };
     }
 
     /// <summary>An error summary response, including the total number of recorded errors.</summary>
     public sealed class ErrorSummary
     {
-        private readonly string _protocolPayload;
+        private const string EmptyEntry = "000000000;;;;;0";
 
-        internal ErrorSummary(int totalCount, ErrorSummaryEntry entry, string protocolPayload)
+        /// <param name="totalCount">Total number of recorded errors.</param>
+        /// <param name="entry">The selected entry, or null when there is no entry at this index.</param>
+        /// <param name="includesLastOccurrence">Whether the response is in ERRSUM2 form, carrying the last occurrence date and time.</param>
+        public ErrorSummary(int totalCount, ErrorSummaryEntry entry, bool includesLastOccurrence = false)
         {
             TotalCount = totalCount;
             Entry = entry;
-            _protocolPayload = protocolPayload;
+            IncludesLastOccurrence = includesLastOccurrence;
         }
         public int TotalCount { get; }
         /// <summary>The selected entry, or null when the controller reports no entry at this index.</summary>
         public ErrorSummaryEntry Entry { get; }
-        public override string ToString() => _protocolPayload;
+        /// <summary>Whether this summary was read with ERRSUM2 and carries the last occurrence date and time.</summary>
+        public bool IncludesLastOccurrence { get; }
+
+        /// <summary>Formats the summary as an ERRSUM or ERRSUM2 response payload.</summary>
+        public override string ToString()
+        {
+            var total = TotalCount.ToString(CultureInfo.InvariantCulture);
+            if (Entry is null)
+                return total + ";" + EmptyEntry + (IncludesLastOccurrence ? ";;" : "");
+            var entry = Entry.ToString();
+            if (IncludesLastOccurrence && Entry.LastOccurrence is null)
+                entry += ";;";
+            return total + ";" + entry;
+        }
     }
 }

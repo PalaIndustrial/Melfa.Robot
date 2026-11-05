@@ -1,10 +1,11 @@
-﻿namespace Melfa.Robot;
+﻿using System.Globalization;
+
+namespace Melfa.Robot;
 
 public partial class MelfaRobot
 {
     public readonly struct TaskSlotInfo
     {
-        private readonly string _protocolPayload;
         public int Slot { get; }
         /// <summary>Program name of slot table</summary>
         public string ProgramName { get; }
@@ -15,9 +16,17 @@ public partial class MelfaRobot
         /// <summary>Priority of slot table (0 ~ 31)</summary>
         public int Priority { get; }
 
+        public TaskSlotInfo(int slot, string programName, TaskMode mode, TaskCondition condition, int priority)
+        {
+            Slot = slot;
+            ProgramName = programName;
+            Mode = mode;
+            Condition = condition;
+            Priority = priority;
+        }
+
         internal TaskSlotInfo(string raw, int slot)
         {
-            _protocolPayload = raw;
             Slot = slot;
             var values = raw.Split(';');
             ProgramName = values[0];
@@ -34,9 +43,11 @@ public partial class MelfaRobot
                 case "ERROR": Condition = TaskCondition.Error; break;
                 default: Condition = TaskCondition.Unknown; break;
             }
-            Priority = int.Parse(values[3]);
+            Priority = int.Parse(values[3], CultureInfo.InvariantCulture);
         }
 
-        public override string ToString() => RequireProtocolPayload(_protocolPayload);
+        /// <summary>Formats the slot as an SLOTRD response payload.</summary>
+        public override string ToString() => string.Format(CultureInfo.InvariantCulture, "{0};{1};{2};{3}",
+            ProgramName, FormatTaskMode(Mode), FormatTaskCondition(Condition), Priority);
     }
 }
