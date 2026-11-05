@@ -9,7 +9,7 @@
 	<PropertyGroup>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>MELFA R-protocol robot library</Title>
-		<VersionPrefix>0.1.22.8</VersionPrefix>
+		<VersionPrefix>0.1.22.9</VersionPrefix>
 		<Copyright>Copyright (C) 2024 Victor Tseng</Copyright>
 		<Description>MELFA R-protocol robot library (BFP-4288-V)</Description>
 		<RepositoryUrl>https://github.com/Palatis/Melfa.Robot.git</RepositoryUrl>
