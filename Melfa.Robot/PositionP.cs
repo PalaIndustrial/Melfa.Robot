@@ -1,4 +1,4 @@
-﻿using Melfa.Robot.Helpers;
+using Melfa.Robot.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +28,7 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
     public short Turn7 => _GetTurn(FLG2, 6);
     public short Turn8 => _GetTurn(FLG2, 7);
 
-    public PositionP(double x, double y, double z, double a, double b, double c, double l1, double l2, PositionConfig flg1, uint flg2)
+    public PositionP(double x = 0, double y = 0, double z = 0, double a = 0, double b = 0, double c = 0, double l1 = 0, double l2 = 0, PositionConfig flg1 = PositionConfig.LBF, uint flg2 = 0)
     {
         X = x;
         Y = y;

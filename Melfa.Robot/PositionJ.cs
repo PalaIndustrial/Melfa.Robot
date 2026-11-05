@@ -17,7 +17,7 @@ public partial struct PositionJ : IPosition, IEquatable<PositionJ>
     public double J7 { get; }
     public double J8 { get; }
 
-    public PositionJ(double j1, double j2, double j3, double j4, double j5, double j6, double j7, double j8)
+    public PositionJ(double j1 = 0, double j2 = 0, double j3 = 0, double j4 = 0, double j5 = 0, double j6 = 0, double j7 = 0, double j8 = 0)
     {
         J1 = j1;
         J2 = j2;
