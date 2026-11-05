@@ -27,7 +27,7 @@ internal static class PositionHelper
     {
         Guard.IsNotNull(value);
         return value.StartsWith("0x", StringComparison.OrdinalIgnoreCase) ?
-            uint.Parse(value.Substring(2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture) :
+            uint.Parse(value.AsSpan(2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture) :
             uint.Parse(value, NumberStyles.None, CultureInfo.InvariantCulture);
     }
 
