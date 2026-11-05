@@ -2,6 +2,7 @@ using Melfa.Robot.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
 namespace Melfa.Robot;
@@ -131,6 +132,7 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
         }
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static short GetTurnInternal(uint flg, int axis)
     {
         // Each FLG2 nibble is a signed 4-bit (two's complement) turn count.
@@ -138,6 +140,7 @@ public readonly partial struct PositionP : IPosition, IEquatable<PositionP>
         return (short)(n >= 8 ? n - 16 : n);
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static double NormalizeAngleInternal(double angle)
     {
         if (double.IsNaN(angle) || double.IsInfinity(angle))
