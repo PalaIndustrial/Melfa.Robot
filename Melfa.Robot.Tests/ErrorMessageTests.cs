@@ -143,6 +143,19 @@ public class ErrorMessageTests
     }
 
     [Fact]
+    public void UnknownErrorResourcesUseCompactKeys()
+    {
+        var manager = new ResourceManager("Melfa.Robot.Resources.ErrorMessages", typeof(MelfaRobotException).Assembly);
+        var set = manager.GetResourceSet(CultureInfo.InvariantCulture, true, false);
+
+        Assert.NotNull(set);
+        Assert.Equal(new[] { "C0000", "L0000", "M0000", "S0000" },
+            set.Cast<DictionaryEntry>().Select(item => Assert.IsType<string>(item.Key)).OrderBy(key => key));
+        foreach (var field in new[] { 'C', 'L', 'M', 'S' })
+            Assert.False(string.IsNullOrEmpty(manager.GetString($"{field}0000", CultureInfo.InvariantCulture)));
+    }
+
+    [Fact]
     public void EveryExpandedErrorHasTraditionalChineseFields()
     {
         var assembly = typeof(MelfaRobotException).Assembly;
