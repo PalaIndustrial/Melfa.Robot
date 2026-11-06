@@ -81,16 +81,20 @@ public partial struct PositionJ : IPosition, IEquatable<PositionJ>
         }
     }
 
+    /// <summary>
+    /// MB6 hates "NaN", for undefined Axis, write "0.0" instead.
+    /// </summary>
+    /// <returns>a string represation of the position which MB6 won't complain about</returns>
     public override string ToString() => string.Format(
         "({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})",
-        PositionHelper.StringFromDouble("{0:0.00}", J1),
-        PositionHelper.StringFromDouble("{0:0.00}", J2),
-        PositionHelper.StringFromDouble("{0:0.00}", J3),
-        PositionHelper.StringFromDouble("{0:0.00}", J4),
-        PositionHelper.StringFromDouble("{0:0.00}", J5),
-        PositionHelper.StringFromDouble("{0:0.00}", J6),
-        PositionHelper.StringFromDouble("{0:0.00}", J7),
-        PositionHelper.StringFromDouble("{0:0.00}", J8)
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J1),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J2),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J3),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J4),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J5),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J6),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J7),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", J8)
     );
 
     //1;1;JPOSF

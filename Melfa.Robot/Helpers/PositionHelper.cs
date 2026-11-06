@@ -41,4 +41,11 @@ internal static class PositionHelper
             return "-Inf";
         return string.Format(CultureInfo.InvariantCulture, format, value);
     }
+
+    public static string StringFromDoubleMB6(string format, double value)
+    {
+        if (double.IsNaN(value) || double.IsPositiveInfinity(value) || double.IsNegativeInfinity(value))
+            return "0.0";
+        return string.Format(CultureInfo.InvariantCulture, format, value);
+    }
 }

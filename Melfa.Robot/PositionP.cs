@@ -70,18 +70,21 @@ public readonly struct PositionP : IPosition, IEquatable<PositionP>
         }
     }
 
+    /// <summary>
+    /// MB6 hates "NaN", for undefined Axis, write "0.0" instead.
+    /// </summary>
+    /// <returns>a string represation of the position which MB6 won't complain about</returns>
     public override string ToString() => string.Format(System.Globalization.CultureInfo.InvariantCulture,
         "({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}) ({8}, {9})",
-        PositionHelper.StringFromDouble("{0:0.00}", X),
-        PositionHelper.StringFromDouble("{0:0.00}", Y),
-        PositionHelper.StringFromDouble("{0:0.00}", Z),
-        PositionHelper.StringFromDouble("{0:0.00}", A),
-        PositionHelper.StringFromDouble("{0:0.00}", B),
-        PositionHelper.StringFromDouble("{0:0.00}", C),
-        PositionHelper.StringFromDouble("{0:0.00}", L1),
-        PositionHelper.StringFromDouble("{0:0.00}", L2),
-        (byte)FLG1,
-        FLG2
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", X),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", Y),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", Z),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", A),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", B),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", C),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", L1),
+        PositionHelper.StringFromDoubleMB6("{0:0.00}", L2),
+        (byte)FLG1, FLG2
     );
 
     private PositionP(Match pmatch, MatchCollection amatches) :
