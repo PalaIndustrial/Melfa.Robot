@@ -90,13 +90,16 @@ public partial class MelfaRobot : IDisposable
     /// <summary>Disconnect from the robot</summary>
     public void Disconnect()
     {
-        TcpClient client;
-        lock (_connectionSyncRoot)
+        lock (_syncRoot)
         {
-            Interlocked.Increment(ref _connectionVersion);
-            client = Interlocked.Exchange(ref _Client, null);
+            TcpClient client;
+            lock (_connectionSyncRoot)
+            {
+                Interlocked.Increment(ref _connectionVersion);
+                client = Interlocked.Exchange(ref _Client, null);
+            }
+            client?.Dispose();
         }
-        client?.Dispose();
     }
 
     #region Communication
