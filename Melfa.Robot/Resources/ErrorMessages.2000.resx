@@ -117,2088 +117,2088 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error.2000.Message" xml:space="preserve">
+  <data name="M2000" xml:space="preserve">
     <value>The servo is OFF</value>
   </data>
-  <data name="Error.2000.Cause" xml:space="preserve">
+  <data name="C2000" xml:space="preserve">
     <value>Because servo is turned off, the robot can't move.</value>
   </data>
-  <data name="Error.2000.Measures" xml:space="preserve">
+  <data name="S2000" xml:space="preserve">
     <value>Tur the servo ON and then restart.</value>
   </data>
-  <data name="Error.2000.Level" xml:space="preserve">
+  <data name="L2000" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2010.Message" xml:space="preserve">
+  <data name="M2010" xml:space="preserve">
     <value>Pulse output was not possible</value>
   </data>
-  <data name="Error.2010.Cause" xml:space="preserve">
+  <data name="C2010" xml:space="preserve">
     <value>There is an error in the pulse output designation.</value>
   </data>
-  <data name="Error.2010.Measures" xml:space="preserve">
+  <data name="S2010" xml:space="preserve">
     <value>Correct the program.</value>
   </data>
-  <data name="Error.2010.Level" xml:space="preserve">
+  <data name="L2010" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2020.Message" xml:space="preserve">
+  <data name="M2020" xml:space="preserve">
     <value>Reading external position data</value>
   </data>
-  <data name="Error.2020.Cause" xml:space="preserve">
+  <data name="C2020" xml:space="preserve">
     <value>A command that cannot be executed while reading the external commands was executed.</value>
   </data>
-  <data name="Error.2020.Measures" xml:space="preserve">
+  <data name="S2020" xml:space="preserve">
     <value>Correct the program.</value>
   </data>
-  <data name="Error.2020.Level" xml:space="preserve">
+  <data name="L2020" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2030.Message" xml:space="preserve">
+  <data name="M2030" xml:space="preserve">
     <value>JOG operation cannot be accepted</value>
   </data>
-  <data name="Error.2030.Cause" xml:space="preserve">
+  <data name="C2030" xml:space="preserve">
     <value>The JOG operation request was issued when the JOG operation request could not be accepted.</value>
   </data>
-  <data name="Error.2030.Measures" xml:space="preserve">
+  <data name="S2030" xml:space="preserve">
     <value>Changes the JOG mode after the JOG operation.</value>
   </data>
-  <data name="Error.2030.Level" xml:space="preserve">
+  <data name="L2030" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2031.Message" xml:space="preserve">
+  <data name="M2031" xml:space="preserve">
     <value>"Illegal parameter(JOGTSJ,JOGJSP)"</value>
   </data>
-  <data name="Error.2031.Cause" xml:space="preserve">
+  <data name="C2031" xml:space="preserve">
     <value>The parameter JOGTSJ, JOGJSP settings are not correct. [JOGPSP] [JOGJSP] = (element 1, element 2) = (constant high, constant low)</value>
   </data>
-  <data name="Error.2031.Measures" xml:space="preserve">
+  <data name="S2031" xml:space="preserve">
     <value>Set the set dimension to 5 or less.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2031.Level" xml:space="preserve">
+  <data name="L2031" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2040.Message" xml:space="preserve">
+  <data name="M2040" xml:space="preserve">
     <value>Teaching position is not correct.</value>
   </data>
-  <data name="Error.2040.Cause" xml:space="preserve">
+  <data name="C2040" xml:space="preserve">
     <value>Change the teaching position.</value>
   </data>
-  <data name="Error.2040.Measures" xml:space="preserve">
+  <data name="S2040" xml:space="preserve">
     <value>The work coordinates were not able to be calculated from the teaching position. The cause is the following content. 1. Two points are the same position. 2. Three points line up on the straight line. Confirm and correct the teaching position</value>
   </data>
-  <data name="Error.2040.Level" xml:space="preserve">
+  <data name="L2040" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2041.Message" xml:space="preserve">
+  <data name="M2041" xml:space="preserve">
     <value>Can't calculate frame transformation coordinates.</value>
   </data>
-  <data name="Error.2041.Cause" xml:space="preserve">
+  <data name="C2041" xml:space="preserve">
     <value>The position data that defines the coordinate system used with frame transformation are on the same point or arranged on a straight line so the coordinate system could not be calculated.</value>
   </data>
-  <data name="Error.2041.Measures" xml:space="preserve">
+  <data name="S2041" xml:space="preserve">
     <value>Change the position data to appropriate positions so the coordinate system can be calculated.</value>
   </data>
-  <data name="Error.2041.Level" xml:space="preserve">
+  <data name="L2041" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2042.Message" xml:space="preserve">
+  <data name="M2042" xml:space="preserve">
     <value>Frame transformation coordinates are not set</value>
   </data>
-  <data name="Error.2042.Cause" xml:space="preserve">
+  <data name="C2042" xml:space="preserve">
     <value>Frame transformation was attempted even though the coordinate system for frame transformation was not set.</value>
   </data>
-  <data name="Error.2042.Measures" xml:space="preserve">
+  <data name="S2042" xml:space="preserve">
     <value>Set the coordinate system or cancel frame transformation. Check that the MvSpl command argument &amp;lt;Frame transformation&amp;gt; designation is correct.</value>
   </data>
-  <data name="Error.2042.Level" xml:space="preserve">
+  <data name="L2042" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2050.Message" xml:space="preserve">
+  <data name="M2050" xml:space="preserve">
     <value>CPU processing time exceeds</value>
   </data>
-  <data name="Error.2050.Cause" xml:space="preserve">
+  <data name="C2050" xml:space="preserve">
     <value>Because the function made effective is many at the same time</value>
   </data>
-  <data name="Error.2050.Measures" xml:space="preserve">
+  <data name="S2050" xml:space="preserve">
     <value>The CPU processing time exceeded the limiting value. Please take measures of either of following. 1. If interference avoidance function is activated, changes some cylinder models into the sphere model, or reduces the number of the models for checking . 2. Invalidate some functions of following. Interference avoidance, User definition area, Free plane limit, Collision detection, Compliance, Tracking, Force sense 3. Reduces the Interrupt definition function currently used by the program.</value>
   </data>
-  <data name="Error.2050.Level" xml:space="preserve">
+  <data name="L2050" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2090.Message" xml:space="preserve">
+  <data name="M2090" xml:space="preserve">
     <value>In interference zone n. (n indicates the zone number (1 to 32).)</value>
   </data>
-  <data name="Error.2090.Cause" xml:space="preserve">
+  <data name="C2090" xml:space="preserve">
     <value>Movement outside the user-defined area "n" range was attempted.</value>
   </data>
-  <data name="Error.2090.Measures" xml:space="preserve">
+  <data name="S2090" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2090.Level" xml:space="preserve">
+  <data name="L2090" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2111.Message" xml:space="preserve">
+  <data name="M2111" xml:space="preserve">
     <value>Free plane 1 overrun</value>
   </data>
-  <data name="Error.2112.Message" xml:space="preserve">
+  <data name="M2112" xml:space="preserve">
     <value>Free plane 2 overrun</value>
   </data>
-  <data name="Error.2113.Message" xml:space="preserve">
+  <data name="M2113" xml:space="preserve">
     <value>Free plane 3 overrun</value>
   </data>
-  <data name="Error.2114.Message" xml:space="preserve">
+  <data name="M2114" xml:space="preserve">
     <value>Free plane 4 overrun</value>
   </data>
-  <data name="Error.2115.Message" xml:space="preserve">
+  <data name="M2115" xml:space="preserve">
     <value>Free plane 5 overrun</value>
   </data>
-  <data name="Error.2116.Message" xml:space="preserve">
+  <data name="M2116" xml:space="preserve">
     <value>Free plane 6 overrun</value>
   </data>
-  <data name="Error.2117.Message" xml:space="preserve">
+  <data name="M2117" xml:space="preserve">
     <value>Free plane 7 overrun</value>
   </data>
-  <data name="Error.2118.Message" xml:space="preserve">
+  <data name="M2118" xml:space="preserve">
     <value>Free plane 8 overrun</value>
   </data>
   
-  <data name="Error.2111.Cause" xml:space="preserve">
+  <data name="C2111" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "1" was attempted.</value>
   </data>
-  <data name="Error.2112.Cause" xml:space="preserve">
+  <data name="C2112" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "2" was attempted.</value>
   </data>
-  <data name="Error.2113.Cause" xml:space="preserve">
+  <data name="C2113" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "3" was attempted.</value>
   </data>
-  <data name="Error.2114.Cause" xml:space="preserve">
+  <data name="C2114" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "4" was attempted.</value>
   </data>
-  <data name="Error.2115.Cause" xml:space="preserve">
+  <data name="C2115" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "5" was attempted.</value>
   </data>
-  <data name="Error.2116.Cause" xml:space="preserve">
+  <data name="C2116" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "6" was attempted.</value>
   </data>
-  <data name="Error.2117.Cause" xml:space="preserve">
+  <data name="C2117" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "7" was attempted.</value>
   </data>
-  <data name="Error.2118.Cause" xml:space="preserve">
+  <data name="C2118" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "8" was attempted.</value>
   </data>
   
-  <data name="Error.2111.Measures" xml:space="preserve">
+  <data name="S2111" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2112.Measures" xml:space="preserve">
+  <data name="S2112" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2113.Measures" xml:space="preserve">
+  <data name="S2113" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2114.Measures" xml:space="preserve">
+  <data name="S2114" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2115.Measures" xml:space="preserve">
+  <data name="S2115" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2116.Measures" xml:space="preserve">
+  <data name="S2116" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2117.Measures" xml:space="preserve">
+  <data name="S2117" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2118.Measures" xml:space="preserve">
+  <data name="S2118" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
   
-  <data name="Error.2111.Level" xml:space="preserve">
+  <data name="L2111" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2112.Level" xml:space="preserve">
+  <data name="L2112" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2113.Level" xml:space="preserve">
+  <data name="L2113" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2114.Level" xml:space="preserve">
+  <data name="L2114" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2115.Level" xml:space="preserve">
+  <data name="L2115" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2116.Level" xml:space="preserve">
+  <data name="L2116" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2117.Level" xml:space="preserve">
+  <data name="L2117" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2118.Level" xml:space="preserve">
+  <data name="L2118" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2121.Message" xml:space="preserve">
+  <data name="M2121" xml:space="preserve">
     <value>Free plane 1 overrun</value>
   </data>
-  <data name="Error.2122.Message" xml:space="preserve">
+  <data name="M2122" xml:space="preserve">
     <value>Free plane 2 overrun</value>
   </data>
-  <data name="Error.2123.Message" xml:space="preserve">
+  <data name="M2123" xml:space="preserve">
     <value>Free plane 3 overrun</value>
   </data>
-  <data name="Error.2124.Message" xml:space="preserve">
+  <data name="M2124" xml:space="preserve">
     <value>Free plane 4 overrun</value>
   </data>
-  <data name="Error.2125.Message" xml:space="preserve">
+  <data name="M2125" xml:space="preserve">
     <value>Free plane 5 overrun</value>
   </data>
-  <data name="Error.2126.Message" xml:space="preserve">
+  <data name="M2126" xml:space="preserve">
     <value>Free plane 6 overrun</value>
   </data>
-  <data name="Error.2127.Message" xml:space="preserve">
+  <data name="M2127" xml:space="preserve">
     <value>Free plane 7 overrun</value>
   </data>
-  <data name="Error.2128.Message" xml:space="preserve">
+  <data name="M2128" xml:space="preserve">
     <value>Free plane 8 overrun</value>
   </data>
   
-  <data name="Error.2121.Cause" xml:space="preserve">
+  <data name="C2121" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "1" was attempted.</value>
   </data>
-  <data name="Error.2122.Cause" xml:space="preserve">
+  <data name="C2122" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "2" was attempted.</value>
   </data>
-  <data name="Error.2123.Cause" xml:space="preserve">
+  <data name="C2123" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "3" was attempted.</value>
   </data>
-  <data name="Error.2124.Cause" xml:space="preserve">
+  <data name="C2124" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "4" was attempted.</value>
   </data>
-  <data name="Error.2125.Cause" xml:space="preserve">
+  <data name="C2125" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "5" was attempted.</value>
   </data>
-  <data name="Error.2126.Cause" xml:space="preserve">
+  <data name="C2126" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "6" was attempted.</value>
   </data>
-  <data name="Error.2127.Cause" xml:space="preserve">
+  <data name="C2127" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "7" was attempted.</value>
   </data>
-  <data name="Error.2128.Cause" xml:space="preserve">
+  <data name="C2128" xml:space="preserve">
     <value>Movement outside the plane defined with free plane "8" was attempted.</value>
   </data>
   
-  <data name="Error.2121.Measures" xml:space="preserve">
+  <data name="S2121" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2122.Measures" xml:space="preserve">
+  <data name="S2122" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2123.Measures" xml:space="preserve">
+  <data name="S2123" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2124.Measures" xml:space="preserve">
+  <data name="S2124" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2125.Measures" xml:space="preserve">
+  <data name="S2125" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2126.Measures" xml:space="preserve">
+  <data name="S2126" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2127.Measures" xml:space="preserve">
+  <data name="S2127" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2128.Measures" xml:space="preserve">
+  <data name="S2128" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
   
-  <data name="Error.2121.Level" xml:space="preserve">
+  <data name="L2121" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2122.Level" xml:space="preserve">
+  <data name="L2122" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2123.Level" xml:space="preserve">
+  <data name="L2123" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2124.Level" xml:space="preserve">
+  <data name="L2124" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2125.Level" xml:space="preserve">
+  <data name="L2125" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2126.Level" xml:space="preserve">
+  <data name="L2126" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2127.Level" xml:space="preserve">
+  <data name="L2127" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2128.Level" xml:space="preserve">
+  <data name="L2128" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2129.Message" xml:space="preserve">
+  <data name="M2129" xml:space="preserve">
     <value>Free plane limit data illegal</value>
   </data>
-  <data name="Error.2129.Cause" xml:space="preserve">
+  <data name="C2129" xml:space="preserve">
     <value>The free plane data setting value is illegal.</value>
   </data>
-  <data name="Error.2129.Measures" xml:space="preserve">
+  <data name="S2129" xml:space="preserve">
     <value>The two points are the same in the three points of parameter: SFCnp. The value of parameter: SFCnAT is except "0, 1, -1".</value>
   </data>
-  <data name="Error.2129.Level" xml:space="preserve">
+  <data name="L2129" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2131.Message" xml:space="preserve">
+  <data name="M2131" xml:space="preserve">
     <value>J1 Speed is excessive (command)
 (axis number: 1)</value>
   </data>
-  <data name="Error.2132.Message" xml:space="preserve">
+  <data name="M2132" xml:space="preserve">
     <value>J2 Speed is excessive (command)
 (axis number: 2)</value>
   </data>
-  <data name="Error.2133.Message" xml:space="preserve">
+  <data name="M2133" xml:space="preserve">
     <value>J3 Speed is excessive (command)
 (axis number: 3)</value>
   </data>
-  <data name="Error.2134.Message" xml:space="preserve">
+  <data name="M2134" xml:space="preserve">
     <value>J4 Speed is excessive (command)
 (axis number: 4)</value>
   </data>
-  <data name="Error.2135.Message" xml:space="preserve">
+  <data name="M2135" xml:space="preserve">
     <value>J5 Speed is excessive (command)
 (axis number: 5)</value>
   </data>
-  <data name="Error.2136.Message" xml:space="preserve">
+  <data name="M2136" xml:space="preserve">
     <value>J6 Speed is excessive (command)
 (axis number: 6)</value>
   </data>
-  <data name="Error.2137.Message" xml:space="preserve">
+  <data name="M2137" xml:space="preserve">
     <value>J7 Speed is excessive (command)
 (axis number: 7)</value>
   </data>
-  <data name="Error.2138.Message" xml:space="preserve">
+  <data name="M2138" xml:space="preserve">
     <value>J8 Speed is excessive (command)
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2131.Cause" xml:space="preserve">
+  <data name="C2131" xml:space="preserve">
     <value>The speed instruction value of 1 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2132.Cause" xml:space="preserve">
+  <data name="C2132" xml:space="preserve">
     <value>The speed instruction value of 2 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2133.Cause" xml:space="preserve">
+  <data name="C2133" xml:space="preserve">
     <value>The speed instruction value of 3 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2134.Cause" xml:space="preserve">
+  <data name="C2134" xml:space="preserve">
     <value>The speed instruction value of 4 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2135.Cause" xml:space="preserve">
+  <data name="C2135" xml:space="preserve">
     <value>The speed instruction value of 5 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2136.Cause" xml:space="preserve">
+  <data name="C2136" xml:space="preserve">
     <value>The speed instruction value of 6 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2137.Cause" xml:space="preserve">
+  <data name="C2137" xml:space="preserve">
     <value>The speed instruction value of 7 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
-  <data name="Error.2138.Cause" xml:space="preserve">
+  <data name="C2138" xml:space="preserve">
     <value>The speed instruction value of 8 axis exceeded the permissible value. When moving by the linear interpolation (or circle interpolation), needs to rotate the motor at the big speed depending on the pose. If the specified speed is large, the speed instruction value to the motor may exceed the permissible value.</value>
   </data>
   
-  <data name="Error.2131.Measures" xml:space="preserve">
+  <data name="S2131" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2132.Measures" xml:space="preserve">
+  <data name="S2132" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2133.Measures" xml:space="preserve">
+  <data name="S2133" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2134.Measures" xml:space="preserve">
+  <data name="S2134" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2135.Measures" xml:space="preserve">
+  <data name="S2135" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2136.Measures" xml:space="preserve">
+  <data name="S2136" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2137.Measures" xml:space="preserve">
+  <data name="S2137" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
-  <data name="Error.2138.Measures" xml:space="preserve">
+  <data name="S2138" xml:space="preserve">
     <value>Please lower moving speed by the Ovrd command and Spd command or change the movement position.</value>
   </data>
   
-  <data name="Error.2131.Level" xml:space="preserve">
+  <data name="L2131" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2132.Level" xml:space="preserve">
+  <data name="L2132" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2133.Level" xml:space="preserve">
+  <data name="L2133" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2134.Level" xml:space="preserve">
+  <data name="L2134" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2135.Level" xml:space="preserve">
+  <data name="L2135" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2136.Level" xml:space="preserve">
+  <data name="L2136" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2137.Level" xml:space="preserve">
+  <data name="L2137" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2138.Level" xml:space="preserve">
+  <data name="L2138" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2141.Message" xml:space="preserve">
+  <data name="M2141" xml:space="preserve">
     <value>J1 +ABS limit over
 (axis number: 1)</value>
   </data>
-  <data name="Error.2142.Message" xml:space="preserve">
+  <data name="M2142" xml:space="preserve">
     <value>J2 +ABS limit over
 (axis number: 2)</value>
   </data>
-  <data name="Error.2143.Message" xml:space="preserve">
+  <data name="M2143" xml:space="preserve">
     <value>J3 +ABS limit over
 (axis number: 3)</value>
   </data>
-  <data name="Error.2144.Message" xml:space="preserve">
+  <data name="M2144" xml:space="preserve">
     <value>J4 +ABS limit over
 (axis number: 4)</value>
   </data>
-  <data name="Error.2145.Message" xml:space="preserve">
+  <data name="M2145" xml:space="preserve">
     <value>J5 +ABS limit over
 (axis number: 5)</value>
   </data>
-  <data name="Error.2146.Message" xml:space="preserve">
+  <data name="M2146" xml:space="preserve">
     <value>J6 +ABS limit over
 (axis number: 6)</value>
   </data>
-  <data name="Error.2147.Message" xml:space="preserve">
+  <data name="M2147" xml:space="preserve">
     <value>J7 +ABS limit over
 (axis number: 7)</value>
   </data>
-  <data name="Error.2148.Message" xml:space="preserve">
+  <data name="M2148" xml:space="preserve">
     <value>J8 +ABS limit over
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2141.Cause" xml:space="preserve">
+  <data name="C2141" xml:space="preserve">
     <value>The axis "1" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2142.Cause" xml:space="preserve">
+  <data name="C2142" xml:space="preserve">
     <value>The axis "2" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2143.Cause" xml:space="preserve">
+  <data name="C2143" xml:space="preserve">
     <value>The axis "3" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2144.Cause" xml:space="preserve">
+  <data name="C2144" xml:space="preserve">
     <value>The axis "4" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2145.Cause" xml:space="preserve">
+  <data name="C2145" xml:space="preserve">
     <value>The axis "5" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2146.Cause" xml:space="preserve">
+  <data name="C2146" xml:space="preserve">
     <value>The axis "6" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2147.Cause" xml:space="preserve">
+  <data name="C2147" xml:space="preserve">
     <value>The axis "7" + ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2148.Cause" xml:space="preserve">
+  <data name="C2148" xml:space="preserve">
     <value>The axis "8" + ABS limit was exceeded.</value>
   </data>
   
-  <data name="Error.2141.Measures" xml:space="preserve">
+  <data name="S2141" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "1" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2142.Measures" xml:space="preserve">
+  <data name="S2142" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "2" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2143.Measures" xml:space="preserve">
+  <data name="S2143" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "3" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2144.Measures" xml:space="preserve">
+  <data name="S2144" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "4" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2145.Measures" xml:space="preserve">
+  <data name="S2145" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "5" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2146.Measures" xml:space="preserve">
+  <data name="S2146" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "6" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2147.Measures" xml:space="preserve">
+  <data name="S2147" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "7" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2148.Measures" xml:space="preserve">
+  <data name="S2148" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "8" within the operation range using JOG operation.</value>
   </data>
   
-  <data name="Error.2141.Level" xml:space="preserve">
+  <data name="L2141" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2142.Level" xml:space="preserve">
+  <data name="L2142" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2143.Level" xml:space="preserve">
+  <data name="L2143" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2144.Level" xml:space="preserve">
+  <data name="L2144" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2145.Level" xml:space="preserve">
+  <data name="L2145" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2146.Level" xml:space="preserve">
+  <data name="L2146" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2147.Level" xml:space="preserve">
+  <data name="L2147" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2148.Level" xml:space="preserve">
+  <data name="L2148" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2151.Message" xml:space="preserve">
+  <data name="M2151" xml:space="preserve">
     <value>J1 -ABS limit over
 (axis number: 1)</value>
   </data>
-  <data name="Error.2152.Message" xml:space="preserve">
+  <data name="M2152" xml:space="preserve">
     <value>J2 -ABS limit over
 (axis number: 2)</value>
   </data>
-  <data name="Error.2153.Message" xml:space="preserve">
+  <data name="M2153" xml:space="preserve">
     <value>J3 -ABS limit over
 (axis number: 3)</value>
   </data>
-  <data name="Error.2154.Message" xml:space="preserve">
+  <data name="M2154" xml:space="preserve">
     <value>J4 -ABS limit over
 (axis number: 4)</value>
   </data>
-  <data name="Error.2155.Message" xml:space="preserve">
+  <data name="M2155" xml:space="preserve">
     <value>J5 -ABS limit over
 (axis number: 5)</value>
   </data>
-  <data name="Error.2156.Message" xml:space="preserve">
+  <data name="M2156" xml:space="preserve">
     <value>J6 -ABS limit over
 (axis number: 6)</value>
   </data>
-  <data name="Error.2157.Message" xml:space="preserve">
+  <data name="M2157" xml:space="preserve">
     <value>J7 -ABS limit over
 (axis number: 7)</value>
   </data>
-  <data name="Error.2158.Message" xml:space="preserve">
+  <data name="M2158" xml:space="preserve">
     <value>J8 -ABS limit over
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2151.Cause" xml:space="preserve">
+  <data name="C2151" xml:space="preserve">
     <value>The axis "1" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2152.Cause" xml:space="preserve">
+  <data name="C2152" xml:space="preserve">
     <value>The axis "2" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2153.Cause" xml:space="preserve">
+  <data name="C2153" xml:space="preserve">
     <value>The axis "3" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2154.Cause" xml:space="preserve">
+  <data name="C2154" xml:space="preserve">
     <value>The axis "4" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2155.Cause" xml:space="preserve">
+  <data name="C2155" xml:space="preserve">
     <value>The axis "5" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2156.Cause" xml:space="preserve">
+  <data name="C2156" xml:space="preserve">
     <value>The axis "6" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2157.Cause" xml:space="preserve">
+  <data name="C2157" xml:space="preserve">
     <value>The axis "7" - ABS limit was exceeded.</value>
   </data>
-  <data name="Error.2158.Cause" xml:space="preserve">
+  <data name="C2158" xml:space="preserve">
     <value>The axis "8" - ABS limit was exceeded.</value>
   </data>
   
-  <data name="Error.2151.Measures" xml:space="preserve">
+  <data name="S2151" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "1" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2152.Measures" xml:space="preserve">
+  <data name="S2152" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "2" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2153.Measures" xml:space="preserve">
+  <data name="S2153" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "3" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2154.Measures" xml:space="preserve">
+  <data name="S2154" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "4" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2155.Measures" xml:space="preserve">
+  <data name="S2155" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "5" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2156.Measures" xml:space="preserve">
+  <data name="S2156" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "6" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2157.Measures" xml:space="preserve">
+  <data name="S2157" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "7" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2158.Measures" xml:space="preserve">
+  <data name="S2158" xml:space="preserve">
     <value>Referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume, "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "8" within the operation range using JOG operation.</value>
   </data>
   
-  <data name="Error.2151.Level" xml:space="preserve">
+  <data name="L2151" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2152.Level" xml:space="preserve">
+  <data name="L2152" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2153.Level" xml:space="preserve">
+  <data name="L2153" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2154.Level" xml:space="preserve">
+  <data name="L2154" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2155.Level" xml:space="preserve">
+  <data name="L2155" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2156.Level" xml:space="preserve">
+  <data name="L2156" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2157.Level" xml:space="preserve">
+  <data name="L2157" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2158.Level" xml:space="preserve">
+  <data name="L2158" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2160.Message" xml:space="preserve">
+  <data name="M2160" xml:space="preserve">
     <value>J0 (+) angle exceeds the limit
 (axis number: 0)</value>
   </data>
-  <data name="Error.2161.Message" xml:space="preserve">
+  <data name="M2161" xml:space="preserve">
     <value>J1 (+) angle exceeds the limit
 (axis number: 1)</value>
   </data>
-  <data name="Error.2162.Message" xml:space="preserve">
+  <data name="M2162" xml:space="preserve">
     <value>J2 (+) angle exceeds the limit
 (axis number: 2)</value>
   </data>
-  <data name="Error.2163.Message" xml:space="preserve">
+  <data name="M2163" xml:space="preserve">
     <value>J3 (+) angle exceeds the limit
 (axis number: 3)</value>
   </data>
-  <data name="Error.2164.Message" xml:space="preserve">
+  <data name="M2164" xml:space="preserve">
     <value>J4 (+) angle exceeds the limit
 (axis number: 4)</value>
   </data>
-  <data name="Error.2165.Message" xml:space="preserve">
+  <data name="M2165" xml:space="preserve">
     <value>J5 (+) angle exceeds the limit
 (axis number: 5)</value>
   </data>
-  <data name="Error.2166.Message" xml:space="preserve">
+  <data name="M2166" xml:space="preserve">
     <value>J6 (+) angle exceeds the limit
 (axis number: 6)</value>
   </data>
-  <data name="Error.2167.Message" xml:space="preserve">
+  <data name="M2167" xml:space="preserve">
     <value>J7 (+) angle exceeds the limit
 (axis number: 7)</value>
   </data>
-  <data name="Error.2168.Message" xml:space="preserve">
+  <data name="M2168" xml:space="preserve">
     <value>J8 (+) angle exceeds the limit
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2160.Cause" xml:space="preserve">
+  <data name="C2160" xml:space="preserve">
     <value>The axis "0" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2161.Cause" xml:space="preserve">
+  <data name="C2161" xml:space="preserve">
     <value>The axis "1" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2162.Cause" xml:space="preserve">
+  <data name="C2162" xml:space="preserve">
     <value>The axis "2" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2163.Cause" xml:space="preserve">
+  <data name="C2163" xml:space="preserve">
     <value>The axis "3" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2164.Cause" xml:space="preserve">
+  <data name="C2164" xml:space="preserve">
     <value>The axis "4" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2165.Cause" xml:space="preserve">
+  <data name="C2165" xml:space="preserve">
     <value>The axis "5" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2166.Cause" xml:space="preserve">
+  <data name="C2166" xml:space="preserve">
     <value>The axis "6" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2167.Cause" xml:space="preserve">
+  <data name="C2167" xml:space="preserve">
     <value>The axis "7" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2168.Cause" xml:space="preserve">
+  <data name="C2168" xml:space="preserve">
     <value>The axis "8" + Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
   
-  <data name="Error.2160.Measures" xml:space="preserve">
+  <data name="S2160" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2161.Measures" xml:space="preserve">
+  <data name="S2161" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2162.Measures" xml:space="preserve">
+  <data name="S2162" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2163.Measures" xml:space="preserve">
+  <data name="S2163" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2164.Measures" xml:space="preserve">
+  <data name="S2164" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2165.Measures" xml:space="preserve">
+  <data name="S2165" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2166.Measures" xml:space="preserve">
+  <data name="S2166" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2167.Measures" xml:space="preserve">
+  <data name="S2167" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2168.Measures" xml:space="preserve">
+  <data name="S2168" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
   
-  <data name="Error.2160.Level" xml:space="preserve">
+  <data name="L2160" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2161.Level" xml:space="preserve">
+  <data name="L2161" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2162.Level" xml:space="preserve">
+  <data name="L2162" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2163.Level" xml:space="preserve">
+  <data name="L2163" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2164.Level" xml:space="preserve">
+  <data name="L2164" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2165.Level" xml:space="preserve">
+  <data name="L2165" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2166.Level" xml:space="preserve">
+  <data name="L2166" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2167.Level" xml:space="preserve">
+  <data name="L2167" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2168.Level" xml:space="preserve">
+  <data name="L2168" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2170.Message" xml:space="preserve">
+  <data name="M2170" xml:space="preserve">
     <value>J0 (-) angle exceeds the limit
 (axis number: 0)</value>
   </data>
-  <data name="Error.2171.Message" xml:space="preserve">
+  <data name="M2171" xml:space="preserve">
     <value>J1 (-) angle exceeds the limit
 (axis number: 1)</value>
   </data>
-  <data name="Error.2172.Message" xml:space="preserve">
+  <data name="M2172" xml:space="preserve">
     <value>J2 (-) angle exceeds the limit
 (axis number: 2)</value>
   </data>
-  <data name="Error.2173.Message" xml:space="preserve">
+  <data name="M2173" xml:space="preserve">
     <value>J3 (-) angle exceeds the limit
 (axis number: 3)</value>
   </data>
-  <data name="Error.2174.Message" xml:space="preserve">
+  <data name="M2174" xml:space="preserve">
     <value>J4 (-) angle exceeds the limit
 (axis number: 4)</value>
   </data>
-  <data name="Error.2175.Message" xml:space="preserve">
+  <data name="M2175" xml:space="preserve">
     <value>J5 (-) angle exceeds the limit
 (axis number: 5)</value>
   </data>
-  <data name="Error.2176.Message" xml:space="preserve">
+  <data name="M2176" xml:space="preserve">
     <value>J6 (-) angle exceeds the limit
 (axis number: 6)</value>
   </data>
-  <data name="Error.2177.Message" xml:space="preserve">
+  <data name="M2177" xml:space="preserve">
     <value>J7 (-) angle exceeds the limit
 (axis number: 7)</value>
   </data>
-  <data name="Error.2178.Message" xml:space="preserve">
+  <data name="M2178" xml:space="preserve">
     <value>J8 (-) angle exceeds the limit
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2170.Cause" xml:space="preserve">
+  <data name="C2170" xml:space="preserve">
     <value>The axis "0" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2171.Cause" xml:space="preserve">
+  <data name="C2171" xml:space="preserve">
     <value>The axis "1" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2172.Cause" xml:space="preserve">
+  <data name="C2172" xml:space="preserve">
     <value>The axis "2" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2173.Cause" xml:space="preserve">
+  <data name="C2173" xml:space="preserve">
     <value>The axis "3" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2174.Cause" xml:space="preserve">
+  <data name="C2174" xml:space="preserve">
     <value>The axis "4" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2175.Cause" xml:space="preserve">
+  <data name="C2175" xml:space="preserve">
     <value>The axis "5" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2176.Cause" xml:space="preserve">
+  <data name="C2176" xml:space="preserve">
     <value>The axis "6" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2177.Cause" xml:space="preserve">
+  <data name="C2177" xml:space="preserve">
     <value>The axis "7" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
-  <data name="Error.2178.Cause" xml:space="preserve">
+  <data name="C2178" xml:space="preserve">
     <value>The axis "8" - Joint limit was exceeded. When the teach mode, numerical "0" is set to the axis number.</value>
   </data>
   
-  <data name="Error.2170.Measures" xml:space="preserve">
+  <data name="S2170" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2171.Measures" xml:space="preserve">
+  <data name="S2171" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2172.Measures" xml:space="preserve">
+  <data name="S2172" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2173.Measures" xml:space="preserve">
+  <data name="S2173" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2174.Measures" xml:space="preserve">
+  <data name="S2174" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2175.Measures" xml:space="preserve">
+  <data name="S2175" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2176.Measures" xml:space="preserve">
+  <data name="S2176" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2177.Measures" xml:space="preserve">
+  <data name="S2177" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2178.Measures" xml:space="preserve">
+  <data name="S2178" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
   
-  <data name="Error.2170.Level" xml:space="preserve">
+  <data name="L2170" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2171.Level" xml:space="preserve">
+  <data name="L2171" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2172.Level" xml:space="preserve">
+  <data name="L2172" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2173.Level" xml:space="preserve">
+  <data name="L2173" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2174.Level" xml:space="preserve">
+  <data name="L2174" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2175.Level" xml:space="preserve">
+  <data name="L2175" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2176.Level" xml:space="preserve">
+  <data name="L2176" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2177.Level" xml:space="preserve">
+  <data name="L2177" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2178.Level" xml:space="preserve">
+  <data name="L2178" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2181.Message" xml:space="preserve">
+  <data name="M2181" xml:space="preserve">
     <value>X(+) data exceeds the limit</value>
   </data>
-  <data name="Error.2181.Cause" xml:space="preserve">
+  <data name="C2181" xml:space="preserve">
     <value>The X axis + XYZ limit was exceeded.</value>
   </data>
-  <data name="Error.2181.Measures" xml:space="preserve">
+  <data name="S2181" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2181.Level" xml:space="preserve">
+  <data name="L2181" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2182.Message" xml:space="preserve">
+  <data name="M2182" xml:space="preserve">
     <value>Y(+) data exceeds the limit</value>
   </data>
-  <data name="Error.2182.Cause" xml:space="preserve">
+  <data name="C2182" xml:space="preserve">
     <value>The Yaxis + XYZ limit was exceeded.</value>
   </data>
-  <data name="Error.2182.Measures" xml:space="preserve">
+  <data name="S2182" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2182.Level" xml:space="preserve">
+  <data name="L2182" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2183.Message" xml:space="preserve">
+  <data name="M2183" xml:space="preserve">
     <value>Z(+) data exceeds the limit</value>
   </data>
-  <data name="Error.2183.Cause" xml:space="preserve">
+  <data name="C2183" xml:space="preserve">
     <value>The Z axis + XYZ limit was exceeded.</value>
   </data>
-  <data name="Error.2183.Measures" xml:space="preserve">
+  <data name="S2183" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2183.Level" xml:space="preserve">
+  <data name="L2183" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2191.Message" xml:space="preserve">
+  <data name="M2191" xml:space="preserve">
     <value>X(-) data exceeds the limit</value>
   </data>
-  <data name="Error.2191.Cause" xml:space="preserve">
+  <data name="C2191" xml:space="preserve">
     <value>X(-) data exceeds the limit</value>
   </data>
-  <data name="Error.2191.Measures" xml:space="preserve">
+  <data name="S2191" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2191.Level" xml:space="preserve">
+  <data name="L2191" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2192.Message" xml:space="preserve">
+  <data name="M2192" xml:space="preserve">
     <value>Y(-) data exceeds the limit</value>
   </data>
-  <data name="Error.2192.Cause" xml:space="preserve">
+  <data name="C2192" xml:space="preserve">
     <value>Y(-) data exceeds the limit</value>
   </data>
-  <data name="Error.2192.Measures" xml:space="preserve">
+  <data name="S2192" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2192.Level" xml:space="preserve">
+  <data name="L2192" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2193.Message" xml:space="preserve">
+  <data name="M2193" xml:space="preserve">
     <value>Z(-) data exceeds the limit</value>
   </data>
-  <data name="Error.2193.Cause" xml:space="preserve">
+  <data name="C2193" xml:space="preserve">
     <value>Z(-) data exceeds the limit</value>
   </data>
-  <data name="Error.2193.Measures" xml:space="preserve">
+  <data name="S2193" xml:space="preserve">
     <value>Adjust the position.</value>
   </data>
-  <data name="Error.2193.Level" xml:space="preserve">
+  <data name="L2193" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2201.Message" xml:space="preserve">
+  <data name="M2201" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2202.Message" xml:space="preserve">
+  <data name="M2202" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2203.Message" xml:space="preserve">
+  <data name="M2203" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2204.Message" xml:space="preserve">
+  <data name="M2204" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2205.Message" xml:space="preserve">
+  <data name="M2205" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2206.Message" xml:space="preserve">
+  <data name="M2206" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2207.Message" xml:space="preserve">
+  <data name="M2207" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
-  <data name="Error.2208.Message" xml:space="preserve">
+  <data name="M2208" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane)
 2. SLP (ROBOT position error:CMD Area)
 3. SLP (ROBOT position error:FB Area)</value>
   </data>
   
-  <data name="Error.2201.Cause" xml:space="preserve">
+  <data name="C2201" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2202.Cause" xml:space="preserve">
+  <data name="C2202" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2203.Cause" xml:space="preserve">
+  <data name="C2203" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2204.Cause" xml:space="preserve">
+  <data name="C2204" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2205.Cause" xml:space="preserve">
+  <data name="C2205" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2206.Cause" xml:space="preserve">
+  <data name="C2206" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2207.Cause" xml:space="preserve">
+  <data name="C2207" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
-  <data name="Error.2208.Cause" xml:space="preserve">
+  <data name="C2208" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): SLP detected the robot position FB over the monitoring plane
 2. SLP (ROBOT position error:CMD Area): SLP detected the robot position CMD over the monitoring area
 3. SLP (ROBOT position error:FB Area): SLP detected the robot position FB over the monitoring area</value>
   </data>
   
-  <data name="Error.2201.Measures" xml:space="preserve">
+  <data name="S2201" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2202.Measures" xml:space="preserve">
+  <data name="S2202" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2203.Measures" xml:space="preserve">
+  <data name="S2203" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2204.Measures" xml:space="preserve">
+  <data name="S2204" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2205.Measures" xml:space="preserve">
+  <data name="S2205" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2206.Measures" xml:space="preserve">
+  <data name="S2206" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2207.Measures" xml:space="preserve">
+  <data name="S2207" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2208.Measures" xml:space="preserve">
+  <data name="S2208" xml:space="preserve">
     <value>1. SLP (ROBOT position error:FB Plane): Please confirm the robot movement or related parameter setting
 2. SLP (ROBOT position error:CMD Area): Please confirm the robot movement or related parameter setting
 3. SLP (ROBOT position error:FB Area): Please confirm the robot movement or related parameter setting</value>
   </data>
   
-  <data name="Error.2201.Level" xml:space="preserve">
+  <data name="L2201" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2202.Level" xml:space="preserve">
+  <data name="L2202" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2203.Level" xml:space="preserve">
+  <data name="L2203" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2204.Level" xml:space="preserve">
+  <data name="L2204" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2205.Level" xml:space="preserve">
+  <data name="L2205" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2206.Level" xml:space="preserve">
+  <data name="L2206" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2207.Level" xml:space="preserve">
+  <data name="L2207" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2208.Level" xml:space="preserve">
+  <data name="L2208" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2211.Message" xml:space="preserve">
+  <data name="M2211" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 1)</value>
   </data>
-  <data name="Error.2212.Message" xml:space="preserve">
+  <data name="M2212" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 2)</value>
   </data>
-  <data name="Error.2213.Message" xml:space="preserve">
+  <data name="M2213" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 3)</value>
   </data>
-  <data name="Error.2214.Message" xml:space="preserve">
+  <data name="M2214" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 4)</value>
   </data>
-  <data name="Error.2215.Message" xml:space="preserve">
+  <data name="M2215" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 5)</value>
   </data>
-  <data name="Error.2216.Message" xml:space="preserve">
+  <data name="M2216" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 6)</value>
   </data>
-  <data name="Error.2217.Message" xml:space="preserve">
+  <data name="M2217" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 7)</value>
   </data>
-  <data name="Error.2218.Message" xml:space="preserve">
+  <data name="M2218" xml:space="preserve">
     <value>STR (ROBOT torque error)
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2211.Cause" xml:space="preserve">
+  <data name="C2211" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2212.Cause" xml:space="preserve">
+  <data name="C2212" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2213.Cause" xml:space="preserve">
+  <data name="C2213" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2214.Cause" xml:space="preserve">
+  <data name="C2214" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2215.Cause" xml:space="preserve">
+  <data name="C2215" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2216.Cause" xml:space="preserve">
+  <data name="C2216" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2217.Cause" xml:space="preserve">
+  <data name="C2217" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
-  <data name="Error.2218.Cause" xml:space="preserve">
+  <data name="C2218" xml:space="preserve">
     <value>Safety Torque Range monitoring detected over the torque limit</value>
   </data>
   
-  <data name="Error.2211.Measures" xml:space="preserve">
+  <data name="S2211" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2212.Measures" xml:space="preserve">
+  <data name="S2212" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2213.Measures" xml:space="preserve">
+  <data name="S2213" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2214.Measures" xml:space="preserve">
+  <data name="S2214" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2215.Measures" xml:space="preserve">
+  <data name="S2215" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2216.Measures" xml:space="preserve">
+  <data name="S2216" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2217.Measures" xml:space="preserve">
+  <data name="S2217" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
-  <data name="Error.2218.Measures" xml:space="preserve">
+  <data name="S2218" xml:space="preserve">
     <value>A feedback torque in excess of the predetermined allowable torque width is detected by the torque width monitoring function.</value>
   </data>
   
-  <data name="Error.2211.Level" xml:space="preserve">
+  <data name="L2211" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2212.Level" xml:space="preserve">
+  <data name="L2212" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2213.Level" xml:space="preserve">
+  <data name="L2213" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2214.Level" xml:space="preserve">
+  <data name="L2214" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2215.Level" xml:space="preserve">
+  <data name="L2215" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2216.Level" xml:space="preserve">
+  <data name="L2216" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2217.Level" xml:space="preserve">
+  <data name="L2217" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2218.Level" xml:space="preserve">
+  <data name="L2218" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2221.Message" xml:space="preserve">
+  <data name="M2221" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 1)</value>
   </data>
-  <data name="Error.2222.Message" xml:space="preserve">
+  <data name="M2222" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 2)</value>
   </data>
-  <data name="Error.2223.Message" xml:space="preserve">
+  <data name="M2223" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 3)</value>
   </data>
-  <data name="Error.2224.Message" xml:space="preserve">
+  <data name="M2224" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 4)</value>
   </data>
-  <data name="Error.2225.Message" xml:space="preserve">
+  <data name="M2225" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 5)</value>
   </data>
-  <data name="Error.2226.Message" xml:space="preserve">
+  <data name="M2226" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 6)</value>
   </data>
-  <data name="Error.2227.Message" xml:space="preserve">
+  <data name="M2227" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 7)</value>
   </data>
-  <data name="Error.2228.Message" xml:space="preserve">
+  <data name="M2228" xml:space="preserve">
     <value>DSI inconsistency
 (DSI number: 8)</value>
   </data>
   
-  <data name="Error.2221.Cause" xml:space="preserve">
+  <data name="C2221" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2222.Cause" xml:space="preserve">
+  <data name="C2222" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2223.Cause" xml:space="preserve">
+  <data name="C2223" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2224.Cause" xml:space="preserve">
+  <data name="C2224" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2225.Cause" xml:space="preserve">
+  <data name="C2225" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2226.Cause" xml:space="preserve">
+  <data name="C2226" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2227.Cause" xml:space="preserve">
+  <data name="C2227" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
-  <data name="Error.2228.Cause" xml:space="preserve">
+  <data name="C2228" xml:space="preserve">
     <value>The duplex DSI status is not consistent.</value>
   </data>
   
-  <data name="Error.2221.Measures" xml:space="preserve">
+  <data name="S2221" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2222.Measures" xml:space="preserve">
+  <data name="S2222" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2223.Measures" xml:space="preserve">
+  <data name="S2223" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2224.Measures" xml:space="preserve">
+  <data name="S2224" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2225.Measures" xml:space="preserve">
+  <data name="S2225" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2226.Measures" xml:space="preserve">
+  <data name="S2226" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2227.Measures" xml:space="preserve">
+  <data name="S2227" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2228.Measures" xml:space="preserve">
+  <data name="S2228" xml:space="preserve">
     <value>The duplex DSI signal ON/OFF status is not consistent. Check the following for the DSI. DSI wiring Duplex signal ON/OFF status ON/OFF status switching timing (The error occurs when the ON/OFF status remains inconsistent between the duplex signals for about 0.1 seconds or more.)
 Power off and on, unless otherwise noted.</value>
   </data>
   
-  <data name="Error.2221.Level" xml:space="preserve">
+  <data name="L2221" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2222.Level" xml:space="preserve">
+  <data name="L2222" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2223.Level" xml:space="preserve">
+  <data name="L2223" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2224.Level" xml:space="preserve">
+  <data name="L2224" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2225.Level" xml:space="preserve">
+  <data name="L2225" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2226.Level" xml:space="preserve">
+  <data name="L2226" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2227.Level" xml:space="preserve">
+  <data name="L2227" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2228.Level" xml:space="preserve">
+  <data name="L2228" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2230.Message" xml:space="preserve">
+  <data name="M2230" xml:space="preserve">
     <value>Mismatch of Dual Safety Output</value>
   </data>
-  <data name="Error.2230.Cause" xml:space="preserve">
+  <data name="C2230" xml:space="preserve">
     <value>State of the redundant wiring do not match (Dual Safty Output)</value>
   </data>
-  <data name="Error.2230.Measures" xml:space="preserve">
+  <data name="S2230" xml:space="preserve">
     <value>Turn the power OFF and ON once If the same error recurs, contact the manufacturer.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2230.Level" xml:space="preserve">
+  <data name="L2230" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2231.Message" xml:space="preserve">
+  <data name="M2231" xml:space="preserve">
     <value>Mismatch of Dual Safety Output Feedback</value>
   </data>
-  <data name="Error.2231.Cause" xml:space="preserve">
+  <data name="C2231" xml:space="preserve">
     <value>State of Dual Safty Output and the feeedback do not match</value>
   </data>
-  <data name="Error.2231.Measures" xml:space="preserve">
+  <data name="S2231" xml:space="preserve">
     <value>Turn the power OFF and ON once If the same error recurs, contact the manufacturer.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2231.Level" xml:space="preserve">
+  <data name="L2231" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2240.Message" xml:space="preserve">
+  <data name="M2240" xml:space="preserve">
     <value>Origin data change</value>
   </data>
-  <data name="Error.2240.Cause" xml:space="preserve">
+  <data name="C2240" xml:space="preserve">
     <value>The origin data is changed during execution of the position monitoring function.</value>
   </data>
-  <data name="Error.2240.Measures" xml:space="preserve">
+  <data name="S2240" xml:space="preserve">
     <value>The error occurs when the origin data is changed by setting the origin during execution of the position monitoring function. After turning OFF the power, turn ON the power again to reset the error.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2240.Level" xml:space="preserve">
+  <data name="L2240" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2250.Message" xml:space="preserve">
+  <data name="M2250" xml:space="preserve">
     <value>Safety function execution disabled (No origin setting)</value>
   </data>
-  <data name="Error.2250.Cause" xml:space="preserve">
+  <data name="C2250" xml:space="preserve">
     <value>The safety function cannot be executed because the origin is not set.</value>
   </data>
-  <data name="Error.2250.Measures" xml:space="preserve">
+  <data name="S2250" xml:space="preserve">
     <value>The safety monitoring function is not activated when the origin is not set. Set the origin.</value>
   </data>
-  <data name="Error.2250.Level" xml:space="preserve">
+  <data name="L2250" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2260.Message" xml:space="preserve">
+  <data name="M2260" xml:space="preserve">
     <value>Safety function execution disabled (No extended safety unit)</value>
   </data>
-  <data name="Error.2260.Cause" xml:space="preserve">
+  <data name="C2260" xml:space="preserve">
     <value>The extended safety unit of the robot safety option is not connected.</value>
   </data>
-  <data name="Error.2260.Measures" xml:space="preserve">
+  <data name="S2260" xml:space="preserve">
     <value>To use the safety monitoring function, it is necessary to connect the extended safety unit of the robot safety option to the controller. Connect the extended safety unit. If the error occurs even if the extended safety unit is connected, the extended safety unit may be faulty. Contact your service provider.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2260.Level" xml:space="preserve">
+  <data name="L2260" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2261.Message" xml:space="preserve">
+  <data name="M2261" xml:space="preserve">
     <value>Extended safety unit's No. error</value>
   </data>
-  <data name="Error.2261.Cause" xml:space="preserve">
+  <data name="C2261" xml:space="preserve">
     <value>The extended safety unit's station No. is illegal</value>
   </data>
-  <data name="Error.2261.Measures" xml:space="preserve">
+  <data name="S2261" xml:space="preserve">
     <value>Set the extended safety unit's station No. to 2
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2261.Level" xml:space="preserve">
+  <data name="L2261" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2270.Message" xml:space="preserve">
+  <data name="M2270" xml:space="preserve">
     <value>Cannot servo ON (SS1/STO active)</value>
   </data>
-  <data name="Error.2270.Cause" xml:space="preserve">
+  <data name="C2270" xml:space="preserve">
     <value>The servo cannot be turned ON while SS1/STO is active</value>
   </data>
-  <data name="Error.2270.Measures" xml:space="preserve">
+  <data name="S2270" xml:space="preserve">
     <value>Disable SS1 before turning the servo ON</value>
   </data>
-  <data name="Error.2270.Level" xml:space="preserve">
+  <data name="L2270" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2280.Message" xml:space="preserve">
+  <data name="M2280" xml:space="preserve">
     <value>SS1 deceleration time exceeded</value>
   </data>
-  <data name="Error.2280.Cause" xml:space="preserve">
+  <data name="C2280" xml:space="preserve">
     <value>The robot didn't stop within deceleration time from SS1 enabled</value>
   </data>
-  <data name="Error.2280.Measures" xml:space="preserve">
+  <data name="S2280" xml:space="preserve">
     <value>Please confirm the robot movement and the load, stop speed parameter (SFSPZERO) setting</value>
   </data>
-  <data name="Error.2280.Level" xml:space="preserve">
+  <data name="L2280" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2281.Message" xml:space="preserve">
+  <data name="M2281" xml:space="preserve">
     <value>SS2 deceleration time exceeded</value>
   </data>
-  <data name="Error.2281.Cause" xml:space="preserve">
+  <data name="C2281" xml:space="preserve">
     <value>The robot didn't stop within deceleration time from SS2 enabled</value>
   </data>
-  <data name="Error.2281.Measures" xml:space="preserve">
+  <data name="S2281" xml:space="preserve">
     <value>Please confirm the robot movement and the load, stop speed parameter (SFSPZERO) setting</value>
   </data>
-  <data name="Error.2281.Level" xml:space="preserve">
+  <data name="L2281" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2282.Message" xml:space="preserve">
+  <data name="M2282" xml:space="preserve">
     <value>1. SOS (Position error)
 2. SOS (Speed error)
 3. SOS (Position command error)
 4. SOS (Speed command error)</value>
   </data>
-  <data name="Error.2282.Cause" xml:space="preserve">
+  <data name="C2282" xml:space="preserve">
     <value>1. SOS (Position error): Detect the change of position FB on SOS
 2. SOS (Speed error): Detect FB speed over on SOS
 3. SOS (Position command error): Detect the change of position CMD on SOS.
 4. SOS (Speed command error): Detect CMD speed over on SOS.</value>
   </data>
-  <data name="Error.2282.Measures" xml:space="preserve">
+  <data name="S2282" xml:space="preserve">
     <value>1. SOS (Position error): An error that the position FB has changed on SOS due to external force was detected. Eliminate the cause of the external force or perform the risk assessment. Then modify the value of the parameter "SOSTLRNC" to extend the acceptable range of SOS.
 2. SOS (Speed error): Please check external force or related parameter settings
 3. SOS (Position command error): Please confirm the robot movement or related parameter setting
 4. SOS (Speed command error): Please confirm the robot movement or related parameter setting</value>
   </data>
-  <data name="Error.2282.Level" xml:space="preserve">
+  <data name="L2282" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2301.Message" xml:space="preserve">
+  <data name="M2301" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 1)</value>
   </data>
-  <data name="Error.2302.Message" xml:space="preserve">
+  <data name="M2302" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 2)</value>
   </data>
-  <data name="Error.2303.Message" xml:space="preserve">
+  <data name="M2303" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 3)</value>
   </data>
-  <data name="Error.2304.Message" xml:space="preserve">
+  <data name="M2304" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 4)</value>
   </data>
-  <data name="Error.2305.Message" xml:space="preserve">
+  <data name="M2305" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 5)</value>
   </data>
-  <data name="Error.2306.Message" xml:space="preserve">
+  <data name="M2306" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 6)</value>
   </data>
-  <data name="Error.2307.Message" xml:space="preserve">
+  <data name="M2307" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 7)</value>
   </data>
-  <data name="Error.2308.Message" xml:space="preserve">
+  <data name="M2308" xml:space="preserve">
     <value>SLS (Joint Speed Error)
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2301.Cause" xml:space="preserve">
+  <data name="C2301" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2302.Cause" xml:space="preserve">
+  <data name="C2302" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2303.Cause" xml:space="preserve">
+  <data name="C2303" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2304.Cause" xml:space="preserve">
+  <data name="C2304" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2305.Cause" xml:space="preserve">
+  <data name="C2305" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2306.Cause" xml:space="preserve">
+  <data name="C2306" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2307.Cause" xml:space="preserve">
+  <data name="C2307" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2308.Cause" xml:space="preserve">
+  <data name="C2308" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
   
-  <data name="Error.2301.Measures" xml:space="preserve">
+  <data name="S2301" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2302.Measures" xml:space="preserve">
+  <data name="S2302" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2303.Measures" xml:space="preserve">
+  <data name="S2303" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2304.Measures" xml:space="preserve">
+  <data name="S2304" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2305.Measures" xml:space="preserve">
+  <data name="S2305" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2306.Measures" xml:space="preserve">
+  <data name="S2306" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2307.Measures" xml:space="preserve">
+  <data name="S2307" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2308.Measures" xml:space="preserve">
+  <data name="S2308" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
   
-  <data name="Error.2301.Level" xml:space="preserve">
+  <data name="L2301" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2302.Level" xml:space="preserve">
+  <data name="L2302" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2303.Level" xml:space="preserve">
+  <data name="L2303" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2304.Level" xml:space="preserve">
+  <data name="L2304" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2305.Level" xml:space="preserve">
+  <data name="L2305" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2306.Level" xml:space="preserve">
+  <data name="L2306" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2307.Level" xml:space="preserve">
+  <data name="L2307" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2308.Level" xml:space="preserve">
+  <data name="L2308" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2311.Message" xml:space="preserve">
+  <data name="M2311" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: Composite speed)</value>
   </data>
-  <data name="Error.2312.Message" xml:space="preserve">
+  <data name="M2312" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: X+)</value>
   </data>
-  <data name="Error.2313.Message" xml:space="preserve">
+  <data name="M2313" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: X-)</value>
   </data>
-  <data name="Error.2314.Message" xml:space="preserve">
+  <data name="M2314" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: Y+)</value>
   </data>
-  <data name="Error.2315.Message" xml:space="preserve">
+  <data name="M2315" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: Y-)</value>
   </data>
-  <data name="Error.2316.Message" xml:space="preserve">
+  <data name="M2316" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: Z+)</value>
   </data>
-  <data name="Error.2317.Message" xml:space="preserve">
+  <data name="M2317" xml:space="preserve">
     <value>SLS (XYZ Speed Error)
 (detected direction: Z-)</value>
   </data>
   
-  <data name="Error.2311.Cause" xml:space="preserve">
+  <data name="C2311" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2312.Cause" xml:space="preserve">
+  <data name="C2312" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2313.Cause" xml:space="preserve">
+  <data name="C2313" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2314.Cause" xml:space="preserve">
+  <data name="C2314" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2315.Cause" xml:space="preserve">
+  <data name="C2315" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2316.Cause" xml:space="preserve">
+  <data name="C2316" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
-  <data name="Error.2317.Cause" xml:space="preserve">
+  <data name="C2317" xml:space="preserve">
     <value>Speed monitor detected the speed over</value>
   </data>
   
-  <data name="Error.2311.Measures" xml:space="preserve">
+  <data name="S2311" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2312.Measures" xml:space="preserve">
+  <data name="S2312" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2313.Measures" xml:space="preserve">
+  <data name="S2313" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2314.Measures" xml:space="preserve">
+  <data name="S2314" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2315.Measures" xml:space="preserve">
+  <data name="S2315" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2316.Measures" xml:space="preserve">
+  <data name="S2316" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
-  <data name="Error.2317.Measures" xml:space="preserve">
+  <data name="S2317" xml:space="preserve">
     <value>A speed feedback exceeding the limit speed is detected by the speed monitoring function. Check the robot movement or the monitoring speed setting. Or else, check the delay time (parameterSLSDLY) setting.</value>
   </data>
   
-  <data name="Error.2311.Level" xml:space="preserve">
+  <data name="L2311" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2312.Level" xml:space="preserve">
+  <data name="L2312" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2313.Level" xml:space="preserve">
+  <data name="L2313" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2314.Level" xml:space="preserve">
+  <data name="L2314" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2315.Level" xml:space="preserve">
+  <data name="L2315" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2316.Level" xml:space="preserve">
+  <data name="L2316" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2317.Level" xml:space="preserve">
+  <data name="L2317" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2320.Message" xml:space="preserve">
+  <data name="M2320" xml:space="preserve">
     <value>SF robot control error</value>
   </data>
-  <data name="Error.2320.Cause" xml:space="preserve">
+  <data name="C2320" xml:space="preserve">
     <value>The robot motion command and the feedback are inconsistent.</value>
   </data>
-  <data name="Error.2320.Measures" xml:space="preserve">
+  <data name="S2320" xml:space="preserve">
     <value>The robot position command and the feedback position are inconsistent. Check the details of the robot movement, the terminal load setting, or interference with the peripheral equipment.</value>
   </data>
-  <data name="Error.2320.Level" xml:space="preserve">
+  <data name="L2320" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2370.Message" xml:space="preserve">
+  <data name="M2370" xml:space="preserve">
     <value>1. SF (Process error)
 2. SF (Process Counter error)</value>
   </data>
-  <data name="Error.2370.Cause" xml:space="preserve">
+  <data name="C2370" xml:space="preserve">
     <value>1. SF (Process error): The Safety Function is not normally executed
 2. SF (Process Counter error): The Safety Function of servo CPU is not normally executed</value>
   </data>
-  <data name="Error.2370.Measures" xml:space="preserve">
+  <data name="S2370" xml:space="preserve">
     <value>1. SF (Process error): Turn the power OFF and ON once. If the same error recurs, contact the manufacturer.
 Power off and on, unless otherwise noted.
 2. SF (Process Counter error): Turn the power OFF and ON once. If the same error recurs, contact the manufacturer.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2370.Level" xml:space="preserve">
+  <data name="L2370" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2401.Message" xml:space="preserve">
+  <data name="M2401" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 1)</value>
   </data>
-  <data name="Error.2402.Message" xml:space="preserve">
+  <data name="M2402" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 2)</value>
   </data>
-  <data name="Error.2403.Message" xml:space="preserve">
+  <data name="M2403" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 3)</value>
   </data>
-  <data name="Error.2404.Message" xml:space="preserve">
+  <data name="M2404" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 4)</value>
   </data>
-  <data name="Error.2405.Message" xml:space="preserve">
+  <data name="M2405" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 5)</value>
   </data>
-  <data name="Error.2406.Message" xml:space="preserve">
+  <data name="M2406" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 6)</value>
   </data>
-  <data name="Error.2407.Message" xml:space="preserve">
+  <data name="M2407" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 7)</value>
   </data>
-  <data name="Error.2408.Message" xml:space="preserve">
+  <data name="M2408" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 8)</value>
   </data>
   
-  <data name="Error.2401.Cause" xml:space="preserve">
+  <data name="C2401" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2402.Cause" xml:space="preserve">
+  <data name="C2402" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2403.Cause" xml:space="preserve">
+  <data name="C2403" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2404.Cause" xml:space="preserve">
+  <data name="C2404" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2405.Cause" xml:space="preserve">
+  <data name="C2405" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2406.Cause" xml:space="preserve">
+  <data name="C2406" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2407.Cause" xml:space="preserve">
+  <data name="C2407" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2408.Cause" xml:space="preserve">
+  <data name="C2408" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
   
-  <data name="Error.2401.Measures" xml:space="preserve">
+  <data name="S2401" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2402.Measures" xml:space="preserve">
+  <data name="S2402" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2403.Measures" xml:space="preserve">
+  <data name="S2403" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2404.Measures" xml:space="preserve">
+  <data name="S2404" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2405.Measures" xml:space="preserve">
+  <data name="S2405" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2406.Measures" xml:space="preserve">
+  <data name="S2406" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2407.Measures" xml:space="preserve">
+  <data name="S2407" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2408.Measures" xml:space="preserve">
+  <data name="S2408" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
   
-  <data name="Error.2401.Level" xml:space="preserve">
+  <data name="L2401" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2402.Level" xml:space="preserve">
+  <data name="L2402" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2403.Level" xml:space="preserve">
+  <data name="L2403" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2404.Level" xml:space="preserve">
+  <data name="L2404" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2405.Level" xml:space="preserve">
+  <data name="L2405" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2406.Level" xml:space="preserve">
+  <data name="L2406" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2407.Level" xml:space="preserve">
+  <data name="L2407" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2408.Level" xml:space="preserve">
+  <data name="L2408" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2411.Message" xml:space="preserve">
+  <data name="M2411" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 1)</value>
   </data>
-  <data name="Error.2412.Message" xml:space="preserve">
+  <data name="M2412" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 2)</value>
   </data>
-  <data name="Error.2413.Message" xml:space="preserve">
+  <data name="M2413" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 3)</value>
   </data>
-  <data name="Error.2414.Message" xml:space="preserve">
+  <data name="M2414" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 4)</value>
   </data>
-  <data name="Error.2415.Message" xml:space="preserve">
+  <data name="M2415" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 5)</value>
   </data>
-  <data name="Error.2416.Message" xml:space="preserve">
+  <data name="M2416" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 6)</value>
   </data>
-  <data name="Error.2417.Message" xml:space="preserve">
+  <data name="M2417" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 7)</value>
   </data>
-  <data name="Error.2418.Message" xml:space="preserve">
+  <data name="M2418" xml:space="preserve">
     <value>Collision avoidance detect (*) Note) "(*)": shows the detected model. (the the lower digit of the parameter for the model registry)
 (Robot CPU No.: 8)</value>
   </data>
   
-  <data name="Error.2411.Cause" xml:space="preserve">
+  <data name="C2411" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2412.Cause" xml:space="preserve">
+  <data name="C2412" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2413.Cause" xml:space="preserve">
+  <data name="C2413" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2414.Cause" xml:space="preserve">
+  <data name="C2414" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2415.Cause" xml:space="preserve">
+  <data name="C2415" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2416.Cause" xml:space="preserve">
+  <data name="C2416" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2417.Cause" xml:space="preserve">
+  <data name="C2417" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
-  <data name="Error.2418.Cause" xml:space="preserve">
+  <data name="C2418" xml:space="preserve">
     <value>A collision avoidance was detected</value>
   </data>
   
-  <data name="Error.2411.Measures" xml:space="preserve">
+  <data name="S2411" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2412.Measures" xml:space="preserve">
+  <data name="S2412" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2413.Measures" xml:space="preserve">
+  <data name="S2413" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2414.Measures" xml:space="preserve">
+  <data name="S2414" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2415.Measures" xml:space="preserve">
+  <data name="S2415" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2416.Measures" xml:space="preserve">
+  <data name="S2416" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2417.Measures" xml:space="preserve">
+  <data name="S2417" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
-  <data name="Error.2418.Measures" xml:space="preserve">
+  <data name="S2418" xml:space="preserve">
     <value>Release the collision avoidance state</value>
   </data>
   
-  <data name="Error.2411.Level" xml:space="preserve">
+  <data name="L2411" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2412.Level" xml:space="preserve">
+  <data name="L2412" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2413.Level" xml:space="preserve">
+  <data name="L2413" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2414.Level" xml:space="preserve">
+  <data name="L2414" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2415.Level" xml:space="preserve">
+  <data name="L2415" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2416.Level" xml:space="preserve">
+  <data name="L2416" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2417.Level" xml:space="preserve">
+  <data name="L2417" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2418.Level" xml:space="preserve">
+  <data name="L2418" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2420.Message" xml:space="preserve">
+  <data name="M2420" xml:space="preserve">
     <value>Collision avoidance comm. error</value>
   </data>
-  <data name="Error.2420.Cause" xml:space="preserve">
+  <data name="C2420" xml:space="preserve">
     <value>Collision avoidance comm. error</value>
   </data>
-  <data name="Error.2420.Measures" xml:space="preserve">
+  <data name="S2420" xml:space="preserve">
     <value>Check the robot controller</value>
   </data>
-  <data name="Error.2420.Level" xml:space="preserve">
+  <data name="L2420" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2421.Message" xml:space="preserve">
+  <data name="M2421" xml:space="preserve">
     <value>A lot of colli. avoidance models</value>
   </data>
-  <data name="Error.2421.Cause" xml:space="preserve">
+  <data name="C2421" xml:space="preserve">
     <value>A lot of collision avoidance models</value>
   </data>
-  <data name="Error.2421.Measures" xml:space="preserve">
+  <data name="S2421" xml:space="preserve">
     <value>Reduce the collision avoidance models</value>
   </data>
-  <data name="Error.2421.Level" xml:space="preserve">
+  <data name="L2421" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2430.Message" xml:space="preserve">
+  <data name="M2430" xml:space="preserve">
     <value>Collision avoidance re-detect</value>
   </data>
-  <data name="Error.2430.Cause" xml:space="preserve">
+  <data name="C2430" xml:space="preserve">
     <value>Collision avoidance was already detected</value>
   </data>
-  <data name="Error.2430.Measures" xml:space="preserve">
+  <data name="S2430" xml:space="preserve">
     <value>Move the robot arm from the interference area and resume the operation.</value>
   </data>
-  <data name="Error.2430.Level" xml:space="preserve">
+  <data name="L2430" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2500.Message" xml:space="preserve">
+  <data name="M2500" xml:space="preserve">
     <value>Tracking encoder data error</value>
   </data>
-  <data name="Error.2500.Cause" xml:space="preserve">
+  <data name="C2500" xml:space="preserve">
     <value>An error was detected in the data of tracking encoder.</value>
   </data>
-  <data name="Error.2500.Measures" xml:space="preserve">
+  <data name="S2500" xml:space="preserve">
     <value>1) The conveyor rotates at the fixed velocity. 2) The connection of the encoder. 3) The earth of the earth wire.</value>
   </data>
-  <data name="Error.2500.Level" xml:space="preserve">
+  <data name="L2500" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2510.Message" xml:space="preserve">
+  <data name="M2510" xml:space="preserve">
     <value>Tracking parameter reverses</value>
   </data>
-  <data name="Error.2510.Cause" xml:space="preserve">
+  <data name="C2510" xml:space="preserve">
     <value>Tracking parameter[EXCRGM*] Setting value reverses</value>
   </data>
-  <data name="Error.2510.Measures" xml:space="preserve">
+  <data name="S2510" xml:space="preserve">
     <value>Check the parameter[EXCRGM*] value.</value>
   </data>
-  <data name="Error.2510.Level" xml:space="preserve">
+  <data name="L2510" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2520.Message" xml:space="preserve">
+  <data name="M2520" xml:space="preserve">
     <value>Tracking parameter is range over</value>
   </data>
-  <data name="Error.2520.Cause" xml:space="preserve">
+  <data name="C2520" xml:space="preserve">
     <value>Tracking parameter[TRBUF] Setting value is range over. Setting range: element 1=1-8, element 2=1-64</value>
   </data>
-  <data name="Error.2520.Measures" xml:space="preserve">
+  <data name="S2520" xml:space="preserve">
     <value>Check the parameter[TRUBF] value.</value>
   </data>
-  <data name="Error.2520.Level" xml:space="preserve">
+  <data name="L2520" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2530.Message" xml:space="preserve">
+  <data name="M2530" xml:space="preserve">
     <value>There is no area where data is written.</value>
   </data>
-  <data name="Error.2530.Cause" xml:space="preserve">
+  <data name="C2530" xml:space="preserve">
     <value>There is no area where data is written.</value>
   </data>
-  <data name="Error.2530.Measures" xml:space="preserve">
+  <data name="S2530" xml:space="preserve">
     <value>Please read the data by using TrRd</value>
   </data>
-  <data name="Error.2530.Level" xml:space="preserve">
+  <data name="L2530" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2540.Message" xml:space="preserve">
+  <data name="M2540" xml:space="preserve">
     <value>There is no read data.</value>
   </data>
-  <data name="Error.2540.Cause" xml:space="preserve">
+  <data name="C2540" xml:space="preserve">
     <value>There is no read data.</value>
   </data>
-  <data name="Error.2540.Measures" xml:space="preserve">
+  <data name="S2540" xml:space="preserve">
     <value>Please use TrRd after executing TrWrt.</value>
   </data>
-  <data name="Error.2540.Level" xml:space="preserve">
+  <data name="L2540" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2560.Message" xml:space="preserve">
+  <data name="M2560" xml:space="preserve">
     <value>Ilegal parameter of Tracking.</value>
   </data>
-  <data name="Error.2560.Cause" xml:space="preserve">
+  <data name="C2560" xml:space="preserve">
     <value>The value of the parameter: EXTENC is outside the range. setting range: 1-8.</value>
   </data>
-  <data name="Error.2560.Measures" xml:space="preserve">
+  <data name="S2560" xml:space="preserve">
     <value>Please check the value of parameter.</value>
   </data>
-  <data name="Error.2560.Level" xml:space="preserve">
+  <data name="L2560" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2580.Message" xml:space="preserve">
+  <data name="M2580" xml:space="preserve">
     <value>No workpiece in the tracking area.</value>
   </data>
-  <data name="Error.2580.Cause" xml:space="preserve">
+  <data name="C2580" xml:space="preserve">
     <value>There is no workpiece in the tracking buffer or "TrkMv On" command is executed. Before the workpiece enters to the tracking area.</value>
   </data>
-  <data name="Error.2580.Measures" xml:space="preserve">
+  <data name="S2580" xml:space="preserve">
     <value>Execute "TrkMv On" command when the workpiece is in the tracking area.</value>
   </data>
-  <data name="Error.2580.Level" xml:space="preserve">
+  <data name="L2580" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2601.Message" xml:space="preserve">
+  <data name="M2601" xml:space="preserve">
     <value>Start position exceeds the limit</value>
   </data>
-  <data name="Error.2601.Cause" xml:space="preserve">
+  <data name="C2601" xml:space="preserve">
     <value>The start position is outside the operation range.</value>
   </data>
-  <data name="Error.2601.Measures" xml:space="preserve">
+  <data name="S2601" xml:space="preserve">
     <value>Adjust the position</value>
   </data>
-  <data name="Error.2601.Level" xml:space="preserve">
+  <data name="L2601" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2602.Message" xml:space="preserve">
+  <data name="M2602" xml:space="preserve">
     <value>Destination position exceeds the limit</value>
   </data>
-  <data name="Error.2602.Cause" xml:space="preserve">
+  <data name="C2602" xml:space="preserve">
     <value>The target position is outside the operation range.</value>
   </data>
-  <data name="Error.2602.Measures" xml:space="preserve">
+  <data name="S2602" xml:space="preserve">
     <value>Adjust the position</value>
   </data>
-  <data name="Error.2602.Level" xml:space="preserve">
+  <data name="L2602" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2603.Message" xml:space="preserve">
+  <data name="M2603" xml:space="preserve">
     <value>Middle position exceeds the limit</value>
   </data>
-  <data name="Error.2603.Cause" xml:space="preserve">
+  <data name="C2603" xml:space="preserve">
     <value>The intermediate position is outside the operation range.</value>
   </data>
-  <data name="Error.2603.Measures" xml:space="preserve">
+  <data name="S2603" xml:space="preserve">
     <value>Adjust the position</value>
   </data>
-  <data name="Error.2603.Level" xml:space="preserve">
+  <data name="L2603" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2610.Message" xml:space="preserve">
+  <data name="M2610" xml:space="preserve">
     <value>1. Spline interpolation error (Spline file)
 2. Can't open spline file
 3. Spline file is broken
@@ -2208,7 +2208,7 @@ Power off and on, unless otherwise noted.</value>
 7. The setting of Ex-T is illegal
 8. Cannot make the spline file</value>
   </data>
-  <data name="Error.2610.Cause" xml:space="preserve">
+  <data name="C2610" xml:space="preserve">
     <value>1. Spline interpolation error (Spline file): An error related to the spline file occurred.
 2. Can't open spline file: The spline file corresponding to the spline No. designated with the MvSpl command could not be opened.
 3. Spline file is broken: The spline file contents did not match the checksum.
@@ -2218,7 +2218,7 @@ Power off and on, unless otherwise noted.</value>
 7. The setting of Ex-T is illegal: The setting of Ex-T is illegal
 8. Cannot make the spline file: The specified spline file is opened already</value>
   </data>
-  <data name="Error.2610.Measures" xml:space="preserve">
+  <data name="S2610" xml:space="preserve">
     <value>1. Spline interpolation error (Spline file): Refer to the error details No. and check the details of the occurring error. Then take actions for those error details.
 2. Can't open spline file: Check that the spline No. designation is correct, and that the target spline file is saved in the controller.
 3. Spline file is broken: Open the target spline file and check the contents. Then, save the file again to recreate the spline file. Write the new file to the controller again.
@@ -2228,10 +2228,10 @@ Power off and on, unless otherwise noted.</value>
 7. The setting of Ex-T is illegal: Please confirm the number and the content of the file
 8. Cannot make the spline file: Please confirm the specified number</value>
   </data>
-  <data name="Error.2610.Level" xml:space="preserve">
+  <data name="L2610" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2611.Message" xml:space="preserve">
+  <data name="M2611" xml:space="preserve">
     <value>1. Spline interpolation error (path point)
 2. Path points are too close (nnnn)
 3. The posture variation is too large (nnnn)
@@ -2241,7 +2241,7 @@ Power off and on, unless otherwise noted.</value>
 7. The format of file is different
 8. The number of point is illegal</value>
   </data>
-  <data name="Error.2611.Cause" xml:space="preserve">
+  <data name="C2611" xml:space="preserve">
     <value>1. Spline interpolation error (path point): An error related to the path point registered in the spline file has occurred.
 2. Path points are too close (nnnn): The distance between path points is too short, or the speed command in respect to the path point distance is too high.
 3. The posture variation is too large (nnnn): The variation in posture between path points is too large. (The posture variation angle exceeds 150 degrees.)
@@ -2251,7 +2251,7 @@ Power off and on, unless otherwise noted.</value>
 7. The format of file is different: The format of file is different
 8. The number of point is illegal: The number of path point is illegal</value>
   </data>
-  <data name="Error.2611.Measures" xml:space="preserve">
+  <data name="S2611" xml:space="preserve">
     <value>1. Spline interpolation error (path point): Refer to the error details No. and check the details of the occurring error. Then take actions for those error details.
 2. Path points are too close (nnnn): "nnnn" in the error message indicates the path point No. causing the error. Review this path point's posi- tion, or review the spline interpolation command speed. * The high speed spline interpolation command has been added to the software version A3a. With this function enabled, a command speed higher than what was previously possible can be specified for the distance between the respective path points. Refer to the separate manual "Instruction Manual/Detailed Explanation of Functions and Operations" in details.
 3. The posture variation is too large (nnnn): "nnnn" in the error message indicates the path point No. causing the error. Review the posture so that the posture variation amount for this path point is smaller, or add a path point to reduce the posture variation amount in the single block.
@@ -2261,34 +2261,34 @@ Power off and on, unless otherwise noted.</value>
 7. The format of file is different: Please confirm the format of the file
 8. The number of point is illegal: Please confirm the file and the content of the file</value>
   </data>
-  <data name="Error.2611.Level" xml:space="preserve">
+  <data name="L2611" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2612.Message" xml:space="preserve">
+  <data name="M2612" xml:space="preserve">
     <value>1. Spline interpolation error (Execution error)
 2. The robot does not support spline interpolation.
 3. Can't execute with these start condition
 4. Another spline interpolation is being executed
 5. Can't execute step return</value>
   </data>
-  <data name="Error.2612.Cause" xml:space="preserve">
+  <data name="C2612" xml:space="preserve">
     <value>1. Spline interpolation error (Execution error): An error related to the spline interpolation execution conditions occurred.
 2. The robot does not support spline interpolation.: Spline interpolation was attempted with a robot that does not support spline interpolation.
 3. Can't execute with these start condition: Spline interpolation was attempted with a robot program in a slot having the start conditions ALWAYS ERROR.
 4. Another spline interpolation is being executed: Multiple spline interpolations cannot be executed simultaneously.
 5. Can't execute step return: Step return was attempted in respect to spline interpolation.</value>
   </data>
-  <data name="Error.2612.Measures" xml:space="preserve">
+  <data name="S2612" xml:space="preserve">
     <value>1. Spline interpolation error (Execution error): Refer to the error detail No. and check the details of the occuring error. Then take action for those error details.
 2. The robot does not support spline interpolation.: Use a different command than spline interpolation.
 3. Can't execute with these start condition: Spline interpolation cannot be executed with a slot having the start conditions ALWAYS ERROR. Delete spline interpolation or change the start conditions to START.
 4. Another spline interpolation is being executed: Check whether spline interpolation was attempted with a different robot during spline interpolation, or whether spline interpolation was directly attempted while spline interpolation was halted.
 5. Can't execute step return: Spline interpolation does not support the step return operation. Do not attempt step return.</value>
   </data>
-  <data name="Error.2612.Level" xml:space="preserve">
+  <data name="L2612" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2613.Message" xml:space="preserve">
+  <data name="M2613" xml:space="preserve">
     <value>1. Spline interpolation error (interpolation process)
 2. Not enough path points
 3. Not enough arc designated points (nnnn)
@@ -2296,7 +2296,7 @@ Power off and on, unless otherwise noted.</value>
 5. Block data does not exist
 6. Spline interpolation command calculation error (nnnn)</value>
   </data>
-  <data name="Error.2613.Cause" xml:space="preserve">
+  <data name="C2613" xml:space="preserve">
     <value>1. Spline interpolation error (interpolation process): An error occurred during the spline interpolation process.
 2. Not enough path points: There are less than four path points registered in the spline file.
 3. Not enough arc designated points (nnnn): Three consecutive path points are not designated for the spline interpolation arc.
@@ -2304,7 +2304,7 @@ Power off and on, unless otherwise noted.</value>
 5. Block data does not exist: The load in the process for the controller during spline interpolation was large, and the data for the spline interpolation block could not be generated in time.
 6. Spline interpolation command calculation error (nnnn): An error occurred in the process for calculating the spline interpolation position commands.</value>
   </data>
-  <data name="Error.2613.Measures" xml:space="preserve">
+  <data name="S2613" xml:space="preserve">
     <value>1. Spline interpolation error (interpolation process): Refer to the error details No. and check the details of the occurring error. Then take actions for those error details.
 2. Not enough path points: At least four path points are required to execute spline interpolation. Use a spline file in which four or more path points are registered.
 3. Not enough arc designated points (nnnn): The number of points in the arc containing the path point No. "nnnn" displayed in the error message is insufficient. To generate an arc, an arc for three consecutive path points must be designated. This error occurs if there are only two consecutive points. Add another path point in the arc designation to move with an arc path.
@@ -2321,31 +2321,31 @@ Power off and on, unless otherwise noted.</value>
 - Reduce the spline interpolation command speed.
 6. Spline interpolation command calculation error (nnnn): Review the position of path point No. "nnnn" indicated in the error message or the MvSpl command argument’s setting value. Check that the cancel angle is set correctly. (Does the spline curve bend suddenly?)</value>
   </data>
-  <data name="Error.2613.Level" xml:space="preserve">
+  <data name="L2613" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2614.Message" xml:space="preserve">
+  <data name="M2614" xml:space="preserve">
     <value>1. Spline interpolation error (other functions)
 2. Tracking function is enabled
 3. Can't change tool/base setting
 4. Can't execute Jrc command</value>
   </data>
-  <data name="Error.2614.Cause" xml:space="preserve">
+  <data name="C2614" xml:space="preserve">
     <value>1. Spline interpolation error (other functions): A function that cannot be used with the spline interpolation was executed.
 2. Tracking function is enabled: The tracking function was enabled when attempting spline interpolation.
 3. Can't change tool/base setting: The tool/base setting was changed during spline interpolation execution.
 4. Can't execute Jrc command: The Jrc command was executed during spline interpolation.</value>
   </data>
-  <data name="Error.2614.Measures" xml:space="preserve">
+  <data name="S2614" xml:space="preserve">
     <value>1. Spline interpolation error (other functions): Refer to the error details No. and check the details of the occurring error. Then take actions for those error details.
 2. Tracking function is enabled: Spline interpolation and tracking function cannot be executed simultaneously. Disable the tracking function before executing spline interpolation.
 3. Can't change tool/base setting: The tool/base setting cannot be changed during spline interpolation (including when halted). Change the settings after spline interpolation ends.
 4. Can't execute Jrc command: The Jrc command cannot be executed during spline interpolation (including when halted). Execute the command after spline interpolation ends.</value>
   </data>
-  <data name="Error.2614.Level" xml:space="preserve">
+  <data name="L2614" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2615.Message" xml:space="preserve">
+  <data name="M2615" xml:space="preserve">
     <value>1. Spline interpolation error (exceeds setting range)
 2. M_SplVar setting value exceeds setting range
 3. M_SplVar setting range exceeds setting range (nnnn)
@@ -2354,7 +2354,7 @@ Power off and on, unless otherwise noted.</value>
 6. Interpolation setting information exceeds range
 7. Header information exceeds range</value>
   </data>
-  <data name="Error.2615.Cause" xml:space="preserve">
+  <data name="C2615" xml:space="preserve">
     <value>1. Spline interpolation error (exceeds setting range): A setting value related to spline interpolation exceeds the setting range.
 2. M_SplVar setting value exceeds setting range: A value exceeding the range was substituted into M_SplVar.
 3. M_SplVar setting range exceeds setting range (nnnn): A value exceeding the setting range is set in the spline file.
@@ -2363,7 +2363,7 @@ Power off and on, unless otherwise noted.</value>
 6. Interpolation setting information exceeds range: Data with value exceeding the range was found in the spline file interpolation setting information.
 7. Header information exceeds range: Data with value exceeding the range was found in the spline file header information.</value>
   </data>
-  <data name="Error.2615.Measures" xml:space="preserve">
+  <data name="S2615" xml:space="preserve">
     <value>1. Spline interpolation error (exceeds setting range): Refer to the error details No. and check the details of the occurring error. Then take actions for those error details.
 2. M_SplVar setting value exceeds setting range: Substitute a value within the setting range (0 to 32767).
 3. M_SplVar setting range exceeds setting range (nnnn): Change the setting for the path point No. "nnnn" indicated in the error message so it is within the range (-1 to 32767).
@@ -2372,250 +2372,250 @@ Power off and on, unless otherwise noted.</value>
 6. Interpolation setting information exceeds range: Open the target spline file and check the contents. Then, save the file again to recreate the spline file. Write the new file to the controller again.
 7. Header information exceeds range: Open the target spline file and check the contents. Then, save the file again to recreate the spline file. Write the new file to the controller again.</value>
   </data>
-  <data name="Error.2615.Level" xml:space="preserve">
+  <data name="L2615" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2621.Message" xml:space="preserve">
+  <data name="M2621" xml:space="preserve">
     <value>Tracking function is enabled.</value>
   </data>
-  <data name="Error.2621.Cause" xml:space="preserve">
+  <data name="C2621" xml:space="preserve">
     <value>The tracking function and Ex-T control function cannot be enabled simultaneously.</value>
   </data>
-  <data name="Error.2621.Measures" xml:space="preserve">
+  <data name="S2621" xml:space="preserve">
     <value>When using the Ex-T control function, disable the tracking function.</value>
   </data>
-  <data name="Error.2621.Level" xml:space="preserve">
+  <data name="L2621" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2622.Message" xml:space="preserve">
+  <data name="M2622" xml:space="preserve">
     <value>Singular point passage function is enabled.</value>
   </data>
-  <data name="Error.2622.Cause" xml:space="preserve">
+  <data name="C2622" xml:space="preserve">
     <value>The singular point passage function and Ex-T control function cannot be enabled simultaneously.</value>
   </data>
-  <data name="Error.2622.Measures" xml:space="preserve">
+  <data name="S2622" xml:space="preserve">
     <value>When using the Ex-T control function, disable the singular point passage function.</value>
   </data>
-  <data name="Error.2622.Level" xml:space="preserve">
+  <data name="L2622" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2641.Message" xml:space="preserve">
+  <data name="M2641" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 1)</value>
   </data>
-  <data name="Error.2642.Message" xml:space="preserve">
+  <data name="M2642" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 2)</value>
   </data>
-  <data name="Error.2643.Message" xml:space="preserve">
+  <data name="M2643" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 3)</value>
   </data>
-  <data name="Error.2644.Message" xml:space="preserve">
+  <data name="M2644" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 4)</value>
   </data>
-  <data name="Error.2645.Message" xml:space="preserve">
+  <data name="M2645" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 5)</value>
   </data>
-  <data name="Error.2646.Message" xml:space="preserve">
+  <data name="M2646" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 6)</value>
   </data>
-  <data name="Error.2647.Message" xml:space="preserve">
+  <data name="M2647" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 7)</value>
   </data>
-  <data name="Error.2648.Message" xml:space="preserve">
+  <data name="M2648" xml:space="preserve">
     <value>Add axis FLS signal is input
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2641.Cause" xml:space="preserve">
+  <data name="C2641" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2642.Cause" xml:space="preserve">
+  <data name="C2642" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2643.Cause" xml:space="preserve">
+  <data name="C2643" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2644.Cause" xml:space="preserve">
+  <data name="C2644" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2645.Cause" xml:space="preserve">
+  <data name="C2645" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2646.Cause" xml:space="preserve">
+  <data name="C2646" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2647.Cause" xml:space="preserve">
+  <data name="C2647" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
-  <data name="Error.2648.Cause" xml:space="preserve">
+  <data name="C2648" xml:space="preserve">
     <value>Add axis FLS signal is input</value>
   </data>
   
-  <data name="Error.2641.Measures" xml:space="preserve">
+  <data name="S2641" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "1" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2642.Measures" xml:space="preserve">
+  <data name="S2642" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "2" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2643.Measures" xml:space="preserve">
+  <data name="S2643" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "3" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2644.Measures" xml:space="preserve">
+  <data name="S2644" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "4" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2645.Measures" xml:space="preserve">
+  <data name="S2645" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "5" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2646.Measures" xml:space="preserve">
+  <data name="S2646" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "6" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2647.Measures" xml:space="preserve">
+  <data name="S2647" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "7" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2648.Measures" xml:space="preserve">
+  <data name="S2648" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "8" within the operation range using JOG operation.</value>
   </data>
   
-  <data name="Error.2641.Level" xml:space="preserve">
+  <data name="L2641" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2642.Level" xml:space="preserve">
+  <data name="L2642" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2643.Level" xml:space="preserve">
+  <data name="L2643" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2644.Level" xml:space="preserve">
+  <data name="L2644" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2645.Level" xml:space="preserve">
+  <data name="L2645" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2646.Level" xml:space="preserve">
+  <data name="L2646" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2647.Level" xml:space="preserve">
+  <data name="L2647" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2648.Level" xml:space="preserve">
+  <data name="L2648" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2651.Message" xml:space="preserve">
+  <data name="M2651" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 1)</value>
   </data>
-  <data name="Error.2652.Message" xml:space="preserve">
+  <data name="M2652" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 2)</value>
   </data>
-  <data name="Error.2653.Message" xml:space="preserve">
+  <data name="M2653" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 3)</value>
   </data>
-  <data name="Error.2654.Message" xml:space="preserve">
+  <data name="M2654" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 4)</value>
   </data>
-  <data name="Error.2655.Message" xml:space="preserve">
+  <data name="M2655" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 5)</value>
   </data>
-  <data name="Error.2656.Message" xml:space="preserve">
+  <data name="M2656" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 6)</value>
   </data>
-  <data name="Error.2657.Message" xml:space="preserve">
+  <data name="M2657" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 7)</value>
   </data>
-  <data name="Error.2658.Message" xml:space="preserve">
+  <data name="M2658" xml:space="preserve">
     <value>Add axis RLS signal is input
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2651.Cause" xml:space="preserve">
+  <data name="C2651" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2652.Cause" xml:space="preserve">
+  <data name="C2652" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2653.Cause" xml:space="preserve">
+  <data name="C2653" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2654.Cause" xml:space="preserve">
+  <data name="C2654" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2655.Cause" xml:space="preserve">
+  <data name="C2655" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2656.Cause" xml:space="preserve">
+  <data name="C2656" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2657.Cause" xml:space="preserve">
+  <data name="C2657" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
-  <data name="Error.2658.Cause" xml:space="preserve">
+  <data name="C2658" xml:space="preserve">
     <value>Add axis RLS signal is input</value>
   </data>
   
-  <data name="Error.2651.Measures" xml:space="preserve">
+  <data name="S2651" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "1" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2652.Measures" xml:space="preserve">
+  <data name="S2652" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "2" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2653.Measures" xml:space="preserve">
+  <data name="S2653" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "3" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2654.Measures" xml:space="preserve">
+  <data name="S2654" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "4" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2655.Measures" xml:space="preserve">
+  <data name="S2655" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "5" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2656.Measures" xml:space="preserve">
+  <data name="S2656" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "6" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2657.Measures" xml:space="preserve">
+  <data name="S2657" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "7" within the operation range using JOG operation.</value>
   </data>
-  <data name="Error.2658.Measures" xml:space="preserve">
+  <data name="S2658" xml:space="preserve">
     <value>Release the brake and move the arm by hand. Or, referring to "Operation to Temporarily Reset an Error that Cannot Be Canceled" in the separate volume "Instruction Manual/Detailed Explanation of Functions and Operations", reset the error and move the axis "8" within the operation range using JOG operation.</value>
   </data>
   
-  <data name="Error.2651.Level" xml:space="preserve">
+  <data name="L2651" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2652.Level" xml:space="preserve">
+  <data name="L2652" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2653.Level" xml:space="preserve">
+  <data name="L2653" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2654.Level" xml:space="preserve">
+  <data name="L2654" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2655.Level" xml:space="preserve">
+  <data name="L2655" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2656.Level" xml:space="preserve">
+  <data name="L2656" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2657.Level" xml:space="preserve">
+  <data name="L2657" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2658.Level" xml:space="preserve">
+  <data name="L2658" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2660.Message" xml:space="preserve">
+  <data name="M2660" xml:space="preserve">
     <value>1. Error concerning axis coop
 2. Illegal robot No.(axis trk)
 3. Illegal axis No.(axis trk)
@@ -2626,7 +2626,7 @@ Power off and on, unless otherwise noted.</value>
 8. Illegal unit system (base coop)
 9. Origin unsetting (base coop)</value>
   </data>
-  <data name="Error.2660.Cause" xml:space="preserve">
+  <data name="C2660" xml:space="preserve">
     <value>1. Error concerning axis coop: The error concerning the axis coop occurred
 2. Illegal robot No.(axis trk): The designated robot No. is illegal
 3. Illegal axis No.(axis trk): The designated axis No. is illegal
@@ -2637,7 +2637,7 @@ Power off and on, unless otherwise noted.</value>
 8. Illegal unit system (base coop): A rotary axis is designated
 9. Origin unsetting (base coop): Base coop cannot be executed because of origin unsetting</value>
   </data>
-  <data name="Error.2660.Measures" xml:space="preserve">
+  <data name="S2660" xml:space="preserve">
     <value>1. Error concerning axis coop: Please Confirm the content by a detail number of the error
 2. Illegal robot No.(axis trk): Set the correct robot No.
 3. Illegal axis No.(axis trk): Set the correct axis No.
@@ -2648,10 +2648,10 @@ Power off and on, unless otherwise noted.</value>
 8. Illegal unit system (base coop): Please designate a linear drive axis
 9. Origin unsetting (base coop): Please set the origin and turn the power OFF and ON</value>
   </data>
-  <data name="Error.2660.Level" xml:space="preserve">
+  <data name="L2660" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2661.Message" xml:space="preserve">
+  <data name="M2661" xml:space="preserve">
     <value>1. Error concerning axis coop (combi.)
 2. Cannot be used (axis trk)
 3. Cannot be used (base coop)
@@ -2660,7 +2660,7 @@ Power off and on, unless otherwise noted.</value>
 6. Interpolation cannot be executed
 7. Cannot be used (base coop)</value>
   </data>
-  <data name="Error.2661.Cause" xml:space="preserve">
+  <data name="C2661" xml:space="preserve">
     <value>1. Error concerning axis coop (combi.): The function cannot be used at the same time with the axis coop
 2. Cannot be used (axis trk): A synchronous addition axis control is effective
 3. Cannot be used (base coop): Tracking function is effective
@@ -2669,7 +2669,7 @@ Power off and on, unless otherwise noted.</value>
 6. Interpolation cannot be executed: An addition axis is going to move
 7. Cannot be used (base coop): Interference avoidance function is effective</value>
   </data>
-  <data name="Error.2661.Measures" xml:space="preserve">
+  <data name="S2661" xml:space="preserve">
     <value>1. Error concerning axis coop (combi.): Please confirm the content by a detailed number of the error
 2. Cannot be used (axis trk): Invalidate a synchronous addition axis control
 3. Cannot be used (base coop): Invalidate the tracking function
@@ -2678,521 +2678,521 @@ Power off and on, unless otherwise noted.</value>
 6. Interpolation cannot be executed: Please do not move an addition axis
 7. Cannot be used (base coop): Invalidate the interference avoidance function</value>
   </data>
-  <data name="Error.2661.Level" xml:space="preserve">
+  <data name="L2661" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2662.Message" xml:space="preserve">
+  <data name="M2662" xml:space="preserve">
     <value>1. Work setting cannot be changed
 2. This work cannot use</value>
   </data>
-  <data name="Error.2662.Cause" xml:space="preserve">
+  <data name="C2662" xml:space="preserve">
     <value>1. Work setting cannot be changed: The additional axis tracking is executing
 2. This work cannot use: The setting is not done(axis trk)</value>
   </data>
-  <data name="Error.2662.Measures" xml:space="preserve">
+  <data name="S2662" xml:space="preserve">
     <value>1. Work setting cannot be changed: Please change after the work coop is invalid
 2. This work cannot use: Please confirm a set valuse and then execute</value>
   </data>
-  <data name="Error.2662.Level" xml:space="preserve">
+  <data name="L2662" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2663.Message" xml:space="preserve">
+  <data name="M2663" xml:space="preserve">
     <value>Origin data was changed</value>
   </data>
-  <data name="Error.2663.Cause" xml:space="preserve">
+  <data name="C2663" xml:space="preserve">
     <value>Origin data was changed about the base cooperation target axis</value>
   </data>
-  <data name="Error.2663.Measures" xml:space="preserve">
+  <data name="S2663" xml:space="preserve">
     <value>Turn the power OFF and ON once</value>
   </data>
-  <data name="Error.2663.Level" xml:space="preserve">
+  <data name="L2663" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2700.Message" xml:space="preserve">
+  <data name="M2700" xml:space="preserve">
     <value>Cmp error (different mode)</value>
   </data>
-  <data name="Error.2700.Cause" xml:space="preserve">
+  <data name="C2700" xml:space="preserve">
     <value>The designated mode is different from the current mode.</value>
   </data>
-  <data name="Error.2700.Measures" xml:space="preserve">
+  <data name="S2700" xml:space="preserve">
     <value>Execute Cmp Off and then designate.</value>
   </data>
-  <data name="Error.2700.Level" xml:space="preserve">
+  <data name="L2700" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2710.Message" xml:space="preserve">
+  <data name="M2710" xml:space="preserve">
     <value>Cmp error (displacement)</value>
   </data>
-  <data name="Error.2710.Cause" xml:space="preserve">
+  <data name="C2710" xml:space="preserve">
     <value>The displacement magnitude of the compliance operation exceeded the specified value.</value>
   </data>
-  <data name="Error.2710.Measures" xml:space="preserve">
+  <data name="S2710" xml:space="preserve">
     <value>Correct the program, position or other item so that the displacement magnitude can be reduced.</value>
   </data>
-  <data name="Error.2710.Level" xml:space="preserve">
+  <data name="L2710" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2720.Message" xml:space="preserve">
+  <data name="M2720" xml:space="preserve">
     <value>Cmp error (joint angle)</value>
   </data>
-  <data name="Error.2720.Cause" xml:space="preserve">
+  <data name="C2720" xml:space="preserve">
     <value>Cmp Command exceeds the limit of a joint angle.</value>
   </data>
-  <data name="Error.2720.Measures" xml:space="preserve">
+  <data name="S2720" xml:space="preserve">
     <value>Adjust the position data or reduce the displacement.</value>
   </data>
-  <data name="Error.2720.Level" xml:space="preserve">
+  <data name="L2720" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2721.Message" xml:space="preserve">
+  <data name="M2721" xml:space="preserve">
     <value>Cmp error (J1 joint angle)
 (axis number: 1)</value>
   </data>
-  <data name="Error.2722.Message" xml:space="preserve">
+  <data name="M2722" xml:space="preserve">
     <value>Cmp error (J2 joint angle)
 (axis number: 2)</value>
   </data>
-  <data name="Error.2723.Message" xml:space="preserve">
+  <data name="M2723" xml:space="preserve">
     <value>Cmp error (J3 joint angle)
 (axis number: 3)</value>
   </data>
-  <data name="Error.2724.Message" xml:space="preserve">
+  <data name="M2724" xml:space="preserve">
     <value>Cmp error (J4 joint angle)
 (axis number: 4)</value>
   </data>
-  <data name="Error.2725.Message" xml:space="preserve">
+  <data name="M2725" xml:space="preserve">
     <value>Cmp error (J5 joint angle)
 (axis number: 5)</value>
   </data>
-  <data name="Error.2726.Message" xml:space="preserve">
+  <data name="M2726" xml:space="preserve">
     <value>Cmp error (J6 joint angle)
 (axis number: 6)</value>
   </data>
-  <data name="Error.2727.Message" xml:space="preserve">
+  <data name="M2727" xml:space="preserve">
     <value>Cmp error (J7 joint angle)
 (axis number: 7)</value>
   </data>
-  <data name="Error.2728.Message" xml:space="preserve">
+  <data name="M2728" xml:space="preserve">
     <value>Cmp error (J8 joint angle)
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2721.Cause" xml:space="preserve">
+  <data name="C2721" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "1" axis</value>
   </data>
-  <data name="Error.2722.Cause" xml:space="preserve">
+  <data name="C2722" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "2" axis</value>
   </data>
-  <data name="Error.2723.Cause" xml:space="preserve">
+  <data name="C2723" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "3" axis</value>
   </data>
-  <data name="Error.2724.Cause" xml:space="preserve">
+  <data name="C2724" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "4" axis</value>
   </data>
-  <data name="Error.2725.Cause" xml:space="preserve">
+  <data name="C2725" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "5" axis</value>
   </data>
-  <data name="Error.2726.Cause" xml:space="preserve">
+  <data name="C2726" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "6" axis</value>
   </data>
-  <data name="Error.2727.Cause" xml:space="preserve">
+  <data name="C2727" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "7" axis</value>
   </data>
-  <data name="Error.2728.Cause" xml:space="preserve">
+  <data name="C2728" xml:space="preserve">
     <value>Cmp Command exceeds the limit of joint angle of joint "8" axis</value>
   </data>
   
-  <data name="Error.2721.Measures" xml:space="preserve">
+  <data name="S2721" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2722.Measures" xml:space="preserve">
+  <data name="S2722" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2723.Measures" xml:space="preserve">
+  <data name="S2723" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2724.Measures" xml:space="preserve">
+  <data name="S2724" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2725.Measures" xml:space="preserve">
+  <data name="S2725" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2726.Measures" xml:space="preserve">
+  <data name="S2726" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2727.Measures" xml:space="preserve">
+  <data name="S2727" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
-  <data name="Error.2728.Measures" xml:space="preserve">
+  <data name="S2728" xml:space="preserve">
     <value>Change the position data or reduce displacement.</value>
   </data>
   
-  <data name="Error.2721.Level" xml:space="preserve">
+  <data name="L2721" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2722.Level" xml:space="preserve">
+  <data name="L2722" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2723.Level" xml:space="preserve">
+  <data name="L2723" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2724.Level" xml:space="preserve">
+  <data name="L2724" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2725.Level" xml:space="preserve">
+  <data name="L2725" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2726.Level" xml:space="preserve">
+  <data name="L2726" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2727.Level" xml:space="preserve">
+  <data name="L2727" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2728.Level" xml:space="preserve">
+  <data name="L2728" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2731.Message" xml:space="preserve">
+  <data name="M2731" xml:space="preserve">
     <value>Cmp error (J1 axis speed)
 (axis number: 1)</value>
   </data>
-  <data name="Error.2732.Message" xml:space="preserve">
+  <data name="M2732" xml:space="preserve">
     <value>Cmp error (J2 axis speed)
 (axis number: 2)</value>
   </data>
-  <data name="Error.2733.Message" xml:space="preserve">
+  <data name="M2733" xml:space="preserve">
     <value>Cmp error (J3 axis speed)
 (axis number: 3)</value>
   </data>
-  <data name="Error.2734.Message" xml:space="preserve">
+  <data name="M2734" xml:space="preserve">
     <value>Cmp error (J4 axis speed)
 (axis number: 4)</value>
   </data>
-  <data name="Error.2735.Message" xml:space="preserve">
+  <data name="M2735" xml:space="preserve">
     <value>Cmp error (J5 axis speed)
 (axis number: 5)</value>
   </data>
-  <data name="Error.2736.Message" xml:space="preserve">
+  <data name="M2736" xml:space="preserve">
     <value>Cmp error (J6 axis speed)
 (axis number: 6)</value>
   </data>
-  <data name="Error.2737.Message" xml:space="preserve">
+  <data name="M2737" xml:space="preserve">
     <value>Cmp error (J7 axis speed)
 (axis number: 7)</value>
   </data>
-  <data name="Error.2738.Message" xml:space="preserve">
+  <data name="M2738" xml:space="preserve">
     <value>Cmp error (J8 axis speed)
 (axis number: 8)</value>
   </data>
   
-  <data name="Error.2731.Cause" xml:space="preserve">
+  <data name="C2731" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "1" axis.</value>
   </data>
-  <data name="Error.2732.Cause" xml:space="preserve">
+  <data name="C2732" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "2" axis.</value>
   </data>
-  <data name="Error.2733.Cause" xml:space="preserve">
+  <data name="C2733" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "3" axis.</value>
   </data>
-  <data name="Error.2734.Cause" xml:space="preserve">
+  <data name="C2734" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "4" axis.</value>
   </data>
-  <data name="Error.2735.Cause" xml:space="preserve">
+  <data name="C2735" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "5" axis.</value>
   </data>
-  <data name="Error.2736.Cause" xml:space="preserve">
+  <data name="C2736" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "6" axis.</value>
   </data>
-  <data name="Error.2737.Cause" xml:space="preserve">
+  <data name="C2737" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "7" axis.</value>
   </data>
-  <data name="Error.2738.Cause" xml:space="preserve">
+  <data name="C2738" xml:space="preserve">
     <value>Cmp Command exceeds the limit of speed of joint "8" axis.</value>
   </data>
   
-  <data name="Error.2731.Measures" xml:space="preserve">
+  <data name="S2731" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2732.Measures" xml:space="preserve">
+  <data name="S2732" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2733.Measures" xml:space="preserve">
+  <data name="S2733" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2734.Measures" xml:space="preserve">
+  <data name="S2734" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2735.Measures" xml:space="preserve">
+  <data name="S2735" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2736.Measures" xml:space="preserve">
+  <data name="S2736" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2737.Measures" xml:space="preserve">
+  <data name="S2737" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
-  <data name="Error.2738.Measures" xml:space="preserve">
+  <data name="S2738" xml:space="preserve">
     <value>Change the position data or slow down.</value>
   </data>
   
-  <data name="Error.2731.Level" xml:space="preserve">
+  <data name="L2731" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2732.Level" xml:space="preserve">
+  <data name="L2732" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2733.Level" xml:space="preserve">
+  <data name="L2733" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2734.Level" xml:space="preserve">
+  <data name="L2734" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2735.Level" xml:space="preserve">
+  <data name="L2735" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2736.Level" xml:space="preserve">
+  <data name="L2736" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2737.Level" xml:space="preserve">
+  <data name="L2737" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2738.Level" xml:space="preserve">
+  <data name="L2738" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.2740.Message" xml:space="preserve">
+  <data name="M2740" xml:space="preserve">
     <value>Cmp error (coordinates conv.)</value>
   </data>
-  <data name="Error.2740.Cause" xml:space="preserve">
+  <data name="C2740" xml:space="preserve">
     <value>An error was detected in the coordinates conversion of Cmp command.</value>
   </data>
-  <data name="Error.2740.Measures" xml:space="preserve">
+  <data name="S2740" xml:space="preserve">
     <value>Adjust the position data.</value>
   </data>
-  <data name="Error.2740.Level" xml:space="preserve">
+  <data name="L2740" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2750.Message" xml:space="preserve">
+  <data name="M2750" xml:space="preserve">
     <value>1. Cannot execute while tracking
 2. Cannot invalidate F.Ctrl (Trk)
 3. Unable to disable force sense control. (Tracking being performed)</value>
   </data>
-  <data name="Error.2750.Cause" xml:space="preserve">
+  <data name="C2750" xml:space="preserve">
     <value>1. Cannot execute while tracking: Cannot execute while tracking
 2. Cannot invalidate F.Ctrl (Trk): Force control cannot be invalidated while executing tracking
 3. Unable to disable force sense control. (Tracking being performed): Unable to disable force sense control while tracking function being executed.</value>
   </data>
-  <data name="Error.2750.Measures" xml:space="preserve">
+  <data name="S2750" xml:space="preserve">
     <value>1. Cannot execute while tracking: Execute Trk Off and then execute
 2. Cannot invalidate F.Ctrl (Trk): Please invalidate the tracking function
 3. Unable to disable force sense control. (Tracking being performed): Try again after disabling the tracking function.</value>
   </data>
-  <data name="Error.2750.Level" xml:space="preserve">
+  <data name="L2750" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2760.Message" xml:space="preserve">
+  <data name="M2760" xml:space="preserve">
     <value>The force sense control offset limit was reached.</value>
   </data>
-  <data name="Error.2760.Cause" xml:space="preserve">
+  <data name="C2760" xml:space="preserve">
     <value>The robot attempted to move beyond the force sense control offset limit.</value>
   </data>
-  <data name="Error.2760.Measures" xml:space="preserve">
+  <data name="S2760" xml:space="preserve">
     <value>Check whether there is a problem with robot movement while force sense control is enabled. (The offset limit is the value set in parameter FSCORMX.)</value>
   </data>
-  <data name="Error.2760.Level" xml:space="preserve">
+  <data name="L2760" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2770.Message" xml:space="preserve">
+  <data name="M2770" xml:space="preserve">
     <value>Outside offset position movement range (**) Note) "**" is substituted with "±Jn" (n is axis No.)</value>
   </data>
-  <data name="Error.2770.Cause" xml:space="preserve">
+  <data name="C2770" xml:space="preserve">
     <value>The position after force sense control offset lies outside the range. The robot may have been moved near the movement range limit.</value>
   </data>
-  <data name="Error.2770.Measures" xml:space="preserve">
+  <data name="S2770" xml:space="preserve">
     <value>Review the movement position or force sense control settings, and ensure that the offset position does not exceed the movement range.</value>
   </data>
-  <data name="Error.2770.Level" xml:space="preserve">
+  <data name="L2770" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2780.Message" xml:space="preserve">
+  <data name="M2780" xml:space="preserve">
     <value>Offset position speed over (**) Note) "**" is substituted with "Jn" (n is axis No.)</value>
   </data>
-  <data name="Error.2780.Cause" xml:space="preserve">
+  <data name="C2780" xml:space="preserve">
     <value>The speed of movement to the position after offsetting with force sense control exceeded the speed limit. The movement speed may be too fast, or the robot may have been moved at the singular point adjacent.</value>
   </data>
-  <data name="Error.2780.Measures" xml:space="preserve">
+  <data name="S2780" xml:space="preserve">
     <value>Review the movement speed and movement position, or the force sense control settings.</value>
   </data>
-  <data name="Error.2780.Level" xml:space="preserve">
+  <data name="L2780" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2800.Message" xml:space="preserve">
+  <data name="M2800" xml:space="preserve">
     <value>Illegal position data</value>
   </data>
-  <data name="Error.2800.Cause" xml:space="preserve">
+  <data name="C2800" xml:space="preserve">
     <value>This may occur for a position to which the robot cannot reach.</value>
   </data>
-  <data name="Error.2800.Measures" xml:space="preserve">
+  <data name="S2800" xml:space="preserve">
     <value>Adjust the position</value>
   </data>
-  <data name="Error.2800.Level" xml:space="preserve">
+  <data name="L2800" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2801.Message" xml:space="preserve">
+  <data name="M2801" xml:space="preserve">
     <value>Illegal start position data</value>
   </data>
-  <data name="Error.2801.Cause" xml:space="preserve">
+  <data name="C2801" xml:space="preserve">
     <value>This may occur for a starting position to which the robot cannot reach.</value>
   </data>
-  <data name="Error.2801.Measures" xml:space="preserve">
+  <data name="S2801" xml:space="preserve">
     <value>Adjust the position</value>
   </data>
-  <data name="Error.2801.Level" xml:space="preserve">
+  <data name="L2801" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2802.Message" xml:space="preserve">
+  <data name="M2802" xml:space="preserve">
     <value>Illegal destination position data</value>
   </data>
-  <data name="Error.2802.Cause" xml:space="preserve">
+  <data name="C2802" xml:space="preserve">
     <value>This may occur for a destination position to which the robot cannot reach.</value>
   </data>
-  <data name="Error.2802.Measures" xml:space="preserve">
+  <data name="S2802" xml:space="preserve">
     <value>Adjust the position</value>
   </data>
-  <data name="Error.2802.Level" xml:space="preserve">
+  <data name="L2802" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2803.Message" xml:space="preserve">
+  <data name="M2803" xml:space="preserve">
     <value>Illegal assisting position data (intmed)</value>
   </data>
-  <data name="Error.2803.Cause" xml:space="preserve">
+  <data name="C2803" xml:space="preserve">
     <value>The intermediate path at the straight line interpolation and the route at circle interpolation are the position which the robot cannot move.</value>
   </data>
-  <data name="Error.2803.Measures" xml:space="preserve">
+  <data name="S2803" xml:space="preserve">
     <value>Confirm the error occurrence line and confirm that there is no position which the robot cannot move. And please correct the data of starting position, midway position, or ending position .</value>
   </data>
-  <data name="Error.2803.Level" xml:space="preserve">
+  <data name="L2803" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2810.Message" xml:space="preserve">
+  <data name="M2810" xml:space="preserve">
     <value>Posture flag is disagree</value>
   </data>
-  <data name="Error.2810.Cause" xml:space="preserve">
+  <data name="C2810" xml:space="preserve">
     <value>The structure flag of the start point and end point don't match</value>
   </data>
-  <data name="Error.2810.Measures" xml:space="preserve">
+  <data name="S2810" xml:space="preserve">
     <value>Adjust the position data</value>
   </data>
-  <data name="Error.2810.Level" xml:space="preserve">
+  <data name="L2810" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2820.Message" xml:space="preserve">
+  <data name="M2820" xml:space="preserve">
     <value>Illegal Accel ratio</value>
   </data>
-  <data name="Error.2820.Cause" xml:space="preserve">
+  <data name="C2820" xml:space="preserve">
     <value>This occurs when the acceleration/deceleration ratio is too small.</value>
   </data>
-  <data name="Error.2820.Measures" xml:space="preserve">
+  <data name="S2820" xml:space="preserve">
     <value>Adjust the acceleration/deceleration ratio to a larger value.</value>
   </data>
-  <data name="Error.2820.Level" xml:space="preserve">
+  <data name="L2820" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2830.Message" xml:space="preserve">
+  <data name="M2830" xml:space="preserve">
     <value>System error (ipol posture type)</value>
   </data>
-  <data name="Error.2830.Cause" xml:space="preserve">
+  <data name="C2830" xml:space="preserve">
     <value>The Type argument of the Mov instruction was set to -1 or a similar value.</value>
   </data>
-  <data name="Error.2830.Measures" xml:space="preserve">
+  <data name="S2830" xml:space="preserve">
     <value>Change the Type argument of the Mov instruction to a correct value (0, 1, etc).</value>
   </data>
-  <data name="Error.2830.Level" xml:space="preserve">
+  <data name="L2830" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2840.Message" xml:space="preserve">
+  <data name="M2840" xml:space="preserve">
     <value>System error (ipol parameters)</value>
   </data>
-  <data name="Error.2840.Cause" xml:space="preserve">
+  <data name="C2840" xml:space="preserve">
     <value>The parameter may have been damaged.</value>
   </data>
-  <data name="Error.2840.Measures" xml:space="preserve">
+  <data name="S2840" xml:space="preserve">
     <value>If it comes back, contact your service provider.</value>
   </data>
-  <data name="Error.2840.Level" xml:space="preserve">
+  <data name="L2840" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2850.Message" xml:space="preserve">
+  <data name="M2850" xml:space="preserve">
     <value>System error (ipol norm)</value>
   </data>
-  <data name="Error.2850.Cause" xml:space="preserve">
+  <data name="C2850" xml:space="preserve">
     <value>The norm is illegal. A problem occurred in internal computation processing.</value>
   </data>
-  <data name="Error.2850.Measures" xml:space="preserve">
+  <data name="S2850" xml:space="preserve">
     <value>If it comes back, contact your service provider.</value>
   </data>
-  <data name="Error.2850.Level" xml:space="preserve">
+  <data name="L2850" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2860.Message" xml:space="preserve">
+  <data name="M2860" xml:space="preserve">
     <value>System error (ipol type)</value>
   </data>
-  <data name="Error.2860.Cause" xml:space="preserve">
+  <data name="C2860" xml:space="preserve">
     <value>An illegal interpolation process method is being used. A problem occurred in internal computation process- ing.</value>
   </data>
-  <data name="Error.2860.Measures" xml:space="preserve">
+  <data name="S2860" xml:space="preserve">
     <value>If it comes back, contact your service provider.</value>
   </data>
-  <data name="Error.2860.Level" xml:space="preserve">
+  <data name="L2860" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2870.Message" xml:space="preserve">
+  <data name="M2870" xml:space="preserve">
     <value>System error (ipol data undef)</value>
   </data>
-  <data name="Error.2870.Cause" xml:space="preserve">
+  <data name="C2870" xml:space="preserve">
     <value>The interpolation position data has not been defined. A problem occurred in internal computation process- ing.</value>
   </data>
-  <data name="Error.2870.Measures" xml:space="preserve">
+  <data name="S2870" xml:space="preserve">
     <value>If it comes back, contact your service provider.</value>
   </data>
-  <data name="Error.2870.Level" xml:space="preserve">
+  <data name="L2870" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2880.Message" xml:space="preserve">
+  <data name="M2880" xml:space="preserve">
     <value>System error (ipol data area)</value>
   </data>
-  <data name="Error.2880.Cause" xml:space="preserve">
+  <data name="C2880" xml:space="preserve">
     <value>The memory is insufficient for the inside operation.</value>
   </data>
-  <data name="Error.2880.Measures" xml:space="preserve">
+  <data name="S2880" xml:space="preserve">
     <value>If it comes back, contact your service provider.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.2880.Level" xml:space="preserve">
+  <data name="L2880" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2890.Message" xml:space="preserve">
+  <data name="M2890" xml:space="preserve">
     <value>System error (undefined err)</value>
   </data>
-  <data name="Error.2890.Cause" xml:space="preserve">
+  <data name="C2890" xml:space="preserve">
     <value>An undefined error number was generated in internal computation processing.</value>
   </data>
-  <data name="Error.2890.Measures" xml:space="preserve">
+  <data name="S2890" xml:space="preserve">
     <value>If it comes back, contact your service provider.</value>
   </data>
-  <data name="Error.2890.Level" xml:space="preserve">
+  <data name="L2890" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.2900.Message" xml:space="preserve">
+  <data name="M2900" xml:space="preserve">
     <value>System ERROR M00 to M04</value>
   </data>
-  <data name="Error.2900.Cause" xml:space="preserve">
+  <data name="C2900" xml:space="preserve">
     <value>An error occurred in the internal processing.</value>
   </data>
-  <data name="Error.2900.Measures" xml:space="preserve">
+  <data name="S2900" xml:space="preserve">
     <value>If it comes back, contact your service provider.</value>
   </data>
-  <data name="Error.2900.Level" xml:space="preserve">
+  <data name="L2900" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
 </root>
