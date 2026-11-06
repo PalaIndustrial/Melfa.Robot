@@ -117,477 +117,477 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error.8300.Message" xml:space="preserve">
+  <data name="M8300" xml:space="preserve">
     <value>There are a lot of GETPOS define</value>
   </data>
-  <data name="Error.8300.Cause" xml:space="preserve">
+  <data name="C8300" xml:space="preserve">
     <value>GETPOS function are up to 8.</value>
   </data>
-  <data name="Error.8300.Measures" xml:space="preserve">
+  <data name="S8300" xml:space="preserve">
     <value>Please use the same Act No. or reset an unnecessary program.</value>
   </data>
-  <data name="Error.8300.Level" xml:space="preserve">
+  <data name="L8300" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8310.Message" xml:space="preserve">
+  <data name="M8310" xml:space="preserve">
     <value>GETPOS undefined</value>
   </data>
-  <data name="Error.8310.Cause" xml:space="preserve">
+  <data name="C8310" xml:space="preserve">
     <value>GETPOS undefined.</value>
   </data>
-  <data name="Error.8310.Measures" xml:space="preserve">
+  <data name="S8310" xml:space="preserve">
     <value>Please define GETPOS.</value>
   </data>
-  <data name="Error.8310.Level" xml:space="preserve">
+  <data name="L8310" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8320.Message" xml:space="preserve">
+  <data name="M8320" xml:space="preserve">
     <value>System Error (GETPOS)</value>
   </data>
-  <data name="Error.8320.Cause" xml:space="preserve">
+  <data name="C8320" xml:space="preserve">
     <value>Internal data of GETPOS is illegal.</value>
   </data>
-  <data name="Error.8320.Measures" xml:space="preserve">
+  <data name="S8320" xml:space="preserve">
     <value>Turn the power OFF and ON once.</value>
   </data>
-  <data name="Error.8320.Level" xml:space="preserve">
+  <data name="L8320" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8400.Message" xml:space="preserve">
+  <data name="M8400" xml:space="preserve">
     <value>CTN data is illegal (Prec)</value>
   </data>
-  <data name="Error.8400.Cause" xml:space="preserve">
+  <data name="C8400" xml:space="preserve">
     <value>CTN data is illegal. It changed to Prec Off.</value>
   </data>
-  <data name="Error.8400.Measures" xml:space="preserve">
+  <data name="S8400" xml:space="preserve">
     <value>Try to set be a Prec mode again.</value>
   </data>
-  <data name="Error.8400.Level" xml:space="preserve">
+  <data name="L8400" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8600.Message" xml:space="preserve">
+  <data name="M8600" xml:space="preserve">
     <value>The vision is a unconnection</value>
   </data>
-  <data name="Error.8600.Cause" xml:space="preserve">
+  <data name="C8600" xml:space="preserve">
     <value>The vision is a unconnection</value>
   </data>
-  <data name="Error.8600.Measures" xml:space="preserve">
+  <data name="S8600" xml:space="preserve">
     <value>Please check Com No. and Parameter</value>
   </data>
-  <data name="Error.8600.Level" xml:space="preserve">
+  <data name="L8600" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8601.Message" xml:space="preserve">
+  <data name="M8601" xml:space="preserve">
     <value>The vision can't be logged on</value>
   </data>
-  <data name="Error.8601.Cause" xml:space="preserve">
+  <data name="C8601" xml:space="preserve">
     <value>The parameter of the user-name or the password is abnormal</value>
   </data>
-  <data name="Error.8601.Measures" xml:space="preserve">
+  <data name="S8601" xml:space="preserve">
     <value>Please set the parameter correctly</value>
   </data>
-  <data name="Error.8601.Level" xml:space="preserve">
+  <data name="L8601" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8602.Message" xml:space="preserve">
+  <data name="M8602" xml:space="preserve">
     <value>Password is abnormal</value>
   </data>
-  <data name="Error.8602.Cause" xml:space="preserve">
+  <data name="C8602" xml:space="preserve">
     <value>The password of the user-name is not corresponding</value>
   </data>
-  <data name="Error.8602.Measures" xml:space="preserve">
+  <data name="S8602" xml:space="preserve">
     <value>Please set the password correctly</value>
   </data>
-  <data name="Error.8602.Level" xml:space="preserve">
+  <data name="L8602" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8603.Message" xml:space="preserve">
+  <data name="M8603" xml:space="preserve">
     <value>Parameter is abnormal</value>
   </data>
-  <data name="Error.8603.Cause" xml:space="preserve">
+  <data name="C8603" xml:space="preserve">
     <value>The parameter of the user-name or the password is abnormal</value>
   </data>
-  <data name="Error.8603.Measures" xml:space="preserve">
+  <data name="S8603" xml:space="preserve">
     <value>Please set the parameter correctly</value>
   </data>
-  <data name="Error.8603.Level" xml:space="preserve">
+  <data name="L8603" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8610.Message" xml:space="preserve">
+  <data name="M8610" xml:space="preserve">
     <value>The communication is abnormal</value>
   </data>
-  <data name="Error.8610.Cause" xml:space="preserve">
+  <data name="C8610" xml:space="preserve">
     <value>The communication was cut</value>
   </data>
-  <data name="Error.8610.Measures" xml:space="preserve">
+  <data name="S8610" xml:space="preserve">
     <value>Please check the communications cable</value>
   </data>
-  <data name="Error.8610.Level" xml:space="preserve">
+  <data name="L8610" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8620.Message" xml:space="preserve">
+  <data name="M8620" xml:space="preserve">
     <value>The vision number is abnormal</value>
   </data>
-  <data name="Error.8620.Cause" xml:space="preserve">
+  <data name="C8620" xml:space="preserve">
     <value>The number is not designated by NVOpen</value>
   </data>
-  <data name="Error.8620.Measures" xml:space="preserve">
+  <data name="S8620" xml:space="preserve">
     <value>Please check NVOpen command</value>
   </data>
-  <data name="Error.8620.Level" xml:space="preserve">
+  <data name="L8620" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8621.Message" xml:space="preserve">
+  <data name="M8621" xml:space="preserve">
     <value>Vision program name is abnormal</value>
   </data>
-  <data name="Error.8621.Cause" xml:space="preserve">
+  <data name="C8621" xml:space="preserve">
     <value>The vision program name has exceeded 15 characters</value>
   </data>
-  <data name="Error.8621.Measures" xml:space="preserve">
+  <data name="S8621" xml:space="preserve">
     <value>Please make the program name within 15 characters</value>
   </data>
-  <data name="Error.8621.Level" xml:space="preserve">
+  <data name="L8621" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8622.Message" xml:space="preserve">
+  <data name="M8622" xml:space="preserve">
     <value>There is no vision program</value>
   </data>
-  <data name="Error.8622.Cause" xml:space="preserve">
+  <data name="C8622" xml:space="preserve">
     <value>There is no specified vision program</value>
   </data>
-  <data name="Error.8622.Measures" xml:space="preserve">
+  <data name="S8622" xml:space="preserve">
     <value>Please check the vision program name</value>
   </data>
-  <data name="Error.8622.Level" xml:space="preserve">
+  <data name="L8622" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8623.Message" xml:space="preserve">
+  <data name="M8623" xml:space="preserve">
     <value>SKIP number is already used</value>
   </data>
-  <data name="Error.8623.Cause" xml:space="preserve">
+  <data name="C8623" xml:space="preserve">
     <value>SKIP number is already used</value>
   </data>
-  <data name="Error.8623.Measures" xml:space="preserve">
+  <data name="S8623" xml:space="preserve">
     <value>Please confirm the SKIP number</value>
   </data>
-  <data name="Error.8623.Level" xml:space="preserve">
+  <data name="L8623" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8630.Message" xml:space="preserve">
+  <data name="M8630" xml:space="preserve">
     <value>The recognition cell is illegal</value>
   </data>
-  <data name="Error.8630.Cause" xml:space="preserve">
+  <data name="C8630" xml:space="preserve">
     <value>There is no value on the cell</value>
   </data>
-  <data name="Error.8630.Measures" xml:space="preserve">
+  <data name="S8630" xml:space="preserve">
     <value>Please check the recognition cell</value>
   </data>
-  <data name="Error.8630.Level" xml:space="preserve">
+  <data name="L8630" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8631.Message" xml:space="preserve">
+  <data name="M8631" xml:space="preserve">
     <value>The cell is outside the range</value>
   </data>
-  <data name="Error.8631.Cause" xml:space="preserve">
+  <data name="C8631" xml:space="preserve">
     <value>The range of the cell is exceeded</value>
   </data>
-  <data name="Error.8631.Measures" xml:space="preserve">
+  <data name="S8631" xml:space="preserve">
     <value>Please check the range of the cell</value>
   </data>
-  <data name="Error.8631.Level" xml:space="preserve">
+  <data name="L8631" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8632.Message" xml:space="preserve">
+  <data name="M8632" xml:space="preserve">
     <value>The vision is a time-out</value>
   </data>
-  <data name="Error.8632.Cause" xml:space="preserve">
+  <data name="C8632" xml:space="preserve">
     <value>There is no response from the vision</value>
   </data>
-  <data name="Error.8632.Measures" xml:space="preserve">
+  <data name="S8632" xml:space="preserve">
     <value>Please check the time-out time</value>
   </data>
-  <data name="Error.8632.Level" xml:space="preserve">
+  <data name="L8632" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8633.Message" xml:space="preserve">
+  <data name="M8633" xml:space="preserve">
     <value>The vision is a time-out (NVTRG)</value>
   </data>
-  <data name="Error.8633.Cause" xml:space="preserve">
+  <data name="C8633" xml:space="preserve">
     <value>There is no response from the vision (NVTRG)</value>
   </data>
-  <data name="Error.8633.Measures" xml:space="preserve">
+  <data name="S8633" xml:space="preserve">
     <value>Please decrease the load of the network</value>
   </data>
-  <data name="Error.8633.Level" xml:space="preserve">
+  <data name="L8633" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8634.Message" xml:space="preserve">
+  <data name="M8634" xml:space="preserve">
     <value>There is a comma within the range of the cell</value>
   </data>
-  <data name="Error.8634.Cause" xml:space="preserve">
+  <data name="C8634" xml:space="preserve">
     <value>There is a comma within the range of the cell</value>
   </data>
-  <data name="Error.8634.Measures" xml:space="preserve">
+  <data name="S8634" xml:space="preserve">
     <value>Please check the range of the cell</value>
   </data>
-  <data name="Error.8634.Level" xml:space="preserve">
+  <data name="L8634" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8635.Message" xml:space="preserve">
+  <data name="M8635" xml:space="preserve">
     <value>There is no comma within the range of the cell</value>
   </data>
-  <data name="Error.8635.Cause" xml:space="preserve">
+  <data name="C8635" xml:space="preserve">
     <value>There is no comma within the range of the cell</value>
   </data>
-  <data name="Error.8635.Measures" xml:space="preserve">
+  <data name="S8635" xml:space="preserve">
     <value>Please check the range of the cell</value>
   </data>
-  <data name="Error.8635.Level" xml:space="preserve">
+  <data name="L8635" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8636.Message" xml:space="preserve">
+  <data name="M8636" xml:space="preserve">
     <value>Vision Tag name is abnormal</value>
   </data>
-  <data name="Error.8636.Cause" xml:space="preserve">
+  <data name="C8636" xml:space="preserve">
     <value>There is no specified vision tag in the vision program</value>
   </data>
-  <data name="Error.8636.Measures" xml:space="preserve">
+  <data name="S8636" xml:space="preserve">
     <value>Please correct the vision tag name</value>
   </data>
-  <data name="Error.8636.Level" xml:space="preserve">
+  <data name="L8636" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8640.Message" xml:space="preserve">
+  <data name="M8640" xml:space="preserve">
     <value>The image trigger is abnormal</value>
   </data>
-  <data name="Error.8640.Cause" xml:space="preserve">
+  <data name="C8640" xml:space="preserve">
     <value>The trigger setting of the vision sensor is abnormal</value>
   </data>
-  <data name="Error.8640.Measures" xml:space="preserve">
+  <data name="S8640" xml:space="preserve">
     <value>Please check the trigger setting</value>
   </data>
-  <data name="Error.8640.Level" xml:space="preserve">
+  <data name="L8640" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8650.Message" xml:space="preserve">
+  <data name="M8650" xml:space="preserve">
     <value>Please make the vision online</value>
   </data>
-  <data name="Error.8650.Cause" xml:space="preserve">
+  <data name="C8650" xml:space="preserve">
     <value>The vision sensor is off-line</value>
   </data>
-  <data name="Error.8650.Measures" xml:space="preserve">
+  <data name="S8650" xml:space="preserve">
     <value>Please make vision sensor online</value>
   </data>
-  <data name="Error.8650.Level" xml:space="preserve">
+  <data name="L8650" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8660.Message" xml:space="preserve">
+  <data name="M8660" xml:space="preserve">
     <value>There is no authority</value>
   </data>
-  <data name="Error.8660.Cause" xml:space="preserve">
+  <data name="C8660" xml:space="preserve">
     <value>The authority of the user-name is not a full access</value>
   </data>
-  <data name="Error.8660.Measures" xml:space="preserve">
+  <data name="S8660" xml:space="preserve">
     <value>Please check user name</value>
   </data>
-  <data name="Error.8660.Level" xml:space="preserve">
+  <data name="L8660" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8670.Message" xml:space="preserve">
+  <data name="M8670" xml:space="preserve">
     <value>Can not restart</value>
   </data>
-  <data name="Error.8670.Cause" xml:space="preserve">
+  <data name="C8670" xml:space="preserve">
     <value>It started without resetting it</value>
   </data>
-  <data name="Error.8670.Measures" xml:space="preserve">
+  <data name="S8670" xml:space="preserve">
     <value>Please reset the program</value>
   </data>
-  <data name="Error.8670.Level" xml:space="preserve">
+  <data name="L8670" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8680.Message" xml:space="preserve">
+  <data name="M8680" xml:space="preserve">
     <value>Unknown code was received (code no.)</value>
   </data>
-  <data name="Error.8680.Cause" xml:space="preserve">
+  <data name="C8680" xml:space="preserve">
     <value>Status code of unregistration was received from vision sensor. (Status cord which is not registered with robot controller was received.)</value>
   </data>
-  <data name="Error.8680.Measures" xml:space="preserve">
+  <data name="S8680" xml:space="preserve">
     <value>The status code received from vision sensor is displayed to the code no.. When the code no. is not the numerical value, there is a possibility which received abnormal data. Please check the communication state, the communication setting, and the command argument.</value>
   </data>
-  <data name="Error.8680.Level" xml:space="preserve">
+  <data name="L8680" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8700.Message" xml:space="preserve">
+  <data name="M8700" xml:space="preserve">
     <value>Multi CPU system self-check error
 (CR800-R/ CR800-Q only)</value>
   </data>
-  <data name="Error.8700.Cause" xml:space="preserve">
+  <data name="C8700" xml:space="preserve">
     <value>Illegal parameter of multi CPU system and CPU is abnormal,etc.</value>
   </data>
-  <data name="Error.8700.Measures" xml:space="preserve">
+  <data name="S8700" xml:space="preserve">
     <value>Confirm details and measures of the error with GX Developer etc.</value>
   </data>
-  <data name="Error.8700.Level" xml:space="preserve">
+  <data name="L8700" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8710.Message" xml:space="preserve">
+  <data name="M8710" xml:space="preserve">
     <value>PC I/O module parameter(m) error. (m): Target parameter numbers 1-4. (correspond to QXYUNIT 1-4)</value>
   </data>
-  <data name="Error.8710.Cause" xml:space="preserve">
+  <data name="C8710" xml:space="preserve">
     <value>An illegal setting of the PC I/O module was detected.</value>
   </data>
-  <data name="Error.8710.Measures" xml:space="preserve">
+  <data name="S8710" xml:space="preserve">
     <value>Please check the value of parameter.</value>
   </data>
-  <data name="Error.8710.Level" xml:space="preserve">
+  <data name="L8710" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8720.Message" xml:space="preserve">
+  <data name="M8720" xml:space="preserve">
     <value>Fuse is blown.(PC I/O module (m)). (m): Target parameter numbers 1-4. (correspond to QXYUNIT 1-4)</value>
   </data>
-  <data name="Error.8720.Cause" xml:space="preserve">
+  <data name="C8720" xml:space="preserve">
     <value>Fuse is blown.(PC I/O module)</value>
   </data>
-  <data name="Error.8720.Measures" xml:space="preserve">
+  <data name="S8720" xml:space="preserve">
     <value>Please refer to the manual of PC I/O module.</value>
   </data>
-  <data name="Error.8720.Level" xml:space="preserve">
+  <data name="L8720" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8730.Message" xml:space="preserve">
+  <data name="M8730" xml:space="preserve">
     <value>I/O module (m) remove error. (m): Target parameter numbers 1-4. (correspond to QXYUNIT 1-4)</value>
   </data>
-  <data name="Error.8730.Cause" xml:space="preserve">
+  <data name="C8730" xml:space="preserve">
     <value>PC I/O module was removed.</value>
   </data>
-  <data name="Error.8730.Measures" xml:space="preserve">
+  <data name="S8730" xml:space="preserve">
     <value>Please mount PC I/O module.</value>
   </data>
-  <data name="Error.8730.Level" xml:space="preserve">
+  <data name="L8730" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8740.Message" xml:space="preserve">
+  <data name="M8740" xml:space="preserve">
     <value>CR800 init communication error</value>
   </data>
-  <data name="Error.8740.Cause" xml:space="preserve">
+  <data name="C8740" xml:space="preserve">
     <value>Initial communication with the CR800 was not possible</value>
   </data>
-  <data name="Error.8740.Measures" xml:space="preserve">
+  <data name="S8740" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8740.Level" xml:space="preserve">
+  <data name="L8740" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8741.Message" xml:space="preserve">
+  <data name="M8741" xml:space="preserve">
     <value>CPU unit init communication error</value>
   </data>
-  <data name="Error.8741.Cause" xml:space="preserve">
+  <data name="C8741" xml:space="preserve">
     <value>Initial communication with the CPU unit was not possible</value>
   </data>
-  <data name="Error.8741.Measures" xml:space="preserve">
+  <data name="S8741" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8741.Level" xml:space="preserve">
+  <data name="L8741" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8751.Message" xml:space="preserve">
+  <data name="M8751" xml:space="preserve">
     <value>CR800 communication error</value>
   </data>
-  <data name="Error.8751.Cause" xml:space="preserve">
+  <data name="C8751" xml:space="preserve">
     <value>Communication from the CR800 was cut off</value>
   </data>
-  <data name="Error.8751.Measures" xml:space="preserve">
+  <data name="S8751" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8751.Level" xml:space="preserve">
+  <data name="L8751" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8752.Message" xml:space="preserve">
+  <data name="M8752" xml:space="preserve">
     <value>CPU unit communication error</value>
   </data>
-  <data name="Error.8752.Cause" xml:space="preserve">
+  <data name="C8752" xml:space="preserve">
     <value>Communication from the CPU unit was cut off</value>
   </data>
-  <data name="Error.8752.Measures" xml:space="preserve">
+  <data name="S8752" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8752.Level" xml:space="preserve">
+  <data name="L8752" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8760.Message" xml:space="preserve">
+  <data name="M8760" xml:space="preserve">
     <value>PLC CPU parameters are not set</value>
   </data>
-  <data name="Error.8760.Cause" xml:space="preserve">
+  <data name="C8760" xml:space="preserve">
     <value>Fixed Scan Communication Area is not set in the PLC CPU</value>
   </data>
-  <data name="Error.8760.Measures" xml:space="preserve">
+  <data name="S8760" xml:space="preserve">
     <value>Please set the Fixed Scan Communication Area in the PLC CPU</value>
   </data>
-  <data name="Error.8760.Level" xml:space="preserve">
+  <data name="L8760" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8761.Message" xml:space="preserve">
+  <data name="M8761" xml:space="preserve">
     <value>CPU number setting is illegal</value>
   </data>
-  <data name="Error.8761.Cause" xml:space="preserve">
+  <data name="C8761" xml:space="preserve">
     <value>The setting of CPU number is different</value>
   </data>
-  <data name="Error.8761.Measures" xml:space="preserve">
+  <data name="S8761" xml:space="preserve">
     <value>Please check PLC's multi CPU setting and QMLTCPUN parameter</value>
   </data>
-  <data name="Error.8761.Level" xml:space="preserve">
+  <data name="L8761" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8762.Message" xml:space="preserve">
+  <data name="M8762" xml:space="preserve">
     <value>Multi CPU parameter setting is illegal</value>
   </data>
-  <data name="Error.8762.Cause" xml:space="preserve">
+  <data name="C8762" xml:space="preserve">
     <value>The multi CPU parameter setting is incorrect.</value>
   </data>
-  <data name="Error.8762.Measures" xml:space="preserve">
+  <data name="S8762" xml:space="preserve">
     <value>Synchronization processing in the robot CPU was not properly performed due to the incorrect multi CPU parameter setting. Please check and correct the value of the multi CPU parameter setting, and then turn the power OFF and ON once.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.8762.Level" xml:space="preserve">
+  <data name="L8762" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8770.Message" xml:space="preserve">
+  <data name="M8770" xml:space="preserve">
     <value>CR800 communication error</value>
   </data>
-  <data name="Error.8770.Cause" xml:space="preserve">
+  <data name="C8770" xml:space="preserve">
     <value>Communication error was detected from CR800</value>
   </data>
-  <data name="Error.8770.Measures" xml:space="preserve">
+  <data name="S8770" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8770.Level" xml:space="preserve">
+  <data name="L8770" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8780.Message" xml:space="preserve">
+  <data name="M8780" xml:space="preserve">
     <value>CPU unit communication error</value>
   </data>
-  <data name="Error.8780.Cause" xml:space="preserve">
+  <data name="C8780" xml:space="preserve">
     <value>Communication error was detected from the CPU unit</value>
   </data>
-  <data name="Error.8780.Measures" xml:space="preserve">
+  <data name="S8780" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8780.Level" xml:space="preserve">
+  <data name="L8780" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8790.Message" xml:space="preserve">
+  <data name="M8790" xml:space="preserve">
     <value>CR800 error reset error</value>
   </data>
-  <data name="Error.8790.Cause" xml:space="preserve">
+  <data name="C8790" xml:space="preserve">
     <value>Can not reset CR800 error</value>
   </data>
-  <data name="Error.8790.Measures" xml:space="preserve">
+  <data name="S8790" xml:space="preserve">
     <value>Check the communication cable connection</value>
   </data>
-  <data name="Error.8790.Level" xml:space="preserve">
+  <data name="L8790" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8800.Message" xml:space="preserve">
+  <data name="M8800" xml:space="preserve">
     <value>1. ASIC communication error
 2. ASIC CRC error
 3. ASIC short frame error
@@ -595,7 +595,7 @@ Power off and on, unless otherwise noted.</value>
 5. ASIC connector connection error
 6. ASIC 0byte transmission</value>
   </data>
-  <data name="Error.8800.Cause" xml:space="preserve">
+  <data name="C8800" xml:space="preserve">
     <value>1. ASIC communication error: A failure was detected in the communication within the controller. The internal temperature of the controller may be high. For the CR800-R/CR800-Q controller, the following conditions may also be the cause. The power on timing may be incorrect. The cable between the controller and the robot CPU may have a fault.
 2. ASIC CRC error: A failure was detected in the communication within the controller. The internal temperature of the controller may be high. For the CR800-R/CR800-Q controller, the following conditions may also be the cause. The power on timing may be incorrect. The cable between the controller and the robot CPU may have a fault.
 3. ASIC short frame error: A failure was detected in the communication within the controller. The internal temperature of the controller may be high. For the CR800-R/CR800-Q controller, the following conditions may also be the cause. The power on timing may be incorrect. The cable between the controller and the robot CPU may have a fault.
@@ -603,7 +603,7 @@ Power off and on, unless otherwise noted.</value>
 5. ASIC connector connection error: A failure was detected in the communication within the controller. The internal temperature of the controller may be high. For the CR800-R/CR800-Q controller, the following conditions may also be the cause. The power on timing may be incorrect. The cable between the controller and the robot CPU may have a fault.
 6. ASIC 0byte transmission: A failure was detected in the communication within the controller. The internal temperature of the controller may be high. For the CR800-R/CR800-Q controller, the following conditions may also be the cause. The power on timing may be incorrect. The cable between the controller and the robot CPU may have a fault.</value>
   </data>
-  <data name="Error.8800.Measures" xml:space="preserve">
+  <data name="S8800" xml:space="preserve">
     <value>1. ASIC communication error: Confirm that the controller filter has no clogging and the ambient temperature is 40 or less. If the error persists after taking above measures, contact the manufacturer. For the CR800-R/CR800-Q controller, turn on the switch of the controller, then of the robot CPU. Check the cable connection between the robot CPU and the controller.
 Power off and on, unless otherwise noted.
 2. ASIC CRC error: Confirm that the controller filter has no clogging and the ambient temperature is 40 or less. If the error persists after taking above measures, contact the manufacturer. For the CR800-R/CR800-Q controller, turn on the switch of the controller, then of the robot CPU. Check the cable connection between the robot CPU and the controller.
@@ -617,37 +617,37 @@ Power off and on, unless otherwise noted.
 6. ASIC 0byte transmission: Confirm that the controller filter has no clogging and the ambient temperature is 40 or less. If the error persists after taking above measures, contact the manufacturer. For the CR800-R/CR800-Q controller, turn on the switch of the controller, then of the robot CPU. Check the cable connection between the robot CPU and the controller.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.8800.Level" xml:space="preserve">
+  <data name="L8800" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8810.Message" xml:space="preserve">
+  <data name="M8810" xml:space="preserve">
     <value>1. Communication error
 2. Illegal ID</value>
   </data>
-  <data name="Error.8810.Cause" xml:space="preserve">
+  <data name="C8810" xml:space="preserve">
     <value>1. Communication error: Error occurred by the data transmission to the servo
 2. Illegal ID: ID of the com. data with the servo is not corresponding</value>
   </data>
-  <data name="Error.8810.Measures" xml:space="preserve">
+  <data name="S8810" xml:space="preserve">
     <value>1. Communication error: Check the communication cable connection. Check that there is not a source of noise.
 2. Illegal ID: Turn the power OFF and ON once</value>
   </data>
-  <data name="Error.8810.Level" xml:space="preserve">
+  <data name="L8810" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8820.Message" xml:space="preserve">
+  <data name="M8820" xml:space="preserve">
     <value>Communication timeout</value>
   </data>
-  <data name="Error.8820.Cause" xml:space="preserve">
+  <data name="C8820" xml:space="preserve">
     <value>The communication with the servo became a timeout</value>
   </data>
-  <data name="Error.8820.Measures" xml:space="preserve">
+  <data name="S8820" xml:space="preserve">
     <value>Turn the power OFF and ON once</value>
   </data>
-  <data name="Error.8820.Level" xml:space="preserve">
+  <data name="L8820" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8830.Message" xml:space="preserve">
+  <data name="M8830" xml:space="preserve">
     <value>1. Amplifier unconnection
 2. Servo axis setting error
 3. Uncorrespondence amplifier
@@ -656,7 +656,7 @@ Power off and on, unless otherwise noted.</value>
 6. Parameter setting failure
 7. Illegal amp. number</value>
   </data>
-  <data name="Error.8830.Cause" xml:space="preserve">
+  <data name="C8830" xml:space="preserve">
     <value>1. Amplifier unconnection: The servo amplifier cannot be detected
 2. Servo axis setting error: The axis setting is not correct
 3. Uncorrespondence amplifier: Uncorrespondence amplifier is connected
@@ -665,7 +665,7 @@ Power off and on, unless otherwise noted.</value>
 6. Parameter setting failure: A set value of the servo parameter is illegal
 7. Illegal amp. number: The number of connected amplifiers is not suitable</value>
   </data>
-  <data name="Error.8830.Measures" xml:space="preserve">
+  <data name="S8830" xml:space="preserve">
     <value>1. Amplifier unconnection: Check the cable connection and the power supply of amp.
 2. Servo axis setting error: Check the servo axis settings (parameters, rotary switches)
 3. Uncorrespondence amplifier: Remove the uncorrespondence amplifier
@@ -674,155 +674,155 @@ Power off and on, unless otherwise noted.</value>
 6. Parameter setting failure: Change to a correct value
 7. Illegal amp. number: Check the number of connected amplifiers</value>
   </data>
-  <data name="Error.8830.Level" xml:space="preserve">
+  <data name="L8830" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8871.Message" xml:space="preserve">
+  <data name="M8871" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8872.Message" xml:space="preserve">
+  <data name="M8872" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8873.Message" xml:space="preserve">
+  <data name="M8873" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8874.Message" xml:space="preserve">
+  <data name="M8874" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8875.Message" xml:space="preserve">
+  <data name="M8875" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8876.Message" xml:space="preserve">
+  <data name="M8876" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8877.Message" xml:space="preserve">
+  <data name="M8877" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
-  <data name="Error.8878.Message" xml:space="preserve">
+  <data name="M8878" xml:space="preserve">
     <value>1. Transient processing error
 2. Transient processing timeout</value>
   </data>
   
-  <data name="Error.8871.Cause" xml:space="preserve">
+  <data name="C8871" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8872.Cause" xml:space="preserve">
+  <data name="C8872" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8873.Cause" xml:space="preserve">
+  <data name="C8873" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8874.Cause" xml:space="preserve">
+  <data name="C8874" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8875.Cause" xml:space="preserve">
+  <data name="C8875" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8876.Cause" xml:space="preserve">
+  <data name="C8876" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8877.Cause" xml:space="preserve">
+  <data name="C8877" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
-  <data name="Error.8878.Cause" xml:space="preserve">
+  <data name="C8878" xml:space="preserve">
     <value>1. Transient processing error: Illegal demand data was transmitted
 2. Transient processing timeout: There is no response to the demand from servo</value>
   </data>
   
-  <data name="Error.8871.Measures" xml:space="preserve">
+  <data name="S8871" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8872.Measures" xml:space="preserve">
+  <data name="S8872" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8873.Measures" xml:space="preserve">
+  <data name="S8873" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8874.Measures" xml:space="preserve">
+  <data name="S8874" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8875.Measures" xml:space="preserve">
+  <data name="S8875" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8876.Measures" xml:space="preserve">
+  <data name="S8876" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8877.Measures" xml:space="preserve">
+  <data name="S8877" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
-  <data name="Error.8878.Measures" xml:space="preserve">
+  <data name="S8878" xml:space="preserve">
     <value>1. Transient processing error: Turn the power OFF and ON once. If it comes back, contact to your service provider.
 2. Transient processing timeout: Turn the power OFF and ON once. If it comes back, contact to your service provider.</value>
   </data>
   
-  <data name="Error.8871.Level" xml:space="preserve">
+  <data name="L8871" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8872.Level" xml:space="preserve">
+  <data name="L8872" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8873.Level" xml:space="preserve">
+  <data name="L8873" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8874.Level" xml:space="preserve">
+  <data name="L8874" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8875.Level" xml:space="preserve">
+  <data name="L8875" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8876.Level" xml:space="preserve">
+  <data name="L8876" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8877.Level" xml:space="preserve">
+  <data name="L8877" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8878.Level" xml:space="preserve">
+  <data name="L8878" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.8920.Message" xml:space="preserve">
+  <data name="M8920" xml:space="preserve">
     <value>Sensor I/F unit error (**) Note) "**" is substituted with the "sensor I/F unit error No." (2 hexadecimal digits)</value>
   </data>
-  <data name="Error.8920.Cause" xml:space="preserve">
+  <data name="C8920" xml:space="preserve">
     <value>An error occurred at the force sensor interface unit.</value>
   </data>
-  <data name="Error.8920.Measures" xml:space="preserve">
+  <data name="S8920" xml:space="preserve">
     <value>See Page 73, "Table 2-1: Force sense interface unit errors" based on the error No. in the Err. Message.</value>
   </data>
-  <data name="Error.8920.Level" xml:space="preserve">
+  <data name="L8920" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.8921.Message" xml:space="preserve">
+  <data name="M8921" xml:space="preserve">
     <value>Sensor I/F unit warning (**) Note) "**" is substituted with the "sensor I/F unit warning No." (2 hexadecimal digits)</value>
   </data>
-  <data name="Error.8921.Cause" xml:space="preserve">
+  <data name="C8921" xml:space="preserve">
     <value>A warning occurred at the force sensor interface unit.</value>
   </data>
-  <data name="Error.8921.Measures" xml:space="preserve">
+  <data name="S8921" xml:space="preserve">
     <value>See Page 73, "Table 2-1: Force sense interface unit errors" based on the error No. in the Err. Message.</value>
   </data>
-  <data name="Error.8921.Level" xml:space="preserve">
+  <data name="L8921" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
 </root>
