@@ -127,9 +127,17 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in set)
             {
                 var key = Assert.IsType<string>(item.Key);
-                Assert.Matches(@"^Error\.\d{4}\.(Message|Cause|Measures|Level)$", key);
-                if (key.EndsWith(".Level", StringComparison.Ordinal))
+                Assert.Matches(@"^[MCSL]\d{4}$", key);
+                if (key[0] == 'L')
                     Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
+            }
+
+            var entries = set.Cast<DictionaryEntry>()
+                .Select(item => Assert.IsType<string>(item.Key))
+                .GroupBy(key => key.Substring(1));
+
+            foreach (var error in entries)
+                Assert.Equal(new[] { 'C', 'L', 'M', 'S' }, error.Select(key => key[0]).OrderBy(field => field));
             }
         }
     }
@@ -149,7 +157,7 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in neutral)
             {
                 var key = Assert.IsType<string>(item.Key);
-                if (key.EndsWith(".Level", StringComparison.Ordinal))
+                if (key[0] == 'L')
                 {
                     Assert.Null(localized.GetString(key));
                     var level = Assert.IsType<string>(item.Value);
