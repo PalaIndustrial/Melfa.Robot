@@ -117,282 +117,282 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error.5000.Message" xml:space="preserve">
+  <data name="M5000" xml:space="preserve">
     <value>TB Enable key is ON</value>
   </data>
-  <data name="Error.5000.Cause" xml:space="preserve">
+  <data name="C5000" xml:space="preserve">
     <value>The TB Enable key was ON in the AUTO mode</value>
   </data>
-  <data name="Error.5000.Measures" xml:space="preserve">
+  <data name="S5000" xml:space="preserve">
     <value>OFF the TB Enable key, or enter the TEACH mode</value>
   </data>
-  <data name="Error.5000.Level" xml:space="preserve">
+  <data name="L5000" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5010.Message" xml:space="preserve">
+  <data name="M5010" xml:space="preserve">
     <value>AUTOENA signal is OFF</value>
   </data>
-  <data name="Error.5010.Cause" xml:space="preserve">
+  <data name="C5010" xml:space="preserve">
     <value>The automatic operation possible signal is OFF.</value>
   </data>
-  <data name="Error.5010.Measures" xml:space="preserve">
+  <data name="S5010" xml:space="preserve">
     <value>Turn the automatic operation possible signal ON, or enter the teach mode.</value>
   </data>
-  <data name="Error.5010.Level" xml:space="preserve">
+  <data name="L5010" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5100.Message" xml:space="preserve">
+  <data name="M5100" xml:space="preserve">
     <value>No program is selected</value>
   </data>
-  <data name="Error.5100.Cause" xml:space="preserve">
+  <data name="C5100" xml:space="preserve">
     <value>A program is not selected for the designated slot.</value>
   </data>
-  <data name="Error.5100.Measures" xml:space="preserve">
+  <data name="S5100" xml:space="preserve">
     <value>Select a program for the designated slot.</value>
   </data>
-  <data name="Error.5100.Level" xml:space="preserve">
+  <data name="L5100" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5110.Message" xml:space="preserve">
+  <data name="M5110" xml:space="preserve">
     <value>Continuous RUN is not possible</value>
   </data>
-  <data name="Error.5110.Cause" xml:space="preserve">
+  <data name="C5110" xml:space="preserve">
     <value>A different program name has been designated.</value>
   </data>
-  <data name="Error.5110.Measures" xml:space="preserve">
+  <data name="S5110" xml:space="preserve">
     <value>Designate the correct program name.</value>
   </data>
-  <data name="Error.5110.Level" xml:space="preserve">
+  <data name="L5110" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5120.Message" xml:space="preserve">
+  <data name="M5120" xml:space="preserve">
     <value>Cannot select program (slot not in program selection state)</value>
   </data>
-  <data name="Error.5120.Cause" xml:space="preserve">
+  <data name="C5120" xml:space="preserve">
     <value>The specified slot is not in the program selection state</value>
   </data>
-  <data name="Error.5120.Measures" xml:space="preserve">
+  <data name="S5120" xml:space="preserve">
     <value>Reset the program</value>
   </data>
-  <data name="Error.5120.Level" xml:space="preserve">
+  <data name="L5120" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5130.Message" xml:space="preserve">
+  <data name="M5130" xml:space="preserve">
     <value>Cannot execute servo on</value>
   </data>
-  <data name="Error.5130.Cause" xml:space="preserve">
+  <data name="C5130" xml:space="preserve">
     <value>A servo OFF process is taking place.</value>
   </data>
-  <data name="Error.5130.Measures" xml:space="preserve">
+  <data name="S5130" xml:space="preserve">
     <value>Wait for the servo to turn OFF before turning the servo ON.</value>
   </data>
-  <data name="Error.5130.Level" xml:space="preserve">
+  <data name="L5130" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5140.Message" xml:space="preserve">
+  <data name="M5140" xml:space="preserve">
     <value>Cannot read the file</value>
   </data>
-  <data name="Error.5140.Cause" xml:space="preserve">
+  <data name="C5140" xml:space="preserve">
     <value>Reading is being carried out, or editing is being carried out.</value>
   </data>
-  <data name="Error.5140.Measures" xml:space="preserve">
+  <data name="S5140" xml:space="preserve">
     <value>Close the file being edited, or read after the reading is completed.</value>
   </data>
-  <data name="Error.5140.Level" xml:space="preserve">
+  <data name="L5140" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5150.Message" xml:space="preserve">
+  <data name="M5150" xml:space="preserve">
     <value>The origin has not been set</value>
   </data>
-  <data name="Error.5150.Cause" xml:space="preserve">
+  <data name="C5150" xml:space="preserve">
     <value>The origin has not been set.</value>
   </data>
-  <data name="Error.5150.Measures" xml:space="preserve">
+  <data name="S5150" xml:space="preserve">
     <value>Refer to the chapters of "Setting the origin" and "Resetting the origin" which are described in the sepa- rate volumes "ROBOT ARM SETUP &amp;amp; MAINTENANCE". And set the origin.</value>
   </data>
-  <data name="Error.5150.Level" xml:space="preserve">
+  <data name="L5150" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5200.Message" xml:space="preserve">
+  <data name="M5200" xml:space="preserve">
     <value>Parameter error (TASKMAX)</value>
   </data>
-  <data name="Error.5200.Cause" xml:space="preserve">
+  <data name="C5200" xml:space="preserve">
     <value>The TASKMAX parameter setting value has been exceeded (initial value: 8, maximum value: 32).</value>
   </data>
-  <data name="Error.5200.Measures" xml:space="preserve">
+  <data name="S5200" xml:space="preserve">
     <value>Reduce the number of multi tasks, or change the TASKMAX parameter.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.5200.Level" xml:space="preserve">
+  <data name="L5200" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5210.Message" xml:space="preserve">
+  <data name="M5210" xml:space="preserve">
     <value>Parameter error (MECHAMAX)</value>
   </data>
-  <data name="Error.5210.Cause" xml:space="preserve">
+  <data name="C5210" xml:space="preserve">
     <value>The No. of multi mechanisms has exceeded the limit.</value>
   </data>
-  <data name="Error.5210.Measures" xml:space="preserve">
+  <data name="S5210" xml:space="preserve">
     <value>Reduce the No. of multi mechanisms.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.5210.Level" xml:space="preserve">
+  <data name="L5210" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5400.Message" xml:space="preserve">
+  <data name="M5400" xml:space="preserve">
     <value>All robot cannot be designated</value>
   </data>
-  <data name="Error.5400.Cause" xml:space="preserve">
+  <data name="C5400" xml:space="preserve">
     <value>All mechanisms cannot be specified.</value>
   </data>
-  <data name="Error.5400.Measures" xml:space="preserve">
+  <data name="S5400" xml:space="preserve">
     <value>Specify an independent mechanism number.</value>
   </data>
-  <data name="Error.5400.Level" xml:space="preserve">
+  <data name="L5400" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5410.Message" xml:space="preserve">
+  <data name="M5410" xml:space="preserve">
     <value>Non-existent mode</value>
   </data>
-  <data name="Error.5410.Cause" xml:space="preserve">
+  <data name="C5410" xml:space="preserve">
     <value>It has been changed to a mode other than Auto/Teach.</value>
   </data>
-  <data name="Error.5410.Measures" xml:space="preserve">
+  <data name="S5410" xml:space="preserve">
     <value>Contact the maker.</value>
   </data>
-  <data name="Error.5410.Level" xml:space="preserve">
+  <data name="L5410" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5420.Message" xml:space="preserve">
+  <data name="M5420" xml:space="preserve">
     <value>Illegal slot No.</value>
   </data>
-  <data name="Error.5420.Cause" xml:space="preserve">
+  <data name="C5420" xml:space="preserve">
     <value>A task slot number other than 1 through TASKMAX (parameter) is specified.</value>
   </data>
-  <data name="Error.5420.Measures" xml:space="preserve">
+  <data name="S5420" xml:space="preserve">
     <value>Designate the correct task slot.</value>
   </data>
-  <data name="Error.5420.Level" xml:space="preserve">
+  <data name="L5420" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5430.Message" xml:space="preserve">
+  <data name="M5430" xml:space="preserve">
     <value>Illegal robot No.</value>
   </data>
-  <data name="Error.5430.Cause" xml:space="preserve">
+  <data name="C5430" xml:space="preserve">
     <value>The mechanism designation is illegal.</value>
   </data>
-  <data name="Error.5430.Measures" xml:space="preserve">
+  <data name="S5430" xml:space="preserve">
     <value>Designate the correct mechanism.</value>
   </data>
-  <data name="Error.5430.Level" xml:space="preserve">
+  <data name="L5430" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5600.Message" xml:space="preserve">
+  <data name="M5600" xml:space="preserve">
     <value>Cannot execute during an error</value>
   </data>
-  <data name="Error.5600.Cause" xml:space="preserve">
+  <data name="C5600" xml:space="preserve">
     <value>Cannot execute during an error</value>
   </data>
-  <data name="Error.5600.Measures" xml:space="preserve">
+  <data name="S5600" xml:space="preserve">
     <value>Reset the error</value>
   </data>
-  <data name="Error.5600.Level" xml:space="preserve">
+  <data name="L5600" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5610.Message" xml:space="preserve">
+  <data name="M5610" xml:space="preserve">
     <value>Cannot execute during STOP ON</value>
   </data>
-  <data name="Error.5610.Cause" xml:space="preserve">
+  <data name="C5610" xml:space="preserve">
     <value>Cannot execute during stop singal input</value>
   </data>
-  <data name="Error.5610.Measures" xml:space="preserve">
+  <data name="S5610" xml:space="preserve">
     <value>Turn the stop signal OFF and execute</value>
   </data>
-  <data name="Error.5610.Level" xml:space="preserve">
+  <data name="L5610" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5620.Message" xml:space="preserve">
+  <data name="M5620" xml:space="preserve">
     <value>Cannot execute during CSTOP ON</value>
   </data>
-  <data name="Error.5620.Cause" xml:space="preserve">
+  <data name="C5620" xml:space="preserve">
     <value>Cannot execute during cycle stop signal input</value>
   </data>
-  <data name="Error.5620.Measures" xml:space="preserve">
+  <data name="S5620" xml:space="preserve">
     <value>Turn the cycle stop signal OFF</value>
   </data>
-  <data name="Error.5620.Level" xml:space="preserve">
+  <data name="L5620" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5630.Message" xml:space="preserve">
+  <data name="M5630" xml:space="preserve">
     <value>Cannot execute during SRVOFF ON</value>
   </data>
-  <data name="Error.5630.Cause" xml:space="preserve">
+  <data name="C5630" xml:space="preserve">
     <value>Cannot execute during servo OFF signal input</value>
   </data>
-  <data name="Error.5630.Measures" xml:space="preserve">
+  <data name="S5630" xml:space="preserve">
     <value>Turn the servo off signal OFF</value>
   </data>
-  <data name="Error.5630.Level" xml:space="preserve">
+  <data name="L5630" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5640.Message" xml:space="preserve">
+  <data name="M5640" xml:space="preserve">
     <value>Cannot execute during RUN</value>
   </data>
-  <data name="Error.5640.Cause" xml:space="preserve">
+  <data name="C5640" xml:space="preserve">
     <value>Cannot execute during operation</value>
   </data>
-  <data name="Error.5640.Measures" xml:space="preserve">
+  <data name="S5640" xml:space="preserve">
     <value>Stop the opration, and then execute.</value>
   </data>
-  <data name="Error.5640.Level" xml:space="preserve">
+  <data name="L5640" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5650.Message" xml:space="preserve">
+  <data name="M5650" xml:space="preserve">
     <value>Cannot execute during STOP</value>
   </data>
-  <data name="Error.5650.Cause" xml:space="preserve">
+  <data name="C5650" xml:space="preserve">
     <value>Cannot execute during stop operation.</value>
   </data>
-  <data name="Error.5650.Measures" xml:space="preserve">
+  <data name="S5650" xml:space="preserve">
     <value>Complete the stop, and then execute.</value>
   </data>
-  <data name="Error.5650.Level" xml:space="preserve">
+  <data name="L5650" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5660.Message" xml:space="preserve">
+  <data name="M5660" xml:space="preserve">
     <value>Edit during RUN (include ALWAYS)</value>
   </data>
-  <data name="Error.5660.Cause" xml:space="preserve">
+  <data name="C5660" xml:space="preserve">
     <value>Editing cannot be performed while in operation (including continuous execution).</value>
   </data>
-  <data name="Error.5660.Measures" xml:space="preserve">
+  <data name="S5660" xml:space="preserve">
     <value>Stop the program, and then execute.</value>
   </data>
-  <data name="Error.5660.Level" xml:space="preserve">
+  <data name="L5660" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5670.Message" xml:space="preserve">
+  <data name="M5670" xml:space="preserve">
     <value>Cannot execute during wait</value>
   </data>
-  <data name="Error.5670.Cause" xml:space="preserve">
+  <data name="C5670" xml:space="preserve">
     <value>Cannot execute during wait</value>
   </data>
-  <data name="Error.5670.Measures" xml:space="preserve">
+  <data name="S5670" xml:space="preserve">
     <value>Execute Program Reset</value>
   </data>
-  <data name="Error.5670.Level" xml:space="preserve">
+  <data name="L5670" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.5990.Message" xml:space="preserve">
+  <data name="M5990" xml:space="preserve">
     <value>System error (Illegal command)</value>
   </data>
-  <data name="Error.5990.Cause" xml:space="preserve">
+  <data name="C5990" xml:space="preserve">
     <value>Not exist command was executed.</value>
   </data>
-  <data name="Error.5990.Measures" xml:space="preserve">
+  <data name="S5990" xml:space="preserve">
     <value>Execute the correct command.</value>
   </data>
-  <data name="Error.5990.Level" xml:space="preserve">
+  <data name="L5990" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
 </root>
