@@ -108,6 +108,18 @@ public class ReadOnlyRobotTests
         });
     }
 
+    [ReadFact]
+    [Trait("Category", "RobotReadOnly")]
+    [Trait("Category", "SimulatorReadOnly")]
+    public void ReadCurrentPosition()
+    {
+        Integration.Run(false, (robot, _) =>
+        {
+            output.WriteLine($"P: {robot.CurrentPositionP}");
+            output.WriteLine($"J: {robot.CurrentPositionJ}");
+        });
+    }
+
     [ReadFact(Skip = "Crash the simulator, temporarily disabled")]
     [Trait("Category", "RobotReadOnly")]
     [Trait("Category", "SimulatorCrashOnly")]
