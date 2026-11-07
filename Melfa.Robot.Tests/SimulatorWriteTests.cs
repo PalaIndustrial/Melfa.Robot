@@ -5,7 +5,7 @@ namespace Melfa.Robot.Tests;
 [Collection("Robot integration")]
 public class SimulatorWriteTests
 {
-    [Fact]
+    [WriteFact]
     [Trait("Category", "SimulatorWrite")]
     public void EditScratchLineAndDiscard()
     {
@@ -14,7 +14,7 @@ public class SimulatorWriteTests
                 () => ScratchOperations.EditLine(robot, config.Line)));
     }
 
-    [Fact]
+    [WriteFact]
     [Trait("Category", "SimulatorWrite")]
     public void EditAndRestoreScratchJointVariable()
     {
