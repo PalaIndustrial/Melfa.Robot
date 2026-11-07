@@ -175,7 +175,7 @@ internal sealed class FakeRobot : IRobotCommands
     public string ProgramGetLine(LocationType type) => Unsupported<string>();
     public IPosition ProgramGetPosition(LocationType type) => Unsupported<IPosition>();
     public IPosition ProgramGetPosition(string positionName) => Unsupported<IPosition>();
-    public void ProgramInsert(int line, string content) => Unsupported();
+    public void ProgramInsert(int line, string content) => Call();
     public void ProgramRenumber(int newLine, int oldLineStart, int step, int oldLineEnd) => Unsupported();
     public void ProgramStep(StepMethod method) => Unsupported();
     public void ProgramUp() => Unsupported();
