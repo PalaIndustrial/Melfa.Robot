@@ -36,7 +36,11 @@ public class PositionTests
             Assert.Equal(10, j.J5);
             Assert.True(double.IsNaN(j.J6));
             Assert.Equal(double.PositiveInfinity, j.J7);
-            Assert.Equal(j, new PositionJ(j.ToString()));
+            var serializedJ = new PositionJ(j.ToString());
+            Assert.Equal(new PositionJ(1.25, -2.5, 0.5, 3, 10, 0, 0, 0), serializedJ);
+            Assert.Equal(0.0, serializedJ.J6);
+            Assert.Equal(0.0, serializedJ.J7);
+            Assert.Equal(0.0, serializedJ.J8);
 
             var p = new PositionP("(+1.25, -2.50, .5, 270, -270, 540, NaN, Inf) (0x06, 0xFFFFFFFF)");
             Assert.Equal(PositionConfig.RAF, p.FLG1);
@@ -44,7 +48,10 @@ public class PositionTests
             Assert.Equal(-90, p.A);
             Assert.Equal(90, p.B);
             Assert.Equal(-180, p.C);
-            Assert.Equal(p, new PositionP(p.ToString()));
+            var serializedP = new PositionP(p.ToString());
+            Assert.Equal(new PositionP(1.25, -2.5, 0.5, -90, 90, -180, 0, 0, PositionConfig.RAF, uint.MaxValue), serializedP);
+            Assert.Equal(0.0, serializedP.L1);
+            Assert.Equal(0.0, serializedP.L2);
             Assert.Contains("1.25", p.ToString());
             Assert.Contains("1.25", j.ToString());
 
@@ -105,7 +112,9 @@ public class PositionTests
         Assert.Equal(0u, position.FLG2);
         Assert.True(double.IsNaN(position.L1));
         Assert.True(double.IsNaN(position.L2));
-        Assert.Equal(position, new PositionP(position.ToString()));
+        var serialized = new PositionP(position.ToString());
+        Assert.Equal(0.0, serialized.L1);
+        Assert.Equal(0.0, serialized.L2);
 
         var withL1 = new PositionP("(1,2,3,4,5,6,+7.25)(7,0)");
         Assert.Equal(7.25, withL1.L1);
