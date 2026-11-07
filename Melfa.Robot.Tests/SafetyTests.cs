@@ -185,8 +185,9 @@ public class SafetyTests
         ScratchOperations.WithScratch(fake, config, 1, "MB6", () => ran = true);
         Assert.True(ran);
         Assert.Equal("1.MB6", fake.CheckedFile);
-        Assert.Equal(new[] { "FileExists", "GetCurrentProgram", "ProgramNew", "ProgramOpen", "ProgramEdit", "ProgramGetLine", "ProgramSave",
-            "FileExists", "ProgramOpen", "ProgramNew", "FileExists", "FileDelete", "FileExists" }, fake.Calls);
+        Assert.Equal(new[] { "FileExists", "GetCurrentProgram", "ProgramNew", "ProgramOpen",
+            "ProgramInsert", "ProgramInsert", "ProgramInsert", "ProgramInsert", "ProgramInsert", "ProgramInsert", "ProgramInsert", "ProgramInsert", "ProgramInsert",
+            "ProgramEdit", "ProgramGetLine", "ProgramSave", "FileExists", "ProgramOpen", "ProgramNew", "FileExists", "FileDelete", "FileExists" }, fake.Calls);
         Assert.False(fake.Exists);
     }
 
@@ -251,7 +252,7 @@ public class SafetyTests
     [Fact]
     public async Task PrimaryAndCleanupFailuresAreBothReported()
     {
-        var ex = Assert.ThrowsAsync<AggregateException>(() => ScratchOperations.WithCleanup(
+        var ex = await Assert.ThrowsAsync<AggregateException>(() => ScratchOperations.WithCleanup(
             () => throw new InvalidOperationException("primary"),
             () => throw new InvalidOperationException("cleanup")));
         Assert.Equal(new[] { "primary", "cleanup" }, ex.Exception.InnerExceptions.Select(e => e.Message));
