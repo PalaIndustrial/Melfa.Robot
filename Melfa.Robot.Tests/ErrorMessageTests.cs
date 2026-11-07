@@ -216,7 +216,7 @@ public class ErrorMessageTests
             var error = MelfaRobotException.FromErrorResult("RUN", "QeR228200000");
             Assert.Equal(
                 "1. SOS (Position error)\n2. SOS (Speed error)\n3. SOS (Position command error)\n4. SOS (Speed command error)",
-                error.ErrorMessage);
+                error.ErrorMessage.Replace("\r\n", "\n"));
             Assert.Contains("1. SOS (Position error):", error.ErrorCause);
             Assert.Contains("4. SOS (Speed command error):", error.ErrorMeasures);
         }
