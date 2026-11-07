@@ -255,7 +255,7 @@ public class SafetyTests
         var ex = await Assert.ThrowsAsync<AggregateException>(() => ScratchOperations.WithCleanup(
             () => throw new InvalidOperationException("primary"),
             () => throw new InvalidOperationException("cleanup")));
-        Assert.Equal(new[] { "primary", "cleanup" }, ex.Exception.InnerExceptions.Select(e => e.Message));
+        Assert.Equal(new[] { "primary", "cleanup" }, ex.InnerExceptions.Select(e => e.Message));
         Assert.Throws<InvalidOperationException>(() => ScratchOperations.WithCleanup(() => { }, () => throw new Exception("cleanup")));
     }
 
