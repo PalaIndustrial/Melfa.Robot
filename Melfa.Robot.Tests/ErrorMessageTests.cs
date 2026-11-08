@@ -127,17 +127,24 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in set)
             {
                 var key = Assert.IsType<string>(item.Key);
-                Assert.Matches(@"^[MCSL]\d{4}$", key);
-                if (key[0] == 'L')
-                    Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
+                if (string.IsNullOrEmpty(culture))
+                {
+                    Assert.Matches(@"^[MCSL]\\d{4}$", key);
+                    if (key[0] == 'L')
+                        Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
+                }
+                else
+                    Assert.Matches(@"^Error\\.\\d{4}\\.(Message|Cause|Measures)$", key);
             }
 
-            var entries = set.Cast<DictionaryEntry>()
-                .Select(item => Assert.IsType<string>(item.Key))
-                .GroupBy(key => key.Substring(1));
+            if (string.IsNullOrEmpty(culture))
+            {
+                var entries = set.Cast<DictionaryEntry>()
+                    .Select(item => Assert.IsType<string>(item.Key))
+                    .GroupBy(key => key.Substring(1));
 
-            foreach (var error in entries)
-                Assert.Equal(new[] { 'C', 'L', 'M', 'S' }, error.Select(key => key[0]).OrderBy(field => field));
+                foreach (var error in entries)
+                    Assert.Equal(new[] { 'C', 'L', 'M', 'S' }, error.Select(key => key[0]).OrderBy(field => field));
         }
     }
 
@@ -177,7 +184,17 @@ public class ErrorMessageTests
                     Assert.Equal(level, manager.GetString(key, CultureInfo.GetCultureInfo("zh-TW")));
                 }
                 else
-                    Assert.False(string.IsNullOrEmpty(localized.GetString(key)), $"Missing Traditional Chinese resource: {key}");
+                {
+                    var legacyField = key[0] switch
+                    {
+                        'M' => "Message",
+                        'C' => "Cause",
+                        'S' => "Measures",
+                        _ => throw new InvalidOperationException(),
+                    };
+                    var legacyKey = $"Error.{key.Substring(1)}.{legacyField}";
+                    Assert.False(string.IsNullOrEmpty(localized.GetString(legacyKey)), $"Missing Traditional Chinese resource: {legacyKey}");
+                }
             }
         }
     }
