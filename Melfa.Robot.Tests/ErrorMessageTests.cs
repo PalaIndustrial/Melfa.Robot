@@ -147,6 +147,7 @@ public class ErrorMessageTests
 
                 foreach (var error in entries)
                     Assert.Equal(new[] { 'C', 'L', 'M', 'S' }, error.Select(key => key[0]).OrderBy(field => field));
+            }
         }
     }
 
