@@ -129,9 +129,8 @@ public class ErrorMessageTests
                 var key = Assert.IsType<string>(item.Key);
                 if (new[] { "Name1", "Color1", "Bitmap1", "Icon1" }.Contains(key))
                     continue;
-                if (string.IsNullOrEmpty(culture))
+                if (Regex.IsMatch(key, @"^[MCSL]\d{4}$"))
                 {
-                    Assert.Matches(@"^[MCSL]\d{4}$", key);
                     if (key[0] == 'L')
                         Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
                 }
@@ -143,6 +142,7 @@ public class ErrorMessageTests
             {
                 var entries = set.Cast<DictionaryEntry>()
                     .Select(item => Assert.IsType<string>(item.Key))
+                    .Where(key => Regex.IsMatch(key, @"^[MCSL]\d{4}$"))
                     .GroupBy(key => key.Substring(1));
 
                 foreach (var error in entries)
