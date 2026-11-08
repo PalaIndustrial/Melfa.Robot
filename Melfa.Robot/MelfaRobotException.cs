@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Resources;
 
 namespace Melfa.Robot;
@@ -17,23 +18,45 @@ public sealed partial class MelfaRobotException : Exception
         return resources;
     }
 
-    private static string GetErrorResource(int errno, string field)
+    private static string GetErrorResource(int errno, char field)
     {
+        var legacyField = field switch
+        {
+            'M' => "Message",
+            'C' => "Cause",
+            'S' => "Measures",
+            'L' => "Level",
+            _ => throw new ArgumentOutOfRangeException(nameof(field)),
+        };
+
         if (0 < errno && errno <= 9999)
         {
             var resources = ErrorResources[errno / 1000];
-            var value = resources.GetString($"Error.{errno:0000}.{field}");
+            var value = GetResource(resources, $"{field}{errno:0000}", $"Error.{errno:0000}.{legacyField}");
             if (value != null)
                 return value;
         }
 
-        return UnknownErrorResources.GetString($"Error.Unknown.{field}");
+        return GetResource(UnknownErrorResources, $"{field}0000", $"Error.Unknown.{legacyField}");
     }
 
-    private static string GetErrorMessage(int errno) => GetErrorResource(errno, "Message");
-    private static string GetErrorCause(int errno) => GetErrorResource(errno, "Cause");
-    private static string GetErrorMeasures(int errno) => GetErrorResource(errno, "Measures");
-    private static ErrorSeverity GetErrorSeverity(int errno) => GetErrorResource(errno, "Level") switch
+    private static string GetResource(ResourceManager resources, string compactKey, string legacyKey)
+    {
+        for (var culture = CultureInfo.CurrentUICulture; culture != CultureInfo.InvariantCulture; culture = culture.Parent)
+        {
+            var resourceSet = resources.GetResourceSet(culture, true, false);
+            var value = resourceSet?.GetString(compactKey) ?? resourceSet?.GetString(legacyKey);
+            if (value != null)
+                return value;
+        }
+
+        return resources.GetString(compactKey) ?? resources.GetString(legacyKey);
+    }
+
+    private static string GetErrorMessage(int errno) => GetErrorResource(errno, 'M');
+    private static string GetErrorCause(int errno) => GetErrorResource(errno, 'C');
+    private static string GetErrorMeasures(int errno) => GetErrorResource(errno, 'S');
+    private static ErrorSeverity GetErrorSeverity(int errno) => GetErrorResource(errno, 'L') switch
     {
         nameof(ErrorSeverity.High) => ErrorSeverity.High,
         nameof(ErrorSeverity.Low) => ErrorSeverity.Low,

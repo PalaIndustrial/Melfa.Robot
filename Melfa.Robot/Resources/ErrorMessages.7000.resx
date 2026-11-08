@@ -117,1043 +117,1043 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error.7000.Message" xml:space="preserve">
+  <data name="M7000" xml:space="preserve">
     <value>Copy source file was not found</value>
   </data>
-  <data name="Error.7000.Cause" xml:space="preserve">
+  <data name="C7000" xml:space="preserve">
     <value>The copy source file was not found.</value>
   </data>
-  <data name="Error.7000.Measures" xml:space="preserve">
+  <data name="S7000" xml:space="preserve">
     <value>Input the correct file name.</value>
   </data>
-  <data name="Error.7000.Level" xml:space="preserve">
+  <data name="L7000" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7010.Message" xml:space="preserve">
+  <data name="M7010" xml:space="preserve">
     <value>Delete target file was not found</value>
   </data>
-  <data name="Error.7010.Cause" xml:space="preserve">
+  <data name="C7010" xml:space="preserve">
     <value>The delete target file was not found.</value>
   </data>
-  <data name="Error.7010.Measures" xml:space="preserve">
+  <data name="S7010" xml:space="preserve">
     <value>Input the correct file name.</value>
   </data>
-  <data name="Error.7010.Level" xml:space="preserve">
+  <data name="L7010" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7020.Message" xml:space="preserve">
+  <data name="M7020" xml:space="preserve">
     <value>Rename target file was not found</value>
   </data>
-  <data name="Error.7020.Cause" xml:space="preserve">
+  <data name="C7020" xml:space="preserve">
     <value>The rename target file was not found.</value>
   </data>
-  <data name="Error.7020.Measures" xml:space="preserve">
+  <data name="S7020" xml:space="preserve">
     <value>Input the correct file name.</value>
   </data>
-  <data name="Error.7020.Level" xml:space="preserve">
+  <data name="L7020" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7030.Message" xml:space="preserve">
+  <data name="M7030" xml:space="preserve">
     <value>System error (param size over)</value>
   </data>
-  <data name="Error.7030.Cause" xml:space="preserve">
+  <data name="C7030" xml:space="preserve">
     <value>The change capacity is too large.</value>
   </data>
-  <data name="Error.7030.Measures" xml:space="preserve">
+  <data name="S7030" xml:space="preserve">
     <value>Contact the maker.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7030.Level" xml:space="preserve">
+  <data name="L7030" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7040.Message" xml:space="preserve">
+  <data name="M7040" xml:space="preserve">
     <value>Parameter changes prohibited</value>
   </data>
-  <data name="Error.7040.Cause" xml:space="preserve">
+  <data name="C7040" xml:space="preserve">
     <value>Changing this parameter is prohibited as it is a dangerous parameter.</value>
   </data>
-  <data name="Error.7040.Measures" xml:space="preserve">
+  <data name="S7040" xml:space="preserve">
     <value>Contact the maker.</value>
   </data>
-  <data name="Error.7040.Level" xml:space="preserve">
+  <data name="L7040" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7050.Message" xml:space="preserve">
+  <data name="M7050" xml:space="preserve">
     <value>File is illegal</value>
   </data>
-  <data name="Error.7050.Cause" xml:space="preserve">
+  <data name="C7050" xml:space="preserve">
     <value>This file is damaged.</value>
   </data>
-  <data name="Error.7050.Measures" xml:space="preserve">
+  <data name="S7050" xml:space="preserve">
     <value>Contact to the dealer.</value>
   </data>
-  <data name="Error.7050.Level" xml:space="preserve">
+  <data name="L7050" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7060.Message" xml:space="preserve">
+  <data name="M7060" xml:space="preserve">
     <value>System error (RAM area full)</value>
   </data>
-  <data name="Error.7060.Cause" xml:space="preserve">
+  <data name="C7060" xml:space="preserve">
     <value>The capacity has been exceeded.</value>
   </data>
-  <data name="Error.7060.Measures" xml:space="preserve">
+  <data name="S7060" xml:space="preserve">
     <value>Contact the maker.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7060.Level" xml:space="preserve">
+  <data name="L7060" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7070.Message" xml:space="preserve">
+  <data name="M7070" xml:space="preserve">
     <value>Memory area is full</value>
   </data>
-  <data name="Error.7070.Cause" xml:space="preserve">
+  <data name="C7070" xml:space="preserve">
     <value>The program and data have already exceeded the capacity.</value>
   </data>
-  <data name="Error.7070.Measures" xml:space="preserve">
+  <data name="S7070" xml:space="preserve">
     <value>Delete any unnecessary programs or data.</value>
   </data>
-  <data name="Error.7070.Level" xml:space="preserve">
+  <data name="L7070" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7071.Message" xml:space="preserve">
+  <data name="M7071" xml:space="preserve">
     <value>Not enough memory area for CTN</value>
   </data>
-  <data name="Error.7071.Cause" xml:space="preserve">
+  <data name="C7071" xml:space="preserve">
     <value>Continue function needs more than 100Kbytes memory area.</value>
   </data>
-  <data name="Error.7071.Measures" xml:space="preserve">
+  <data name="S7071" xml:space="preserve">
     <value>Delete any unnecessary programs.</value>
   </data>
-  <data name="Error.7071.Level" xml:space="preserve">
+  <data name="L7071" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7080.Message" xml:space="preserve">
+  <data name="M7080" xml:space="preserve">
     <value>Can not read parameter</value>
   </data>
-  <data name="Error.7080.Cause" xml:space="preserve">
+  <data name="C7080" xml:space="preserve">
     <value>Non-existent parameter or illegal password.</value>
   </data>
-  <data name="Error.7080.Measures" xml:space="preserve">
+  <data name="S7080" xml:space="preserve">
     <value>1. Input the correct parameter name. 2. Input the correct password</value>
   </data>
-  <data name="Error.7080.Level" xml:space="preserve">
+  <data name="L7080" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7081.Message" xml:space="preserve">
+  <data name="M7081" xml:space="preserve">
     <value>1. Can not write parameter
 2. Illegal CRC during parameter writing</value>
   </data>
-  <data name="Error.7081.Cause" xml:space="preserve">
+  <data name="C7081" xml:space="preserve">
     <value>1. Can not write parameter: Non-existent parameter or illegal password.
 2. Illegal CRC during parameter writing: The parameter CRC value is illegal.</value>
   </data>
-  <data name="Error.7081.Measures" xml:space="preserve">
+  <data name="S7081" xml:space="preserve">
     <value>1. Can not write parameter: 1. Input the correct parameter name. 2. Input the correct password
 2. Illegal CRC during parameter writing: An error is detected in the CRC check in the writing process of a parameter related to the safety monitoring function. Check the communication environment between the robot controller and the personal computer, and perform the writing operation again.</value>
   </data>
-  <data name="Error.7081.Level" xml:space="preserve">
+  <data name="L7081" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7090.Message" xml:space="preserve">
+  <data name="M7090" xml:space="preserve">
     <value>Parameter comment illgal</value>
   </data>
-  <data name="Error.7090.Cause" xml:space="preserve">
+  <data name="C7090" xml:space="preserve">
     <value>The number of parameter comment characters exceeded the limit.</value>
   </data>
-  <data name="Error.7090.Measures" xml:space="preserve">
+  <data name="S7090" xml:space="preserve">
     <value>Operation will not be affected, so continue the operation.</value>
   </data>
-  <data name="Error.7090.Level" xml:space="preserve">
+  <data name="L7090" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7099.Message" xml:space="preserve">
+  <data name="M7099" xml:space="preserve">
     <value>Can not read parameter"xxx". "xxx": Parameter name.</value>
   </data>
-  <data name="Error.7099.Cause" xml:space="preserve">
+  <data name="C7099" xml:space="preserve">
     <value>The parameter doesn't exist.</value>
   </data>
-  <data name="Error.7099.Measures" xml:space="preserve">
+  <data name="S7099" xml:space="preserve">
     <value>Please confirm the parameter name.</value>
   </data>
-  <data name="Error.7099.Level" xml:space="preserve">
+  <data name="L7099" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7300.Message" xml:space="preserve">
+  <data name="M7300" xml:space="preserve">
     <value>Loading the parameter file.</value>
   </data>
-  <data name="Error.7300.Cause" xml:space="preserve">
+  <data name="C7300" xml:space="preserve">
     <value>It is necessary to turn the power ON again to reflect the parameters.</value>
   </data>
-  <data name="Error.7300.Measures" xml:space="preserve">
+  <data name="S7300" xml:space="preserve">
     <value>Turn the power OFF and ON once.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7300.Level" xml:space="preserve">
+  <data name="L7300" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7310.Message" xml:space="preserve">
+  <data name="M7310" xml:space="preserve">
     <value>Changed variables weren't saved</value>
   </data>
-  <data name="Error.7310.Cause" xml:space="preserve">
+  <data name="C7310" xml:space="preserve">
     <value>The power was OFF during program execution.</value>
   </data>
-  <data name="Error.7310.Measures" xml:space="preserve">
+  <data name="S7310" xml:space="preserve">
     <value>Don't turn the power OFF during program execution.</value>
   </data>
-  <data name="Error.7310.Level" xml:space="preserve">
+  <data name="L7310" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7311.Message" xml:space="preserve">
+  <data name="M7311" xml:space="preserve">
     <value>The power was OFF during file saving</value>
   </data>
-  <data name="Error.7311.Cause" xml:space="preserve">
+  <data name="C7311" xml:space="preserve">
     <value>The power was OFF during file saving.</value>
   </data>
-  <data name="Error.7311.Measures" xml:space="preserve">
+  <data name="S7311" xml:space="preserve">
     <value>Don't turn the power OFF during file saving.</value>
   </data>
-  <data name="Error.7311.Level" xml:space="preserve">
+  <data name="L7311" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7332.Message" xml:space="preserve">
+  <data name="M7332" xml:space="preserve">
     <value>Can't change to RAM mode in CTN mode</value>
   </data>
-  <data name="Error.7332.Cause" xml:space="preserve">
+  <data name="C7332" xml:space="preserve">
     <value>Can't change to RAM mode in continue mode.</value>
   </data>
-  <data name="Error.7332.Measures" xml:space="preserve">
+  <data name="S7332" xml:space="preserve">
     <value>Please change to RAM mode and perform again.</value>
   </data>
-  <data name="Error.7332.Level" xml:space="preserve">
+  <data name="L7332" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7340.Message" xml:space="preserve">
+  <data name="M7340" xml:space="preserve">
     <value>Contine function cannot be used in DRAM mode</value>
   </data>
-  <data name="Error.7340.Cause" xml:space="preserve">
+  <data name="C7340" xml:space="preserve">
     <value>Contine function cannot be used in DRAM mode</value>
   </data>
-  <data name="Error.7340.Measures" xml:space="preserve">
+  <data name="S7340" xml:space="preserve">
     <value>Please change to RAM mode and perform again</value>
   </data>
-  <data name="Error.7340.Level" xml:space="preserve">
+  <data name="L7340" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7341.Message" xml:space="preserve">
+  <data name="M7341" xml:space="preserve">
     <value>Can't change to DRAM mode in CTN mode</value>
   </data>
-  <data name="Error.7341.Cause" xml:space="preserve">
+  <data name="C7341" xml:space="preserve">
     <value>Can't change to DRAM mode in CTN mode</value>
   </data>
-  <data name="Error.7341.Measures" xml:space="preserve">
+  <data name="S7341" xml:space="preserve">
     <value>Please change to RAM mode and perform again</value>
   </data>
-  <data name="Error.7341.Level" xml:space="preserve">
+  <data name="L7341" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7342.Message" xml:space="preserve">
+  <data name="M7342" xml:space="preserve">
     <value>Global extension cannot be used in DRAM mode</value>
   </data>
-  <data name="Error.7342.Cause" xml:space="preserve">
+  <data name="C7342" xml:space="preserve">
     <value>Global extension cannot be used in DRAM mode</value>
   </data>
-  <data name="Error.7342.Measures" xml:space="preserve">
+  <data name="S7342" xml:space="preserve">
     <value>Please change to RAM mode and perform again</value>
   </data>
-  <data name="Error.7342.Level" xml:space="preserve">
+  <data name="L7342" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7343.Message" xml:space="preserve">
+  <data name="M7343" xml:space="preserve">
     <value>Can't change to DRAM mode in PRGGBL mode</value>
   </data>
-  <data name="Error.7343.Cause" xml:space="preserve">
+  <data name="C7343" xml:space="preserve">
     <value>Can't change to DRAM mode in PRGGBL mode</value>
   </data>
-  <data name="Error.7343.Measures" xml:space="preserve">
+  <data name="S7343" xml:space="preserve">
     <value>Please change to RAM mode and perform again</value>
   </data>
-  <data name="Error.7343.Level" xml:space="preserve">
+  <data name="L7343" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7370.Message" xml:space="preserve">
+  <data name="M7370" xml:space="preserve">
     <value>The password is 8 to 32 char.</value>
   </data>
-  <data name="Error.7370.Cause" xml:space="preserve">
+  <data name="C7370" xml:space="preserve">
     <value>The password is 8 to 32 characters</value>
   </data>
-  <data name="Error.7370.Measures" xml:space="preserve">
+  <data name="S7370" xml:space="preserve">
     <value>Please input the password 8 to 32 characters</value>
   </data>
-  <data name="Error.7370.Level" xml:space="preserve">
+  <data name="L7370" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7371.Message" xml:space="preserve">
+  <data name="M7371" xml:space="preserve">
     <value>Only alphanumeric character</value>
   </data>
-  <data name="Error.7371.Cause" xml:space="preserve">
+  <data name="C7371" xml:space="preserve">
     <value>It input it excluding the alphanumeric character</value>
   </data>
-  <data name="Error.7371.Measures" xml:space="preserve">
+  <data name="S7371" xml:space="preserve">
     <value>Please input the password in the alphanumeric character</value>
   </data>
-  <data name="Error.7371.Level" xml:space="preserve">
+  <data name="L7371" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7372.Message" xml:space="preserve">
+  <data name="M7372" xml:space="preserve">
     <value>The password is unmatch</value>
   </data>
-  <data name="Error.7372.Cause" xml:space="preserve">
+  <data name="C7372" xml:space="preserve">
     <value>The password is unmatch</value>
   </data>
-  <data name="Error.7372.Measures" xml:space="preserve">
+  <data name="S7372" xml:space="preserve">
     <value>Please input the password again</value>
   </data>
-  <data name="Error.7372.Level" xml:space="preserve">
+  <data name="L7372" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7373.Message" xml:space="preserve">
+  <data name="M7373" xml:space="preserve">
     <value>Password lock to the programs</value>
   </data>
-  <data name="Error.7373.Cause" xml:space="preserve">
+  <data name="C7373" xml:space="preserve">
     <value>Password lock to the programs</value>
   </data>
-  <data name="Error.7373.Measures" xml:space="preserve">
+  <data name="S7373" xml:space="preserve">
     <value>Please release password</value>
   </data>
-  <data name="Error.7373.Level" xml:space="preserve">
+  <data name="L7373" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7374.Message" xml:space="preserve">
+  <data name="M7374" xml:space="preserve">
     <value>Password lock to the parameter</value>
   </data>
-  <data name="Error.7374.Cause" xml:space="preserve">
+  <data name="C7374" xml:space="preserve">
     <value>Password lock to the parameter</value>
   </data>
-  <data name="Error.7374.Measures" xml:space="preserve">
+  <data name="S7374" xml:space="preserve">
     <value>Please release password</value>
   </data>
-  <data name="Error.7374.Level" xml:space="preserve">
+  <data name="L7374" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7375.Message" xml:space="preserve">
+  <data name="M7375" xml:space="preserve">
     <value>Password lock to the files</value>
   </data>
-  <data name="Error.7375.Cause" xml:space="preserve">
+  <data name="C7375" xml:space="preserve">
     <value>Password lock to the files</value>
   </data>
-  <data name="Error.7375.Measures" xml:space="preserve">
+  <data name="S7375" xml:space="preserve">
     <value>Please release password</value>
   </data>
-  <data name="Error.7375.Level" xml:space="preserve">
+  <data name="L7375" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7378.Message" xml:space="preserve">
+  <data name="M7378" xml:space="preserve">
     <value>Change password</value>
   </data>
-  <data name="Error.7378.Cause" xml:space="preserve">
+  <data name="C7378" xml:space="preserve">
     <value>The password has not been changed from the initial value.</value>
   </data>
-  <data name="Error.7378.Measures" xml:space="preserve">
+  <data name="S7378" xml:space="preserve">
     <value>The password to change functional safety related parameters has not been changed from the initial value. Change the password to new one, and perform parameter setting. The factory default password is "MEL- FASafetyPSWD".</value>
   </data>
-  <data name="Error.7378.Level" xml:space="preserve">
+  <data name="L7378" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7450.Message" xml:space="preserve">
+  <data name="M7450" xml:space="preserve">
     <value>No battery voltage (robot CPU)</value>
   </data>
-  <data name="Error.7450.Cause" xml:space="preserve">
+  <data name="C7450" xml:space="preserve">
     <value>The battery is spent.</value>
   </data>
-  <data name="Error.7450.Measures" xml:space="preserve">
+  <data name="S7450" xml:space="preserve">
     <value>The battery voltage of the robot CPU dropped to 2.5V or less. Replace the battery, and then restore the robot program and parameters. For more information about the replacement procedure, refer to the separate volumes, "Controller setup, basic operation, and maintenance".</value>
   </data>
-  <data name="Error.7450.Level" xml:space="preserve">
+  <data name="L7450" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7451.Message" xml:space="preserve">
+  <data name="M7451" xml:space="preserve">
     <value>Battery voltage low (robot CPU)</value>
   </data>
-  <data name="Error.7451.Cause" xml:space="preserve">
+  <data name="C7451" xml:space="preserve">
     <value>The battery will be spent soon.</value>
   </data>
-  <data name="Error.7451.Measures" xml:space="preserve">
+  <data name="S7451" xml:space="preserve">
     <value>The battery voltage of the robot CPU dropped to 2.7V or less. Back up the robot program and the parameters, and replace the battery immediately. Otherwise, they may be lost due to low voltage. For more information about the replacement procedure, refer to the separate volumes, "Controller setup, basic operation, and maintenance".</value>
   </data>
-  <data name="Error.7451.Level" xml:space="preserve">
+  <data name="L7451" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7500.Message" xml:space="preserve">
+  <data name="M7500" xml:space="preserve">
     <value>No battery voltage (robot)</value>
   </data>
-  <data name="Error.7500.Cause" xml:space="preserve">
+  <data name="C7500" xml:space="preserve">
     <value>The battery is spent.</value>
   </data>
-  <data name="Error.7500.Measures" xml:space="preserve">
+  <data name="S7500" xml:space="preserve">
     <value>Replace the battery and set the origin. For more information about the replacement procedure, refer to the separate volumes, "Instruction Manual/Robot Arm Setup to Maintenance".</value>
   </data>
-  <data name="Error.7500.Level" xml:space="preserve">
+  <data name="L7500" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7510.Message" xml:space="preserve">
+  <data name="M7510" xml:space="preserve">
     <value>Battery voltage low (robot)</value>
   </data>
-  <data name="Error.7510.Cause" xml:space="preserve">
+  <data name="C7510" xml:space="preserve">
     <value>The battery will be spent soon.</value>
   </data>
-  <data name="Error.7510.Measures" xml:space="preserve">
+  <data name="S7510" xml:space="preserve">
     <value>Replace the battery. For more information about the replacement procedure, refer to the separate volumes, "Instruction Manual/Robot Arm Setup to Maintenance".</value>
   </data>
-  <data name="Error.7510.Level" xml:space="preserve">
+  <data name="L7510" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7531.Message" xml:space="preserve">
+  <data name="M7531" xml:space="preserve">
     <value>Replenishment time of grease
 (axis number: 1)</value>
   </data>
-  <data name="Error.7532.Message" xml:space="preserve">
+  <data name="M7532" xml:space="preserve">
     <value>Replenishment time of grease
 (axis number: 2)</value>
   </data>
-  <data name="Error.7533.Message" xml:space="preserve">
+  <data name="M7533" xml:space="preserve">
     <value>Replenishment time of grease
 (axis number: 3)</value>
   </data>
-  <data name="Error.7534.Message" xml:space="preserve">
+  <data name="M7534" xml:space="preserve">
     <value>Replenishment time of grease
 (axis number: 4)</value>
   </data>
-  <data name="Error.7535.Message" xml:space="preserve">
+  <data name="M7535" xml:space="preserve">
     <value>Replenishment time of grease
 (axis number: 5)</value>
   </data>
-  <data name="Error.7536.Message" xml:space="preserve">
+  <data name="M7536" xml:space="preserve">
     <value>Replenishment time of grease
 (axis number: 6)</value>
   </data>
   
-  <data name="Error.7531.Cause" xml:space="preserve">
+  <data name="C7531" xml:space="preserve">
     <value>It seems that grease reached longevity</value>
   </data>
-  <data name="Error.7532.Cause" xml:space="preserve">
+  <data name="C7532" xml:space="preserve">
     <value>It seems that grease reached longevity</value>
   </data>
-  <data name="Error.7533.Cause" xml:space="preserve">
+  <data name="C7533" xml:space="preserve">
     <value>It seems that grease reached longevity</value>
   </data>
-  <data name="Error.7534.Cause" xml:space="preserve">
+  <data name="C7534" xml:space="preserve">
     <value>It seems that grease reached longevity</value>
   </data>
-  <data name="Error.7535.Cause" xml:space="preserve">
+  <data name="C7535" xml:space="preserve">
     <value>It seems that grease reached longevity</value>
   </data>
-  <data name="Error.7536.Cause" xml:space="preserve">
+  <data name="C7536" xml:space="preserve">
     <value>It seems that grease reached longevity</value>
   </data>
   
-  <data name="Error.7531.Measures" xml:space="preserve">
+  <data name="S7531" xml:space="preserve">
     <value>Replenish grease</value>
   </data>
-  <data name="Error.7532.Measures" xml:space="preserve">
+  <data name="S7532" xml:space="preserve">
     <value>Replenish grease</value>
   </data>
-  <data name="Error.7533.Measures" xml:space="preserve">
+  <data name="S7533" xml:space="preserve">
     <value>Replenish grease</value>
   </data>
-  <data name="Error.7534.Measures" xml:space="preserve">
+  <data name="S7534" xml:space="preserve">
     <value>Replenish grease</value>
   </data>
-  <data name="Error.7535.Measures" xml:space="preserve">
+  <data name="S7535" xml:space="preserve">
     <value>Replenish grease</value>
   </data>
-  <data name="Error.7536.Measures" xml:space="preserve">
+  <data name="S7536" xml:space="preserve">
     <value>Replenish grease</value>
   </data>
   
-  <data name="Error.7531.Level" xml:space="preserve">
+  <data name="L7531" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7532.Level" xml:space="preserve">
+  <data name="L7532" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7533.Level" xml:space="preserve">
+  <data name="L7533" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7534.Level" xml:space="preserve">
+  <data name="L7534" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7535.Level" xml:space="preserve">
+  <data name="L7535" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7536.Level" xml:space="preserve">
+  <data name="L7536" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.7541.Message" xml:space="preserve">
+  <data name="M7541" xml:space="preserve">
     <value>Exchange time of the belt
 (axis number: 1)</value>
   </data>
-  <data name="Error.7542.Message" xml:space="preserve">
+  <data name="M7542" xml:space="preserve">
     <value>Exchange time of the belt
 (axis number: 2)</value>
   </data>
-  <data name="Error.7543.Message" xml:space="preserve">
+  <data name="M7543" xml:space="preserve">
     <value>Exchange time of the belt
 (axis number: 3)</value>
   </data>
-  <data name="Error.7544.Message" xml:space="preserve">
+  <data name="M7544" xml:space="preserve">
     <value>Exchange time of the belt
 (axis number: 4)</value>
   </data>
-  <data name="Error.7545.Message" xml:space="preserve">
+  <data name="M7545" xml:space="preserve">
     <value>Exchange time of the belt
 (axis number: 5)</value>
   </data>
-  <data name="Error.7546.Message" xml:space="preserve">
+  <data name="M7546" xml:space="preserve">
     <value>Exchange time of the belt
 (axis number: 6)</value>
   </data>
   
-  <data name="Error.7541.Cause" xml:space="preserve">
+  <data name="C7541" xml:space="preserve">
     <value>It seems that the belt reached longevity</value>
   </data>
-  <data name="Error.7542.Cause" xml:space="preserve">
+  <data name="C7542" xml:space="preserve">
     <value>It seems that the belt reached longevity</value>
   </data>
-  <data name="Error.7543.Cause" xml:space="preserve">
+  <data name="C7543" xml:space="preserve">
     <value>It seems that the belt reached longevity</value>
   </data>
-  <data name="Error.7544.Cause" xml:space="preserve">
+  <data name="C7544" xml:space="preserve">
     <value>It seems that the belt reached longevity</value>
   </data>
-  <data name="Error.7545.Cause" xml:space="preserve">
+  <data name="C7545" xml:space="preserve">
     <value>It seems that the belt reached longevity</value>
   </data>
-  <data name="Error.7546.Cause" xml:space="preserve">
+  <data name="C7546" xml:space="preserve">
     <value>It seems that the belt reached longevity</value>
   </data>
   
-  <data name="Error.7541.Measures" xml:space="preserve">
+  <data name="S7541" xml:space="preserve">
     <value>Execute the check and the exchange of the belt</value>
   </data>
-  <data name="Error.7542.Measures" xml:space="preserve">
+  <data name="S7542" xml:space="preserve">
     <value>Execute the check and the exchange of the belt</value>
   </data>
-  <data name="Error.7543.Measures" xml:space="preserve">
+  <data name="S7543" xml:space="preserve">
     <value>Execute the check and the exchange of the belt</value>
   </data>
-  <data name="Error.7544.Measures" xml:space="preserve">
+  <data name="S7544" xml:space="preserve">
     <value>Execute the check and the exchange of the belt</value>
   </data>
-  <data name="Error.7545.Measures" xml:space="preserve">
+  <data name="S7545" xml:space="preserve">
     <value>Execute the check and the exchange of the belt</value>
   </data>
-  <data name="Error.7546.Measures" xml:space="preserve">
+  <data name="S7546" xml:space="preserve">
     <value>Execute the check and the exchange of the belt</value>
   </data>
   
-  <data name="Error.7541.Level" xml:space="preserve">
+  <data name="L7541" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7542.Level" xml:space="preserve">
+  <data name="L7542" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7543.Level" xml:space="preserve">
+  <data name="L7543" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7544.Level" xml:space="preserve">
+  <data name="L7544" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7545.Level" xml:space="preserve">
+  <data name="L7545" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7546.Level" xml:space="preserve">
+  <data name="L7546" xml:space="preserve">
     <value>Caution</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.7600.Message" xml:space="preserve">
+  <data name="M7600" xml:space="preserve">
     <value>Mechanism number of additional axis is illegal.</value>
   </data>
-  <data name="Error.7600.Cause" xml:space="preserve">
+  <data name="C7600" xml:space="preserve">
     <value>The value of AXMENO (mechanism No. used) parameter is illegal.</value>
   </data>
-  <data name="Error.7600.Measures" xml:space="preserve">
+  <data name="S7600" xml:space="preserve">
     <value>On the mechanical additional axis, change "0" to a value which is smaller than set to AXUNUM (number of mechanisms used).
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7600.Level" xml:space="preserve">
+  <data name="L7600" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7601.Message" xml:space="preserve">
+  <data name="M7601" xml:space="preserve">
     <value>Axis number of additional axis is illegal.</value>
   </data>
-  <data name="Error.7601.Cause" xml:space="preserve">
+  <data name="C7601" xml:space="preserve">
     <value>The value of AXJNO (setting axis No.) is illegal.</value>
   </data>
-  <data name="Error.7601.Measures" xml:space="preserve">
+  <data name="S7601" xml:space="preserve">
     <value>Change the value of this parameter from 1 to 3. Change the value of this parameter to a order from 1.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7601.Level" xml:space="preserve">
+  <data name="L7601" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7602.Message" xml:space="preserve">
+  <data name="M7602" xml:space="preserve">
     <value>Axis numbers of additional axis are overlap.</value>
   </data>
-  <data name="Error.7602.Cause" xml:space="preserve">
+  <data name="C7602" xml:space="preserve">
     <value>As the parameter value of AXJNO (setting axis No.), the same value is set at two or more elements.</value>
   </data>
-  <data name="Error.7602.Measures" xml:space="preserve">
+  <data name="S7602" xml:space="preserve">
     <value>Change the values of the element Nos. which set the same values at this pa-rameter AXMENO, to all different values.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7602.Level" xml:space="preserve">
+  <data name="L7602" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7603.Message" xml:space="preserve">
+  <data name="M7603" xml:space="preserve">
     <value>Unit of additional axis is illegal.</value>
   </data>
-  <data name="Error.7603.Cause" xml:space="preserve">
+  <data name="C7603" xml:space="preserve">
     <value>The value of AXUNT (unit axis) parameter is illegal.</value>
   </data>
-  <data name="Error.7603.Measures" xml:space="preserve">
+  <data name="S7603" xml:space="preserve">
     <value>Change the values of all elements of this parameter to "0" or "1".
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7603.Level" xml:space="preserve">
+  <data name="L7603" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7604.Message" xml:space="preserve">
+  <data name="M7604" xml:space="preserve">
     <value>Acceleration time of additional axis is illegal.</value>
   </data>
-  <data name="Error.7604.Cause" xml:space="preserve">
+  <data name="C7604" xml:space="preserve">
     <value>The value of AXACC (acceleration time) parameter is illegal.</value>
   </data>
-  <data name="Error.7604.Measures" xml:space="preserve">
+  <data name="S7604" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive real numbers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7604.Level" xml:space="preserve">
+  <data name="L7604" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7605.Message" xml:space="preserve">
+  <data name="M7605" xml:space="preserve">
     <value>Deceleration time of additional axis is illegal.</value>
   </data>
-  <data name="Error.7605.Cause" xml:space="preserve">
+  <data name="C7605" xml:space="preserve">
     <value>The value of AXDEC (deceleration time) parameter is illegal.</value>
   </data>
-  <data name="Error.7605.Measures" xml:space="preserve">
+  <data name="S7605" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive real numbers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7605.Level" xml:space="preserve">
+  <data name="L7605" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7606.Message" xml:space="preserve">
+  <data name="M7606" xml:space="preserve">
     <value>Gear ratio numerator of additional axis is illegal.</value>
   </data>
-  <data name="Error.7606.Cause" xml:space="preserve">
+  <data name="C7606" xml:space="preserve">
     <value>The value of AXGRTN (total speed ratio numerator) parameter is illegal.</value>
   </data>
-  <data name="Error.7606.Measures" xml:space="preserve">
+  <data name="S7606" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive integers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7606.Level" xml:space="preserve">
+  <data name="L7606" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7607.Message" xml:space="preserve">
+  <data name="M7607" xml:space="preserve">
     <value>Gear ratio denominator of additional axis is illegal.</value>
   </data>
-  <data name="Error.7607.Cause" xml:space="preserve">
+  <data name="C7607" xml:space="preserve">
     <value>The value of AXGRTD (total speed ratio denominator) parameter is illegal.</value>
   </data>
-  <data name="Error.7607.Measures" xml:space="preserve">
+  <data name="S7607" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive integers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7607.Level" xml:space="preserve">
+  <data name="L7607" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7609.Message" xml:space="preserve">
+  <data name="M7609" xml:space="preserve">
     <value>Motor rated speed of additional axis is illegal.</value>
   </data>
-  <data name="Error.7609.Cause" xml:space="preserve">
+  <data name="C7609" xml:space="preserve">
     <value>The value of AXMREV (rated speed) parameter is illegal.</value>
   </data>
-  <data name="Error.7609.Measures" xml:space="preserve">
+  <data name="S7609" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive integers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7609.Level" xml:space="preserve">
+  <data name="L7609" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7610.Message" xml:space="preserve">
+  <data name="M7610" xml:space="preserve">
     <value>Motor maximum speed of additional axis is illegal.</value>
   </data>
-  <data name="Error.7610.Cause" xml:space="preserve">
+  <data name="C7610" xml:space="preserve">
     <value>The value of AXJMX (maximum speed) parameter is illegal.</value>
   </data>
-  <data name="Error.7610.Measures" xml:space="preserve">
+  <data name="S7610" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive integers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7610.Level" xml:space="preserve">
+  <data name="L7610" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7611.Message" xml:space="preserve">
+  <data name="M7611" xml:space="preserve">
     <value>Encoder pulse of additional axis is illegal.</value>
   </data>
-  <data name="Error.7611.Cause" xml:space="preserve">
+  <data name="C7611" xml:space="preserve">
     <value>The value of AXENCR (encoder resolution) parameter is illegal.</value>
   </data>
-  <data name="Error.7611.Measures" xml:space="preserve">
+  <data name="S7611" xml:space="preserve">
     <value>Change the values of all elements of this parameter to positive integers.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7611.Level" xml:space="preserve">
+  <data name="L7611" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7612.Message" xml:space="preserve">
+  <data name="M7612" xml:space="preserve">
     <value>JOG smoothening time constant of additional axis is illegal.</value>
   </data>
-  <data name="Error.7612.Cause" xml:space="preserve">
+  <data name="C7612" xml:space="preserve">
     <value>The value of AXJOGTS (JOG smoothening time constant) parameter is illegal.</value>
   </data>
-  <data name="Error.7612.Measures" xml:space="preserve">
+  <data name="S7612" xml:space="preserve">
     <value>Change the values of all elements of this parameter to 0 or positive real number.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7612.Level" xml:space="preserve">
+  <data name="L7612" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7613.Message" xml:space="preserve">
+  <data name="M7613" xml:space="preserve">
     <value>Turn OFF the power supply once, and turn ON it again.</value>
   </data>
-  <data name="Error.7613.Cause" xml:space="preserve">
+  <data name="C7613" xml:space="preserve">
     <value>It is necessary to turn OFF the power supply once.</value>
   </data>
-  <data name="Error.7613.Measures" xml:space="preserve">
+  <data name="S7613" xml:space="preserve">
     <value>Turn OFF the power supply of the controller, and turn it ON again.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7613.Level" xml:space="preserve">
+  <data name="L7613" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7650.Message" xml:space="preserve">
+  <data name="M7650" xml:space="preserve">
     <value>The force sensor quantity setting is incorrect.</value>
   </data>
-  <data name="Error.7650.Cause" xml:space="preserve">
+  <data name="C7650" xml:space="preserve">
     <value>Only 1 force sensor can be used for a single robot.</value>
   </data>
-  <data name="Error.7650.Measures" xml:space="preserve">
+  <data name="S7650" xml:space="preserve">
     <value>Check the parameter (AXJNO, AXMENO) settings to see whether multiple force sensors have been set.</value>
   </data>
-  <data name="Error.7650.Level" xml:space="preserve">
+  <data name="L7650" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7651.Message" xml:space="preserve">
+  <data name="M7651" xml:space="preserve">
     <value>Force sense I/F unit initialization error</value>
   </data>
-  <data name="Error.7651.Cause" xml:space="preserve">
+  <data name="C7651" xml:space="preserve">
     <value>The force sense I/F unit was not recognized, and therefore it was not possible to successfully complete initialization.</value>
   </data>
-  <data name="Error.7651.Measures" xml:space="preserve">
+  <data name="S7651" xml:space="preserve">
     <value>Check the force sense I/F unit wiring and whether the power supply is ON.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7651.Level" xml:space="preserve">
+  <data name="L7651" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7652.Message" xml:space="preserve">
+  <data name="M7652" xml:space="preserve">
     <value>Force sense I/F unit revision illegal</value>
   </data>
-  <data name="Error.7652.Cause" xml:space="preserve">
+  <data name="C7652" xml:space="preserve">
     <value>This force sense I/F unit revision is not supported.</value>
   </data>
-  <data name="Error.7652.Measures" xml:space="preserve">
+  <data name="S7652" xml:space="preserve">
     <value>Contact the maker.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7652.Level" xml:space="preserve">
+  <data name="L7652" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7661.Message" xml:space="preserve">
+  <data name="M7661" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 1)</value>
   </data>
-  <data name="Error.7662.Message" xml:space="preserve">
+  <data name="M7662" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 2)</value>
   </data>
-  <data name="Error.7663.Message" xml:space="preserve">
+  <data name="M7663" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 3)</value>
   </data>
-  <data name="Error.7664.Message" xml:space="preserve">
+  <data name="M7664" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 4)</value>
   </data>
-  <data name="Error.7665.Message" xml:space="preserve">
+  <data name="M7665" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 5)</value>
   </data>
-  <data name="Error.7666.Message" xml:space="preserve">
+  <data name="M7666" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 6)</value>
   </data>
-  <data name="Error.7667.Message" xml:space="preserve">
+  <data name="M7667" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 7)</value>
   </data>
-  <data name="Error.7668.Message" xml:space="preserve">
+  <data name="M7668" xml:space="preserve">
     <value>The force sensor data exceeded the tolerance value. (sensor axis: 8)</value>
   </data>
   
-  <data name="Error.7661.Cause" xml:space="preserve">
+  <data name="C7661" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7662.Cause" xml:space="preserve">
+  <data name="C7662" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7663.Cause" xml:space="preserve">
+  <data name="C7663" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7664.Cause" xml:space="preserve">
+  <data name="C7664" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7665.Cause" xml:space="preserve">
+  <data name="C7665" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7666.Cause" xml:space="preserve">
+  <data name="C7666" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7667.Cause" xml:space="preserve">
+  <data name="C7667" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
-  <data name="Error.7668.Cause" xml:space="preserve">
+  <data name="C7668" xml:space="preserve">
     <value>The force acting on the force sensor exceeded the set tolerance value.</value>
   </data>
   
-  <data name="Error.7661.Measures" xml:space="preserve">
+  <data name="S7661" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7662.Measures" xml:space="preserve">
+  <data name="S7662" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7663.Measures" xml:space="preserve">
+  <data name="S7663" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7664.Measures" xml:space="preserve">
+  <data name="S7664" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7665.Measures" xml:space="preserve">
+  <data name="S7665" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7666.Measures" xml:space="preserve">
+  <data name="S7666" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7667.Measures" xml:space="preserve">
+  <data name="S7667" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
-  <data name="Error.7668.Measures" xml:space="preserve">
+  <data name="S7668" xml:space="preserve">
     <value>Check whether too large a force is acting on the force sensor. Check whether an appropriate value has been set for parameter FSLMTMX. Refer to the section "Force Sensor Tolerance" in separate manual, "Instruction Manual/Force Sense Function" for details on the error recovery method.</value>
   </data>
   
-  <data name="Error.7661.Level" xml:space="preserve">
+  <data name="L7661" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7662.Level" xml:space="preserve">
+  <data name="L7662" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7663.Level" xml:space="preserve">
+  <data name="L7663" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7664.Level" xml:space="preserve">
+  <data name="L7664" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7665.Level" xml:space="preserve">
+  <data name="L7665" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7666.Level" xml:space="preserve">
+  <data name="L7666" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7667.Level" xml:space="preserve">
+  <data name="L7667" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7668.Level" xml:space="preserve">
+  <data name="L7668" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
   
-  <data name="Error.7700.Message" xml:space="preserve">
+  <data name="M7700" xml:space="preserve">
     <value>CC-Link card is illegal (Error Code).</value>
   </data>
-  <data name="Error.7700.Cause" xml:space="preserve">
+  <data name="C7700" xml:space="preserve">
     <value>CC-Link card is illegal.</value>
   </data>
-  <data name="Error.7700.Measures" xml:space="preserve">
+  <data name="S7700" xml:space="preserve">
     <value>Please exchange the CC-Link card. When it comes back, contact to the dealer.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7700.Level" xml:space="preserve">
+  <data name="L7700" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7710.Message" xml:space="preserve">
+  <data name="M7710" xml:space="preserve">
     <value>Cannot set a CC-Link master station.</value>
   </data>
-  <data name="Error.7710.Cause" xml:space="preserve">
+  <data name="C7710" xml:space="preserve">
     <value>A master station is already set by the rotary switch.</value>
   </data>
-  <data name="Error.7710.Measures" xml:space="preserve">
+  <data name="S7710" xml:space="preserve">
     <value>Set the rotary switch to other than 0.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7710.Level" xml:space="preserve">
+  <data name="L7710" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7720.Message" xml:space="preserve">
+  <data name="M7720" xml:space="preserve">
     <value>Two CC-Link interface cards are mounted.</value>
   </data>
-  <data name="Error.7720.Cause" xml:space="preserve">
+  <data name="C7720" xml:space="preserve">
     <value>Mount one card in slot 2.</value>
   </data>
-  <data name="Error.7720.Measures" xml:space="preserve">
+  <data name="S7720" xml:space="preserve">
     <value>It is not allowed to install two cards. Install only one card.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7720.Level" xml:space="preserve">
+  <data name="L7720" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7730.Message" xml:space="preserve">
+  <data name="M7730" xml:space="preserve">
     <value>CC-Link data link error (local station connection error)</value>
   </data>
-  <data name="Error.7730.Cause" xml:space="preserve">
+  <data name="C7730" xml:space="preserve">
     <value>There is a line error or the master station's parameter settings are invalid.</value>
   </data>
-  <data name="Error.7730.Measures" xml:space="preserve">
+  <data name="S7730" xml:space="preserve">
     <value>Review the line and parameters.</value>
   </data>
-  <data name="Error.7730.Level" xml:space="preserve">
+  <data name="L7730" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7750.Message" xml:space="preserve">
+  <data name="M7750" xml:space="preserve">
     <value>A (CC-Link) cable is not connected or parameters do not match.</value>
   </data>
-  <data name="Error.7750.Cause" xml:space="preserve">
+  <data name="C7750" xml:space="preserve">
     <value>A cable is not connected or parameters do not match.</value>
   </data>
-  <data name="Error.7750.Measures" xml:space="preserve">
+  <data name="S7750" xml:space="preserve">
     <value>Reset the power and start again.</value>
   </data>
-  <data name="Error.7750.Level" xml:space="preserve">
+  <data name="L7750" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7760.Message" xml:space="preserve">
+  <data name="M7760" xml:space="preserve">
     <value>CC-Link initialization error</value>
   </data>
-  <data name="Error.7760.Cause" xml:space="preserve">
+  <data name="C7760" xml:space="preserve">
     <value>The master station's parameters do not match.</value>
   </data>
-  <data name="Error.7760.Measures" xml:space="preserve">
+  <data name="S7760" xml:space="preserve">
     <value>Correct the parameters, and then start again.
 Power off and on, unless otherwise noted.</value>
   </data>
-  <data name="Error.7760.Level" xml:space="preserve">
+  <data name="L7760" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7780.Message" xml:space="preserve">
+  <data name="M7780" xml:space="preserve">
     <value>A CC-Link register number is outside the range.</value>
   </data>
-  <data name="Error.7780.Cause" xml:space="preserve">
+  <data name="C7780" xml:space="preserve">
     <value>A register number entered is outside the allowable range.</value>
   </data>
-  <data name="Error.7780.Measures" xml:space="preserve">
+  <data name="S7780" xml:space="preserve">
     <value>Enter the correct value.</value>
   </data>
-  <data name="Error.7780.Level" xml:space="preserve">
+  <data name="L7780" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7781.Message" xml:space="preserve">
+  <data name="M7781" xml:space="preserve">
     <value>A signal number for CC-Link was specified.</value>
   </data>
-  <data name="Error.7781.Cause" xml:space="preserve">
+  <data name="C7781" xml:space="preserve">
     <value>A signal number for CC-Link was specified.</value>
   </data>
-  <data name="Error.7781.Measures" xml:space="preserve">
+  <data name="S7781" xml:space="preserve">
     <value>Install a CC-Link interface card.</value>
   </data>
-  <data name="Error.7781.Level" xml:space="preserve">
+  <data name="L7781" xml:space="preserve">
     <value>Low</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7810.Message" xml:space="preserve">
+  <data name="M7810" xml:space="preserve">
     <value>MONPORT/SLMPPORT parameter error</value>
   </data>
-  <data name="Error.7810.Cause" xml:space="preserve">
+  <data name="C7810" xml:space="preserve">
     <value>The element of MONPORT(1/2) and SLMPPORT overlap.</value>
   </data>
-  <data name="Error.7810.Measures" xml:space="preserve">
+  <data name="S7810" xml:space="preserve">
     <value>Please set not to overlap to another port number.</value>
   </data>
-  <data name="Error.7810.Level" xml:space="preserve">
+  <data name="L7810" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7820.Message" xml:space="preserve">
+  <data name="M7820" xml:space="preserve">
     <value>Mxt Scommand timeout</value>
   </data>
-  <data name="Error.7820.Cause" xml:space="preserve">
+  <data name="C7820" xml:space="preserve">
     <value>The setting time of the MXTTOUT parameter has been exceeded.</value>
   </data>
-  <data name="Error.7820.Measures" xml:space="preserve">
+  <data name="S7820" xml:space="preserve">
     <value>Make the MXTTOUT parameter value larger.</value>
   </data>
-  <data name="Error.7820.Level" xml:space="preserve">
+  <data name="L7820" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7830.Message" xml:space="preserve">
+  <data name="M7830" xml:space="preserve">
     <value>"Ethernet card is not installed, or command disable"</value>
   </data>
-  <data name="Error.7830.Cause" xml:space="preserve">
+  <data name="C7830" xml:space="preserve">
     <value>Ethernet card is not installed, or command disable.</value>
   </data>
-  <data name="Error.7830.Measures" xml:space="preserve">
+  <data name="S7830" xml:space="preserve">
     <value>Install Ethernet interface card.</value>
   </data>
-  <data name="Error.7830.Level" xml:space="preserve">
+  <data name="L7830" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7840.Message" xml:space="preserve">
+  <data name="M7840" xml:space="preserve">
     <value>Mxt command Illegal received data</value>
   </data>
-  <data name="Error.7840.Cause" xml:space="preserve">
+  <data name="C7840" xml:space="preserve">
     <value>The command argument and the data type do not match.</value>
   </data>
-  <data name="Error.7840.Measures" xml:space="preserve">
+  <data name="S7840" xml:space="preserve">
     <value>Check the command and the data you are sending.</value>
   </data>
-  <data name="Error.7840.Level" xml:space="preserve">
+  <data name="L7840" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7860.Message" xml:space="preserve">
+  <data name="M7860" xml:space="preserve">
     <value>SLMP error</value>
   </data>
-  <data name="Error.7860.Cause" xml:space="preserve">
+  <data name="C7860" xml:space="preserve">
     <value>An error related to SLMP has occurred.</value>
   </data>
-  <data name="Error.7860.Measures" xml:space="preserve">
+  <data name="S7860" xml:space="preserve">
     <value>Please confirm the content by a detailed number of the error.</value>
   </data>
-  <data name="Error.7860.Level" xml:space="preserve">
+  <data name="L7860" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
-  <data name="Error.7861.Message" xml:space="preserve">
+  <data name="M7861" xml:space="preserve">
     <value>1. SLMP parameter error
 2. SLMP SLMPPORT parameter error
 3. SLMP SLMPPORT parameter error</value>
   </data>
-  <data name="Error.7861.Cause" xml:space="preserve">
+  <data name="C7861" xml:space="preserve">
     <value>1. SLMP parameter error: Illegal parameter.
 2. SLMP SLMPPORT parameter error: Overlap with server port number of NETPORT.
 3. SLMP SLMPPORT parameter error: Overlap with element of NETPORT(1) or MONPORT(1/2).</value>
   </data>
-  <data name="Error.7861.Measures" xml:space="preserve">
+  <data name="S7861" xml:space="preserve">
     <value>1. SLMP parameter error: Correct parameter.
 2. SLMP SLMPPORT parameter error: Please set not to overlap to another port number.
 3. SLMP SLMPPORT parameter error: Please set not to overlap to another port number.</value>
   </data>
-  <data name="Error.7861.Level" xml:space="preserve">
+  <data name="L7861" xml:space="preserve">
     <value>High</value><comment>@DoNotTranslate</comment>
   </data>
 </root>
