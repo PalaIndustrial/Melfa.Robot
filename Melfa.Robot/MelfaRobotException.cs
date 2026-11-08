@@ -25,6 +25,20 @@ public sealed partial class MelfaRobotException : Exception
             var value = resources.GetString($"{field}{errno:0000}");
             if (value != null)
                 return value;
+
+            var legacyField = field switch
+            {
+                'M' => "Message",
+                'C' => "Cause",
+                'S' => "Measures",
+                _ => null,
+            };
+            if (legacyField != null)
+            {
+                value = resources.GetString($"Error.{errno:0000}.{legacyField}");
+                if (value != null)
+                    return value;
+            }
         }
 
         return UnknownErrorResources.GetString($"{field}0000");
