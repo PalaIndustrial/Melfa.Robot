@@ -127,11 +127,41 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in set)
             {
                 var key = Assert.IsType<string>(item.Key);
-                Assert.Matches(@"^Error\.\d{4}\.(Message|Cause|Measures|Level)$", key);
-                if (key.EndsWith(".Level", StringComparison.Ordinal))
-                    Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
+                if (new[] { "Name1", "Color1", "Bitmap1", "Icon1" }.Contains(key))
+                    continue;
+                if (Regex.IsMatch(key, @"^[MCSL]\d{4}$"))
+                {
+                    if (key[0] == 'L')
+                        Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
+                }
+                else
+                    Assert.Matches(@"^Error\.\d{4}\.(Message|Cause|Measures)$", key);
+            }
+
+            if (string.IsNullOrEmpty(culture))
+            {
+                var entries = set.Cast<DictionaryEntry>()
+                    .Select(item => Assert.IsType<string>(item.Key))
+                    .Where(key => Regex.IsMatch(key, @"^[MCSL]\d{4}$"))
+                    .GroupBy(key => key.Substring(1));
+
+                foreach (var error in entries)
+                    Assert.Equal(new[] { 'C', 'L', 'M', 'S' }, error.Select(key => key[0]).OrderBy(field => field));
             }
         }
+    }
+
+    [Fact]
+    public void UnknownErrorResourcesUseCompactKeys()
+    {
+        var manager = new ResourceManager("Melfa.Robot.Resources.ErrorMessages", typeof(MelfaRobotException).Assembly);
+        var set = manager.GetResourceSet(CultureInfo.InvariantCulture, true, false);
+
+        Assert.NotNull(set);
+        Assert.Equal(new[] { "C0000", "L0000", "M0000", "S0000" },
+            set.Cast<DictionaryEntry>().Select(item => Assert.IsType<string>(item.Key)).OrderBy(key => key));
+        foreach (var field in new[] { 'C', 'L', 'M', 'S' })
+            Assert.False(string.IsNullOrEmpty(manager.GetString($"{field}0000", CultureInfo.InvariantCulture)));
     }
 
     [Fact]
@@ -149,7 +179,9 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in neutral)
             {
                 var key = Assert.IsType<string>(item.Key);
-                if (key.EndsWith(".Level", StringComparison.Ordinal))
+                if (new[] { "Name1", "Color1", "Bitmap1", "Icon1" }.Contains(key) || !Regex.IsMatch(key, @"^[MCSL]\d{4}$"))
+                    continue;
+                if (key[0] == 'L')
                 {
                     Assert.Null(localized.GetString(key));
                     var level = Assert.IsType<string>(item.Value);
@@ -157,7 +189,17 @@ public class ErrorMessageTests
                     Assert.Equal(level, manager.GetString(key, CultureInfo.GetCultureInfo("zh-TW")));
                 }
                 else
-                    Assert.False(string.IsNullOrEmpty(localized.GetString(key)), $"Missing Traditional Chinese resource: {key}");
+                {
+                    var legacyField = key[0] switch
+                    {
+                        'M' => "Message",
+                        'C' => "Cause",
+                        'S' => "Measures",
+                        _ => throw new InvalidOperationException(),
+                    };
+                    var legacyKey = $"Error.{key.Substring(1)}.{legacyField}";
+                    Assert.False(string.IsNullOrEmpty(localized.GetString(legacyKey)), $"Missing Traditional Chinese resource: {legacyKey}");
+                }
             }
         }
     }

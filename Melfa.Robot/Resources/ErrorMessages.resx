@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error.Unknown.Cause" xml:space="preserve">
+  <data name="C0000" xml:space="preserve">
     <value>Unknown error, check controller troubleshooting manual (BFP-A3480) for more information.</value>
   </data>
-  <data name="Error.Unknown.Level" xml:space="preserve">
+  <data name="L0000" xml:space="preserve">
     <value>Unknown</value>
     <comment>@Invariant @DoNotTranslate</comment>
   </data>
-  <data name="Error.Unknown.Measures" xml:space="preserve">
+  <data name="S0000" xml:space="preserve">
     <value>Unknown error, check controller troubleshooting manual (BFP-A3480) for more information.</value>
   </data>
-  <data name="Error.Unknown.Message" xml:space="preserve">
+  <data name="M0000" xml:space="preserve">
     <value>Unknown error, check controller troubleshooting manual (BFP-A3480) for more information.</value>
   </data>
 </root>
