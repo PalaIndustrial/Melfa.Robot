@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Resources;
 
 namespace Melfa.Robot;
@@ -22,13 +23,35 @@ public sealed partial class MelfaRobotException : Exception
         if (0 < errno && errno <= 9999)
         {
             var resources = ErrorResources[errno / 1000];
-            var value = resources.GetString($"Error.{errno:0000}.{field}");
+            var value = GetResource(resources, $"{GetCompactField(field)}{errno:0000}", $"Error.{errno:0000}.{field}");
             if (value != null)
                 return value;
         }
 
-        return UnknownErrorResources.GetString($"Error.Unknown.{field}");
+        return GetResource(UnknownErrorResources, $"{GetCompactField(field)}0000", $"Error.Unknown.{field}");
     }
+
+    private static string GetResource(ResourceManager resources, string compactKey, string legacyKey)
+    {
+        for (var culture = CultureInfo.CurrentUICulture; culture != CultureInfo.InvariantCulture; culture = culture.Parent)
+        {
+            var resourceSet = resources.GetResourceSet(culture, true, false);
+            var value = resourceSet?.GetString(compactKey) ?? resourceSet?.GetString(legacyKey);
+            if (value != null)
+                return value;
+        }
+
+        return resources.GetString(compactKey) ?? resources.GetString(legacyKey);
+    }
+
+    private static char GetCompactField(string field) => field switch
+    {
+        "Message" => 'M',
+        "Cause" => 'C',
+        "Measures" => 'S',
+        "Level" => 'L',
+        _ => throw new ArgumentOutOfRangeException(nameof(field)),
+    };
 
     private static string GetErrorMessage(int errno) => GetErrorResource(errno, "Message");
     private static string GetErrorCause(int errno) => GetErrorResource(errno, "Cause");

@@ -244,6 +244,22 @@ public class ErrorMessageTests
         finally { CultureInfo.CurrentUICulture = old; }
     }
 
+    [Fact]
+    public void UsesTraditionalChineseErrorDetailsBeforeNeutralFallback()
+    {
+        var old = CultureInfo.CurrentUICulture;
+        try
+        {
+            CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo("zh-Hant");
+            var error = MelfaRobotException.FromErrorNumber(1030);
+            Assert.Equal("電源再生過量", error.ErrorMessage);
+            Assert.Equal("轉換器超過再生性能極限。", error.ErrorCause);
+            Assert.Contains("保持電源開啟至少 15 分鐘", error.ErrorMeasures);
+            Assert.Equal(ErrorSeverity.High, error.ErrorLevel);
+        }
+        finally { CultureInfo.CurrentUICulture = old; }
+    }
+
     [Theory]
     [InlineData(1030, "電源再生過量")]
     [InlineData(161, "無法同時使用平行 I/O")]
