@@ -11,7 +11,7 @@ public class SimulatorMotionTests
 
     public SimulatorMotionTests(ITestOutputHelper output) => this.output = output;
 
-    [Fact(Skip = "Motion tests disabled")]
+    [WriteFact(Skip = "Motion tests disabled")]
     public Task ServoOnOff()
     {
         return Integration.Run(true, async (robot, _) =>
@@ -31,7 +31,7 @@ public class SimulatorMotionTests
         });
     }
 
-    [Fact(Skip = "Motion tests disabled")]
+    [WriteFact(Skip = "Motion tests disabled")]
     public Task MotionSquare()
     {
         return Integration.Run(true, async (robot, _) =>
