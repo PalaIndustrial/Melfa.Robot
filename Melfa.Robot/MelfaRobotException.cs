@@ -20,34 +20,24 @@ public sealed partial class MelfaRobotException : Exception
 
     private static string GetErrorResource(int errno, char field)
     {
+        var legacyField = field switch
+        {
+            'M' => "Message",
+            'C' => "Cause",
+            'S' => "Measures",
+            'L' => "Level",
+            _ => throw new ArgumentOutOfRangeException(nameof(field)),
+        };
+
         if (0 < errno && errno <= 9999)
         {
             var resources = ErrorResources[errno / 1000];
-<<<<<<< HEAD
-            var value = GetResource(resources, $"{GetCompactField(field)}{errno:0000}", $"Error.{errno:0000}.{field}");
-=======
-            var value = resources.GetString($"{field}{errno:0000}");
->>>>>>> origin/compact-error-resource-keys
+            var value = GetResource(resources, $"{field}{errno:0000}", $"Error.{errno:0000}.{legacyField}");
             if (value != null)
                 return value;
-
-            var legacyField = field switch
-            {
-                'M' => "Message",
-                'C' => "Cause",
-                'S' => "Measures",
-                _ => null,
-            };
-            if (legacyField != null)
-            {
-                value = resources.GetString($"Error.{errno:0000}.{legacyField}");
-                if (value != null)
-                    return value;
-            }
         }
 
-<<<<<<< HEAD
-        return GetResource(UnknownErrorResources, $"{GetCompactField(field)}0000", $"Error.Unknown.{field}");
+        return GetResource(UnknownErrorResources, $"{field}0000", $"Error.Unknown.{legacyField}");
     }
 
     private static string GetResource(ResourceManager resources, string compactKey, string legacyKey)
@@ -63,28 +53,10 @@ public sealed partial class MelfaRobotException : Exception
         return resources.GetString(compactKey) ?? resources.GetString(legacyKey);
     }
 
-    private static char GetCompactField(string field) => field switch
-    {
-        "Message" => 'M',
-        "Cause" => 'C',
-        "Measures" => 'S',
-        "Level" => 'L',
-        _ => throw new ArgumentOutOfRangeException(nameof(field)),
-    };
-
-    private static string GetErrorMessage(int errno) => GetErrorResource(errno, "Message");
-    private static string GetErrorCause(int errno) => GetErrorResource(errno, "Cause");
-    private static string GetErrorMeasures(int errno) => GetErrorResource(errno, "Measures");
-    private static ErrorSeverity GetErrorSeverity(int errno) => GetErrorResource(errno, "Level") switch
-=======
-        return UnknownErrorResources.GetString($"{field}0000");
-    }
-
     private static string GetErrorMessage(int errno) => GetErrorResource(errno, 'M');
     private static string GetErrorCause(int errno) => GetErrorResource(errno, 'C');
     private static string GetErrorMeasures(int errno) => GetErrorResource(errno, 'S');
     private static ErrorSeverity GetErrorSeverity(int errno) => GetErrorResource(errno, 'L') switch
->>>>>>> origin/compact-error-resource-keys
     {
         nameof(ErrorSeverity.High) => ErrorSeverity.High,
         nameof(ErrorSeverity.Low) => ErrorSeverity.Low,
