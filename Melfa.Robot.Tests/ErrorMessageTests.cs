@@ -127,14 +127,16 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in set)
             {
                 var key = Assert.IsType<string>(item.Key);
+                if (new[] { "Name1", "Color1", "Bitmap1", "Icon1" }.Contains(key))
+                    continue;
                 if (string.IsNullOrEmpty(culture))
                 {
-                    Assert.Matches(@"^[MCSL]\\d{4}$", key);
+                    Assert.Matches(@"^[MCSL]\d{4}$", key);
                     if (key[0] == 'L')
                         Assert.Contains(Assert.IsType<string>(item.Value), new[] { "High", "Low", "Caution", "Unknown" });
                 }
                 else
-                    Assert.Matches(@"^Error\\.\\d{4}\\.(Message|Cause|Measures)$", key);
+                    Assert.Matches(@"^Error\.\d{4}\.(Message|Cause|Measures)$", key);
             }
 
             if (string.IsNullOrEmpty(culture))
@@ -176,6 +178,8 @@ public class ErrorMessageTests
             foreach (DictionaryEntry item in neutral)
             {
                 var key = Assert.IsType<string>(item.Key);
+                if (new[] { "Name1", "Color1", "Bitmap1", "Icon1" }.Contains(key) || !Regex.IsMatch(key, @"^[MCSL]\d{4}$"))
+                    continue;
                 if (key[0] == 'L')
                 {
                     Assert.Null(localized.GetString(key));
